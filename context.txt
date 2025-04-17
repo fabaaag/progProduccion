@@ -1,0 +1,150 @@
+Documento de Contexto: Proyecto Abasolo - Sistema de Gestión de Producción Industrial
+1. Visión General del Proyecto
+El Proyecto Abasolo es un sistema de gestión integral para entornos industriales que permite administrar el ciclo completo de producción, desde órdenes de trabajo hasta la programación y supervisión diaria de tareas en planta. El sistema está diseñado para optimizar los procesos productivos, mejorar la trazabilidad y facilitar la toma de decisiones operativas.
+2. Arquitectura y Tecnologías
+Backend: Django/Python con Django REST Framework
+Frontend: React.js con componentes Bootstrap
+Base de datos: Actualmente SQLite en desarrollo (preparado para PostgreSQL en producción)
+Autenticación: Sistema basado en JWT (JSON Web Tokens)
+Estructura: Aplicaciones modulares separadas por dominios funcionales
+3. Módulos Principales del Sistema
+Gestión de Usuarios (UserManagement): Administración de usuarios, roles y permisos
+Gestión de Clientes (Client): Catálogo de clientes y datos de contacto
+Gestión de Productos (Product): Catálogo de productos, piezas y materias primas
+Gestión de Maquinaria (Machine): Inventario y estado de maquinaria
+Gestión de Operadores (Operator): Registro de operadores, habilidades y asignaciones
+Gestión de Trabajos (JobManagement): Órdenes de trabajo, programación y seguimiento
+4. Funcionalidades Disponibles
+4.1 Gestión de Órdenes de Trabajo
+Creación y seguimiento de órdenes de trabajo
+Asignación de rutas de producción a órdenes
+Visualización detallada de OTs con su estado actual
+Cambio de estado (pendiente, en proceso, finalizada)
+Registro de multas y observaciones
+4.2 Programación de Producción
+Creación de programas con fechas de inicio y fin
+Asignación de OTs a programas con priorización
+Visualización de timeline de producción
+Drag & drop para cambiar prioridades de OTs
+Recalculación automática de fechas al cambiar prioridades
+4.3 Gestión de Operadores
+Registro de operadores con datos personales
+Asignación de habilidades para máquinas específicas
+Visualización de disponibilidad de operadores
+Asignación de operadores a tareas específicas
+Seguimiento de quién realizó las asignaciones
+4.4 Reporte de Supervisor
+Vista diaria de tareas programadas
+Interfaz para indicar avance de producción
+Registro de estados (pendiente, en proceso, terminado, detenido)
+Cálculo de porcentajes de cumplimiento
+Registro de observaciones por tarea
+Vista ampliada de la tabla de tareas
+4.5 Gestión de Máquinas
+Catálogo de maquinaria disponible
+Asignación de máquinas a procesos específicos
+Verificación de compatibilidad máquina-proceso
+4.6 Sistema de Fragmentación de Tareas (En implementación)
+División de tareas incompletas al finalizar el día
+Creación automática de continuaciones para días siguientes
+Visualización de genealogía de tareas fragmentadas
+Trazabilidad completa del avance entre fragmentos
+5. Funcionalidades Pendientes de Implementación
+UI para Fragmentación: Completar interfaces para el sistema de fragmentación
+Endpoint de Finalización del Día: Finalizar implementación del backend
+Sistema de Permisos Avanzado: Restricciones para edición de reportes históricos
+Filtros y Búsqueda: Implementar filtrado por diversos criterios
+Exportación: Generación de reportes en Excel/PDF
+Indicadores Visuales: Mejorar UX con indicadores de estado
+Dashboard: Panel de control con métricas clave
+Sistema de Notificaciones: Alertas para eventos relevantes
+6. Resumen de Funcionalidades Clave
+Gestión completa de órdenes de trabajo desde creación hasta finalización
+Programación visual con timeline y priorización por drag & drop
+Asignación inteligente de operadores según habilidades y disponibilidad
+Seguimiento diario de producción con registro de avances
+Trazabilidad de todo el proceso productivo
+Sistema de fragmentación de tareas para manejo de continuidad entre días
+Visualización de datos para toma de decisiones operativas
+7. Consideraciones para Desarrollo Futuro
+Integración con sistemas de control de calidad
+Análisis predictivo de capacidad y programación
+Aplicación móvil para operadores de planta
+Módulo de mantenimiento preventivo de maquinaria
+Integración con sistemas ERP existentes
+Gestión de inventarios de materias primas
+Este documento proporciona un contexto general del Proyecto Abasolo y sus principales funcionalidades. Los archivos de código fuente pueden ser adjuntados por separado para una comprensión técnica más profunda. El desarrollo actual se centra en la finalización del sistema de fragmentación de tareas y las mejoras de usabilidad del módulo de reporte de supervisor.
+
+  Próximas Funcionalidades a Implementar en Proyecto Abasolo
+1. Sistema de Fragmentación de Tareas (Prioridad Alta)
+1.1. Finalización del Backend
+Endpoint de Finalización del Día: Completar la implementación del endpoint para procesar tareas incompletas
+Optimización del Cálculo de Progreso: Mejorar rendimiento para grandes volúmenes de datos
+Transacciones Atómicas: Asegurar integridad de datos durante el proceso de fragmentación
+1.2. Implementación del Frontend
+Modal de Finalización del Día: Interfaz para confirmar y visualizar tareas a fragmentar
+Componente de Visualización Genealógica: Vista jerárquica de tareas originales y sus fragmentos
+Indicadores Visuales: Identificación clara de tareas que son continuaciones de días anteriores
+2. Mejoras en el Reporte de Supervisor
+2.1. Filtrado y Búsqueda
+Filtros por OT, proceso, máquina y estado
+Búsqueda rápida de tareas específicas
+Opción para mostrar solo tareas pendientes/en proceso
+2.2. Indicadores Visuales Mejorados
+Código de colores para diferentes estados
+Barras de progreso para visualizar cumplimiento
+Iconos para indicar prioridad y estado
+2.3. Panel de Resumen
+Métricas diarias: total de tareas, % de cumplimiento global
+Comparativa kilos programados vs. fabricados
+Tendencias de producción en periodo seleccionado
+3. Sistema de Control de Acceso Avanzado
+3.1. Permisos Granulares
+Restricción para modificar reportes cerrados
+Permisos específicos para finalizar días
+Roles para visualización vs. edición
+3.2. Sistema de Solicitudes
+Flujo para solicitar permisos de modificación de reportes cerrados
+Aprobación por administradores o supervisores senior
+Registro de auditoría de cambios
+4. Exportación y Reportes
+4.1. Exportación de Datos
+Generación de reportes en Excel/CSV
+Exportación a PDF para impresión
+Personalización de formatos de reporte
+4.2. Reportes Consolidados
+Vistas semanales/mensuales de producción
+Análisis por operador, máquina o producto
+Reportes de cumplimiento por cliente u orden
+5. Vista Consolidada de Timeline
+5.1. Mejoras de Visualización
+Código de colores por estado en timeline
+Indicadores de tareas fragmentadas
+Zoom y navegación mejorada
+5.2. Vistas Alternativas
+Vista de calendario con código de colores
+Diagrama de Gantt mejorado
+Vista de carga por operador/máquina
+6. Sistema de Notificaciones
+6.1. Alertas en Tiempo Real
+Notificaciones para tareas retrasadas
+Alertas de bajo cumplimiento
+Avisos para operadores sobre nuevas asignaciones
+6.2. Centro de Notificaciones
+Historial de notificaciones
+Configuración de preferencias por usuario
+Canales múltiples (in-app, email)
+7. Análisis Predictivo (Largo Plazo)
+7.1. Predicción de Capacidad
+Análisis de carga futura basado en historial
+Detección temprana de cuellos de botella
+Sugerencias de optimización de programación
+7.2. Optimización Automática
+Algoritmos para balanceo de carga
+Sugerencias de reasignación de operadores
+Optimización de secuencia de tareas
+Recomendación de Priorización
+Corto plazo (1-2 meses): Completar el sistema de fragmentación de tareas y mejoras básicas al reporte del supervisor
+Mediano plazo (2-4 meses): Implementar exportación, sistema de permisos y mejoras visuales
+Largo plazo (4+ meses): Desarrollar sistema de notificaciones y análisis predictivo
+Estas funcionalidades aumentarán significativamente la utilidad del sistema, mejorando tanto la experiencia del usuario como la eficiencia operativa de la planta de producción.
