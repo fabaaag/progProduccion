@@ -1,0 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+*{
+  margin:0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Open Sans" ,sans-serif;
+}
+.containerlight{
+  width: 100vw;
+  min-height: 100vh;
+  background: #fff;
+  transition: .5s;
+}
+.containerdark{
+  width: 100vw;
+  min-height: 100vh;
+  background: #222;
+  transition: .5s;
+  color: #fff;
+}
+.container{
+  transition: .5s;
+}
+
+/* Asegura que el cuerpo de la página ocupa todo el viewport */
+html, body, #root {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+}
+
+/* Estructura flex para mantener el footer abajo */
+#root {
+  display: flex;
+  flex-direction: column;
+}
+
+/* El contenido principal debe crecer para llenar el espacio disponible */
+.main-content {
+  flex: 1 0 auto;
+}
+
+/* El footer no debe crecer, sino mantener su tamaño */
+footer {
+  flex-shrink: 0;
+}

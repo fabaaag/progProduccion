@@ -1,0 +1,44 @@
+.table-modal-content {
+    max-width: 98% !important;
+    max-height: 90vh;
+}
+
+.modal-xl {
+    max-width: 95% !important;
+}
+
+.modal-body .table-responsive {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+.table-responsive table{
+    width:100%;
+}
+
+.table-responsive th,
+.table-responsive td {
+    white-space: nowrap;
+    padding: 12px 8px;
+    vertical-align: middle;
+}
+
+.table-responsive thead th {
+    background-color: #004b93;
+    color: white;
+    position: sticky;
+    top: 0;
+    z-index: 10;
+}
+
+/* Mejora para dispositivos móviles*/
+@media (max-width: 768px) {
+    .modal-xl {
+        max-width: 100% !important;
+        margin: 10px;
+    }
+
+    .table-modal-content {
+        max-height: 95vh;
+    }
+}

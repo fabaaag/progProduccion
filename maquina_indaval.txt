@@ -1,0 +1,175 @@
+
+CODIGO@SIGLA@DESCRIPCION@SECCION@CARGA@GOLPES
+1001@TIJE1 @TIJERA #1                                    @  @0000011796.14@0000
+1002@TIJE2 @TIJERA #2                                    @  @0000003647.40@0000
+1003@TIJEU1@TIJERA UNIVERSAL                             @  @0000005706.75@0000
+1004@GUILLO@GUILLOTINA                                   @  @0000017537.92@0000
+1112@CH-12 @PRENSA CHUN-ZU-12                            @  @0000000000.00@0065
+1201@PF-01 @PRENSA FRICCION #1                           @  @0000005139.14@0000
+1202@PF-02 @PRENSA FRICCION #2                           @  @0000001221.95@0000
+1203@PF-03 @PRENSA FRICCION #3                           @  @0000003687.86@0000
+1204@PF-04 @PRENSA FRICCION #4                           @  @0000001860.80@0000
+1205@PF-05 @PRENSA FRICCION #5                           @  @0000006697.98@0000
+1206@PF-06 @PRENSA FRICCION #6                           @  @0000000213.88@0000
+1207@PF-07 @PRENSA FRICCION #7                           @  @0000002324.29@0000
+1208@PF-08 @PRENSA FRICCION #8                           @  @0000000000.00@0000
+1209@PF-09 @PRENSA FRICCION #9                           @  @0000000000.00@0000
+1210@PF-10 @PRENSA FRICCION #10                          @  @0000002565.64@0000
+1211@PF-11 @PRENSA FRICCION #11                          @  @0000001542.51@0000
+1212@PF-12 @PRENSA FRICCION #12                          @  @0000000000.00@0000
+1213@PF13  @PRENSA FRICCION #13 ITALIANA                 @  @0000000000.00@0000
+1220@LASER @CORTADORA LASER                              @  @0000004277.20@0000
+1303@PR-3  @PRENSA EXCENTRICA #3                         @  @0000000000.00@0000
+1304@PR-4  @PRENSA EXCENTRICA #4                         @  @0000000000.00@0000
+1305@PR-5  @PRENSA EXCENTRICA #5                         @  @0000000100.31@0000
+1306@PR-6  @PRENSA EXCENTRICA #6                         @  @0000001520.53@0000
+1311@PE-11 @PRENSA EXCENTRICA #11                        @  @0000011280.47@0000
+1312@PE-12 @PRENSA EXCENTRICA #12                        @  @0000003105.16@0000
+1313@PE-13 @PRENSA EXCENTRICA #13                        @  @0000013436.50@0000
+1314@PE-14 @PRENSA EXCENTRICA #14                        @  @0000001373.11@0000
+1315@PE-15 @PRENSA EXCENTRICA #15                        @  @0000011822.56@0000
+1316@P.EX16@PRENSA EXCENTRICA #16                        @  @0000000000.00@0000
+1317@P.EX17@PRENSA EXCENTRICA #17                        @  @0000000000.00@0000
+1318@P.EX18@PRENSA EXCENTRICA #18                        @  @0000000000.00@0000
+1401@REFA01@REBARBADORA FAMAE #1                         @  @0000000000.00@0000
+1402@REFA02@REBARBADORA FAMAE #2                         @  @0000001931.10@0000
+1403@REFA03@REBARBADORA FAMAE #3                         @  @0000006064.81@0000
+1411@RENI01@REBARBADORA NIETO #1                         @  @0000000000.00@0000
+1412@RENI02@REBARBADORA NIETO #2                         @  @0000000000.00@0000
+1421@RE2CA @REBARBADORA DE 2 CABEZAS                     @  @0000000874.97@0000
+1431@RETOR @REBARBADORA TORTUGA #1                       @  @0000001737.54@0000
+1440@CT-12 @REBARBADORA CHUN-ZU-12                       @  @0000000000.00@0065
+1600@PU2CA @PUNTEADORA 2 CABEZAS                         @  @0000000295.32@0000
+1601@PUPE1 @PUNTEADORA DE PERNOS #1                      @  @0000008639.23@0000
+1611@PUCLA1@PUNTEADORA DE CLAVOS #1                      @  @0000000000.00@0000
+1612@PUCLA2@PUNTEADORA DE CLAVOS #2                      @  @0000000000.00@0000
+1621@PUTIR1@PUNTEADORA DE TIRAFONDOS #1                  @  @0000004168.69@0000
+1631@PUBAR1@PUNTEADORA DE BARRAS                         @  @0000000126.50@0000
+1811@LATIR1@LAMINADORA TIRAFONDOS #1                     @  @0000003966.67@0000
+1812@LATIR2@LAMINADORA TIRAFONDOS #2                     @  @0000000000.00@0000
+1835@LDR-15@LAMINADORA ZURZOLO (LDR)                     @  @0000000000.00@0000
+1840@DPR-12@LAMINADORA CHUN-ZU-12                        @  @0000000000.00@0098
+2001@T.PER1@TERRAJADORA PERNOS #1                        @  @0000000000.00@0000
+2002@TEPE2 @TERRAJADORA DE PERNOS #2                     @  @0000000935.52@0000
+2003@TEPE3 @TERRAJADORA DE PERNOS #3                     @  @0000001402.42@0000
+2004@TEPE4 @TERRAJADORA DE PERNOS #4                     @  @0000001773.47@0000
+2005@TEPE5 @TERRAJADORA DE PERNOS #5                     @  @0000000493.03@0000
+2006@TEPE6 @TERRAJADORA DE PERNOS #6                     @  @0000007419.25@0000
+2007@TEPE7 @TERRAJADORA DE PERNOS #7                     @  @0000000126.50@0000
+2008@TEPE8 @TERRAJADORA DE PERNOS #8                     @  @0000000000.00@0000
+2303@TETU3 @TERRAJADORA DE TUERCAS #3                    @  @0000000096.72@0000
+2304@TETU4 @TERRAJADORA DE TUERCAS #4                    @  @0000000000.00@0000
+2305@TETU5 @TERRAJADORA DE TUERCAS #5                    @  @0000000000.00@0000
+2306@TETU6 @TERRAJADORA DE TUERCAS #6                    @  @0000000000.00@0000
+2307@TETU7 @TERRAJADORA DE TUERCAS DE 2 BRAZOS           @  @0000000719.00@0000
+2401@RETU1 @REBARBADORA DE TUERCAS #1                    @  @0000000030.72@0000
+2402@RETU2 @REBARBADORA DE TUERCAS #2                    @  @0000000000.00@0000
+2501@TAL01 @TALADRO #1                                   @  @0000001394.74@0000
+2502@TAL02 @TALADRO #2                                   @  @0000000000.00@0000
+2503@TAL03 @TALADRO #3                                   @  @0000000000.00@0000
+2504@TAL04 @TALADRO #4                                   @  @0000000000.00@0000
+2505@TAL05 @TALADRO #5                                   @  @0000000000.00@0000
+2506@TAL06 @TALADRO #6                                   @  @0000000000.00@0000
+2507@TAL07 @TALADRO #7                                   @  @0000000000.00@0000
+2508@TAL08 @TALADRO #8                                   @  @0000000000.00@0000
+2601@AVETU1@AVELLANADORA #1                              @  @0000000030.72@0000
+2602@AVETU2@AVELLANADORA #2                              @  @0000000000.00@0000
+2603@AVETU3@AVELLANADORA #3                              @  @0000000000.00@0000
+2701@PELT-1@PELTZER #1                                   @  @0000000030.72@0000
+2702@PELT-2@PELTZER #2                                   @  @0000000000.00@0000
+2801@TEJCA1@TEJEDORA CADENA #1                           @  @0000000000.00@0000
+2802@TEJCA2@TEJEDORA CADENA #2                           @  @0000000000.00@0000
+3001@SOLCA1@SOLDADORA CADENAS #1                         @  @0000000000.00@0000
+3002@SOLCA2@SOLDADORA CADENAS #2                         @  @0000000000.00@0000
+3004@SOLCA4@SOLDADORA CADENAS #4                         @  @0000000000.00@0000
+3200@CHAV01@CHAVETERA                                    @  @0000000000.00@0000
+3401@SOL401@SOLDADORA AL ARCO #1                         @  @0000000000.00@0000
+3402@SOL402@SOLDADORA AL ARCO #2                         @  @0000000000.00@0000
+3421@SOLMI1@SOLDADORA MIG #1                             @  @0000012976.13@0000
+3422@SOLMI2@SOLDADORA MIG #2                             @  @0000000000.00@0000
+3501@P.PELS@PRENSA EXCENTRICA PELS                       @  @0000000000.00@0000
+3601@CORPU1@CORTADORA DE PUNTAS                          @  @0000000000.00@0000
+3801@TORNO1@TORNO DE PRODUCCION #1                       @  @0000000066.00@0000
+3802@TORNO2@TORNO DE PRODUCCION #2                       @  @0000000000.00@0000
+3810@TORNOG@TORNO GILDEMEISTER                           @  @0000000000.00@0000
+4001@ESME1 @ESMERIL #1                                   @  @0000000000.00@0000
+4002@ESME2 @ESMERIL #2                                   @  @0000011492.99@0000
+4003@ESME3 @ESMERIL #3                                   @  @0000000000.00@0000
+4004@ESME4 @ESMERIL #4                                   @  @0000000000.00@0000
+4201@SIECI1@SIERRA CIRCULAR #1                           @  @0000000020.47@0000
+4202@SIECI2@SIERRA CIRCULAR CAROLINA #2                  @  @0000000000.00@0000
+4221@SIEVA1@SIERRA DE VAIVEN #1                          @  @0000000000.00@0000
+4222@SIEVA2@SIERRA DE VAIVEN #2                          @  @0000000000.00@0000
+4223@SHARK @SIERRA SHARK 331 NC 5.0                      @  @0000000000.00@0000
+4401@HORNO1@HORNO #1                                     @  @0000000719.00@0000
+4402@HORNO2@HORNO #2                                     @  @0000000000.00@0000
+4403@HORNO3@HORNO #3                                     @  @0000000000.00@0000
+4600@BCOTRE@BANCO TREFILADOR                             @  @0000000000.00@0000
+4610@TRERO1@TREFILADORA ROLLOS                           @  @0000000000.00@0000
+4801@ARE1  @ARENADORA #1                                 @  @0000000000.00@0000
+5001@TAMPU1@TAMBOR PULIDOR #1                            @  @0000000000.00@0000
+6002@ACEITA@ACEITADO                                     @  @0000000000.00@0000
+6004@DECA  @DECAPADO                                     @  @0000000000.00@0000
+6006@DICRO @DICROMATADO                                  @  @0000000000.00@0000
+6008@GALVAN@GALVANIZADO                                  @  @0000000123.95@0000
+6010@PAVON @PAVONADO                                     @  @0000000000.00@0000
+6012@PINTAR@PINTADO                                      @  @0000000000.00@0000
+6018@ZINCAR@ZINCADO                                      @  @0000000000.00@0000
+6020@CALI  @CALIBRADO                                    @  @0000000000.00@0000
+6022@EMPLO @EMPLOMADO                                    @  @0000000000.00@0000
+6023@ENCAM @ENCAMIZADO                                   @  @0000000000.00@0000
+6024@LIMAR @LIMADO                                       @  @0000000000.00@0000
+6026@REPI  @REPICADO                                     @  @0000000000.00@0000
+6027@WEING @WEINGARTEN                                   @  @0000000000.00@0000
+7000@PLEGA @PLEGADORA NARGESA                            @  @0000000000.00@0000
+8000@S/M   @SIN MAQUINA                                  @  @0000007005.00@0000
+9000@O/I   @ORDENES INTERNAS                             @  @0000000000.00@0000
+9100@CARRET@CARRETERA                                    @  @0000000000.00@0000
+9110@INYEC1@INYECTORA DE PLASTICO                        @  @0000000561.60@0000
+9201@PRB1  @PRENSA BLISS  150 TONELADAS                  @  @0000000000.00@0000
+9202@PRB2  @PRENSA BLISS 50 TONELADAS                    @  @0000000000.00@0000
+9203@PRB3  @PRENSA BLISS 150 TONELADAS                   @  @0000000000.00@0000
+9204@PRB4  @PRENSA BLISS 300 TONELADAS                   @  @0000000000.00@0000
+9205@PRB5  @PRENSA BLISS 150 TONELADAS                   @  @0000000000.00@0000
+9206@PRB6  @PRENSA BLISS 150 TONELADAS                   @  @0000000000.00@0000
+9207@PRB7  @PRENSA BLISS 120 TONELADAS                   @  @0000000000.00@0000
+9208@PRB8  @PRENSA BLISS 30                              @  @0000000000.00@0000
+9209@PRB9  @PRENSA BLISS 30 TONELADAS                    @  @0000000000.00@0000
+9210@PRB10 @PRENSA BLISS 20 TONELADAS                    @  @0000000000.00@0000
+9211@PRB11 @PRENSA BLISS 20 TONELADAS                    @  @0000000000.00@0000
+9212@PRB12 @PRENSA BLISS 30 TONELADAS                    @  @0000000000.00@0000
+9213@PCH1  @PRENSA CHINA                                 @  @0000000000.00@0000
+9214@PCH2  @PRENSA CHINA                                 @  @0000000000.00@0000
+9215@PRN1  @PRENSA NATIONAL                              @  @0000000000.00@0000
+9216@PRP1  @PRENSA MANUAL PEDDINGHOUS                    @  @0000000000.00@0000
+9217@PEP1  @PRENSA ENMANGADORA                           @  @0000000000.00@0000
+9218@MAB1  @MARTINETE BECHE                              @  @0000000000.00@0000
+9219@CZA1  @CIZALLA AJIAL 8 X 2                          @  @0000000000.00@0000
+9220@CZS1  @CIZALLA SACMA                                @  @0000000000.00@0000
+9221@TAT1  @TALADRO TRADE MARK 16mm                      @  @0000000000.00@0000
+9222@TAB1  @TALADRO BENCH 13mm                           @  @0000000000.00@0000
+9223@TOS1  @TORNO SOUTE BEND                             @  @0000000000.00@0000
+9224@TOS1  @TORNO TABELLI ZUM                            @  @0000000000.00@0000
+9225@SPT1  @SOLDADORA PUNTO                              @  @0000000000.00@0000
+9226@SPT2  @SOLDADORA PUNTO SIEMENS                      @  @0000000000.00@0000
+9227@SPT3  @SOLDADORA PUNTO PANTERA                      @  @0000000000.00@0000
+9228@SVM1  @SIERRA VAIVEN MARVEL                         @  @0000000000.00@0000
+9229@CZP1  @CIZALLA PORTATIL BOSCH                       @  @0000000000.00@0000
+9230@CZA3  @CIZALLA ARCO CHILE                           @  @0000000000.00@0000
+9231@CZA4  @CIZALLA AB SVETSMEKANO                       @  @0000000000.00@0000
+9232@TAK1  @TALADRO K&K                                  @  @0000000000.00@0000
+9233@SMH1  @SOLDADORA MIG HOBART                         @  @0000000000.00@0000
+9234@DCS1  @DOBLADORA Y CORTADORA SCHNELL                @  @0000000000.00@0000
+9235@DOG1  @DOBLADORA GREENLEE ELECTRICA                 @  @0000000000.00@0000
+9236@DOG2  @DOBLADORA GREENLEE MANUAL                    @  @0000000000.00@0000
+9237@CLL1  @CORTADORA DE LLANTAS                         @  @0000000000.00@0000
+9238@RTO1  @RODONADORA TOLVA                             @  @0000000000.00@0000
+9239@RT02  @RODONADORA TOLVA                             @  @0000000000.00@0000
+9240@MAT1  @MESA ARMADO ALMA TOLVA                       @  @0000000000.00@0000
+9241@MET1  @MESON TRAZADO                                @  @0000000000.00@0000
+9242@MEP1  @MESON PLEGADO                                @  @0000000000.00@0000
+9243@MEA   @MESA ARMADO                                  @  @0000000000.00@0000
+9244@ARREG @ARREGLO MAQUINA                              @  @0000000000.00@0000
+9245@PREHI @PRENSA HIDRAULICA                            @  @0000000000.00@0000
+9246@MEREC @MESA RECUPERACION                            @  @0000000000.00@0000
+9247@INVENT@INVENTARIO                                   @  @0000000000.00@0000

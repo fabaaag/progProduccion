@@ -1,0 +1,185 @@
+.machine-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    cursor: pointer;
+    border: none;
+    background: white;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.machine-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1) !important;
+}
+
+.machine-info {
+    margin-top: 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.info-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    background-color: #f8f9fa;
+    border-radius: 6px;
+    transition: background-color 0.2s ease;
+}
+
+.info-item:hover {
+    background-color: #e9ecef;
+}
+
+.info-item .label {
+    font-weight: 500;
+    color: #6c757d;
+}
+
+.badge {
+    padding: 0.5em 0.8em;
+    font-weight: 500;
+}
+
+/* Status badges */
+.badge-operativa {
+    background-color: #28a745 !important;
+}
+
+.badge-mantencion {
+    background-color: #ffc107 !important;
+    color: #000 !important;
+}
+
+.badge-inoperativa {
+    background-color: #dc3545 !important;
+}
+
+/* Icons */
+.status-icon {
+    font-size: 1.2rem;
+    margin-right: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .col-md-6 {
+        margin-bottom: 1rem;
+    }
+}
+
+/* Loading state */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+/* Estilos para la paginación */
+.pagination {
+    margin-bottom: 2rem;
+}
+
+.pagination .page-item .page-link {
+    color: #004b93;
+    border: none;
+    padding: 0.5rem 1rem;
+    margin: 0 0.2rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #004b93;
+    color: white;
+}
+
+.pagination .page-item:not(.active) .page-link:hover {
+    background-color: #e9ecef;
+    color: #004b93;
+    transform: translateY(-2px);
+}
+
+.pagination .page-item.disabled .page-link {
+    color: #6c757d;
+    pointer-events: none;
+    background-color: #fff;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.machine-types {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.machine-types .badge {
+    font-size: 0.75rem;
+    padding: 0.35em 0.65em;
+}
+
+.remaining-types {
+    cursor: help;
+    transition: all 0.2s ease;
+}
+
+.remaining-types:hover {
+    background-color: #4a5568;
+}
+
+.tooltip {
+    font-size: 0.8rem;
+}
+
+.tooltip-inner {
+    max-width: 200px;
+    padding: 0.5rem;
+}
+
+/* Estilos para el campo de búsqueda */
+.search-input-group {
+    position: relative;
+}
+
+.search-input-group .search-icon {
+    background: none;
+    border: none;
+    border-right: none;
+    color: #6c757d;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    z-index: 4;
+}
+
+.search-input-group .search-input {
+    border: 1px solid #ced4da;
+    border-radius: 8px;
+    padding: 0.5rem 0.5rem 0.5rem 35px;
+    height: 40px;
+}
+
+.search-input-group .search-input:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+    border-color: #80bdff;
+}

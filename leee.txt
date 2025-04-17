@@ -1,0 +1,1 @@
+solucionar la vista de lista de ot y añadir los filtros para que no sea vea tan horrible

@@ -1,0 +1,19 @@
+.tabla-base {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+.tabla-base th {
+    background-color: #f0f0f0;
+    font-weight: 600;
+}
+
+.tabla-base th, .tabla-base td{
+    padding: 0.75rem;
+    vertical-align: middle;
+}
+
+.tabla-base tbody tr:hover {
+    background-color: rgba(0, 123, 255, 0.05);
+}

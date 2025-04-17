@@ -1,0 +1,45 @@
+.footer {
+    background: linear-gradient(to right, #1a1a1a, #2c3e50);
+    padding: 1rem 0;
+    margin-top: auto;
+}
+
+.footer-content {
+    padding: 0.5rem 2rem;
+}
+
+.footer-logo {
+    width: 40px;
+    height: auto;
+    margin-right: 1rem;
+    vertical-align: middle;
+}
+
+.company-name {
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 1rem;
+    vertical-align: middle;
+}
+
+.version-info {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin-bottom: 0.25rem;
+}
+
+.copyright {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 0.85rem;
+    margin-bottom: 0;
+}
+
+@media (max-width: 768px) {
+    .footer-content {
+        text-align: center;
+        padding: 1rem;
+    }
+    
+    .copyright {
+        margin-top: 0.5rem;
+    }
+}

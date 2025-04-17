@@ -1,0 +1,290 @@
+/* ProductosList.css */
+.productos-list-container {
+  width: 100%;
+  padding: 15px;
+}
+
+.productos-card {
+  border-radius: 6px;
+  box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+}
+
+.productos-card .card-header {
+  background-color: #0d6efd;
+  color: white;
+  border-radius: 5px 5px 0 0;
+  padding: 10px 15px;
+  font-weight: 500;
+}
+
+.productos-table thead th {
+  background-color: #f8f9fa;
+  border-bottom: 2px solid #dee2e6;
+  color: #495057;
+  font-weight: 500;
+}
+
+.productos-table tbody tr:hover {
+  background-color: rgba(13, 110, 253, 0.05);
+}
+
+.filtros-avanzados {
+  background-color: #f8f9fa;
+  padding: 15px;
+  border-radius: 4px;
+  border: 1px solid #dee2e6;
+  margin-bottom: 15px;
+}
+
+.btn-primary {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+}
+
+.btn-primary:hover {
+  background-color: #0b5ed7;
+  border-color: #0a58ca;
+}
+
+.btn-secondary {
+  background-color: #6c757d;
+  border-color: #6c757d;
+}
+
+.productos-table {
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+.pagination .page-item .page-link {
+  color: #0d6efd;
+  background-color: #fff;
+  border: 1px solid #dee2e6;
+}
+
+.pagination .page-item.active .page-link {
+  background-color: #0d6efd;
+  border-color: #0d6efd;
+  color: white;
+}
+
+.pagination .page-item .page-link:hover {
+  background-color: #e9ecef;
+  border-color: #dee2e6;
+  color: #0d6efd;
+}
+
+.producto-detalle-modal .modal-header {
+  background-color: #0d6efd;
+  color: white;
+}
+
+.nav-tabs .nav-link {
+  color: #495057;
+}
+
+.nav-tabs .nav-link.active {
+  color: #0d6efd;
+  font-weight: 500;
+}
+
+.form-control:focus {
+  border-color: #86b7fe;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25);
+}
+
+/* Modal de detalles */
+.modal-90w {
+  width: 95%;
+  max-width: 1000px;
+}
+
+.producto-info-container,
+.ruta-fabricacion-container,
+.datos-produccion-container {
+  padding: 10px;
+}
+
+.info-section {
+  margin-bottom: 20px;
+}
+
+.info-section h5 {
+  color: #004b93;
+  font-weight: 500;
+}
+
+.observaciones-alert {
+  font-style: italic;
+  border-left: 3px solid #004b93;
+}
+
+/* Tabla de rutas */
+.ruta-table th {
+  font-weight: 500;
+  background-color: #e9ecef;
+}
+
+.proceso-count {
+  font-size: 0.9rem;
+}
+
+/* Datos de producción */
+.placeholder-card {
+  text-align: center;
+  transition: all 0.3s;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+}
+
+.placeholder-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+.placeholder-value {
+  font-size: 1.4rem;
+  font-weight: 500;
+  color: #004b93;
+  margin-top: 0.5rem;
+}
+
+@media (max-width: 768px) {
+  .productos-list-container {
+    padding: 10px;
+  }
+  
+  .pagination {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+
+
+/* Estilos para el diagrama de flujo de procesos */
+.proceso-flow-container {
+  display: flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  overflow-x: auto;
+  padding: 20px 10px;
+  min-height: 150px;
+}
+
+.proceso-step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 160px;
+  padding: 15px;
+  border-radius: 8px;
+  background-color: #f8f9fa;
+  border: 1px solid #dee2e6;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: relative;
+}
+
+.proceso-number {
+  position: absolute;
+  top: -12px;
+  left: -12px;
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+  background-color: #004b93;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  font-size: 0.8rem;
+}
+
+.proceso-icon {
+  font-size: 1.8rem;
+  color: #004b93;
+  margin-bottom: 10px;
+}
+
+.proceso-content {
+  text-align: center;
+  width: 100%;
+}
+
+.proceso-title {
+  font-weight: 600;
+  margin-bottom: 5px;
+  font-size: 0.9rem;
+}
+
+.proceso-machine {
+  font-size: 0.8rem;
+  color: #6c757d;
+  margin-bottom: 5px;
+}
+
+.proceso-standard {
+  font-size: 0.75rem;
+  font-weight: 500;
+  padding: 2px 8px;
+  background-color: #e9ecef;
+  border-radius: 20px;
+  display: inline-block;
+}
+
+.proceso-arrow {
+  margin: 0 10px;
+  color: #6c757d;
+  font-size: 1.2rem;
+  flex-shrink: 0;
+}
+
+/* Para hacer responsive el diagrama en móviles */
+@media (max-width: 768px) {
+  .proceso-flow-container {
+    padding-bottom: 15px;
+  }
+  
+  .proceso-step {
+    min-width: 140px;
+    padding: 10px;
+  }
+}
+
+/* Estilos para el diagrama de flujo en RutaFabricacionTab */
+.flow-diagram {
+    overflow-x: auto;
+    padding: 15px 0;
+}
+
+.flow-step {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 5px;
+}
+
+.flow-step .badge {
+    margin-bottom: 8px;
+}
+
+.process-box {
+    border: 1px solid #dee2e6;
+    border-radius: 8px;
+    padding: 10px;
+    min-width: 120px;
+    text-align: center;
+    background-color: #f8f9fa;
+}
+
+.flow-arrow {
+    margin: 0 10px;
+    color: #6c757d;
+}
+
+/* Estilos para la pestaña de ruta de fabricación */
+.ruta-fabricacion-container {
+    padding: 15px 0;
+}

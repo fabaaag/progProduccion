@@ -1,0 +1,55 @@
+.piezas-list-container {
+    padding: 20px;
+    width: 100%;
+  }
+  
+  .piezas-card {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .piezas-table thead th {
+    background-color: #f8f9fa;
+    border-bottom: 2px solid #dee2e6;
+  }
+  
+  .piezas-table tbody tr:hover {
+    background-color: #f8f9fa;
+    cursor: pointer;
+  }
+  
+  .search-filters {
+    margin-bottom: 20px;
+  }
+  
+  .filter-buttons {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
+  .custom-pagination {
+    margin-top: 20px;
+    text-align: right;
+  }
+  
+  @media (max-width: 768px) {
+    .filter-buttons {
+      justify-content: flex-start;
+      margin-top: 10px;
+    }
+    
+    .piezas-list-container {
+      padding: 10px;
+    }
+    
+    .custom-pagination {
+      text-align: center;
+    }
+    
+    .pagination {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }

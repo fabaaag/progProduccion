@@ -1,0 +1,252 @@
+:root{
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+.dark{
+    --background-color: #1a1a1a;
+    --text-color: #f0f0f0;
+}
+
+.light{
+    --background-color: #ffffff;
+    --text-color: #000000;
+}
+
+.navbar{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px 7%;
+    transition: .5s;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+.navbar .nv-logo-container{
+    display: flex;
+    align-items: center;
+    justify-content: left;
+    gap: 15px;
+    cursor: pointer;
+    color: #030303;
+}
+
+.navbar .logo{
+    width: 5%;
+}
+
+.toggle-icon{
+    width: 3%;
+    cursor: pointer;
+}
+
+
+.navbar.dark ul li:hover{
+    text-shadow: 1px 1px 1px gray;
+    transition: .2s;
+}
+
+.navbar-custom {
+    background: linear-gradient(to right, #1a1a1a, #2c3e50) !important;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    padding: 0.75rem 0;
+}
+
+.brand-container {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+}
+
+.brand-logo {
+    width: 35px;
+    height: 35px;
+    transition: transform 0.3s ease;
+}
+
+.brand-text {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #fff;
+    letter-spacing: 0.5px;
+}
+
+.nav-links {
+    margin-left: 2rem;
+}
+
+.nav-dropdown-title {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.nav-icon {
+    font-size: 1.1rem;
+    opacity: 0.9;
+    transition: all 0.2s ease;
+}
+
+/* Estilo para los dropdowns */
+.custom-dropdown {
+    margin: 0 0.5rem;
+}
+
+.custom-dropdown .dropdown-toggle::after {
+    display: none !important;
+}
+
+.custom-dropdown .dropdown-menu {
+    background-color: #2c3e50;
+    border: none;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    border-radius: 8px;
+    margin-top: 0.5rem;
+    min-width: 200px;
+    padding: 0.5rem 0;
+    transform-origin: top;
+    animation: dropdownAnimation 0.2s ease forwards;
+    display: block;
+    opacity: 0;
+    visibility: hidden;
+}
+
+.custom-dropdown.show .dropdown-menu {
+    opacity: 1;
+    visibility: visible;
+}
+
+@keyframes dropdownAnimation {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.custom-dropdown .dropdown-item {
+    color: rgba(255, 255, 255, 0.85);
+    padding: 0.75rem 1.5rem;
+    transition: all 0.2s ease;
+}
+
+.custom-dropdown .dropdown-item:hover {
+    background-color: rgba(0, 75, 147, 0.8);
+    color: white;
+}
+
+.custom-dropdown .dropdown-divider {
+    border-top-color: rgba(255, 255, 255, 0.1);
+    margin: 0.5rem 0;
+}
+
+/* Estilo hover para los dropdowns */
+.custom-dropdown:hover .nav-dropdown-title {
+    color: white;
+    background-color: rgba(255, 255, 255, 0.1);
+    transform: translateY(-1px);
+}
+
+/* Estilo especial para el dropdown de usuario */
+.user-dropdown {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    margin-left: 1rem;
+    min-width: auto;
+    white-space: nowrap;
+}
+
+.user-dropdown:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.user-dropdown .nav-dropdown-title {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    .navbar-custom {
+        padding: 0.5rem 1rem;
+    }
+
+    .nav-links {
+        margin-left: 0;
+        padding: 1rem 0;
+    }
+
+    .custom-dropdown {
+        margin: 0.25rem 0;
+    }
+
+    .nav-dropdown-title {
+        padding: 0.75rem 1rem;
+        justify-content: flex-start;
+    }
+
+    /* Asegurar que el botón de usuario sea visible */
+    .user-dropdown {
+        margin: 0.5rem 0;
+        width: 100%;
+        text-align: left;
+    }
+
+    /* Mejorar el menú colapsado */
+    .navbar-collapse {
+        background: linear-gradient(to right, #1a1a1a, #2c3e50);
+        padding: 1rem;
+        border-radius: 0 0 8px 8px;
+        box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    }
+
+    /* Mejorar visibilidad del botón toggle */
+    .navbar-toggler {
+        border: none;
+        padding: 0.5rem;
+    }
+
+    .navbar-toggler:focus {
+        box-shadow: none;
+    }
+
+    /* Ajustar el dropdown del usuario en móvil */
+    .user-dropdown .nav-dropdown-title {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .custom-dropdown .dropdown-menu {
+        position: static !important;
+        width: 100%;
+        margin: 0.25rem 0;
+        padding: 0.5rem 0;
+        transform: none !important;
+        animation: none;
+    }
+}
+
+/* Mejorar la transición del navbar collapse */
+.navbar-collapse {
+    transition: all 0.3s ease;
+}
+
+.navbar-collapse.collapsing {
+    height: auto;
+}
+
+.custom-dropdown:hover .nav-icon {
+    opacity: 1;
+    transform: scale(1.1);
+}

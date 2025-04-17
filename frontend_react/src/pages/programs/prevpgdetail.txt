@@ -1,0 +1,741 @@
+import React, { useEffect, useState } from "react";
+import { useParams, Link, redirect } from "react-router-dom";
+import { Button, Dropdown, Form } from "react-bootstrap";
+import { ReactSortable } from "react-sortablejs";
+import CompNavbar from "../../components/Navbar/CompNavbar";
+import { Footer } from "../../components/Footer/Footer";
+import { getProgram, updatePriorities, deleteOrder, getMaquinas, generateProgramPDF } from "../../api/programs.api";
+import { getAllOperators } from "../../api/operator.api";
+import { crearAsignacion, obtenerAsignacionesPrograma } from "../../api/asignaciones.api";
+import Timeline from "react-calendar-timeline";
+import "react-calendar-timeline/dist/Timeline.scss";
+import { toast } from "react-hot-toast";
+
+
+export function ProgramDetail() {
+    const { programId } = useParams();
+    const [programData, setProgramData] = useState(null);
+    const [loading, setLoading] = useState(true);
+    const [otList, setOtList] = useState([]);
+    const [timelineItems, setTimelineItems] = useState([]);
+    const [showTimeline, setShowTimeline] = useState(false); // Control para mostrar el timeline
+    const [timelineLoading, setTimelineLoading] = useState(false);
+    const [timelineGroups, setTimelineGroups] = useState([]);
+
+    const [expandedOTs, setExpandedOTs] = useState({});
+    const [maquinas, setMaquinas] = useState([]);
+
+    const [pendingChanges, setPendingChanges] = useState({});
+    const [savingChanges, setSavingChanges] = useState(false);
+    const [operadores, setOperadores] = useState([]);
+
+    
+
+    const handleProcessChange = (otId, procesoId, field, value) => {
+        if(!otList){
+            console.error('otList no está inicializado.');
+            return;
+        }
+    
+        console.log(`Cambio pendiente en OT: ${otId}, Proceso: ${procesoId}, Campo: ${field}, Valor: ${value}`);
+    
+        setOtList(prevOtList => {
+            if(!prevOtList) return [];  // Retornamos array vacío si es undefined
+    
+            const newList = prevOtList.map(ot => {
+                if(ot.orden_trabajo === otId && ot.procesos){
+                    return{
+                        ...ot,
+                        procesos: ot.procesos.map(proceso => {
+                            if(proceso.id === procesoId){
+                                return {
+                                    ...proceso,
+                                    [field]: value
+                                };
+                            }
+                            return proceso;
+                        })
+                    };
+                }
+                return ot;
+            });
+            return newList;
+        });
+
+        setPendingChanges(prev => {
+            const newChanges = {
+                ...prev,
+                [`${otId}-${procesoId}-${field}`]: {
+                    otId,
+                    procesoId,
+                    field,
+                    value
+                }
+            };
+            console.log('Cambios pendientes:', newChanges);
+            return newChanges;
+        });
+
+        toast('Hay cambios pendientes por guardar', {
+            icon: '⚠️',
+            style: {
+                borderRadius: '10px',
+                background: '#333',
+                color: '#fff'
+            },
+        });
+    };
+
+    const handleSaveChanges = async () => {
+        if (!otList || otList.length === 0) {
+            console.error("No hay OTs para guardar");
+            toast.error("No hay OTs para guardar");
+            return;
+        }
+    
+        setSavingChanges(true);
+        try {
+            // 1. Primero guardamos las asignaciones pendientes
+            const asignacionesPendientes = Object.entries(pendingChanges)
+                .filter(([key]) => key.includes('_asignacion'))
+                .map(([_, data]) => data);
+    
+            console.log("Asignaciones pendientes a guardar:", asignacionesPendientes);
+    
+            for (const asignacionData of asignacionesPendientes) {
+                await crearAsignacion(asignacionData);
+            }
+    
+            // 2. Luego actualizamos las prioridades de las OTs
+            const updatedOrders = otList.map((ot, index) => ({
+                id: ot.orden_trabajo,
+                priority: index + 1,
+                procesos: ot.procesos?.map(proceso => ({
+                    id: proceso.codigo_proceso,
+                    estandar: proceso.estandar || 0,
+                    maquina_id: proceso.maquina_id,
+                    operador_id: proceso.operador_id  // Agregamos el operador_id
+                })) || []
+            }));
+    
+            console.log("Datos de OTs a actualizar:", updatedOrders);
+            
+            const response = await updatePriorities(programId, updatedOrders);
+            console.log("Respuesta del servidor:", response);
+    
+            // Actualizar el estado con la respuesta
+            if (response.ordenes_trabajo) {
+                setOtList(response.ordenes_trabajo);
+            }
+    
+            if (response.routes_data?.items) {
+                setTimelineItems(response.routes_data.items.map(item => ({
+                    id: item.id,
+                    group: `${item.ot_id}-${item.proceso_id}`,
+                    title: `${item.name} (Restantes: ${item.unidades_restantes})`,
+                    start_time: new Date(item.start_time + 'Z'),
+                    end_time: new Date(item.end_time + 'Z'),
+                    itemProps: {
+                        style: {
+                            backgroundColor: '#4CAF50',
+                            color: 'white',
+                            borderRadius: '4px',
+                            padding: '2px 6px',
+                            opacity: 1 - (item.unidades_restantes / item.cantidad_total)
+                        }
+                    }
+                })));
+            }
+    
+            setPendingChanges({});
+            toast.success('Cambios guardados correctamente');
+        } catch (error) {
+            console.error("Error al guardar los cambios:", error);
+            toast.error("Error al guardar los cambios");
+        } finally {
+            setSavingChanges(false);
+        }
+    };
+
+
+    const handleToggleExpand = (otId) => {
+        setExpandedOTs((prevExpanded) => ({
+            ...prevExpanded,
+            [otId]: !prevExpanded[otId]
+        }));
+    };
+
+
+    const toggleTimeline = () => {
+        if (!showTimeline) {
+            setTimelineLoading(true);
+            setTimeout(() => setTimelineLoading(false), 1000); // Simula carga
+        }
+        setShowTimeline(!showTimeline);
+    };
+
+
+
+
+    useEffect(()=> {
+        const fetchData = async () => {
+            if(!programId){
+                console.error("No hay programId disponible");
+                return;
+            }
+            try{
+                const maquinasData = await getMaquinas(programId);
+                
+                setMaquinas(maquinasData);
+
+                const operadoresData = await getAllOperators();
+                
+                setOperadores(operadoresData);
+                
+            }catch(error){
+                console.error("Error al cargar datos:", error);
+                toast.error("Error al cargar ldatos");
+            }
+        };
+        fetchData();
+    }, [programId])
+
+
+
+    useEffect(() => {
+        if (!programId) {
+            console.error("No se proporcionó un programId");
+            return;
+        }
+    
+        const fetchProgramData = async () => {
+            setLoading(true);
+            try {
+                const response = await getProgram(programId);
+                
+                // Actualizar los datos generales del programa
+                setProgramData(response.program || {});
+
+                // Procesar las órdenes de trabajo y sus asignaciones
+                const ordenesTrabajo = response.ordenes_trabajo || [];
+                setOtList(ordenesTrabajo.map(ot => ({
+                    ...ot,
+                    procesos: ot.procesos.map(proceso => ({
+                        ...proceso,
+                        //Agregar información de asignación si existe
+                        operador_id: proceso.asignacion?.operador_id || null,
+                        operador_nombre: proceso.asignacion?.operador_nombre || null,
+                        fecha_inicio: proceso.asignacion?.fecha_inicio || null,
+                        fecha_fin: proceso.asignacion?.fecha_fin || null,
+                    }))
+                })));
+    
+                // Validar y procesar los datos del timeline
+                if (response.routes_data && typeof response.routes_data === "object") {
+                    const { groups, items } = response.routes_data;
+    
+                    // Validar grupos y convertirlos si están disponibles
+                    if (Array.isArray(groups)) {
+                        const processedGroups = groups.map(ot => ({
+                            id: ot.id,
+                            title: ot.orden_trabajo_codigo_ot || "OT Sin código",
+                            stackItems: false,
+                            height: 70,
+                            subgroups: ot.procesos?.map(proceso =>({
+                                id: `${ot.id}-${proceso.id}`,
+                                title: proceso.descripcion,
+                                parent:ot.id,
+                                height: 50,
+                            })) || []
+                        }));
+
+                        //Aplanar la estructura para el Timeline
+                        const flatGroups = processedGroups.reduce((acc, group)=>{
+                            acc.push({
+                                id: group.id,
+                                title: group.title,
+                                height: group.height,
+                                stackItems: true
+                            });
+                            group.subgroups.forEach(subgroup => {
+                                acc.push({
+                                    id: subgroup.id,
+                                    title: subgroup.title,
+                                    parent: subgroup.parent,
+                                    height: subgroup.height
+                                });
+                            });
+                            return acc;
+                        }, []);
+                        setTimelineGroups(flatGroups);
+                    } 
+    
+                    // Procesar elementos de rutas
+                    if (Array.isArray(items)) {
+                        const timelineItems = items.map((item) => ({
+                            id: item.id,
+                            group: `${item.ot_id}-${item.proceso_id}`,
+                            title: item.name || item.title || "Sin texto",
+                            start_time: new Date(item.start || item.start_time),
+                            end_time: new Date(item.end || item.end_time),
+                            itemProps: {
+                                style: {
+                                    backgroundColor: new Date(item.end || item.end_time) < new Date() ? "#ff4444" : "#4CAF50",
+                                    color: 'white',
+                                    borderRadius: '4px',
+                                    padding: '2px',
+                                    marginBottom: '10px',    
+                                },
+                            },
+                            canMove: true,
+                            canResize: false,
+                        }));
+                       setTimelineItems(timelineItems);
+                    }
+                }
+
+                //Procesar las asignaciones si existen
+                if(response.ordenes_trabajo){
+                    console.log("OT con asignaciones:", response.ordenes_trabajo);
+                }
+            } catch (error) {
+                console.error("Error al cargar detalles del programa:", error);
+                toast.error("Error al cargar los datos");
+            } finally {
+                setLoading(false);
+            }
+        };
+    
+        fetchProgramData();
+    }, [programId]);
+    
+
+    const handleOperadorChange = async (proceso, operadorId) => {
+        try {
+            const timelineItem = timelineItems.find(item => {
+                if (!item || !item.id) return false;
+                const itemIdParts = item.id.split('_');
+                return parseInt(itemIdParts[1]) === proceso.id;
+            });
+
+            if(!timelineItem){
+                toast.error('Error: No se encontró la programación del proceso')
+                return;
+            }
+
+            const asignacionData = {
+                operador_id: operadorId,
+                item_ruta: proceso.id,
+                programa: programaId,
+                fecha_inicio: timelineItem.start_time.toISOString(),
+                fecha_fin: timelineItem.end_time.toISOString()
+            };
+
+            //Actualizar el estado local
+            setOtList(prevOtList => 
+                prevOtList.map(ot => ({
+                    ...ot,
+                    procesos: ot.procesos.map(p =>
+                        p.id === proceso.id
+                            ? {
+                                ...p,
+                                operador_id: operadorId,
+                                asignacion: {
+                                    ...p.asignacion,
+                                    operador_id: operadorId,
+                                    fecha_inicio: timeline.start_time,
+                                    fecha_fin: timelineItem.end_time
+                                }
+                            }
+                            : p
+                    )
+                }))
+            );
+
+            setPendingChanges(prev => ({
+                ...prev,
+                [`${proceso.id}_asignacion`]: asignacionData
+            }));
+
+        } catch (error) {
+            console.error('Error al preparar asignación:', error);
+            toast.error('Error al preparar la asignación');
+        }
+    }
+    
+
+
+    const handleDeleteOrder = async (orderId) => {
+        console.log(orderId, programId);
+        if(window.confirm("¿Estás seguro que deseas eliminar esta orden de trabajo?")){
+            setLoading(true);
+            try{
+                const result = await deleteOrder(programId, orderId);
+                if(result && result.deleted > 0){
+                setOtList(otList.filter((ot) => ot.orden_trabajo !== orderId));
+                console.log("Orden de trabajo eliminada exitósamente.");
+                }else{
+                    console.error("Error al eliminar la orden de trabajo:", result);
+                    alert("No se pudo eliminar la orden de trabajo");
+                }
+            }catch(error){
+                console.error("Error al eliminar la orden de trabajo:", error);
+                alert(error.message ||"Error al eliminar la orden de trabajo");
+            }finally{
+                setLoading(false);
+            }
+        }
+    };
+
+    const handleOtReorder = (newOtList) => {
+        console.log("Nueva lista recibida: ", newOtList);
+        setOtList(newOtList);
+
+        const updatedGroups = newOtList.flatMap(ot => {
+            const mainGroup = {
+                id: `ot_${ot.orden_trabajo}`,
+                title: ot.orden_trabajo_codigo_ot,
+                height: 50,
+                stackItems: true
+            };
+
+            const processGroups = ot.procesos.map(proceso => ({
+                id: `${mainGroup.id}-${proceso.id}`,
+                title: proceso.descripcion,
+                parent: mainGroup.id,
+                height: 30
+            }));
+
+            return [mainGroup, ...processGroups];
+        });
+
+        setTimelineGroups(updatedGroups);
+
+        const orderIds = newOtList.map((ot, index) => ({
+                id: ot.orden_trabajo,
+                priority: index + 1
+        })).filter(item => item !== null);
+
+        console.log("Actualizando prioridades: ", orderIds);
+        setLoading(true);
+
+        updatePriorities(programId, orderIds)
+            .then((response) => {
+                console.log("Prioridades actualizadas:", response);
+
+                if (response.routes_data?.items) {
+                    const serverItems = response.routes_data.items.map(item => ({
+                        id: item.id,
+                        group: `${item.ot_id}-${item.proceso_id}`,
+                        title: `${item.name} (Restantes: ${item.unidades_restantes})`,
+                        start_time: new Date(item.start_time + 'Z'),  // Añadimos Z para asegurar que se interprete en UTC
+                        end_time: new Date(item.end_time + 'Z'),      // Añadimos Z para asegurar que se interprete en UTC
+                        itemProps: {
+                            style: {
+                                backgroundColor: '#4CAF50',
+                                color: 'white',
+                                borderRadius: '4px',
+                                padding: '2px 6px',
+                                opacity: 1 - (item.unidades_restantes / item.cantidad_total)
+                            }
+                        }
+                    }));
+                    setTimelineItems(serverItems);
+                }
+            })
+            .catch((error) => {
+                console.error("Error al actualizar prioridades", error);
+                alert("Error al actualizar el orden de las OTs");
+            })
+            .finally(() => {
+                setLoading(false);
+            });
+    };
+
+    const renderOt = (ot) => {
+        // Verificar cambios pendientes solo para esta OT específica
+        const hasPendingChanges = Object.keys(pendingChanges).some(key => {
+            if (key.includes('_asignacion')) {
+                // Verificar si algún proceso de esta OT tiene cambios pendientes
+                return ot.procesos.some(proceso => 
+                    key === `${proceso.id}_asignacion`  // Cambiado de codigo_proceso a id
+                );
+            }
+            //Verificar cambios de máquina
+            if (key.includes('maquina_id')){
+                return ot.procesos.some(proceso => 
+                    key === `${ot.orden_trabajo}-${proceso.id}-maquina_id`
+                );
+            }
+            return false;
+        }); 
+
+        if (!ot) return null;
+
+        return (
+            <div
+                key={ot.orden_trabajo}
+                className="list-group-item"
+                style={{
+                    border: "1.5px solid",
+                    borderRadius: "5px",
+                    backgroundColor: "lavender",
+                    padding: "10px",
+                    textAlign: "center",
+                    marginBottom: "5px",
+                }}
+            >
+                <div className="d-flex justify-content-between align-items-center">
+                    <div className="d-flex align-items-center">
+                        <span className="me-3">{ot.orden_trabajo_codigo_ot || "Sin código"}</span>
+                        <span>{ot.orden_trabajo_descripcion_producto_ot || "Sin descripción"}</span>
+                        <span className="ms-3">{ot.orden_trabajo_fecha_termino || "Sin fecha"}</span>
+                    </div>
+                    <div className="d-flex align-items-center">
+                        {hasPendingChanges && (
+                            <Button
+                                variant="success"
+                                size="sm"
+                                onClick={handleSaveChanges}
+                                disabled={savingChanges}
+                                className="me-2"
+                            >
+                                {savingChanges ? "Guardando..." : "Guardar"}
+                            </Button>
+                        )}
+                        <Button
+                            variant="outline-primary"
+                            size="sm"
+                            onClick={() => handleToggleExpand(ot.orden_trabajo)}
+                        >
+                            {expandedOTs[ot.orden_trabajo] ? "Ocultar" : "Mostrar"}
+                        </Button>
+                    </div>
+                </div>
+                {/*Contenido expandible */}
+                {expandedOTs[ot.orden_trabajo] && (
+                <div className="mt-3">
+                    <table className="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th>#</th>
+                                <th>Proceso</th>
+                                <th>Máquina</th>
+                                <th>Operador</th>
+                                <th>Cantidad</th>
+                                <th>Estandar</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {ot.procesos?.map((proceso) => (
+                                <tr key={proceso.id}>
+                                    <td>{proceso.item}</td>
+                                    <td>
+                                        <input 
+                                        type="text" 
+                                        className="form-control" 
+                                        value={`${proceso.codigo_proceso} - ${proceso.descripcion}`}
+                                        disabled
+                                        />
+                                    </td>
+                                    <td>
+                                        <select 
+                                        className="form-control" 
+                                        value={proceso.maquina_id || ''}
+                                        onChange={(e) => handleProcessChange(
+                                            ot.orden_trabajo,
+                                            proceso.id,
+                                            "maquina_id",
+                                            e.target.value
+                                            
+                                        )}
+                                        >
+                                            <option value="">Seleccione una máquina</option>
+                                            {maquinas?.map(maquina => (
+                                                <option
+                                                    value={maquina.id}
+                                                    key={maquina.id}
+                                                >
+                                                    {maquina.codigo_maquina} - {maquina.descripcion}
+                                                </option>
+                                            ))}
+                                        </select>
+                                    </td>
+                                    <td>
+                                        {proceso.asignacion ? (
+                                            // Si hay operador asignado, mostrar como texto con botón de desasignación
+                                            <div className="d-flex align-items-center">
+                                                <input 
+                                                    type="text" 
+                                                    className="form-control" 
+                                                    value={proceso.operador_asignado.operador_nombre}
+                                                    disabled
+                                                    title={`Asignado el: ${proceso.operador_asignado.fecha_asignacion}`}
+                                                />
+                                                <Button
+                                                    variant="outline-danger"
+                                                    size="sm"
+                                                    onClick={() => handleOperadorChange(proceso, null)}
+                                                    title="Desasignar Operador"
+                                                >
+                                                    <i className="bi bi-x-circle"></i>
+                                                </Button>
+
+                                            </div>
+                                        ) : (
+                                            // Si no hay operador asignado, mostrar el select original
+                                            <select
+                                                className='form-control'
+                                                value={proceso.operador_id ? proceso.operador_id.toString() : ''}
+                                                onChange={(e) => handleOperadorChange(proceso, e.target.value)}
+                                                disabled={!proceso.maquina_id}
+                                            >
+                                                <option value="">Seleccione un operador</option>
+                                                {operadores?.map(operador =>(
+                                                <option
+                                                    key={operador.id}
+                                                    value={operador.id}
+                                                >
+                                                    {operador.nombre}
+                                                </option>
+                                                ))}
+                                            </select>
+                                        )}
+                                    </td>
+                                    <td>
+                                        <input 
+                                        type="number" 
+                                        className="form-control"
+                                        value={proceso.cantidad} 
+                                        onChange={(e) => handleProcessChange(
+                                            ot.orden_trabajo,
+                                            proceso.id,
+                                            'cantidad',
+                                            parseInt(e.target.value, 10)
+                                        )}
+                                        />
+                                    </td>
+                                    <td>
+                                        <Form.Control 
+                                            type="number"
+                                            value={proceso.estandar || 0}
+                                            onChange={(e) => {
+                                                const newValue = parseFloat(e.target.value);
+                                                handleProcessChange(
+                                                    ot.orden_trabajo,
+                                                    proceso.id,
+                                                    'estandar',
+                                                    parseFloat(e.target.value)
+                                                );
+                                            }}
+                                            min="0"
+                                            step="1"
+                                        />
+                                    </td>
+                                </tr>
+                            ))}
+                        </tbody>
+                    </table>
+                </div>
+                )}
+            </div>
+        )
+    };
+        
+
+    if (loading) return <p>Cargando detalles del programa...</p>;
+    if (!programData) return <p>No se encontró el programa.</p>;
+
+    return (
+        <div>
+            <CompNavbar />
+            <br />
+            <div className="container">
+                <div className="d-flex justify-content-between">
+                    <Link to="/programs" className="btn btn-primary">
+                        Volver a Programas
+                    </Link>
+                </div>
+                <h1 className="display-4 text-center mb-4">
+                    Detalles del Programa: {programData?.nombre}
+                </h1>
+                <span className="d-flex justify-content-evenly">
+                    <p>Fecha Inicio: {programData?.fecha_inicio}</p>
+                    <p>Fecha Término: {programData?.fecha_fin}</p>
+                </span>
+                <section
+                    className="container-section container-fluid border py-2 mb-2"
+                    style={{ borderRadius: "5px" }}
+                >
+                    <h2>Órdenes de Trabajo:</h2>
+                    <div>
+                        {otList && otList.length > 0 ? (
+                            <ReactSortable
+                                list={otList}
+                                setList={setOtList}
+                                onEnd={(evt) => {
+                                    const newOtList = [...otList];
+                                    const movedItem = newOtList.splice(evt.oldIndex, 1)[0];
+                                    newOtList.splice(evt.newIndex, 0, movedItem);
+                                    handleOtReorder(newOtList);
+                                }}
+                            >
+                                {otList.map((ot) => renderOt(ot))}
+                            </ReactSortable>
+                        ) : (
+                            <p>No hay OTs asignadas a este programa.</p>
+                        )}
+                    </div>
+                    <Button variant="success" onClick={toggleTimeline} className="mt-3" disabled={timelineLoading}>
+                        {timelineLoading
+                            ? "Cargando Proyección..."
+                            : showTimeline
+                            ? "Ocultar Proyección"
+                            : "Proyectar en Timeline"}
+                    </Button>
+                    <Button 
+                    variant="primary" 
+                    onClick={async() => {
+                        try{
+                            await generateProgramPDF(programId);
+                        }catch(error){
+                            toast.error("Error al generar el PDF");
+                        }
+                    }} 
+                    className="mt-3">
+                        Generar PDF
+                    </Button>
+                </section>
+
+                {showTimeline && (
+                    <div className="timeline-container mt-4 mb-4" style={{ width: "100%" }}>
+                        <Timeline
+                            groups={timelineGroups}
+                            items={timelineItems}
+                            defaultTimeStart={new Date()}
+                            defaultTimeEnd={new Date(new Date().getTime() + 30 * 24 * 60 * 60 * 1000)}
+                            lineHeight={70}
+                            sidebarWidth={200}
+                            canMove={false}
+                            canResize={false}
+                            itemHeightRatio={0.38}
+                            groupRenderer={({ group }) => (
+                                <div style={{
+                                    padding: "5px",
+                                    backgroundColor: group.parent ? "#f0f0f0" : "#e0e0e0",
+                                    height: '100%',
+                                    display: 'flex',
+                                    alignItems: 'center'
+                                }}>
+                                    {group.title}
+                                </div>
+                            )}
+                        />
+                    </div>
+                )}
+            </div>
+
+            <Footer/>
+        </div>
+    );
+}

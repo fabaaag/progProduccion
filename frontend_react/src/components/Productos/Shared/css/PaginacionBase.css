@@ -1,0 +1,36 @@
+.paginacion-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 1rem;
+}
+
+.pagination {
+    margin-bottom: 0;
+}
+
+.pagination .page-item.active .page-link {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.pagination .page-link{
+    color: #007bff;
+}
+
+.pagination .page-item.disabled .page-link{
+    color: #6c757d;
+}
+
+.pagination .page-link:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@media (max-width: 768px){
+    .paginacion-container {
+        margin-top: 0.5rem;
+    }
+
+    .pagination .page-link {
+        padding: 0.375rem 0.75rem;
+    }
+}
