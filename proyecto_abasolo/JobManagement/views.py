@@ -4,6 +4,7 @@ from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
 from django.utils.dateparse import parse_date
 from django.utils.dateparse import parse_date, parse_datetime
+from django.utils.timezone import localtime, now
 from django.shortcuts import get_object_or_404
 
 
@@ -2394,6 +2395,61 @@ class SupervisorReportView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
+    def put(self, request, pk):
+        """Actualiza los kilos fabricados sin duplicar registros"""
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=pk)
+            data = request.data
+            tarea_id = data.get('tarea_id')
+            proceso_id = data.get('proceso_id')
+            kilos_fabricados = float(data.get('kilos_fabricados', 0))
+            estado = data.get('estado', 'Pendiente')
+            fecha_actual = datetime.strptime(data.get('fecha'), '%Y-%m-%d')
+            observaciones = data.get('observaciones', '')
+            
+            # Obtener el item_ruta
+            item_ruta = ItemRuta.objects.select_related(
+                'proceso', 'maquina', 'ruta__orden_trabajo'
+            ).get(id=proceso_id)
+            
+            # Calcular unidades fabricadas
+            peso_unitario = float(item_ruta.ruta.orden_trabajo.peso_unitario or 0)
+            unidades_programadas = float(data.get('cantidad_programada', 0))
+            unidades_fabricadas = kilos_fabricados / peso_unitario if peso_unitario > 0 else 0
+            
+            # Buscar si ya existe un reporte para este día y actualizar
+            reporte_diario, created = ReporteDiario.objects.update_or_create(
+                programa=programa,
+                item_ruta=item_ruta,
+                fecha=fecha_actual,
+                defaults={
+                    'estado': estado,
+                    'kilos_fabricados': kilos_fabricados,
+                    'unidades_fabricadas': unidades_fabricadas,
+                    'observaciones': observaciones
+                }
+            )
+            
+            # Calcular unidades pendientes para eventos adicionales
+            unidades_pendientes = unidades_programadas - unidades_fabricadas
+            
+            # Lógica adicional similar al método post actual...
+            
+            return Response({
+                'message': 'Actualización exitosa',
+                'kilos_fabricados': kilos_fabricados,
+                'porcentaje_cumplimiento': (kilos_fabricados / (peso_unitario * unidades_programadas)) * 100 if peso_unitario > 0 else 0,
+                'unidades_pendientes': unidades_pendientes,
+                'siguiente_fecha': get_next_working_day(fecha_actual).strftime('%Y-%m-%d') if unidades_pendientes > 0 else None
+            })
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+
     @transaction.atomic
     def post(self, request, pk):
         """Actualiza los kilos fabricados y recalcula el programa si es necesario"""
@@ -2562,4 +2618,199 @@ def search_orders(request):
     serializer = OrdenTrabajoSerializer(queryset, many=True)
     return Response(serializer.data)
         
+class FinalizarDiaReporteView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def obtener_siguiente_dia_laboral(self, fecha):
+        """Obtiene el siguiente dia laboral (excluyendo sabados y domingos)"""
+        siguiente_dia = fecha + timedelta(days=1)
+        #Si es sabado (5) o domingo (6), avanzar al lunes
+        if siguiente_dia.weekday() >= 5:
+            siguiente_dia = siguiente_dia + timedelta(days=(7 - siguiente_dia.weekday()))
+        return siguiente_dia
+    
+    def identificar_tareas_incompletas(self, programa_id, fecha):
+        """Identifica tareas que no se han completado para el dia especificado"""
+        try:
+            #Obtener el programa
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+
+            #Obtener tareas del día
+            from .serializers import SupervisorReporteSerializer
+            supervisor_view = SupervisorReportView()
+            reporte_data = supervisor_view.get(None, programa_id).data
+
+            tareas = reporte_data.get('tareas', [])
+            tareas_del_dia = [tarea for tarea in tareas if tarea.get('fecha') == fecha]
+
+            #Identificar tareas incompletas (menos del 100% de cumplimiento)
+            tareas_incompletas = []
+            for tarea in tareas_del_dia:
+                kilos_prog = float(tarea.get('kilos_programados', 0))
+                kilos_fab = float(tarea.get('kilos_fabricados', 0))
+
+                if kilos_prog > 0 and kilos_fab < kilos_prog:
+                    porcentaje = (kilos_fab / kilos_prog) * 100
+                    kilos_restantes = kilos_prog - kilos_fab
+
+                    tareas_incompletas.append({
+                        'id': tarea.get('id'),
+                        'ot_codigo': tarea.get('ot_codigo'),
+                        'proceso': tarea.get('proceso'),
+                        'maquina': tarea.get('maquina'),
+                        'kilos_programados': kilos_prog,
+                        'kilos_fabricados': kilos_fab,
+                        'kilos_restantes': kilos_restantes,
+                        'porcentaje_completado': round(porcentaje, 2),
+                        'porcentaje_restante': round(100 - porcentaje, 2)
+                    })
+            return tareas_incompletas
+        except Exception as e:
+            print(f'Error identificando tareas incompletas: {str(e)}')
+            raise e
         
+    @transaction.atomic
+    def post(self, request, programa_id, fecha_str):
+        """
+        Finaliza el dia, identificando tareas incompletas y creando continuaciones.
+        Admite modo de previsualizacion que no realiza cambios en la base de datos.
+        """
+        try:
+            try:
+                fecha = datetime.strptime(fecha_str, "%Y-%m-%d").date()
+            except ValueError:
+                return Response(
+                    {"error": "Formato de fecha inválido. Use el formato YYYY-MM-DD"},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+            
+            #Determinar si estamos en modo previsualización
+            preview_only = request.data.get('preview_only', True)
+
+            #Calcular siguiente dia laboral
+            siguiente_dia = self.obtener_siguiente_dia_laboral(fecha)
+
+            #Identificar tareas incompletas
+            tareas_incompletas = self.identificar_tareas_incompletas(programa_id, fecha_str)
+
+            #Si estamos en modo previsualización, solo devolver datos sin hacer cambios
+            if preview_only:
+                return Response({
+                    'mensaje': f'Previsualización de finalización del día {fecha_str}',
+                    'tareas_incompletas': tareas_incompletas,
+                    'siguiente_dia': siguiente_dia.strftime('%Y-%m-%d'),
+                    'total_tareas': len(tareas_incompletas)
+                })
+            #Si no estamos en previsualización, rear fragmentos y continuaciones
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            tareas_procesadas = []
+
+            for tarea in tareas_incompletas:
+                item_ruta = get_object_or_404(ItemRuta, id=tarea['id'])
+
+                #Buscar si ya existe un fragmento para esta tarea en esta fecha
+                fragmento_existente = TareaFragmentada.objects.filter(
+                    tarea_original=item_ruta,
+                    fecha=fecha
+                ).first()
+
+                #Si no existe, crear el fragmento para el día actual
+                if not fragmento_existente:
+                    fragmento = TareaFragmentada.objects.create(
+                        tarea_original=item_ruta,
+                        fecha=fecha,
+                        porcentaje_completado=tarea['porcentaje_completado'],
+                        cantidad_asignada=tarea['kilos_programados'],
+                        cantidad_completada=tarea['kilos_fabricados'],
+                        es_continuacion=False,
+                        nivel_fragmentacion=0
+                    )
+                else:
+                    #Actualizar el fragmento existente
+                    fragmento = fragmento_existente
+                    fragmento.porcentaje_completado = tarea['porcentaje_completado']
+                    fragmento.cantidad_completada = tarea['kilos_fabricados']
+                    fragmento.save()
+
+                #Crear la continuación para el siguiente día
+                continuacion = TareaFragmentada.objects.create(
+                    tarea_original=item_ruta,
+                    tarea_padre=fragmento,
+                    fecha=siguiente_dia,
+                    porcentaje_completado=0,
+                    cantidad_asignada=tarea['kilos_restantes'],
+                    cantidad_completada=0,
+                    es_continuacion=True,
+                    nivel_fragmentacion=fragmento.nivel_fragmentacion + 1
+                )
+
+                #Actualizar registro de tareas procesadas 
+                tareas_procesadas.append({
+                    'id': tarea['id'],
+                    'proceso': tarea['proceso'],
+                    'ot_codigo': tarea['ot_codigo'],
+                    'porcentaje_completado': tarea['porcentaje_completado'],
+                    'kilos_restantes': tarea['kilos_restantes'],
+                    'continuacion_id': continuacion.id,
+                    'fecha_continuacion': siguiente_dia.strftime('%Y-%m-%d')
+                })
+
+            return Response({
+                'mensaje': f'Día {fecha_str} finalizado con éxito',
+                'tareas_procesadas': tareas_procesadas,
+                'siguiente_dia': siguiente_dia.strftime('%Y-%m-%d'),
+                'total_tareas': len(tareas_procesadas)
+            })
+        except Exception as e:
+            print(f'Error finalizando día: {str(e)}')
+            return Response(
+                {'error': f'Error al finalizar el día: {str(e)}'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+class TareaGenealogiaView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, tarea_id):
+        """Obtiene la genealogía completa de una tarea fragmentada"""
+        try:
+            #Obtener el item ruta
+            item_ruta = get_object_or_404(ItemRuta, id=tarea_id)
+
+            #Buscar el fragmento raíz (nivel 0, no es continuacion)
+            fragmento_raiz = TareaFragmentada.objects.filter(
+                tarea_original=item_ruta,
+                nivel_fragmentacion=0
+            ).first()
+
+            if not fragmento_raiz:
+                #Si no hay fragmento raíz pero hay fragmentos, buscar el de menor nivel
+                fragmento_raiz = TareaFragmentada.objects.filter(
+                    tarea_original=item_ruta
+                ).order_by('nivel_fragmentacion').first()
+
+                if not fragmento_raiz:
+                    return Response(
+                        {'mensaje': 'Esta tarea no tiene fragmentos asociados'},
+                        status=status.HTTP_404_NOT_FOUND
+                    )
+                
+            #Serializer con anidación recursiva
+            serializer = TareaFragmentadaSerializer(fragmento_raiz)
+
+            return Response({
+                'tarea_original': {
+                    'id': item_ruta.id,
+                    'proceso': item_ruta.proceso.descripcion,
+                    'maquina': item_ruta.maquina.descripcion if item_ruta.maquina else 'Sin maquina',
+                    'cantidad_total': float(item_ruta.cantidad_pedido)
+                },
+                'genealogia': serializer.data,
+                'progreso_global': serializer.data.get('progreso_acumulado', 0)
+            })
+        except Exception as e:
+            print(f'Error obteniendo genealogía: {str(e)}')
+            return Response(
+                {'error': f'Error al obtener genealogía: {str(e)}'},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )

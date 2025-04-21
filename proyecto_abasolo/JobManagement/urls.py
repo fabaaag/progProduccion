@@ -26,6 +26,8 @@ urlpatterns += [
     path('api/v1/procesos/', views.ProcesoListView.as_view(), name='proceso-list'),
     path('api/v1/programas/<int:pk>/supervisor-report/', views.SupervisorReportView.as_view(), name='supervisor-report'),
     path('api/v1/programas/<int:pk>/supervisor-report/update-priority/', views.SupervisorReportView.as_view(), name='supervisor-report'),
+    path('api/v1/programas/<int:programa_id>/finalizar-dia/<str:fecha_str>/', views.FinalizarDiaReporteView.as_view(), name='finalizar_dia'),
+    path('api/v1/tareas/<int:tarea_id>/genealogia/', views.TareaGenealogiaView.as_view(), name='tarea_genealogia'),
 ]
 
 #Urls para maquinas dentro del programa

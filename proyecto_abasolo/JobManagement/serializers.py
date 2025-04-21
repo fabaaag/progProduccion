@@ -258,7 +258,7 @@ class TareaFragmentadaSerializer(serializers.ModelSerializer):
         model = TareaFragmentada
         fields = '__all__'
 
-class TareaGenealogicaSerializer(serializers.ModelSerializer):
+class TareaGenealogiaSerializer(serializers.ModelSerializer):
     continuaciones = serializers.SerializerMethodField()
     progreso_acumulado = serializers.SerializerMethodField()
 
@@ -267,7 +267,7 @@ class TareaGenealogicaSerializer(serializers.ModelSerializer):
         fields = '__all__'
 
     def get_continuaciones(self, obj):
-        return TareaGenealogicaSerializer(obj.continuaciones.all(), many=True).data
+        return TareaGenealogiaSerializer(obj.continuaciones.all(), many=True).data
     
     def get_progreso_acumulado(self, obj):
         #Logica para calcular el progreso acumulado

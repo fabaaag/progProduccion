@@ -1,0 +1,45 @@
+/* Crear archivo: frontend_react/src/components/Tarea/TareaGenealogiaView.css */
+
+.tarea-genealogia .card-header {
+    background-color: #f8f9fa;
+}
+
+.tarea-genealogia h5 {
+    color: #004b93;
+    font-weight: 600;
+}
+
+.tarea-info {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 0.25rem;
+    margin-bottom: 1.5rem;
+}
+
+.tarea-info h6 {
+    color: #495057;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.original-row {
+    background-color: rgba(0, 123, 255, 0.05);
+}
+
+.continuacion-row {
+    background-color: rgba(108, 117, 125, 0.05);
+}
+
+.table th {
+    background-color: #f8f9fa;
+}
+
+.progress {
+    height: 20px;
+}
+
+.progress-bar {
+    color: #fff;
+    font-weight: 500;
+    font-size: 0.8rem;
+}

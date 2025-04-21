@@ -209,15 +209,107 @@ export const getSupervisorReport = async (programId) => {
   }
 };
 
-export const updateSupervisorReport = async (programId, taskData) => {
+export const updateSupervisorReport = async (programId, data) => {
+    // Si recibimos un objeto con 'tasks', procesamos cada tarea individualmente
+    if (data.tasks && Array.isArray(data.tasks)) {
+        try {
+            const results = [];
+            for (const task of data.tasks) {
+                const response = await axios.put(
+                    `/gestion/api/v1/programas/${programId}/supervisor-report/update-priority/`,
+                    {
+                        tarea_id: task.id,
+                        proceso_id: task.proceso_id,
+                        kilos_fabricados: task.kilos_fabricados,
+                        cantidad_programada: task.cantidad_programada,
+                        fecha: task.fecha,
+                        estado: task.estado,
+                        observaciones: task.observaciones
+                    },
+                    {
+                        headers: {
+                            'Content-Type': 'application/json'
+                        }
+                    }
+                );
+                results.push(response.data);
+            }
+            return results;
+        } catch (error) {
+            console.error('Error en updateSupervisorReport:', error);
+            throw error;
+        }
+    } else {
+        // Si recibimos una sola tarea, la procesamos directamente
+        try {
+            const response = await axios.post(
+                `/gestion/api/v1/programas/${programId}/supervisor-report/update-priority/`,
+                data,
+                {
+                    headers: {
+                        'Content-Type': 'application/json'
+                    }
+                }
+            );
+            return response.data;
+        } catch (error) {
+            console.error('Error en updateSupervisorReport:', error);
+            throw error;
+        }
+    }
+};
+
+/**
+ * Obtiene una previsualización de la finalización del día
+ * @param {number} programId - ID del programa
+ * @param {string} fecha - Fecha en formato YYYY-MM-DD
+ * @returns {Promise} - Promesa con los datos de previsualización
+ */
+
+export const previewFinalizarDia = async (programId, fecha) => {
   try {
-      const response = await axios.post(
-          `/gestion/api/v1/programas/${programId}/supervisor-report/update-priority/`,
-          taskData
-      );
-      return response.data;
+    const response = await axios.post(
+      `/gestion/api/v1/programas/${programId}/finalizar-dia/${fecha}/`,
+      { preview_only: true }
+    );
+    return response.data;
+  } catch (error){
+    console.error('Error obteniendo previsualización:', error);
+    throw error;
+  }
+};
+
+/**
+ * Finaliza el día creando continuaciones para tareas incompletas
+ * @param {number} programId - ID del programa
+ * @param {string} fecha - Fecha en formato YYYY-MM-DD
+ * @returns {Promise} - Promesa con los resultados de la finalización
+ */
+
+export const finalizarDia = async (programId, fecha) => {
+  try{
+    const response = await axios.post(
+      `/gestion/api/v1/programas/${programId}/finalizar-dia/${fecha}/`,
+      { preview_only: false}
+    );
+    return response.data;
+  } catch (error){
+    console.error('Error finalizando dia:', error);
+    throw error;
+  }
+};
+
+/**
+ * Obtiene la información de genealogía de una tarea específica
+ * @param {number} taskId - ID de la tarea
+ * @returns {Promise} - Promesa con los datos de genealogía de la tarea
+ */
+export const obtenerGenealogiaTask = async (taskId) => {
+  try {
+    const response = await axios.get(`/gestion/api/v1/tareas/${taskId}/genealogia/`);
+    return response.data;
   } catch (error) {
-      console.error('Error en updateSupervisorReport:', error);
-      throw error;
+    console.error('Error obteniendo genealogía de tarea:', error);
+    throw error;
   }
 };

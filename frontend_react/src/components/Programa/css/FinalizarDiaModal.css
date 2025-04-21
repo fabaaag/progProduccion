@@ -1,0 +1,42 @@
+/* Crear archivo: frontend_react/src/components/Reporte/FinalizarDiaModal.css */
+
+.modal-header .modal-title {
+    font-weight: 600;
+    color: #004b93;
+}
+
+.table {
+    font-size: 0.95rem;
+}
+
+.table th {
+    background-color: #f8f9fa;
+    white-space: nowrap;
+}
+
+.alert h5 {
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.alert-warning {
+    border-left: 4px solid #ffc107;
+}
+
+.alert-success {
+    border-left: 4px solid #28a745;
+}
+
+.alert-danger {
+    border-left: 4px solid #dc3545;
+}
+
+.btn-danger {
+    background-color: #dc3545;
+    border-color: #dc3545;
+}
+
+.btn-danger:hover {
+    background-color: #c82333;
+    border-color: #bd2130;
+}

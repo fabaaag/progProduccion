@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { useParams, Link } from 'react-router-dom';
-import { Container, Table, Form, Button, ButtonGroup } from 'react-bootstrap';
+import { Container, Table, Form, Button, ButtonGroup, Modal } from 'react-bootstrap';
 import { ReactSortable } from "react-sortablejs";
 import CompNavbar from "../../components/Navbar/CompNavbar";
 import { Footer } from "../../components/Footer/Footer";
@@ -9,12 +9,14 @@ import { toast } from "react-hot-toast";
 import moment from 'moment';
 import { getSupervisorReport, updateSupervisorReport, getProcesoTimeline } from '../../api/programs.api';
 import { crearAsignacion } from '../../api/asignaciones.api';
-import { FaArrowLeft, FaSave, FaUser, FaUserPlus, FaExpand } from 'react-icons/fa';
+import { FaArrowLeft, FaSave, FaUser, FaUserPlus, FaExpand, FaCalendarCheck, FaCodeBranch } from 'react-icons/fa';
 import './ReporteSupervisor.css';
 import DatePicker from 'react-datepicker';
 import "react-datepicker/dist/react-datepicker.css";
 import { OperadorSelectionModal } from '../../components/Programa/OperadorSelectionModal';
 import TableFullViewModal from './ReporteSupervisorSubComp/TableFullViewModal';
+import FinalizarDiaModal from '../../components/Programa/FinalizarDiaModal';;
+import TareaGenealogiaView from '../../components/Programa/TareaGenealogiaView';
 
 export function ReporteSupervisor() {
     const { programId } = useParams();
@@ -37,6 +39,11 @@ export function ReporteSupervisor() {
     const [currentProceso, setCurrentProceso] = useState(null);
     const [operadores, setOperadores] = useState([]);
     const [showTableModal, setShowTableModal] = useState(false);
+
+    // 2. Añadir estados para controlar los modales
+    const [showFinalizarDiaModal, setShowFinalizarDiaModal] = useState(false);
+    const [showGenealogiaModal, setShowGenealogiaModal] = useState(false);
+    const [tareaSeleccionada, setTareaSeleccionada] = useState(null);
 
     const fetchTasksForDate = async () => {
         try {
@@ -72,6 +79,9 @@ export function ReporteSupervisor() {
                 if (tarea.kilos_fabricados) {
                     kilosFab[tarea.id] = tarea.kilos_fabricados;
                     porcentajes[tarea.id] = (tarea.kilos_fabricados / tarea.kilos_programados) * 100;
+                }else {
+                    kilosFab[tarea.id] = 0;
+                    porcentajes[tarea.id] = 0;
                 }
             });
             setKilosFabricados(kilosFab);
@@ -229,14 +239,19 @@ export function ReporteSupervisor() {
     };
 
     const handleKilosChange = (taskId, kilos, task) => {
-        const kilosNum = parseFloat(kilos) || 0;
-        setKilosFabricados(prev => ({...prev, [taskId]: kilosNum}));
+        // Preservar el valor de entrada tal cual (vacío o texto) en la interfaz
+        // pero usar un valor numérico para cálculos
+        setKilosFabricados(prev => ({...prev, [taskId]: kilos}));
+        
+        // Para cálculos, convertir a número, pero permitiendo 0 explícitamente
+        const kilosNum = kilos === "" ? 0 : 
+                       (isNaN(parseFloat(kilos)) ? 0 : parseFloat(kilos));
         
         // Calcular porcentaje localmente
         const porcentaje = (kilosNum / task.kilos_programados) * 100;
         setPorcentajeCumplimiento(prev => ({...prev, [taskId]: porcentaje}));
         
-        // Guardar cambio pendiente
+        // Guardar cambio pendiente con el valor numérico
         setPendingChanges(prev => ({
             ...prev,
             [taskId]: {
@@ -307,23 +322,46 @@ export function ReporteSupervisor() {
         try {
             setLoading(true);
             
-            // Crear un array de promesas para todas las actualizaciones
-            const updatePromises = displayedTasks.map((task, index) => {
-                const taskData = {
+            // Añadir console.log para depurar la entrada
+            console.log('Estado de kilosFabricados:', kilosFabricados);
+            console.log('Tareas originales:', displayedTasks);
+            
+            // Crear un único objeto con todas las tareas en lugar de múltiples peticiones
+            const tasksData = displayedTasks.map((task, index) => {
+                // Asegurarnos de que valores cero se manejen correctamente
+                const kilosValue = kilosFabricados[task.id];
+                let kilosFab;
+                
+                // Validar que sea un número o convertirlo a 0
+                if (kilosValue !== undefined && kilosValue !== null && kilosValue !== "") {
+                    kilosFab = parseFloat(kilosValue);
+                    if (isNaN(kilosFab)) kilosFab = 0;
+                } else if (task.kilos_fabricados !== undefined && task.kilos_fabricados !== null) {
+                    kilosFab = parseFloat(task.kilos_fabricados);
+                    if (isNaN(kilosFab)) kilosFab = 0;
+                } else {
+                    kilosFab = 0;
+                }
+                
+                return {
                     id: task.id,
-                    priority: index + 1, // La prioridad basada en la posición actual
+                    priority: index + 1,
                     proceso_id: task.proceso_id,
-                    kilos_fabricados: kilosFabricados[task.id] || task.kilos_fabricados || 0,
-                    cantidad_programada: task.cantidad_programada,
+                    kilos_fabricados: kilosFab,
+                    cantidad_programada: parseFloat(task.cantidad_programada || 0),
                     fecha: task.fecha,
                     estado: taskStates[task.id] || task.estado || 'Pendiente',
                     observaciones: task.observaciones || ''
                 };
-                return updateSupervisorReport(programId, taskData);
             });
-
-            // Esperar a que todas las actualizaciones se completen
-            await Promise.all(updatePromises);
+    
+            // Añadir console.log para depurar
+            console.log('Enviando tareas al backend:', tasksData);
+            
+            // Enviar una única petición con todas las tareas
+            await updateSupervisorReport(programId, {
+                tasks: tasksData
+            });
             
             // Limpiar cambios pendientes
             setPendingChanges({});
@@ -334,7 +372,13 @@ export function ReporteSupervisor() {
             toast.success('Reporte guardado correctamente');
         } catch (error) {
             console.error('Error al guardar el reporte:', error);
-            toast.error('Error al guardar el reporte');
+            // Mostrar más información del error si está disponible
+            if (error.response) {
+                console.error('Respuesta del servidor:', error.response.data);
+                toast.error(`Error al guardar el reporte: ${error.response.data.error || error.message || 'Error desconocido'}`);
+            } else {
+                toast.error(`Error al guardar el reporte: ${error.message || 'Error desconocido'}`);
+            }
         } finally {
             setLoading(false);
         }
@@ -387,7 +431,7 @@ export function ReporteSupervisor() {
 
                 //Si hay error usar la fecha actual y una duración predeterminada
                 fechaInicio = new Date();
-                fechaFin = newDate(fechaInicio);
+                fechaFin = new Date(fechaInicio);
                 fechaFin.setHours(fechaFin.getHours() + 8);
             }
 
@@ -440,6 +484,29 @@ export function ReporteSupervisor() {
             await fetchTasksForDate();
         }
     }
+
+    // 3. Añadir función para manejar la finalización exitosa
+    const handleFinalizacionExitosa = (resultado) => {
+        toast.success('Día finalizado correctamente');
+        
+        // Si el siguiente día está en las fechas disponibles, navegar a él
+        if (resultado && resultado.siguiente_dia) {
+            const siguienteDiaIndex = availableDates.indexOf(resultado.siguiente_dia);
+            if (siguienteDiaIndex >= 0) {
+                setSelectedDateIndex(siguienteDiaIndex);
+                setCurrentDate(resultado.siguiente_dia);
+            }
+        }
+        
+        // Recargar datos
+        fetchTasksForDate();
+    };
+
+    // 4. Añadir función para mostrar genealogía
+    const handleVerGenealogia = (tarea) => {
+        setTareaSeleccionada(tarea);
+        setShowGenealogiaModal(true);
+    };
 
     if (loading) return <LoadingSpinner message="Cargando reporte..." />;
     if (error) return (
@@ -519,17 +586,32 @@ export function ReporteSupervisor() {
                     </ButtonGroup>
                 </div>
                 <div className="action-toolbar d-flex justify-content-between align-items-center mb-3">
-                    <div className="total-kilos-alert grow-1">
-                    <strong>Total Kilos Programados para el día:</strong> {displayedTasks.reduce((sum, task) => sum + task.kilos_programados, 0).toFixed(2)} kg
+                    <div className="total-kilos-alert flex-grow-1">
+                        <strong>Total Kilos Programados para el día:</strong> {displayedTasks.reduce((sum, task) => sum + task.kilos_programados, 0).toFixed(2)} kg
                     </div>
-                    <Button
+                    <Button 
                         variant="primary" 
                         onClick={() => setShowTableModal(true)}
-                        className="ms-3 view-full-table-btn"
+                        className="ms-2"
                     >
                         <FaExpand className="me-2" />
                         Ver Tabla Completa
-                        </Button>
+                    </Button>
+                    <Button 
+                        variant="success" 
+                        onClick={() => {
+                            if(programId){
+                                setShowFinalizarDiaModal(true)
+                            } else {
+                                toast.error('No se pudo identificar el programa');
+                            }
+                        }}
+                        className="ms-2"
+                        disabled={!programId}
+                    >
+                        <FaCalendarCheck className="me-2" />
+                        Finalizar Día
+                    </Button>
                 </div>
 
                 {displayedTasks.length > 0 ? (
@@ -588,7 +670,20 @@ export function ReporteSupervisor() {
                                                 <strong>{index + 1}</strong>
                                             </td>
                                             <td className="col-ot">{task.ot_codigo}</td>
-                                            <td className="col-process">{task.proceso}</td>
+                                            <td className="col-process">
+                                                {task.proceso}
+                                                {task.tiene_fragmentos && (
+                                                    <Button 
+                                                        variant="link" 
+                                                        size="sm" 
+                                                        className="p-0 ms-1"
+                                                        onClick={() => handleVerGenealogia(task)}
+                                                        title="Ver historial de fragmentación"
+                                                    >
+                                                        <FaCodeBranch />
+                                                    </Button>
+                                                )}
+                                            </td>
                                             <td className="col-machine">{task.maquina ? task.maquina.descripcion : 'Sin máquina'}</td>
                                             <td className="col-operator">
                                                 <span>{task.operador_nombre || 'Sin asignar'}</span>
@@ -627,7 +722,7 @@ export function ReporteSupervisor() {
                                                 <Form.Control
                                                     type="number"
                                                     step="0.01"
-                                                    value={kilosFabricados[task.id] || task.kilos_fabricados || ''}
+                                                    value={kilosFabricados[task.id] !== undefined ? kilosFabricados[task.id] : (task.kilos_fabricados || '')}
                                                     onChange={(e) => handleKilosChange(task.id, e.target.value, task)}
                                                     disabled={!editableStates[task.id] && taskStates[task.id] === 'Terminado'}
                                                 />
@@ -691,6 +786,37 @@ export function ReporteSupervisor() {
                 </div>
             </Container>
             <Footer />
+
+            <FinalizarDiaModal
+                show={showFinalizarDiaModal}
+                onHide={() => setShowFinalizarDiaModal(false)}
+                programId={programId}
+                fecha={currentDate}
+                onFinalizacionExitosa={handleFinalizacionExitosa}
+            />
+
+            <Modal
+                show={showGenealogiaModal}
+                onHide={() => setShowGenealogiaModal(false)}
+                size="lg"
+                centered
+            >
+                <Modal.Header closeButton>
+                    <Modal.Title>
+                        Historial de Tarea
+                        {tareaSeleccionada && (
+                            <span className="ms-2 text-muted">
+                                {tareaSeleccionada.proceso} (OT: {tareaSeleccionada.ot_codigo})
+                            </span>
+                        )}
+                    </Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {tareaSeleccionada && (
+                        <TareaGenealogiaView tareaId={tareaSeleccionada.id} />
+                    )}
+                </Modal.Body>
+            </Modal>
         </div>
     );
 }
