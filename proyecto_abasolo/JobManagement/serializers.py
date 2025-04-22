@@ -272,3 +272,5 @@ class TareaGenealogiaSerializer(serializers.ModelSerializer):
     def get_progreso_acumulado(self, obj):
         #Logica para calcular el progreso acumulado
         return calcular_progreso_acumulado(obj)
+    
+#class ReporteSupervisorListSerializer(serializers.ModelSerializer):

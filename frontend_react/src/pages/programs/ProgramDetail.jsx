@@ -647,7 +647,7 @@ export function ProgramDetail() {
     };
         
 
-    if (loading) return <LoadingSpinner message="Cargando detalles del programa..." overlay={true} size="small"/>;
+    if (loading) return <LoadingSpinner message="Cargando detalles del programa..."/>;
     if (!programData) return <p>No se encontró el programa.</p>;
 
     return (

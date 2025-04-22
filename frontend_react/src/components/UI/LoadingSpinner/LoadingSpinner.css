@@ -113,9 +113,9 @@
 
 .small-loader .progress-ring__circle,
 .small-loader .progress-ring__circle-bg {
-    r: "21";
-    cx: "25";
-    cy: "25";
+    r: 21;
+    cx: 25;
+    cy: 25;
 }
 
 .small-loader .icon-container {

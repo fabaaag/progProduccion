@@ -1,0 +1,51 @@
+.supervisor-reports-page {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.page-title {
+    color: #004b93;
+    font-size: 1.75rem;
+    font-weight: 600;
+    border-bottom: 2px solid #e9ecef;
+    padding-bottom: 0.75rem;
+}
+
+.search-bar {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.report-card {
+    transition: all 0.3s ease;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+    border: 1px solid #eee;
+}
+
+.report-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.report-meta {
+    margin-top: 1rem;
+}
+
+.meta-item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0.5rem;
+    color: #6c757d;
+}
+
+.meta-icon {
+    margin-right: 0.5rem;
+    color: #004b93;
+}
+
+.completion-info {
+    border-top: 1px solid #eee;
+    padding-top: 1rem;
+}

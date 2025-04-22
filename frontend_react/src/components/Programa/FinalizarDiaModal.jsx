@@ -28,8 +28,20 @@ const FinalizarDiaModal = ({
         try{
             setCargando(true);
             setError(null);
-
-            const datos = await previewFinalizarDia(programId, fecha);
+    
+            // Convertir programId a número antes de enviarlo
+            const datos = await previewFinalizarDia(parseInt(programId, 10), fecha);
+            
+            // Normalizar los IDs en la respuesta
+            if (datos && datos.tareas_incompletas) {
+                datos.tareas_incompletas = datos.tareas_incompletas.map(tarea => ({
+                    ...tarea,
+                    id: typeof tarea.id === 'string' && tarea.id.startsWith('item_') 
+                        ? parseInt(tarea.id.split('_')[1]) 
+                        : tarea.id
+                }));
+            }
+            
             setDatosPreview(datos);
             setPaso('preview');
         } catch (error){
@@ -38,14 +50,28 @@ const FinalizarDiaModal = ({
         } finally {
             setCargando(false);
         }
-    }
+    };
 
     const confirmarFinalizacion = async () => {
         try {
             setCargando(true);
             setError(null);
             
-            const resultado = await finalizarDia(programId, fecha);
+            // Asegurarse de que las tareas no tengan IDs con formato "item_X_Y"
+            if (datosPreview && datosPreview.tareas_incompletas) {
+                // Normalizar los IDs de las tareas antes de enviarlas
+                datosPreview.tareas_incompletas = datosPreview.tareas_incompletas.map(tarea => ({
+                    ...tarea,
+                    id: typeof tarea.id === 'string' && tarea.id.startsWith('item_') 
+                        ? parseInt(tarea.id.split('_')[1]) 
+                        : tarea.id
+                }));
+            }
+            
+            // Convertir programId a número antes de enviarlo}
+            console.log(programId, 'id del programa que va hacia el comunicador api')
+            const resultado = await finalizarDia(parseInt(programId, 10), fecha);
+            console.log(resultado, 'er resultaou');
             setResultado(resultado);
             setPaso('success');
             
@@ -55,7 +81,10 @@ const FinalizarDiaModal = ({
             }
         } catch (err) {
             console.error('Error finalizando día:', err);
-            setError('No se pudo finalizar el día. Por favor, inténtelo de nuevo.');
+            
+            // Mostrar mensaje de error más detallado si está disponible
+            const errorMsg = err.response?.data?.error || 'No se pudo finalizar el día. Por favor, inténtelo de nuevo.';
+            setError(errorMsg);
             setPaso('preview'); // Volver a previsualización en caso de error
         } finally {
             setCargando(false);

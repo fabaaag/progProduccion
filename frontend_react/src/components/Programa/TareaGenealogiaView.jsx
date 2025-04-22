@@ -52,13 +52,13 @@ const TareaGenealogiaView = ({ tareaId }) => {
                             {fragmento.es_continuacion ? 'Continuación' : 'Original'}
                         </Badge>
                     </td>
-                    <td>{fragmento.cantidad_asignada.toFixed(2)} kg</td>
-                    <td>{fragmento.cantidad_completada.toFixed(2)} kg</td>
+                    <td>{parseFloat(fragmento.cantidad_asignada || 0).toFixed(2)} kg</td>
+                    <td>{parseFloat(fragmento.cantidad_completada || 0).toFixed(2)} kg</td>
                     <td>
                         <ProgressBar 
-                            now={fragmento.porcentaje_completado} 
-                            variant={obtenerColorEstado(fragmento.porcentaje_completado)}
-                            label={`${fragmento.porcentaje_completado.toFixed(1)}%`}
+                            now={parseFloat(fragmento.porcentaje_completado || 0)} 
+                            variant={obtenerColorEstado(parseFloat(fragmento.porcentaje_completado || 0))}
+                            label={`${(parseFloat(fragmento.porcentaje_completado || 0)).toFixed(1)}%`}
                         />
                     </td>
                 </tr>

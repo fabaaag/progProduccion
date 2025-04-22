@@ -1480,6 +1480,68 @@ class ProgramDetailView(APIView):
                 print(f"Error generando timeline para OT {ot_id}: {str(e)}")
                 continue
 
+        # Buscar tareas fragmentadas (continuaciones) para este programa
+        fragmentos = TareaFragmentada.objects.filter(
+            es_continuacion=True,
+            fecha__gte=programa.fecha_inicio,
+            fecha__lte=programa.fecha_fin
+        ).select_related(
+            'tarea_original',
+            'tarea_original__proceso',
+            'tarea_original__maquina',
+            'tarea_original__ruta__orden_trabajo',
+            'tarea_padre'
+        )
+
+        # Añadir cada fragmento como un item al timeline
+        for fragmento in fragmentos:
+            try:
+                item_ruta = fragmento.tarea_original
+                ot = item_ruta.ruta.orden_trabajo
+                
+                # Obtener fecha y horas para este fragmento
+                fecha_fragmento = fragmento.fecha
+                hora_inicio = time(7, 45)  # Hora de inicio por defecto
+                hora_fin = time(17, 45)    # Hora de fin por defecto
+                
+                # Calcular horas basadas en la cantidad y estándar
+                if item_ruta.estandar > 0:
+                    # Calcular cuántas horas tomaría fabricar esta cantidad
+                    horas_necesarias = (float(fragmento.cantidad_asignada) / item_ruta.estandar) * 8
+                    
+                    # Si es menos de un día completo, ajustar hora_fin
+                    if horas_necesarias < 8:
+                        minutos = int((horas_necesarias * 60) % 60)
+                        horas = int(horas_necesarias)
+                        hora_fin = (datetime.combine(date.today(), hora_inicio) + 
+                                   timedelta(hours=horas, minutes=minutos)).time()
+                
+                # Crear el item para el timeline
+                item_id = f"proc_{item_ruta.id}"
+                fecha_inicio_str = datetime.combine(fecha_fragmento, hora_inicio).strftime('%Y-%m-%d %H:%M:%S')
+                fecha_fin_str = datetime.combine(fecha_fragmento, hora_fin).strftime('%Y-%m-%d %H:%M:%S')
+                
+                timeline_item = {
+                    'id': item_id,
+                    'ot_id': ot.id,
+                    'grupo': ot.codigo_ot,
+                    'proceso_id': item_id,
+                    'title': f"{item_ruta.proceso.descripcion} (Continuación)",
+                    'start_time': fecha_inicio_str,
+                    'end_time': fecha_fin_str,
+                    'maquina': item_ruta.maquina.descripcion if item_ruta.maquina else "Sin máquina",
+                    'cantidad_total': float(fragmento.cantidad_asignada),
+                    'color': '#ff7700',  # Color especial para continuaciones
+                    'es_continuacion': True,
+                    'tarea_padre_fecha': fragmento.tarea_padre.fecha.strftime('%Y-%m-%d') if fragmento.tarea_padre else None,
+                    'tarea_padre_porcentaje': float(fragmento.tarea_padre.porcentaje_completado) if fragmento.tarea_padre else 0
+                }
+                
+                # Añadir al timeline
+                items.append(timeline_item)
+            except Exception as e:
+                print(f"Error añadiendo fragmento al timeline: {str(e)}")
+
         return {
             "groups": groups,
             "items": items,
@@ -2360,8 +2422,9 @@ class SupervisorReportView(APIView):
                                     'fecha': fecha_inicio.strftime('%Y-%m-%d'),
                                     'kilos_fabricados': ultimo_reporte['kilos_fabricados'] if ultimo_reporte else 0,
                                     'porcentaje_cumplimiento': (float(ultimo_reporte['kilos_fabricados']) / kilos_programados * 100) if ultimo_reporte and kilos_programados > 0 else 0,
-                                    'historial': reportes
+                                    'historial': reportes,
                                 }
+                                
                                 #Info sobre quién realizó la asignación
                                 from Operator.models import AsignacionOperador
                                 asignacion = AsignacionOperador.objects.filter(
@@ -2375,6 +2438,44 @@ class SupervisorReportView(APIView):
                                 else:
                                     tarea['asignado_por_nombre'] = None
                                     tarea['fecha_asignacion'] = None
+
+
+                                # Verificar si esta tarea es una continuación
+                                from JobManagement.models import TareaFragmentada
+
+                                # Buscar fragmento para este proceso en esta fecha
+                                fragmento = TareaFragmentada.objects.filter(
+                                    tarea_original_id=proceso_id,
+                                    fecha=fecha_inicio.date()
+                                ).select_related('tarea_padre').first()
+
+                                if fragmento:
+                                    # Si existe un fragmento y es continuación, marcar como tal
+                                    if fragmento.es_continuacion:
+                                        tarea['es_continuacion'] = True
+                                        tarea['nivel_fragmentacion'] = fragmento.nivel_fragmentacion
+                                        
+                                        # Si tiene tarea padre, obtener su información
+                                        if fragmento.tarea_padre:
+                                            tarea['tarea_padre_fecha'] = fragmento.tarea_padre.fecha.strftime('%Y-%m-%d')
+                                            tarea['tarea_padre_porcentaje'] = float(fragmento.tarea_padre.porcentaje_completado)
+                                            tarea['tarea_padre_kilos'] = float(fragmento.tarea_padre.cantidad_completada)
+                                        else:
+                                            tarea['tarea_padre_fecha'] = None
+                                            tarea['tarea_padre_porcentaje'] = 0
+                                            tarea['tarea_padre_kilos'] = 0
+                                    else:
+                                        tarea['es_continuacion'] = False
+                                else:
+                                    tarea['es_continuacion'] = False
+
+                                # Verificar si tiene fragmentos (continuaciones)
+                                tiene_fragmentos = TareaFragmentada.objects.filter(
+                                    tarea_padre__tarea_original_id=proceso_id,
+                                    tarea_padre__fecha=fecha_inicio.date()
+                                ).exists()
+
+                                tarea['tiene_fragmentos'] = tiene_fragmentos
 
                                 tareas_agrupadas[clave] = tarea
 
@@ -2649,12 +2750,21 @@ class FinalizarDiaReporteView(APIView):
                 kilos_prog = float(tarea.get('kilos_programados', 0))
                 kilos_fab = float(tarea.get('kilos_fabricados', 0))
 
+                # Normalizar el ID si tiene formato ReactSortable
+                tarea_id = tarea.get('id')
+                if isinstance(tarea_id, str) and tarea_id.startswith('item_'):
+                    try:
+                        tarea_id = int(tarea_id.split('_')[1])
+                    except (IndexError, ValueError):
+                        # Si hay error al convertir, usar el ID original
+                        pass
+                
                 if kilos_prog > 0 and kilos_fab < kilos_prog:
                     porcentaje = (kilos_fab / kilos_prog) * 100
                     kilos_restantes = kilos_prog - kilos_fab
 
                     tareas_incompletas.append({
-                        'id': tarea.get('id'),
+                        'id': tarea_id,  # Usar el ID normalizado
                         'ot_codigo': tarea.get('ot_codigo'),
                         'proceso': tarea.get('proceso'),
                         'maquina': tarea.get('maquina'),
@@ -2706,6 +2816,16 @@ class FinalizarDiaReporteView(APIView):
             tareas_procesadas = []
 
             for tarea in tareas_incompletas:
+                # Normalizar el ID si todavía tiene formato ReactSortable
+                tarea_id = tarea['id']
+                if isinstance(tarea_id, str) and tarea_id.startswith('item_'):
+                    try:
+                        tarea_id = int(tarea_id.split('_')[1])
+                        tarea['id'] = tarea_id  # Actualizar el ID en el diccionario
+                    except (IndexError, ValueError):
+                        # Si hay error al convertir, dejar el error ocurrir para generar un log claro
+                        pass
+                    
                 item_ruta = get_object_or_404(ItemRuta, id=tarea['id'])
 
                 #Buscar si ya existe un fragmento para esta tarea en esta fecha

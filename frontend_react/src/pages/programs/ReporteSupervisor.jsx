@@ -643,27 +643,36 @@ export function ReporteSupervisor() {
                                             handlePriorityUpdate(newState);
                                         }
                                     }}
-                                    animation={200}
+                                    // Asegurarse de que los IDs sean numéricos
+                                    setData={(dataSet) => {
+                                        return dataSet.map(item => ({
+                                            ...item,
+                                            id: typeof item.id === 'string' && item.id.startsWith('item_') 
+                                                ? parseInt(item.id.split('_')[1]) 
+                                                : item.id
+                                        }));
+                                    }}
+                                    animation={150}
                                     handle=".drag-handle"
                                     ghostClass="sortable-ghost"
                                     dragClass="sortable-drag"
                                     chosenClass="sortable-chosen"
-                                    forceFallback={true}
-                                    fallbackOnBody={true}
+                                    forceFallback={false}
+                                    fallbackOnBody={false}
                                     scroll={true}
                                     bubbleScroll={true}
                                     scrollSensitivity={30}
                                     scrollSpeed={10}
                                     delayOnTouchOnly={true}
-                                    delay={2}
-                                    swapThreshold={0.5}
+                                    delay={0}
+                                    swapThreshold={0.65}
                                     dataIdAttr="data-id"
                                 >
                                     {displayedTasks.map((task, index) => (
-                                        <tr key={task.id} data-id={task.id}>
+                                        <tr key={task.id} data-id={task.id} className={task.es_continuacion ? 'tarea-continuacion' : ''}>
                                             <td className="col-drag">
                                                 <div className="drag-handle">
-                                                    ≡
+                                                    <span>≡</span>
                                                 </div>
                                             </td>
                                             <td className="col-priority">
@@ -672,6 +681,15 @@ export function ReporteSupervisor() {
                                             <td className="col-ot">{task.ot_codigo}</td>
                                             <td className="col-process">
                                                 {task.proceso}
+                                                {task.es_continuacion && (
+                                                    <div className="continuacion-badge ms-2" 
+                                                        title={`Continuación de tarea del ${task.tarea_padre_fecha}. 
+                                                                Avance previo: ${task.tarea_padre_porcentaje.toFixed(1)}% 
+                                                                (${task.tarea_padre_kilos.toFixed(2)} kg)`}>
+                                                        <FaArrowLeft className="me-1" style={{color: '#ff7700'}} />
+                                                        <small>Continuación</small>
+                                                    </div>
+                                                )}
                                                 {task.tiene_fragmentos && (
                                                     <Button 
                                                         variant="link" 
@@ -771,7 +789,7 @@ export function ReporteSupervisor() {
                     </div>
                 )}
 
-                <div className="d-flex justify-content-end mt-4">
+                <div className="d-flex justify-content-end mt-4 mb-2">
                     <Button 
                         className="save-button" 
                         onClick={handleSaveReport}

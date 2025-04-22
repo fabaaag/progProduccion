@@ -265,11 +265,13 @@ export const updateSupervisorReport = async (programId, data) => {
  * @param {string} fecha - Fecha en formato YYYY-MM-DD
  * @returns {Promise} - Promesa con los datos de previsualización
  */
-
 export const previewFinalizarDia = async (programId, fecha) => {
   try {
+    // Asegurar que programId sea numérico
+    const numericProgramId = parseInt(programId, 10);
+    
     const response = await axios.post(
-      `/gestion/api/v1/programas/${programId}/finalizar-dia/${fecha}/`,
+      `/gestion/api/v1/programas/${numericProgramId}/finalizar-dia/${fecha}/`,
       { preview_only: true }
     );
     return response.data;
@@ -285,13 +287,17 @@ export const previewFinalizarDia = async (programId, fecha) => {
  * @param {string} fecha - Fecha en formato YYYY-MM-DD
  * @returns {Promise} - Promesa con los resultados de la finalización
  */
-
 export const finalizarDia = async (programId, fecha) => {
   try{
+    // Asegurar que programId sea numérico
+    console.log('id del programa que viene al comunicador api', programId)
+    const numericProgramId = parseInt(programId, 10);
+    
     const response = await axios.post(
-      `/gestion/api/v1/programas/${programId}/finalizar-dia/${fecha}/`,
-      { preview_only: false}
+      `/gestion/api/v1/programas/${numericProgramId}/finalizar-dia/${fecha}/`,
+      { preview_only: false }
     );
+    console.log(response.data, 'respuesta del comunicador api')
     return response.data;
   } catch (error){
     console.error('Error finalizando dia:', error);
@@ -306,7 +312,12 @@ export const finalizarDia = async (programId, fecha) => {
  */
 export const obtenerGenealogiaTask = async (taskId) => {
   try {
-    const response = await axios.get(`/gestion/api/v1/tareas/${taskId}/genealogia/`);
+    // Convertir taskId a número si es un string formateado por ReactSortable
+    const numericTaskId = typeof taskId === 'string' && taskId.startsWith('item_')
+        ? parseInt(taskId.split('_')[1])
+        : parseInt(taskId, 10);
+        
+    const response = await axios.get(`/gestion/api/v1/tareas/${numericTaskId}/genealogia/`);
     return response.data;
   } catch (error) {
     console.error('Error obteniendo genealogía de tarea:', error);

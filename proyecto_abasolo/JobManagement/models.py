@@ -5,7 +5,7 @@ from Client.models import Cliente
 from Product.models import Producto, Pieza, MateriaPrima, MeasurementUnit
 from datetime import datetime, time, timedelta
 import uuid
-
+from django.conf import settings
 
 # Create your models here.
 
@@ -411,3 +411,89 @@ class TareaFragmentada(models.Model):
 
     def __str__(self):
         return f"Fragmento {self.nivel_fragmentacion} de {self.tarea_original} - {self.fecha}"
+    
+
+
+class ReporteSupervisor(models.Model):
+    """Modelo para gestionar el reporte global de un supervisor para un programa"""
+    programa = models.OneToOneField(
+        ProgramaProduccion,
+        on_delete=models.CASCADE,
+        related_name='reporte_supervisor'
+    )
+    supervisor = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.CASCADE,
+        related_name='programas_supervisados'
+    )
+    estado = models.CharField(
+        max_length=20,
+        choices=[
+            ('ACTIVO', 'Activo'),
+            ('FINALIZADO', 'Finalizado'),
+            ('PAUSADO', 'Pausado')
+        ],
+        default='ACTIVO'
+    )
+    notas = models.TextField(blank=True, null=True)
+    porcentaje_completado = models.DecimalField(max_digits=5, decimal_places=2, default=0)
+    created_at = models.DateTimeField(auto_now_add=True)
+    updated_at = models.DateTimeField(auto_now=True)
+
+    #Campos para el bloqueo de edición
+    editor_actual = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True, blank=True,
+        related_name='reportes_editando'
+    )
+    bloqueo_hasta = models.DateTimeField(null=True, blank=True)
+
+    class Meta:
+        verbose_name = 'Reporte de Supervisor'
+        verbose_name_plural = 'Reportes de Supervisor'
+
+    def __str__(self):
+        return f'Reporte Supervisor: {self.programa.nombre}'
+    
+    def calcular_porcentaje_completado(self):
+        """Calcular porcentaje de tareas completadas"""
+        reportes = ReporteDiario.objects.filter(programa=self.programa)
+        if not reportes.exists():
+            return 0
+        
+        total_tareas = reportes.count()
+        tareas_completadas = reportes.filter(estado='Terminado').count()
+
+        porcentaje = (tareas_completadas / total_tareas) * 100 if total_tareas > 0 else 0
+        self.porcentaje_completado = round(porcentaje, 2)
+        self.save(update_fields=['porcentaje_completado'])
+        return self.porcentaje_completado
+    
+
+    #Métodos para gestonar el bloqueo
+    def esta_bloqueado(self):
+        return (self.editor_actual is not None and
+                self.bloqueo_hasta is not None and
+                self.bloqueo_hasta > timezone.now())
+    
+    def puede_editar(self, usuario):
+        if not self.esta_bloqueado():
+            return True
+        return self.editor_actual == usuario
+    
+    def adquirir_bloqueo(self, usuario, duracion_minutos=30):
+        if self.esta_bloqueado() and self.editor_actual != usuario:
+            return False
+        self.editor_actual = usuario
+        self.bloqueo_hasta = timezone.now() + timedelta(minutes=duracion_minutos)
+        self.save(update_fields=['editor_actual', 'bloqueo_hasta'])
+        return True
+    
+    def liberar_bloqueo(self, usuario):
+        if self.editor_actual == usuario:
+            self.editor_actual = None
+            self.bloqueo_hasta = None
+            self.save(update_fields=['editor_actual', 'bloqueo_hasta'])
+            return True
+        return False
