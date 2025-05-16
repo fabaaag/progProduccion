@@ -1,0 +1,145 @@
+
+
+.task-table-container table {
+    min-width: 1200px;
+}
+
+/* Estilos para filas*/
+.tarea-continuacion {
+    background-color: #fff3cd;
+}
+
+/* Badge de continuacion*/
+.continuacion-badge {
+    font-size: 0.8rem;
+    padding: 2px 6px;
+    background-color: #ff7700;
+    color: white;
+    border-radius: 4px;
+}
+
+/* Columnas con números */
+
+td.text-end {
+    font-family: monospace;
+}
+
+.drag-handle {
+    cursor: move;
+    padding: 0 5px;
+    color: #666;
+}
+
+/* Estilos para los controles del form */
+.form-control, .form-select {
+    padding: 2px 5px;
+    height: auto;
+}
+
+/* Estilos para el estado de la tarea*/
+.form-select option[value="Terminado"]{
+    background-color: #28a745;
+    color: white;
+}
+.form-select option[value="En Proceso"]{
+    background-color: #007bff;
+    color: white;
+}
+.form-select option[value="Detenido"]{
+    background-color: #dc3545;
+    color: white;
+}
+.form-select option[value="Pendiente"]{
+    background-color: #ebc51f;
+    color: white;
+}
+
+.task-table-container td[colspan="11"] {
+    font-style: italic;
+    color: #6c757d;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .task-table-container {
+        margin: 10px -15px;
+    }
+}
+
+.task-table-container {
+    margin-bottom: 1.5rem;
+    overflow-x: auto;
+}
+
+.table-expanded {
+    width: 100%;
+    min-width: 1200px; /* Establecer un ancho mínimo */
+}
+
+.table-expanded th {
+    vertical-align: middle;
+    font-size: 0.85rem;
+    white-space: nowrap;
+}
+
+.table-expanded td {
+    vertical-align: middle;
+    font-size: 0.85rem;
+}
+
+.progress-container {
+    padding: 0.15rem;
+}
+
+.estado-pendiente {
+    background-color: #f8f9fa;
+}
+
+.estado-en_proceso {
+    background-color: #cfe2ff;
+}
+
+.estado-completado {
+    background-color: #d1e7dd;
+}
+
+.estado-detenido {
+    background-color: #f8d7da;
+}
+
+.badge {
+    font-size: 0.75rem;
+    padding: 0.25em 0.5em;
+}
+
+td small.text-muted {
+    font-size: 0.75rem;
+    display: block;
+    line-height: 1.2;
+}
+
+textarea.form-control {
+    min-height: 31px;
+    height: 31px;
+}
+
+/* Mejoras para inputs numéricos */
+input[type="number"].form-control-sm {
+    text-align: right;
+    padding-right: 0.5rem;
+}
+
+/* Estilo para las cantidades */
+td.text-end div {
+    font-weight: 500;
+}
+
+.row-modified {
+    background-color: rgba(255, 243, 205, 0.5) !important;
+}
+
+.save-all-container {
+    position: relative;
+    top: 0;
+    z-index: 1000;
+}

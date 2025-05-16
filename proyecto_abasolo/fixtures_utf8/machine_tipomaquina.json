@@ -1,0 +1,842 @@
+[
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 193,
+    "fields": {
+      "codigo": "ARENAR",
+      "descripcion": "Máquinas para ARENADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 194,
+    "fields": {
+      "codigo": "CORTAR",
+      "descripcion": "Máquinas para CORTADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 195,
+    "fields": {
+      "codigo": "CORTPE",
+      "descripcion": "Máquinas para CORTE Y PERFORADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 196,
+    "fields": {
+      "codigo": "CORTPL",
+      "descripcion": "Máquinas para CORTE, PERFORADO Y LOGO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 197,
+    "fields": {
+      "codigo": "TREBA",
+      "descripcion": "Máquinas para TREFILADO DE BARRAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 198,
+    "fields": {
+      "codigo": "TRERO",
+      "descripcion": "Máquinas para TREFILADO DE ROLLOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 199,
+    "fields": {
+      "codigo": "ACANAL",
+      "descripcion": "Máquinas para ACANALADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 200,
+    "fields": {
+      "codigo": "BISEL",
+      "descripcion": "Máquinas para BISELADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 201,
+    "fields": {
+      "codigo": "CALI",
+      "descripcion": "Máquinas para CALIBRADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 202,
+    "fields": {
+      "codigo": "CHASCO",
+      "descripcion": "Máquinas para CHASCONEADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 203,
+    "fields": {
+      "codigo": "CORPUN",
+      "descripcion": "Máquinas para CORTADO DE PUNTAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 204,
+    "fields": {
+      "codigo": "DESBAS",
+      "descripcion": "Máquinas para DESBASTADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 205,
+    "fields": {
+      "codigo": "DESTAJ",
+      "descripcion": "Máquinas para DESTAJE"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 206,
+    "fields": {
+      "codigo": "DOBLAC",
+      "descripcion": "Máquinas para DOBLAR EN CALIENTE"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 207,
+    "fields": {
+      "codigo": "DOBLAF",
+      "descripcion": "Máquinas para DOBLAR EN FRIO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 208,
+    "fields": {
+      "codigo": "EMPLO",
+      "descripcion": "Máquinas para EMPLOMADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 209,
+    "fields": {
+      "codigo": "DEMPL",
+      "descripcion": "Máquinas para DESEMPLOMADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 210,
+    "fields": {
+      "codigo": "ENCAM",
+      "descripcion": "Máquinas para ENCAMIZADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 211,
+    "fields": {
+      "codigo": "ENDERZ",
+      "descripcion": "Máquinas para ENDEREZAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 212,
+    "fields": {
+      "codigo": "ESMERI",
+      "descripcion": "Máquinas para ESMERILAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 213,
+    "fields": {
+      "codigo": "ESTAMC",
+      "descripcion": "Máquinas para ESTAMPAR EN CALIENTE"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 214,
+    "fields": {
+      "codigo": "ESTAC1",
+      "descripcion": "Máquinas para ESTAMPAR EN CALIENTE PRIMER GO 1202 PF- 02"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 215,
+    "fields": {
+      "codigo": "ESTAC2",
+      "descripcion": "Máquinas para ESTAMPAR EN CALIENTE SEGUNDO G 1202 PF- 02"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 216,
+    "fields": {
+      "codigo": "ESTAMF",
+      "descripcion": "Máquinas para ESTAMPAR EN FRIO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 217,
+    "fields": {
+      "codigo": "ESTATU",
+      "descripcion": "Máquinas para ESTAMPAR TUERCAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 218,
+    "fields": {
+      "codigo": "ESTRIA",
+      "descripcion": "Máquinas para ESTRIAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 219,
+    "fields": {
+      "codigo": "FABCHA",
+      "descripcion": "Máquinas para FABRICAR CHAVETAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 220,
+    "fields": {
+      "codigo": "FORJAR",
+      "descripcion": "Máquinas para FORJAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 221,
+    "fields": {
+      "codigo": "LIMAR",
+      "descripcion": "Máquinas para LIMADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 222,
+    "fields": {
+      "codigo": "LOGOTI",
+      "descripcion": "Máquinas para LOGOTIPO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 223,
+    "fields": {
+      "codigo": "PERFCE",
+      "descripcion": "Máquinas para PERFORACION CENTRO 10MM"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 224,
+    "fields": {
+      "codigo": "PERFEX",
+      "descripcion": "Máquinas para PERFORACION EXTREMO 10MM"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 225,
+    "fields": {
+      "codigo": "PERFOR",
+      "descripcion": "Máquinas para PERFORADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 226,
+    "fields": {
+      "codigo": "PERFTR",
+      "descripcion": "Máquinas para PERFORACION TREBOL"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 227,
+    "fields": {
+      "codigo": "PERFSE",
+      "descripcion": "Máquinas para PERFORACION SEIS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 228,
+    "fields": {
+      "codigo": "PERFOV",
+      "descripcion": "Máquinas para PERFORACION OVALADA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 229,
+    "fields": {
+      "codigo": "PERFRE",
+      "descripcion": "Máquinas para PERFORACION REDONDA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 230,
+    "fields": {
+      "codigo": "PERF18",
+      "descripcion": "Máquinas para PERFORACION REDONDA 18mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 231,
+    "fields": {
+      "codigo": "PERF14",
+      "descripcion": "Máquinas para PERFORACION REDONDA 14mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 232,
+    "fields": {
+      "codigo": "PERFCU",
+      "descripcion": "Máquinas para PERFORACION CUADRADA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 233,
+    "fields": {
+      "codigo": "PERFO2",
+      "descripcion": "Máquinas para PERFORACION OVALADA 2"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 234,
+    "fields": {
+      "codigo": "PERFO8",
+      "descripcion": "Máquinas para PERFORACION OCHO - SEIS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 235,
+    "fields": {
+      "codigo": "PINCHA",
+      "descripcion": "Máquinas para PINCHADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 236,
+    "fields": {
+      "codigo": "PERF21",
+      "descripcion": "Máquinas para PERFORACION REDONDA 21mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 237,
+    "fields": {
+      "codigo": "PERF20",
+      "descripcion": "Máquinas para PERFORACION REDONDA 20mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 238,
+    "fields": {
+      "codigo": "PERFT",
+      "descripcion": "Máquinas para PERFORACION TRASLAPADA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 239,
+    "fields": {
+      "codigo": "PERF11",
+      "descripcion": "Máquinas para PERFORACION REDONDA 11mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 240,
+    "fields": {
+      "codigo": "PERF16",
+      "descripcion": "Máquinas para PERFORACION REDONDA 16mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 241,
+    "fields": {
+      "codigo": "PLANCH",
+      "descripcion": "Máquinas para PLANCHADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 242,
+    "fields": {
+      "codigo": "PLANCL",
+      "descripcion": "Máquinas para PLANCHADO Y LOGO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 243,
+    "fields": {
+      "codigo": "PUBAR",
+      "descripcion": "Máquinas para PUNTEADO DE BARRAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 244,
+    "fields": {
+      "codigo": "PUCLA",
+      "descripcion": "Máquinas para PUNTEADO DE CLAVOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 245,
+    "fields": {
+      "codigo": "PUESPI",
+      "descripcion": "Máquinas para PUNTEADO DE ESPIGA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 246,
+    "fields": {
+      "codigo": "PULIR",
+      "descripcion": "Máquinas para PULIDO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 247,
+    "fields": {
+      "codigo": "PUPER",
+      "descripcion": "Máquinas para PUNTEADO DE PERNOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 248,
+    "fields": {
+      "codigo": "PUTIR",
+      "descripcion": "Máquinas para PUNTEAR TIRAFONDOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 249,
+    "fields": {
+      "codigo": "RANURA",
+      "descripcion": "Máquinas para RANURADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 250,
+    "fields": {
+      "codigo": "REBAJA",
+      "descripcion": "Máquinas para REBAJADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 251,
+    "fields": {
+      "codigo": "REBAJD",
+      "descripcion": "Máquinas para REBAJE DE DIAMETRO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 252,
+    "fields": {
+      "codigo": "REBARE",
+      "descripcion": "Máquinas para REBARBADO EXTERIOR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 253,
+    "fields": {
+      "codigo": "REBARI",
+      "descripcion": "Máquinas para REBARBADO INTERIOR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 254,
+    "fields": {
+      "codigo": "REBAES",
+      "descripcion": "Máquinas para REBARBADO DE ESPIGAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 255,
+    "fields": {
+      "codigo": "REBART",
+      "descripcion": "Máquinas para REBARBADO DE TUERCAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 256,
+    "fields": {
+      "codigo": "REBARP",
+      "descripcion": "Máquinas para REBARBADO DE PERNOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 257,
+    "fields": {
+      "codigo": "REFREN",
+      "descripcion": "Máquinas para REFRENTADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 258,
+    "fields": {
+      "codigo": "REPI",
+      "descripcion": "Máquinas para REPICADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 259,
+    "fields": {
+      "codigo": "SOLCA",
+      "descripcion": "Máquinas para SOLDADO DE CADENAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 260,
+    "fields": {
+      "codigo": "SOLDAR",
+      "descripcion": "Máquinas para SOLDADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 261,
+    "fields": {
+      "codigo": "SOLDOJ",
+      "descripcion": "Máquinas para SOLDAR OJO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 262,
+    "fields": {
+      "codigo": "SOLDCU",
+      "descripcion": "Máquinas para SOLDAR CUELLO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 263,
+    "fields": {
+      "codigo": "SOLGOL",
+      "descripcion": "Máquinas para SOLDAR GOLILLA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 264,
+    "fields": {
+      "codigo": "PARTPA",
+      "descripcion": "Máquinas para PARTIR PATAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 265,
+    "fields": {
+      "codigo": "PREPAR",
+      "descripcion": "Máquinas para PREPARTIR PATAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 266,
+    "fields": {
+      "codigo": "HILOS",
+      "descripcion": "Máquinas para CONFECCION DE HILOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 267,
+    "fields": {
+      "codigo": "AVELLA",
+      "descripcion": "Máquinas para AVELLANAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 268,
+    "fields": {
+      "codigo": "LAMIN",
+      "descripcion": "Máquinas para LAMINAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 269,
+    "fields": {
+      "codigo": "LATIR",
+      "descripcion": "Máquinas para LAMINAR TIRAFONDOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 270,
+    "fields": {
+      "codigo": "REPER",
+      "descripcion": "Máquinas para REPASADO DE PERNOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 271,
+    "fields": {
+      "codigo": "RETUE",
+      "descripcion": "Máquinas para REPASADO DE TUERCAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 272,
+    "fields": {
+      "codigo": "TEPER",
+      "descripcion": "Máquinas para TERRAJADO DE PERNOS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 273,
+    "fields": {
+      "codigo": "TETUE",
+      "descripcion": "Máquinas para TERRAJADO DE TUERCAS"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 274,
+    "fields": {
+      "codigo": "TRATER",
+      "descripcion": "Máquinas para TRATAMIENTO TERMICO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 275,
+    "fields": {
+      "codigo": "REVE",
+      "descripcion": "Máquinas para REVENIDO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 276,
+    "fields": {
+      "codigo": "NORMAL",
+      "descripcion": "Máquinas para NORMALIZADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 277,
+    "fields": {
+      "codigo": "PLANCU",
+      "descripcion": "Máquinas para PLANCHADO CURVO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 278,
+    "fields": {
+      "codigo": "ACEITA",
+      "descripcion": "Máquinas para ACEITAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 279,
+    "fields": {
+      "codigo": "DECA",
+      "descripcion": "Máquinas para DECAPAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 280,
+    "fields": {
+      "codigo": "DICRO",
+      "descripcion": "Máquinas para DICROMATAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 281,
+    "fields": {
+      "codigo": "GALVAN",
+      "descripcion": "Máquinas para GALVANIZAR"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 282,
+    "fields": {
+      "codigo": "PAVON",
+      "descripcion": "Máquinas para PAVONADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 283,
+    "fields": {
+      "codigo": "PINTAR",
+      "descripcion": "Máquinas para PINTADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 284,
+    "fields": {
+      "codigo": "REGALV",
+      "descripcion": "Máquinas para REGALVANIZADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 285,
+    "fields": {
+      "codigo": "REZINC",
+      "descripcion": "Máquinas para REZINCADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 286,
+    "fields": {
+      "codigo": "ZINCAR",
+      "descripcion": "Máquinas para ZINCADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 287,
+    "fields": {
+      "codigo": "DINDAV",
+      "descripcion": "Máquinas para DESPACHO INDAVAL"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 288,
+    "fields": {
+      "codigo": "CORTE",
+      "descripcion": "Máquinas para CORTE"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 289,
+    "fields": {
+      "codigo": "LOGO",
+      "descripcion": "Máquinas para LOGOTIPO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 290,
+    "fields": {
+      "codigo": "PERF09",
+      "descripcion": "Máquinas para PERFORACION REDONDA 9mm"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 291,
+    "fields": {
+      "codigo": "SOLDAD",
+      "descripcion": "Máquinas para SOLDADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 292,
+    "fields": {
+      "codigo": "DOBLA",
+      "descripcion": "Máquinas para DOBLADO"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 293,
+    "fields": {
+      "codigo": "DOBLA1",
+      "descripcion": "Máquinas para DOBLADO 1"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 294,
+    "fields": {
+      "codigo": "DOBLA2",
+      "descripcion": "Máquinas para DOBLADO 2"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 295,
+    "fields": {
+      "codigo": "DEPUN",
+      "descripcion": "Máquinas para DESPUNTE"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 296,
+    "fields": {
+      "codigo": "INYECT",
+      "descripcion": "Máquinas para INYECION DE POLIAMIDA"
+    }
+  },
+  {
+    "model": "Machine.tipomaquina",
+    "pk": 297,
+    "fields": {
+      "codigo": "RECEPC",
+      "descripcion": "Máquinas para RECEPCION DE PRODUCTOS"
+    }
+  }
+]

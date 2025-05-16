@@ -1,0 +1,14 @@
+.card {
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+  
+  .form-label {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #495057;
+  }
+  
+  .form-control:disabled {
+    background-color: #f8f9fa;
+    cursor: not-allowed;
+  }

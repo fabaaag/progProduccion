@@ -1,0 +1,1802 @@
+[
+  {
+    "model": "JobManagement.proceso",
+    "pk": 133,
+    "fields": {
+      "codigo_proceso": "1000",
+      "sigla": "PREMAT",
+      "descripcion": "PREPARACION DE MATERIAL",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 134,
+    "fields": {
+      "codigo_proceso": "1010",
+      "sigla": "ARENAR",
+      "descripcion": "ARENADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        193
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 135,
+    "fields": {
+      "codigo_proceso": "1020",
+      "sigla": "CORTAR",
+      "descripcion": "CORTADO",
+      "carga": "46976.4100",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 136,
+    "fields": {
+      "codigo_proceso": "1025",
+      "sigla": "CORTPE",
+      "descripcion": "CORTE Y PERFORADO",
+      "carga": "8375.8400",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        195
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 137,
+    "fields": {
+      "codigo_proceso": "1026",
+      "sigla": "CORTPL",
+      "descripcion": "CORTE, PERFORADO Y LOGO",
+      "carga": "4.7300",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        196
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 138,
+    "fields": {
+      "codigo_proceso": "1030",
+      "sigla": "TREBA",
+      "descripcion": "TREFILADO DE BARRAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        197
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 139,
+    "fields": {
+      "codigo_proceso": "1040",
+      "sigla": "TRERO",
+      "descripcion": "TREFILADO DE ROLLOS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        198
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 140,
+    "fields": {
+      "codigo_proceso": "2000",
+      "sigla": "FABRIC",
+      "descripcion": "FABRICACION",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 141,
+    "fields": {
+      "codigo_proceso": "2010",
+      "sigla": "ACANAL",
+      "descripcion": "ACANALADO",
+      "carga": "408.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        199
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 142,
+    "fields": {
+      "codigo_proceso": "2020",
+      "sigla": "BISEL",
+      "descripcion": "BISELADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        200
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 143,
+    "fields": {
+      "codigo_proceso": "2030",
+      "sigla": "CALI",
+      "descripcion": "CALIBRADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        201
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 144,
+    "fields": {
+      "codigo_proceso": "2040",
+      "sigla": "CHASCO",
+      "descripcion": "CHASCONEADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        202
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 145,
+    "fields": {
+      "codigo_proceso": "2050",
+      "sigla": "CORPUN",
+      "descripcion": "CORTADO DE PUNTAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        203
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 146,
+    "fields": {
+      "codigo_proceso": "2060",
+      "sigla": "DESBAS",
+      "descripcion": "DESBASTADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        204
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 147,
+    "fields": {
+      "codigo_proceso": "2070",
+      "sigla": "DESTAJ",
+      "descripcion": "DESTAJE",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        205
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 148,
+    "fields": {
+      "codigo_proceso": "2080",
+      "sigla": "DOBLAC",
+      "descripcion": "DOBLAR EN CALIENTE",
+      "carga": "505.9500",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        206
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 149,
+    "fields": {
+      "codigo_proceso": "2090",
+      "sigla": "DOBLAF",
+      "descripcion": "DOBLAR EN FRIO",
+      "carga": "17161.3900",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        207
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 150,
+    "fields": {
+      "codigo_proceso": "2100",
+      "sigla": "EMPLO",
+      "descripcion": "EMPLOMADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        208
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 151,
+    "fields": {
+      "codigo_proceso": "2105",
+      "sigla": "DEMPL",
+      "descripcion": "DESEMPLOMADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        209
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 152,
+    "fields": {
+      "codigo_proceso": "2110",
+      "sigla": "ENCAP",
+      "descripcion": "ENCAPSULAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 153,
+    "fields": {
+      "codigo_proceso": "2120",
+      "sigla": "ENCAM",
+      "descripcion": "ENCAMIZADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        210
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 154,
+    "fields": {
+      "codigo_proceso": "2130",
+      "sigla": "ENDERZ",
+      "descripcion": "ENDEREZAR",
+      "carga": "101.2800",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        211
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 155,
+    "fields": {
+      "codigo_proceso": "2140",
+      "sigla": "ESMERI",
+      "descripcion": "ESMERILAR",
+      "carga": "8569.5800",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        212
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 156,
+    "fields": {
+      "codigo_proceso": "2150",
+      "sigla": "ESTAMC",
+      "descripcion": "ESTAMPAR EN CALIENTE",
+      "carga": "16672.3700",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        213
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 157,
+    "fields": {
+      "codigo_proceso": "2160",
+      "sigla": "ESTAC1",
+      "descripcion": "ESTAMPAR EN CALIENTE PRIMER GOLPE",
+      "carga": "901.6000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        214
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 158,
+    "fields": {
+      "codigo_proceso": "2170",
+      "sigla": "ESTAC2",
+      "descripcion": "ESTAMPAR EN CALIENTE SEGUNDO GOLPE",
+      "carga": "901.6000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        215
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 159,
+    "fields": {
+      "codigo_proceso": "2180",
+      "sigla": "ESTAMF",
+      "descripcion": "ESTAMPAR EN FRIO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        216
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 160,
+    "fields": {
+      "codigo_proceso": "2190",
+      "sigla": "ESTATU",
+      "descripcion": "ESTAMPAR TUERCAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        217
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 161,
+    "fields": {
+      "codigo_proceso": "2200",
+      "sigla": "ESTRIA",
+      "descripcion": "ESTRIAR",
+      "carga": "244.8200",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        218
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 162,
+    "fields": {
+      "codigo_proceso": "2210",
+      "sigla": "FABCHA",
+      "descripcion": "FABRICAR CHAVETAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        219
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 163,
+    "fields": {
+      "codigo_proceso": "2220",
+      "sigla": "FORJAR",
+      "descripcion": "FORJAR",
+      "carga": "1265.8000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        220
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 164,
+    "fields": {
+      "codigo_proceso": "2230",
+      "sigla": "LIMAR",
+      "descripcion": "LIMADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        221
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 165,
+    "fields": {
+      "codigo_proceso": "2240",
+      "sigla": "LOGOTI",
+      "descripcion": "LOGOTIPO",
+      "carga": "57.5000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        222
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 166,
+    "fields": {
+      "codigo_proceso": "2248",
+      "sigla": "PERFCE",
+      "descripcion": "PERFORACION CENTRO 10MM",
+      "carga": "47.7900",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        223
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 167,
+    "fields": {
+      "codigo_proceso": "2249",
+      "sigla": "PERFEX",
+      "descripcion": "PERFORACION EXTREMO 10MM",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        224
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 168,
+    "fields": {
+      "codigo_proceso": "2250",
+      "sigla": "PERFOR",
+      "descripcion": "PERFORADO",
+      "carga": "7836.6300",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        225
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 169,
+    "fields": {
+      "codigo_proceso": "2251",
+      "sigla": "PERFTR",
+      "descripcion": "PERFORACION TREBOL",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        226
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 170,
+    "fields": {
+      "codigo_proceso": "2252",
+      "sigla": "PERFSE",
+      "descripcion": "PERFORACION SEIS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        227
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 171,
+    "fields": {
+      "codigo_proceso": "2253",
+      "sigla": "PERFOV",
+      "descripcion": "PERFORACION OVALADA",
+      "carga": "762.1500",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        228
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 172,
+    "fields": {
+      "codigo_proceso": "2254",
+      "sigla": "PERFRE",
+      "descripcion": "PERFORACION REDONDA",
+      "carga": "207.5000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        229
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 173,
+    "fields": {
+      "codigo_proceso": "2255",
+      "sigla": "PERF18",
+      "descripcion": "PERFORACION REDONDA 18mm",
+      "carga": "9092.9000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        230
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 174,
+    "fields": {
+      "codigo_proceso": "2256",
+      "sigla": "PERF14",
+      "descripcion": "PERFORACION REDONDA 14mm",
+      "carga": "408.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        231
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 175,
+    "fields": {
+      "codigo_proceso": "2257",
+      "sigla": "PERFCU",
+      "descripcion": "PERFORACION CUADRADA",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        232
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 176,
+    "fields": {
+      "codigo_proceso": "2258",
+      "sigla": "PERFO2",
+      "descripcion": "PERFORACION OVALADA 2",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        233
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 177,
+    "fields": {
+      "codigo_proceso": "2259",
+      "sigla": "PERFO8",
+      "descripcion": "PERFORACION OCHO - SEIS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        234
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 178,
+    "fields": {
+      "codigo_proceso": "2260",
+      "sigla": "PINCHA",
+      "descripcion": "PINCHADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        235
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 179,
+    "fields": {
+      "codigo_proceso": "2261",
+      "sigla": "PERF21",
+      "descripcion": "PERFORACION REDONDA 21mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        236
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 180,
+    "fields": {
+      "codigo_proceso": "2262",
+      "sigla": "PERF20",
+      "descripcion": "PERFORACION REDONDA 20mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        237
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 181,
+    "fields": {
+      "codigo_proceso": "2263",
+      "sigla": "PERFT",
+      "descripcion": "PERFORACION TRASLAPADA",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        238
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 182,
+    "fields": {
+      "codigo_proceso": "2264",
+      "sigla": "PERF11",
+      "descripcion": "PERFORACION REDONDA 11mm",
+      "carga": "408.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        239
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 183,
+    "fields": {
+      "codigo_proceso": "2265",
+      "sigla": "PERF16",
+      "descripcion": "PERFORACION REDONDA 16mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        240
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 184,
+    "fields": {
+      "codigo_proceso": "2270",
+      "sigla": "PLANCH",
+      "descripcion": "PLANCHADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        241
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 185,
+    "fields": {
+      "codigo_proceso": "2275",
+      "sigla": "PLANCL",
+      "descripcion": "PLANCHADO Y LOGO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        242
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 186,
+    "fields": {
+      "codigo_proceso": "2280",
+      "sigla": "PREEST",
+      "descripcion": "PRE-ESTAMPADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 187,
+    "fields": {
+      "codigo_proceso": "2290",
+      "sigla": "PUBAR",
+      "descripcion": "PUNTEADO DE BARRAS",
+      "carga": "7851.7400",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        243
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 188,
+    "fields": {
+      "codigo_proceso": "2300",
+      "sigla": "PUCLA",
+      "descripcion": "PUNTEADO DE CLAVOS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        244
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 189,
+    "fields": {
+      "codigo_proceso": "2305",
+      "sigla": "PUESPI",
+      "descripcion": "PUNTEADO DE ESPIGA",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        245
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 190,
+    "fields": {
+      "codigo_proceso": "2310",
+      "sigla": "PULIR",
+      "descripcion": "PULIDO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        246
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 191,
+    "fields": {
+      "codigo_proceso": "2320",
+      "sigla": "PUPER",
+      "descripcion": "PUNTEADO DE PERNOS",
+      "carga": "8114.5800",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        247
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 192,
+    "fields": {
+      "codigo_proceso": "2330",
+      "sigla": "PUTIR",
+      "descripcion": "PUNTEAR TIRAFONDOS",
+      "carga": "5628.7300",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        248
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 193,
+    "fields": {
+      "codigo_proceso": "2340",
+      "sigla": "RANURA",
+      "descripcion": "RANURADO",
+      "carga": "20.4700",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        249
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 194,
+    "fields": {
+      "codigo_proceso": "2350",
+      "sigla": "REBAJA",
+      "descripcion": "REBAJADO",
+      "carga": "203.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        250
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 195,
+    "fields": {
+      "codigo_proceso": "2360",
+      "sigla": "REBAJD",
+      "descripcion": "REBAJE DE DIAMETRO",
+      "carga": "41.8200",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        251
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 196,
+    "fields": {
+      "codigo_proceso": "2370",
+      "sigla": "REBARE",
+      "descripcion": "REBARBADO EXTERIOR",
+      "carga": "7289.8400",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        252
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 197,
+    "fields": {
+      "codigo_proceso": "2380",
+      "sigla": "REBARI",
+      "descripcion": "REBARBADO INTERIOR",
+      "carga": "6340.8200",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        253
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 198,
+    "fields": {
+      "codigo_proceso": "2385",
+      "sigla": "REBAES",
+      "descripcion": "REBARBADO DE ESPIGAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        254
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 199,
+    "fields": {
+      "codigo_proceso": "2390",
+      "sigla": "REBART",
+      "descripcion": "REBARBADO DE TUERCAS",
+      "carga": "30.7200",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        255
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 200,
+    "fields": {
+      "codigo_proceso": "2395",
+      "sigla": "REBARP",
+      "descripcion": "REBARBADO DE PERNOS",
+      "carga": "11471.2400",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        256
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 201,
+    "fields": {
+      "codigo_proceso": "2400",
+      "sigla": "REFREN",
+      "descripcion": "REFRENTADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        257
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 202,
+    "fields": {
+      "codigo_proceso": "2410",
+      "sigla": "REPI",
+      "descripcion": "REPICADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        258
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 203,
+    "fields": {
+      "codigo_proceso": "2420",
+      "sigla": "SOLCA",
+      "descripcion": "SOLDADO DE CADENAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        259
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 204,
+    "fields": {
+      "codigo_proceso": "2430",
+      "sigla": "SOLDAR",
+      "descripcion": "SOLDADO",
+      "carga": "15299.0400",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        260
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 205,
+    "fields": {
+      "codigo_proceso": "2431",
+      "sigla": "SOLDOJ",
+      "descripcion": "SOLDAR OJO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        261
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 206,
+    "fields": {
+      "codigo_proceso": "2432",
+      "sigla": "SOLDCU",
+      "descripcion": "SOLDAR CUELLO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        262
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 207,
+    "fields": {
+      "codigo_proceso": "2433",
+      "sigla": "SOLGOL",
+      "descripcion": "SOLDAR GOLILLA",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        263
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 208,
+    "fields": {
+      "codigo_proceso": "2440",
+      "sigla": "TEJCA",
+      "descripcion": "TEJER CADENAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 209,
+    "fields": {
+      "codigo_proceso": "2501",
+      "sigla": "PARTPA",
+      "descripcion": "PARTIR PATAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        264
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 210,
+    "fields": {
+      "codigo_proceso": "2502",
+      "sigla": "PREPAR",
+      "descripcion": "PREPARTIR PATAS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        265
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 211,
+    "fields": {
+      "codigo_proceso": "3000",
+      "sigla": "HILOS",
+      "descripcion": "CONFECCION DE HILOS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        266
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 212,
+    "fields": {
+      "codigo_proceso": "3010",
+      "sigla": "AVELLA",
+      "descripcion": "AVELLANAR",
+      "carga": "30.7200",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        267
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 213,
+    "fields": {
+      "codigo_proceso": "3020",
+      "sigla": "LAMIN",
+      "descripcion": "LAMINAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        268
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 214,
+    "fields": {
+      "codigo_proceso": "3030",
+      "sigla": "LATIR",
+      "descripcion": "LAMINAR TIRAFONDOS",
+      "carga": "5382.5500",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        269
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 215,
+    "fields": {
+      "codigo_proceso": "3040",
+      "sigla": "REPER",
+      "descripcion": "REPASADO DE PERNOS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        270
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 216,
+    "fields": {
+      "codigo_proceso": "3050",
+      "sigla": "RETUE",
+      "descripcion": "REPASADO DE TUERCAS",
+      "carga": "96.7200",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        271
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 217,
+    "fields": {
+      "codigo_proceso": "3060",
+      "sigla": "TEPER",
+      "descripcion": "TERRAJADO DE PERNOS",
+      "carga": "19302.9000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        272
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 218,
+    "fields": {
+      "codigo_proceso": "3070",
+      "sigla": "TETUE",
+      "descripcion": "TERRAJADO DE TUERCAS",
+      "carga": "719.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        273
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 219,
+    "fields": {
+      "codigo_proceso": "4000",
+      "sigla": "TRATER",
+      "descripcion": "TRATAMIENTO TERMICO",
+      "carga": "719.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        274
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 220,
+    "fields": {
+      "codigo_proceso": "4010",
+      "sigla": "REVE",
+      "descripcion": "REVENIDO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        275
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 221,
+    "fields": {
+      "codigo_proceso": "4020",
+      "sigla": "TEMPLE",
+      "descripcion": "TEMPLADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 222,
+    "fields": {
+      "codigo_proceso": "4030",
+      "sigla": "NORMAL",
+      "descripcion": "NORMALIZADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        276
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 223,
+    "fields": {
+      "codigo_proceso": "5010",
+      "sigla": "PLANCU",
+      "descripcion": "PLANCHADO CURVO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        277
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 224,
+    "fields": {
+      "codigo_proceso": "6040",
+      "sigla": "TERMIN",
+      "descripcion": "TERMINACION",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 225,
+    "fields": {
+      "codigo_proceso": "6050",
+      "sigla": "ACEITA",
+      "descripcion": "ACEITAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        278
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 226,
+    "fields": {
+      "codigo_proceso": "6060",
+      "sigla": "DECA",
+      "descripcion": "DECAPAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        279
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 227,
+    "fields": {
+      "codigo_proceso": "6070",
+      "sigla": "DICRO",
+      "descripcion": "DICROMATAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        280
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 228,
+    "fields": {
+      "codigo_proceso": "6080",
+      "sigla": "GALVAN",
+      "descripcion": "GALVANIZAR",
+      "carga": "123.9500",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        281
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 229,
+    "fields": {
+      "codigo_proceso": "6090",
+      "sigla": "PAVON",
+      "descripcion": "PAVONADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        282
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 230,
+    "fields": {
+      "codigo_proceso": "6100",
+      "sigla": "PINTAR",
+      "descripcion": "PINTADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        283
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 231,
+    "fields": {
+      "codigo_proceso": "6110",
+      "sigla": "REGALV",
+      "descripcion": "REGALVANIZADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        284
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 232,
+    "fields": {
+      "codigo_proceso": "6120",
+      "sigla": "REZINC",
+      "descripcion": "REZINCADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        285
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 233,
+    "fields": {
+      "codigo_proceso": "6130",
+      "sigla": "ZINCAR",
+      "descripcion": "ZINCADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        286
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 234,
+    "fields": {
+      "codigo_proceso": "7000",
+      "sigla": "DINDAV",
+      "descripcion": "DESPACHO INDAVAL",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        287
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 235,
+    "fields": {
+      "codigo_proceso": "7005",
+      "sigla": "ARMADO",
+      "descripcion": "ARMADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 236,
+    "fields": {
+      "codigo_proceso": "7010",
+      "sigla": "CORTE",
+      "descripcion": "CORTE",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 237,
+    "fields": {
+      "codigo_proceso": "7015",
+      "sigla": "ESMERI",
+      "descripcion": "ESMERILADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 238,
+    "fields": {
+      "codigo_proceso": "7020",
+      "sigla": "ESTAMP",
+      "descripcion": "ESTAMPADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 239,
+    "fields": {
+      "codigo_proceso": "7025",
+      "sigla": "LOGO",
+      "descripcion": "LOGOTIPO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        289
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 240,
+    "fields": {
+      "codigo_proceso": "7030",
+      "sigla": "MONTAJ",
+      "descripcion": "MONTAJE",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 241,
+    "fields": {
+      "codigo_proceso": "7033",
+      "sigla": "PERF09",
+      "descripcion": "PERFORACION REDONDA 9mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        290
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 242,
+    "fields": {
+      "codigo_proceso": "7034",
+      "sigla": "PERF12",
+      "descripcion": "PERFORACION REDONDA 12mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 243,
+    "fields": {
+      "codigo_proceso": "7035",
+      "sigla": "PERF14",
+      "descripcion": "PERFORACION REDONDA 14mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        231
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 244,
+    "fields": {
+      "codigo_proceso": "7036",
+      "sigla": "PERF18",
+      "descripcion": "PERFORACION REDONDA 18mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        230
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 245,
+    "fields": {
+      "codigo_proceso": "7038",
+      "sigla": "PERF21",
+      "descripcion": "PERFORACION REDONDA 21mm",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        236
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 246,
+    "fields": {
+      "codigo_proceso": "7040",
+      "sigla": "PINTAD",
+      "descripcion": "PINTADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 247,
+    "fields": {
+      "codigo_proceso": "7045",
+      "sigla": "PLEGAD",
+      "descripcion": "PLEGADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 248,
+    "fields": {
+      "codigo_proceso": "7050",
+      "sigla": "REPUJA",
+      "descripcion": "REPUJADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 249,
+    "fields": {
+      "codigo_proceso": "7055",
+      "sigla": "RODONA",
+      "descripcion": "RODONADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 250,
+    "fields": {
+      "codigo_proceso": "7060",
+      "sigla": "SOLDAD",
+      "descripcion": "SOLDADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        291
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 251,
+    "fields": {
+      "codigo_proceso": "7065",
+      "sigla": "TRAZAD",
+      "descripcion": "TRAZADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 252,
+    "fields": {
+      "codigo_proceso": "7069",
+      "sigla": "DOBLA",
+      "descripcion": "DOBLADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        292
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 253,
+    "fields": {
+      "codigo_proceso": "7070",
+      "sigla": "DOBLA1",
+      "descripcion": "DOBLADO 1",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        293
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 254,
+    "fields": {
+      "codigo_proceso": "7071",
+      "sigla": "DOBLA2",
+      "descripcion": "DOBLADO 2",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        294
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 255,
+    "fields": {
+      "codigo_proceso": "7080",
+      "sigla": "DEPUN",
+      "descripcion": "DESPUNTE",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        295
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 256,
+    "fields": {
+      "codigo_proceso": "8010",
+      "sigla": "ENTUER",
+      "descripcion": "ENTUERCADO DE PERNOS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 257,
+    "fields": {
+      "codigo_proceso": "8020",
+      "sigla": "INYECT",
+      "descripcion": "INYECION DE POLIAMIDA",
+      "carga": "764.6000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        296
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 258,
+    "fields": {
+      "codigo_proceso": "8021",
+      "sigla": "RECUP",
+      "descripcion": "RECUPERACION",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 259,
+    "fields": {
+      "codigo_proceso": "8022",
+      "sigla": "CONTA",
+      "descripcion": "CONTABILIZAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 260,
+    "fields": {
+      "codigo_proceso": "8023",
+      "sigla": "CLASIF",
+      "descripcion": "CLASIFICAR",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 261,
+    "fields": {
+      "codigo_proceso": "8024",
+      "sigla": "INSERT",
+      "descripcion": "INSERTO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 262,
+    "fields": {
+      "codigo_proceso": "8025",
+      "sigla": "ARMAD",
+      "descripcion": "ARMADO",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": []
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 263,
+    "fields": {
+      "codigo_proceso": "9999",
+      "sigla": "RECEPC",
+      "descripcion": "RECEPCION DE PRODUCTOS",
+      "carga": "0.0000",
+      "empresa": 2,
+      "tipos_maquina_compatibles": [
+        297
+      ]
+    }
+  },
+  {
+    "model": "JobManagement.proceso",
+    "pk": 264,
+    "fields": {
+      "codigo_proceso": "",
+      "sigla": null,
+      "descripcion": "",
+      "carga": "0.0000",
+      "empresa": null,
+      "tipos_maquina_compatibles": []
+    }
+  }
+]

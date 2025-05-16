@@ -1,0 +1,74 @@
+[
+  {
+    "model": "Operator.operador",
+    "pk": 1,
+    "fields": {
+      "nombre": "Operador 1",
+      "rut": "18.567.293-0",
+      "activo": true,
+      "empresa": 2,
+      "created_at": "2025-02-27T15:33:29.858Z",
+      "updated_at": "2025-02-28T12:06:46.367Z"
+    }
+  },
+  {
+    "model": "Operator.operador",
+    "pk": 2,
+    "fields": {
+      "nombre": "Operador nro 2",
+      "rut": "22.222.222-2",
+      "activo": true,
+      "empresa": 2,
+      "created_at": "2025-02-28T19:54:25.040Z",
+      "updated_at": "2025-02-28T19:54:25.040Z"
+    }
+  },
+  {
+    "model": "Operator.operador",
+    "pk": 3,
+    "fields": {
+      "nombre": "Operador 3",
+      "rut": "19.376.229-7",
+      "activo": true,
+      "empresa": 2,
+      "created_at": "2025-03-11T10:18:07.294Z",
+      "updated_at": "2025-03-11T10:18:07.294Z"
+    }
+  },
+  {
+    "model": "Operator.operador",
+    "pk": 4,
+    "fields": {
+      "nombre": "Operador 3.5",
+      "rut": "19.376.229-8",
+      "activo": false,
+      "empresa": 2,
+      "created_at": "2025-03-11T10:18:25.620Z",
+      "updated_at": "2025-03-13T18:26:10.993Z"
+    }
+  },
+  {
+    "model": "Operator.operador",
+    "pk": 5,
+    "fields": {
+      "nombre": "Operador 4",
+      "rut": "13.789.456-1",
+      "activo": true,
+      "empresa": 2,
+      "created_at": "2025-03-11T11:56:39.320Z",
+      "updated_at": "2025-03-11T11:56:39.320Z"
+    }
+  },
+  {
+    "model": "Operator.operador",
+    "pk": 6,
+    "fields": {
+      "nombre": "Operador 12",
+      "rut": "17.965.471-9",
+      "activo": true,
+      "empresa": 2,
+      "created_at": "2025-03-13T18:27:12.027Z",
+      "updated_at": "2025-03-13T18:27:12.027Z"
+    }
+  }
+]

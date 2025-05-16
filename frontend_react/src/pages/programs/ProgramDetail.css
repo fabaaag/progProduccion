@@ -3,18 +3,31 @@
     padding: 20px;
     border-radius: 8px;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    height: 600px; /* Altura fija para el contenedor */
+    overflow: auto !important; /* Forzar scroll cuando sea necesario */
 }
 
+.react-calendar-timeline {
+    height: 100% !important;
+}
+
+/* Sobreescribir estilos inline del rct-item */
+.rct-item {
+    padding: 0 !important;
+    line-height: normal !important;
+    font-size: 11px !important;
+}
+
+/* Ajustar el contenido del item */
 .timeline-item-content {
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    padding: 2px 6px;
-    font-size: 12px;
-    line-height: 26px; /* Alinear verticalmente el texto */
+    display: flex;
+    align-items: center;
+    height: 100%;
+    padding: 0 4px;
+    font-size: inherit;
 }
 
-/* Estilo para el tooltip */
+/* Estilos para el tooltip */
 [data-tooltip] {
     position: relative;
 }
@@ -26,7 +39,7 @@
     left: 50%;
     transform: translateX(-50%);
     padding: 8px;
-    background: rgba(0,0,0,0.8);
+    background: rgba(0,0,0,0.9);
     color: white;
     border-radius: 4px;
     font-size: 12px;
@@ -34,6 +47,7 @@
     z-index: 1000;
     width: max-content;
     max-width: 300px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
 
 /* Estilos para el layout principal */
@@ -51,4 +65,91 @@
 /* Asegurar que el footer se mantenga abajo */
 .footer {
     flex-shrink: 0;
+}
+
+/* Estilos específicos para el timeline de supervisión */
+.supervisor-timeline {
+    height: 500px !important;
+}
+
+/* Estados de las tareas */
+.timeline-item {
+    height: 30px;
+    border-radius: 4px;
+    transition: all 0.3s ease;
+}
+
+.timeline-item:hover {
+    filter: brightness(0.9);
+}
+
+.timeline-item.estado-pendiente {
+    background-color: #ffeeba;
+    border: 1px solid #ffeeba;
+}
+
+.timeline-item.estado-en_proceso {
+    background-color: #b8daff;
+    border: 1px solid #b8daff;
+}
+
+.timeline-item.estado-completado {
+    background-color: #c3e6cb;
+    border: 1px solid #c3e6cb;
+}
+
+.timeline-item.estado-detenido {
+    background-color: #f5c6cb;
+    border: 1px solid #f5c6cb;
+}
+
+/* Personalización del scroll */
+.timeline-container::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+.timeline-container::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 4px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 4px;
+}
+
+.timeline-container::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* Estilo base para los items del timeline */
+.timeline-custom-item {
+    border-radius: 4px !important;
+    overflow: hidden !important;
+    padding: 0 !important;
+    margin: 2px 0 !important;
+}
+
+.timeline-item-content {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    height: 100% !important;
+    padding: 0 8px !important;
+    font-size: 11px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    line-height: 1 !important;
+}
+
+/* Ocultar los controles de resize/move */
+.rct-item-handler {
+    display: none !important;
+}
+
+/* Ocultar las flechitas de los lados */
+.rct-item-overflow {
+    display: none !important;
 }

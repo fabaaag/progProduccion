@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { Card, Badge, Button, Container, InputGroup, Form, Pagination, OverlayTrigger, Tooltip } from 'react-bootstrap';
 import CompNavbar from '../Navbar/CompNavbar';
 import { Footer } from '../../components/Footer/Footer';
-import { getAllMachinesFromApp, getMachineDetails } from '../../api/machines.api';
+import { getAllMachinesFromApp, getMachineDetails, getMachineTypes } from '../../api/machines.api';
 import { toast } from 'react-hot-toast';
 import { MachineDetailsModal } from './MachineDetailsModal';
 import { FaSearch, FaPlus, FaCog, FaTools } from 'react-icons/fa';
@@ -19,9 +19,12 @@ export function MachineList() {
     const [filterStatus, setFilterStatus] = useState('all');
     const [currentPage, setCurrentPage] = useState(1);
     const [itemsPerPage] = useState(9); // 9 máquinas por página (3x3 grid)
+    const [machineTypes, setMachineTypes] = useState([]);
+    const [selectedMachineType, setSelectedMachineType] = useState('all');
 
     useEffect(() => {
         loadMachines();
+        loadMachineTypes();
     }, []);
 
     const loadMachines = async () => {
@@ -34,6 +37,16 @@ export function MachineList() {
             toast.error('Error al cargar la lista de máquinas');
         } finally {
             setLoading(false);
+        }
+    };
+
+    const loadMachineTypes = async () => {
+        try {
+            const types = await getMachineTypes();
+            setMachineTypes(types);
+        } catch (error) {
+            console.error('Error al cargar tipos de máquina:', error);
+            toast.error('Error al cargar los tipos de máquina');
         }
     };
 
@@ -85,7 +98,11 @@ export function MachineList() {
         const matchesStatus = filterStatus === 'all' || 
             (machine.estado && machine.estado.estado === filterStatus);
 
-        return matchesSearch && matchesStatus;
+        const matchesType = selectedMachineType === 'all' || 
+            (machine.tipos_maquina && 
+             machine.tipos_maquina.some(tipo => tipo.id === parseInt(selectedMachineType)));
+
+        return matchesSearch && matchesStatus && matchesType;
     });
 
     const getStatusIcon = (estado) => {
@@ -255,6 +272,19 @@ export function MachineList() {
                                     <option value="Operativa">Operativa</option>
                                     <option value="En Mantención">En Mantención</option>
                                     <option value="Inoperativa">Inoperativa</option>
+                                </Form.Select>
+                            </div>
+                            <div className="col-md-4">
+                                <Form.Select
+                                    value={selectedMachineType}
+                                    onChange={(e) => setSelectedMachineType(e.target.value)}
+                                >
+                                    <option value="all">Todos los tipos</option>
+                                    {machineTypes.map(type => (
+                                        <option key={type.id} value={type.id}>
+                                            {type.codigo} - {type.descripcion}
+                                        </option>
+                                    ))}
                                 </Form.Select>
                             </div>
                         </div>

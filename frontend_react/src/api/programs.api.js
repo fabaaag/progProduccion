@@ -324,3 +324,93 @@ export const obtenerGenealogiaTask = async (taskId) => {
     throw error;
   }
 };
+
+
+// Obtener timeline de ejecución
+export const getProgramTimelineEjecucion = async (programId) => {
+  try {
+    const response = await axios.get(`/gestion/api/v1/programas/${programId}/timeline-ejecucion/`);
+    return response.data;
+  } catch (error) {
+    console.error("Error obteniendo timeline de ejecución:", error);
+    throw error;
+  }
+};
+
+export const checkProgramStatus = async (programId) => {
+  try {
+    const response = await axios.post(
+      `/gestion/api/v1/programas/${programId}/check-status/`,
+      {},
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error('Error verificando estado del programa:', error);
+    throw error;
+  }
+};
+
+export const addOrdersToProgram = async (programId, orderIds) => {
+  try {
+    const response = await axios.post(
+      `/gestion/api/v1/programas/${programId}/add-orders/`,
+      { ordenes: orderIds },
+      {
+        headers: {
+          'Content-Type': 'application/json'
+        }
+      }
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error añadiendo órdenes al programa:", error);
+    throw error;
+  }
+};
+
+export const getUnassignedOrders = async () => {
+  try {
+    const response = await axios.get(`/gestion/api/v1/ordenes/no_asignadas/`);
+    return response.data;
+  } catch (error) {
+    console.error("Error obteniendo órdenes sin asignar:", error);
+    throw error;
+  }
+};
+
+export const verificarReajustesPrograma = async (programId) => {
+  try {
+    const response = await axios.post(
+      `/gestion/api/v1/programas/${programId}/reajustar/`
+    );
+    return response.data;
+  } catch (error) {
+    console.error("Error verificando reajustes:", error);
+    throw error;
+  }
+};
+
+export const aplicarReajustesPrograma = async (programId, ajustes) => {
+  try {
+      const response = await axios.put(
+          `/gestion/api/v1/programas/${programId}/reajustar/`,
+          {
+              ajustes_sugeridos: ajustes
+          },
+          {
+              headers: {
+                  'Content-Type': 'application/json'
+              }
+          }
+      );
+      return response.data;
+  } catch (error) {
+      console.error("Error aplicando reajustes:", error);
+      throw error;
+  }
+};

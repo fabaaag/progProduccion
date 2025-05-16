@@ -1,0 +1,2090 @@
+[
+  {
+    "model": "JobManagement.maquina",
+    "pk": 175,
+    "fields": {
+      "codigo_maquina": "1001",
+      "descripcion": "TIJERA #1",
+      "sigla": "TIJE1",
+      "carga": "12363.83",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 176,
+    "fields": {
+      "codigo_maquina": "1002",
+      "descripcion": "TIJERA #2",
+      "sigla": "TIJE2",
+      "carga": "9297.83",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 177,
+    "fields": {
+      "codigo_maquina": "1003",
+      "descripcion": "TIJERA UNIVERSAL",
+      "sigla": "TIJEU1",
+      "carga": "6432.75",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 178,
+    "fields": {
+      "codigo_maquina": "1004",
+      "descripcion": "GUILLOTINA",
+      "sigla": "GUILLO",
+      "carga": "17241.02",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 179,
+    "fields": {
+      "codigo_maquina": "1112",
+      "descripcion": "PRENSA CHUN-ZU-12",
+      "sigla": "CH-12",
+      "carga": "0.00",
+      "golpes": 65,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 180,
+    "fields": {
+      "codigo_maquina": "1201",
+      "descripcion": "PRENSA FRICCION #1",
+      "sigla": "PF-01",
+      "carga": "4711.05",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 181,
+    "fields": {
+      "codigo_maquina": "1202",
+      "descripcion": "PRENSA FRICCION #2",
+      "sigla": "PF-02",
+      "carga": "1125.01",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 182,
+    "fields": {
+      "codigo_maquina": "1203",
+      "descripcion": "PRENSA FRICCION #3",
+      "sigla": "PF-03",
+      "carga": "10179.35",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 183,
+    "fields": {
+      "codigo_maquina": "1204",
+      "descripcion": "PRENSA FRICCION #4",
+      "sigla": "PF-04",
+      "carga": "1800.94",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 184,
+    "fields": {
+      "codigo_maquina": "1205",
+      "descripcion": "PRENSA FRICCION #5",
+      "sigla": "PF-05",
+      "carga": "6719.11",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 185,
+    "fields": {
+      "codigo_maquina": "1206",
+      "descripcion": "PRENSA FRICCION #6",
+      "sigla": "PF-06",
+      "carga": "163.18",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 186,
+    "fields": {
+      "codigo_maquina": "1207",
+      "descripcion": "PRENSA FRICCION #7",
+      "sigla": "PF-07",
+      "carga": "2032.09",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 187,
+    "fields": {
+      "codigo_maquina": "1208",
+      "descripcion": "PRENSA FRICCION #8",
+      "sigla": "PF-08",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 188,
+    "fields": {
+      "codigo_maquina": "1209",
+      "descripcion": "PRENSA FRICCION #9",
+      "sigla": "PF-09",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 189,
+    "fields": {
+      "codigo_maquina": "1210",
+      "descripcion": "PRENSA FRICCION #10",
+      "sigla": "PF-10",
+      "carga": "2565.64",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 190,
+    "fields": {
+      "codigo_maquina": "1211",
+      "descripcion": "PRENSA FRICCION #11",
+      "sigla": "PF-11",
+      "carga": "1473.86",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 191,
+    "fields": {
+      "codigo_maquina": "1212",
+      "descripcion": "PRENSA FRICCION #12",
+      "sigla": "PF-12",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 192,
+    "fields": {
+      "codigo_maquina": "1213",
+      "descripcion": "PRENSA FRICCION #13 ITALIANA",
+      "sigla": "PF13",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 193,
+    "fields": {
+      "codigo_maquina": "1220",
+      "descripcion": "CORTADORA LASER",
+      "sigla": "LASER",
+      "carga": "4490.75",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 194,
+    "fields": {
+      "codigo_maquina": "1303",
+      "descripcion": "PRENSA EXCENTRICA #3",
+      "sigla": "PR-3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 195,
+    "fields": {
+      "codigo_maquina": "1304",
+      "descripcion": "PRENSA EXCENTRICA #4",
+      "sigla": "PR-4",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 196,
+    "fields": {
+      "codigo_maquina": "1305",
+      "descripcion": "PRENSA EXCENTRICA #5",
+      "sigla": "PR-5",
+      "carga": "100.31",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 197,
+    "fields": {
+      "codigo_maquina": "1306",
+      "descripcion": "PRENSA EXCENTRICA #6",
+      "sigla": "PR-6",
+      "carga": "1520.53",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 198,
+    "fields": {
+      "codigo_maquina": "1311",
+      "descripcion": "PRENSA EXCENTRICA #11",
+      "sigla": "PE-11",
+      "carga": "12313.16",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 199,
+    "fields": {
+      "codigo_maquina": "1312",
+      "descripcion": "PRENSA EXCENTRICA #12",
+      "sigla": "PE-12",
+      "carga": "3964.78",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 200,
+    "fields": {
+      "codigo_maquina": "1313",
+      "descripcion": "PRENSA EXCENTRICA #13",
+      "sigla": "PE-13",
+      "carga": "12892.90",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 201,
+    "fields": {
+      "codigo_maquina": "1314",
+      "descripcion": "PRENSA EXCENTRICA #14",
+      "sigla": "PE-14",
+      "carga": "1094.10",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 202,
+    "fields": {
+      "codigo_maquina": "1315",
+      "descripcion": "PRENSA EXCENTRICA #15",
+      "sigla": "PE-15",
+      "carga": "11571.14",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 203,
+    "fields": {
+      "codigo_maquina": "1316",
+      "descripcion": "PRENSA EXCENTRICA #16",
+      "sigla": "P.EX16",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 204,
+    "fields": {
+      "codigo_maquina": "1317",
+      "descripcion": "PRENSA EXCENTRICA #17",
+      "sigla": "P.EX17",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 205,
+    "fields": {
+      "codigo_maquina": "1318",
+      "descripcion": "PRENSA EXCENTRICA #18",
+      "sigla": "P.EX18",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 206,
+    "fields": {
+      "codigo_maquina": "1401",
+      "descripcion": "REBARBADORA FAMAE #1",
+      "sigla": "REFA01",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 207,
+    "fields": {
+      "codigo_maquina": "1402",
+      "descripcion": "REBARBADORA FAMAE #2",
+      "sigla": "REFA02",
+      "carga": "2140.80",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 208,
+    "fields": {
+      "codigo_maquina": "1403",
+      "descripcion": "REBARBADORA FAMAE #3",
+      "sigla": "REFA03",
+      "carga": "11308.18",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 209,
+    "fields": {
+      "codigo_maquina": "1411",
+      "descripcion": "REBARBADORA NIETO #1",
+      "sigla": "RENI01",
+      "carga": "44.35",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 210,
+    "fields": {
+      "codigo_maquina": "1412",
+      "descripcion": "REBARBADORA NIETO #2",
+      "sigla": "RENI02",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 211,
+    "fields": {
+      "codigo_maquina": "1421",
+      "descripcion": "REBARBADORA DE 2 CABEZAS",
+      "sigla": "RE2CA",
+      "carga": "1028.81",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 212,
+    "fields": {
+      "codigo_maquina": "1431",
+      "descripcion": "REBARBADORA TORTUGA #1",
+      "sigla": "RETOR",
+      "carga": "1698.54",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 213,
+    "fields": {
+      "codigo_maquina": "1440",
+      "descripcion": "REBARBADORA CHUN-ZU-12",
+      "sigla": "CT-12",
+      "carga": "0.00",
+      "golpes": 65,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 214,
+    "fields": {
+      "codigo_maquina": "1600",
+      "descripcion": "PUNTEADORA 2 CABEZAS",
+      "sigla": "PU2CA",
+      "carga": "138.65",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 215,
+    "fields": {
+      "codigo_maquina": "1601",
+      "descripcion": "PUNTEADORA DE PERNOS #1",
+      "sigla": "PUPE1",
+      "carga": "9540.89",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 216,
+    "fields": {
+      "codigo_maquina": "1611",
+      "descripcion": "PUNTEADORA DE CLAVOS #1",
+      "sigla": "PUCLA1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 217,
+    "fields": {
+      "codigo_maquina": "1612",
+      "descripcion": "PUNTEADORA DE CLAVOS #2",
+      "sigla": "PUCLA2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 218,
+    "fields": {
+      "codigo_maquina": "1621",
+      "descripcion": "PUNTEADORA DE TIRAFONDOS #1",
+      "sigla": "PUTIR1",
+      "carga": "8378.80",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 219,
+    "fields": {
+      "codigo_maquina": "1631",
+      "descripcion": "PUNTEADORA DE BARRAS",
+      "sigla": "PUBAR1",
+      "carga": "126.50",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 220,
+    "fields": {
+      "codigo_maquina": "1811",
+      "descripcion": "LAMINADORA TIRAFONDOS #1",
+      "sigla": "LATIR1",
+      "carga": "8528.40",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 221,
+    "fields": {
+      "codigo_maquina": "1812",
+      "descripcion": "LAMINADORA TIRAFONDOS #2",
+      "sigla": "LATIR2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 222,
+    "fields": {
+      "codigo_maquina": "1835",
+      "descripcion": "LAMINADORA ZURZOLO (LDR)",
+      "sigla": "LDR-15",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 223,
+    "fields": {
+      "codigo_maquina": "1840",
+      "descripcion": "LAMINADORA CHUN-ZU-12",
+      "sigla": "DPR-12",
+      "carga": "0.00",
+      "golpes": 98,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 224,
+    "fields": {
+      "codigo_maquina": "2001",
+      "descripcion": "TERRAJADORA PERNOS #1",
+      "sigla": "T.PER1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 225,
+    "fields": {
+      "codigo_maquina": "2002",
+      "descripcion": "TERRAJADORA DE PERNOS #2",
+      "sigla": "TEPE2",
+      "carga": "2587.71",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 226,
+    "fields": {
+      "codigo_maquina": "2003",
+      "descripcion": "TERRAJADORA DE PERNOS #3",
+      "sigla": "TEPE3",
+      "carga": "801.57",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 227,
+    "fields": {
+      "codigo_maquina": "2004",
+      "descripcion": "TERRAJADORA DE PERNOS #4",
+      "sigla": "TEPE4",
+      "carga": "1860.60",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 228,
+    "fields": {
+      "codigo_maquina": "2005",
+      "descripcion": "TERRAJADORA DE PERNOS #5",
+      "sigla": "TEPE5",
+      "carga": "105.85",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 229,
+    "fields": {
+      "codigo_maquina": "2006",
+      "descripcion": "TERRAJADORA DE PERNOS #6",
+      "sigla": "TEPE6",
+      "carga": "7419.25",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 230,
+    "fields": {
+      "codigo_maquina": "2007",
+      "descripcion": "TERRAJADORA DE PERNOS #7",
+      "sigla": "TEPE7",
+      "carga": "126.50",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 231,
+    "fields": {
+      "codigo_maquina": "2008",
+      "descripcion": "TERRAJADORA DE PERNOS #8",
+      "sigla": "TEPE8",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 232,
+    "fields": {
+      "codigo_maquina": "2303",
+      "descripcion": "TERRAJADORA DE TUERCAS #3",
+      "sigla": "TETU3",
+      "carga": "96.72",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 233,
+    "fields": {
+      "codigo_maquina": "2304",
+      "descripcion": "TERRAJADORA DE TUERCAS #4",
+      "sigla": "TETU4",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 234,
+    "fields": {
+      "codigo_maquina": "2305",
+      "descripcion": "TERRAJADORA DE TUERCAS #5",
+      "sigla": "TETU5",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 235,
+    "fields": {
+      "codigo_maquina": "2306",
+      "descripcion": "TERRAJADORA DE TUERCAS #6",
+      "sigla": "TETU6",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 236,
+    "fields": {
+      "codigo_maquina": "2307",
+      "descripcion": "TERRAJADORA DE TUERCAS DE 2 BRAZOS",
+      "sigla": "TETU7",
+      "carga": "1294.20",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 237,
+    "fields": {
+      "codigo_maquina": "2401",
+      "descripcion": "REBARBADORA DE TUERCAS #1",
+      "sigla": "RETU1",
+      "carga": "30.72",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 238,
+    "fields": {
+      "codigo_maquina": "2402",
+      "descripcion": "REBARBADORA DE TUERCAS #2",
+      "sigla": "RETU2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 239,
+    "fields": {
+      "codigo_maquina": "2501",
+      "descripcion": "TALADRO #1",
+      "sigla": "TAL01",
+      "carga": "629.17",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 240,
+    "fields": {
+      "codigo_maquina": "2502",
+      "descripcion": "TALADRO #2",
+      "sigla": "TAL02",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 241,
+    "fields": {
+      "codigo_maquina": "2503",
+      "descripcion": "TALADRO #3",
+      "sigla": "TAL03",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 242,
+    "fields": {
+      "codigo_maquina": "2504",
+      "descripcion": "TALADRO #4",
+      "sigla": "TAL04",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 243,
+    "fields": {
+      "codigo_maquina": "2505",
+      "descripcion": "TALADRO #5",
+      "sigla": "TAL05",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 244,
+    "fields": {
+      "codigo_maquina": "2506",
+      "descripcion": "TALADRO #6",
+      "sigla": "TAL06",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 245,
+    "fields": {
+      "codigo_maquina": "2507",
+      "descripcion": "TALADRO #7",
+      "sigla": "TAL07",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 246,
+    "fields": {
+      "codigo_maquina": "2508",
+      "descripcion": "TALADRO #8",
+      "sigla": "TAL08",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 247,
+    "fields": {
+      "codigo_maquina": "2601",
+      "descripcion": "AVELLANADORA #1",
+      "sigla": "AVETU1",
+      "carga": "30.72",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 248,
+    "fields": {
+      "codigo_maquina": "2602",
+      "descripcion": "AVELLANADORA #2",
+      "sigla": "AVETU2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 249,
+    "fields": {
+      "codigo_maquina": "2603",
+      "descripcion": "AVELLANADORA #3",
+      "sigla": "AVETU3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 250,
+    "fields": {
+      "codigo_maquina": "2701",
+      "descripcion": "PELTZER #1",
+      "sigla": "PELT-1",
+      "carga": "30.72",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 251,
+    "fields": {
+      "codigo_maquina": "2702",
+      "descripcion": "PELTZER #2",
+      "sigla": "PELT-2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 252,
+    "fields": {
+      "codigo_maquina": "2801",
+      "descripcion": "TEJEDORA CADENA #1",
+      "sigla": "TEJCA1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 253,
+    "fields": {
+      "codigo_maquina": "2802",
+      "descripcion": "TEJEDORA CADENA #2",
+      "sigla": "TEJCA2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 254,
+    "fields": {
+      "codigo_maquina": "3001",
+      "descripcion": "SOLDADORA CADENAS #1",
+      "sigla": "SOLCA1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 255,
+    "fields": {
+      "codigo_maquina": "3002",
+      "descripcion": "SOLDADORA CADENAS #2",
+      "sigla": "SOLCA2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 256,
+    "fields": {
+      "codigo_maquina": "3004",
+      "descripcion": "SOLDADORA CADENAS #4",
+      "sigla": "SOLCA4",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 257,
+    "fields": {
+      "codigo_maquina": "3200",
+      "descripcion": "CHAVETERA",
+      "sigla": "CHAV01",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 258,
+    "fields": {
+      "codigo_maquina": "3401",
+      "descripcion": "SOLDADORA AL ARCO #1",
+      "sigla": "SOL401",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 259,
+    "fields": {
+      "codigo_maquina": "3402",
+      "descripcion": "SOLDADORA AL ARCO #2",
+      "sigla": "SOL402",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 260,
+    "fields": {
+      "codigo_maquina": "3421",
+      "descripcion": "SOLDADORA MIG #1",
+      "sigla": "SOLMI1",
+      "carga": "12399.88",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 261,
+    "fields": {
+      "codigo_maquina": "3422",
+      "descripcion": "SOLDADORA MIG #2",
+      "sigla": "SOLMI2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 262,
+    "fields": {
+      "codigo_maquina": "3501",
+      "descripcion": "PRENSA EXCENTRICA PELS",
+      "sigla": "P.PELS",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 263,
+    "fields": {
+      "codigo_maquina": "3601",
+      "descripcion": "CORTADORA DE PUNTAS",
+      "sigla": "CORPU1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 264,
+    "fields": {
+      "codigo_maquina": "3801",
+      "descripcion": "TORNO DE PRODUCCION #1",
+      "sigla": "TORNO1",
+      "carga": "66.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 265,
+    "fields": {
+      "codigo_maquina": "3802",
+      "descripcion": "TORNO DE PRODUCCION #2",
+      "sigla": "TORNO2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 266,
+    "fields": {
+      "codigo_maquina": "3810",
+      "descripcion": "TORNO GILDEMEISTER",
+      "sigla": "TORNOG",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 267,
+    "fields": {
+      "codigo_maquina": "4001",
+      "descripcion": "ESMERIL #1",
+      "sigla": "ESME1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 268,
+    "fields": {
+      "codigo_maquina": "4002",
+      "descripcion": "ESMERIL #2",
+      "sigla": "ESME2",
+      "carga": "10834.18",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 269,
+    "fields": {
+      "codigo_maquina": "4003",
+      "descripcion": "ESMERIL #3",
+      "sigla": "ESME3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 270,
+    "fields": {
+      "codigo_maquina": "4004",
+      "descripcion": "ESMERIL #4",
+      "sigla": "ESME4",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 271,
+    "fields": {
+      "codigo_maquina": "4201",
+      "descripcion": "SIERRA CIRCULAR #1",
+      "sigla": "SIECI1",
+      "carga": "20.47",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 272,
+    "fields": {
+      "codigo_maquina": "4202",
+      "descripcion": "SIERRA CIRCULAR CAROLINA #2",
+      "sigla": "SIECI2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 273,
+    "fields": {
+      "codigo_maquina": "4221",
+      "descripcion": "SIERRA DE VAIVEN #1",
+      "sigla": "SIEVA1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 274,
+    "fields": {
+      "codigo_maquina": "4222",
+      "descripcion": "SIERRA DE VAIVEN #2",
+      "sigla": "SIEVA2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 275,
+    "fields": {
+      "codigo_maquina": "4223",
+      "descripcion": "SIERRA SHARK 331 NC 5.0",
+      "sigla": "SHARK",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 276,
+    "fields": {
+      "codigo_maquina": "4401",
+      "descripcion": "HORNO #1",
+      "sigla": "HORNO1",
+      "carga": "1294.20",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 277,
+    "fields": {
+      "codigo_maquina": "4402",
+      "descripcion": "HORNO #2",
+      "sigla": "HORNO2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 278,
+    "fields": {
+      "codigo_maquina": "4403",
+      "descripcion": "HORNO #3",
+      "sigla": "HORNO3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 279,
+    "fields": {
+      "codigo_maquina": "4600",
+      "descripcion": "BANCO TREFILADOR",
+      "sigla": "BCOTRE",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 280,
+    "fields": {
+      "codigo_maquina": "4610",
+      "descripcion": "TREFILADORA ROLLOS",
+      "sigla": "TRERO1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 281,
+    "fields": {
+      "codigo_maquina": "4801",
+      "descripcion": "ARENADORA #1",
+      "sigla": "ARE1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 282,
+    "fields": {
+      "codigo_maquina": "5001",
+      "descripcion": "TAMBOR PULIDOR #1",
+      "sigla": "TAMPU1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 283,
+    "fields": {
+      "codigo_maquina": "6002",
+      "descripcion": "ACEITADO",
+      "sigla": "ACEITA",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 284,
+    "fields": {
+      "codigo_maquina": "6004",
+      "descripcion": "DECAPADO",
+      "sigla": "DECA",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 285,
+    "fields": {
+      "codigo_maquina": "6006",
+      "descripcion": "DICROMATADO",
+      "sigla": "DICRO",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 286,
+    "fields": {
+      "codigo_maquina": "6008",
+      "descripcion": "GALVANIZADO",
+      "sigla": "GALVAN",
+      "carga": "123.95",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 287,
+    "fields": {
+      "codigo_maquina": "6010",
+      "descripcion": "PAVONADO",
+      "sigla": "PAVON",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 288,
+    "fields": {
+      "codigo_maquina": "6012",
+      "descripcion": "PINTADO",
+      "sigla": "PINTAR",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 289,
+    "fields": {
+      "codigo_maquina": "6018",
+      "descripcion": "ZINCADO",
+      "sigla": "ZINCAR",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 290,
+    "fields": {
+      "codigo_maquina": "6020",
+      "descripcion": "CALIBRADO",
+      "sigla": "CALI",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 291,
+    "fields": {
+      "codigo_maquina": "6022",
+      "descripcion": "EMPLOMADO",
+      "sigla": "EMPLO",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 292,
+    "fields": {
+      "codigo_maquina": "6023",
+      "descripcion": "ENCAMIZADO",
+      "sigla": "ENCAM",
+      "carga": "56.40",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 293,
+    "fields": {
+      "codigo_maquina": "6024",
+      "descripcion": "LIMADO",
+      "sigla": "LIMAR",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 294,
+    "fields": {
+      "codigo_maquina": "6026",
+      "descripcion": "REPICADO",
+      "sigla": "REPI",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 295,
+    "fields": {
+      "codigo_maquina": "6027",
+      "descripcion": "WEINGARTEN",
+      "sigla": "WEING",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 296,
+    "fields": {
+      "codigo_maquina": "7000",
+      "descripcion": "PLEGADORA NARGESA",
+      "sigla": "PLEGA",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 297,
+    "fields": {
+      "codigo_maquina": "8000",
+      "descripcion": "SIN MAQUINA",
+      "sigla": "S/M",
+      "carga": "6033.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 298,
+    "fields": {
+      "codigo_maquina": "9000",
+      "descripcion": "ORDENES INTERNAS",
+      "sigla": "O/I",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 299,
+    "fields": {
+      "codigo_maquina": "9100",
+      "descripcion": "CARRETERA",
+      "sigla": "CARRET",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 300,
+    "fields": {
+      "codigo_maquina": "9110",
+      "descripcion": "INYECTORA DE PLASTICO",
+      "sigla": "INYEC1",
+      "carga": "561.60",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 301,
+    "fields": {
+      "codigo_maquina": "9201",
+      "descripcion": "PRENSA BLISS  150 TONELADAS",
+      "sigla": "PRB1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 302,
+    "fields": {
+      "codigo_maquina": "9202",
+      "descripcion": "PRENSA BLISS 50 TONELADAS",
+      "sigla": "PRB2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 303,
+    "fields": {
+      "codigo_maquina": "9203",
+      "descripcion": "PRENSA BLISS 150 TONELADAS",
+      "sigla": "PRB3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 304,
+    "fields": {
+      "codigo_maquina": "9204",
+      "descripcion": "PRENSA BLISS 300 TONELADAS",
+      "sigla": "PRB4",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 305,
+    "fields": {
+      "codigo_maquina": "9205",
+      "descripcion": "PRENSA BLISS 150 TONELADAS",
+      "sigla": "PRB5",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 306,
+    "fields": {
+      "codigo_maquina": "9206",
+      "descripcion": "PRENSA BLISS 150 TONELADAS",
+      "sigla": "PRB6",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 307,
+    "fields": {
+      "codigo_maquina": "9207",
+      "descripcion": "PRENSA BLISS 120 TONELADAS",
+      "sigla": "PRB7",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 308,
+    "fields": {
+      "codigo_maquina": "9208",
+      "descripcion": "PRENSA BLISS 30",
+      "sigla": "PRB8",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 309,
+    "fields": {
+      "codigo_maquina": "9209",
+      "descripcion": "PRENSA BLISS 30 TONELADAS",
+      "sigla": "PRB9",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 310,
+    "fields": {
+      "codigo_maquina": "9210",
+      "descripcion": "PRENSA BLISS 20 TONELADAS",
+      "sigla": "PRB10",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 311,
+    "fields": {
+      "codigo_maquina": "9211",
+      "descripcion": "PRENSA BLISS 20 TONELADAS",
+      "sigla": "PRB11",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 312,
+    "fields": {
+      "codigo_maquina": "9212",
+      "descripcion": "PRENSA BLISS 30 TONELADAS",
+      "sigla": "PRB12",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 313,
+    "fields": {
+      "codigo_maquina": "9213",
+      "descripcion": "PRENSA CHINA",
+      "sigla": "PCH1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 314,
+    "fields": {
+      "codigo_maquina": "9214",
+      "descripcion": "PRENSA CHINA",
+      "sigla": "PCH2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 315,
+    "fields": {
+      "codigo_maquina": "9215",
+      "descripcion": "PRENSA NATIONAL",
+      "sigla": "PRN1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 316,
+    "fields": {
+      "codigo_maquina": "9216",
+      "descripcion": "PRENSA MANUAL PEDDINGHOUS",
+      "sigla": "PRP1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 317,
+    "fields": {
+      "codigo_maquina": "9217",
+      "descripcion": "PRENSA ENMANGADORA",
+      "sigla": "PEP1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 318,
+    "fields": {
+      "codigo_maquina": "9218",
+      "descripcion": "MARTINETE BECHE",
+      "sigla": "MAB1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 319,
+    "fields": {
+      "codigo_maquina": "9219",
+      "descripcion": "CIZALLA AJIAL 8 X 2",
+      "sigla": "CZA1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 320,
+    "fields": {
+      "codigo_maquina": "9220",
+      "descripcion": "CIZALLA SACMA",
+      "sigla": "CZS1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 321,
+    "fields": {
+      "codigo_maquina": "9221",
+      "descripcion": "TALADRO TRADE MARK 16mm",
+      "sigla": "TAT1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 322,
+    "fields": {
+      "codigo_maquina": "9222",
+      "descripcion": "TALADRO BENCH 13mm",
+      "sigla": "TAB1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 323,
+    "fields": {
+      "codigo_maquina": "9223",
+      "descripcion": "TORNO SOUTE BEND",
+      "sigla": "TOS1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 324,
+    "fields": {
+      "codigo_maquina": "9224",
+      "descripcion": "TORNO TABELLI ZUM",
+      "sigla": "TOS1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 325,
+    "fields": {
+      "codigo_maquina": "9225",
+      "descripcion": "SOLDADORA PUNTO",
+      "sigla": "SPT1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 326,
+    "fields": {
+      "codigo_maquina": "9226",
+      "descripcion": "SOLDADORA PUNTO SIEMENS",
+      "sigla": "SPT2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 327,
+    "fields": {
+      "codigo_maquina": "9227",
+      "descripcion": "SOLDADORA PUNTO PANTERA",
+      "sigla": "SPT3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 328,
+    "fields": {
+      "codigo_maquina": "9228",
+      "descripcion": "SIERRA VAIVEN MARVEL",
+      "sigla": "SVM1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 329,
+    "fields": {
+      "codigo_maquina": "9229",
+      "descripcion": "CIZALLA PORTATIL BOSCH",
+      "sigla": "CZP1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 330,
+    "fields": {
+      "codigo_maquina": "9230",
+      "descripcion": "CIZALLA ARCO CHILE",
+      "sigla": "CZA3",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 331,
+    "fields": {
+      "codigo_maquina": "9231",
+      "descripcion": "CIZALLA AB SVETSMEKANO",
+      "sigla": "CZA4",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 332,
+    "fields": {
+      "codigo_maquina": "9232",
+      "descripcion": "TALADRO K&K",
+      "sigla": "TAK1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 333,
+    "fields": {
+      "codigo_maquina": "9233",
+      "descripcion": "SOLDADORA MIG HOBART",
+      "sigla": "SMH1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 334,
+    "fields": {
+      "codigo_maquina": "9234",
+      "descripcion": "DOBLADORA Y CORTADORA SCHNELL",
+      "sigla": "DCS1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 335,
+    "fields": {
+      "codigo_maquina": "9235",
+      "descripcion": "DOBLADORA GREENLEE ELECTRICA",
+      "sigla": "DOG1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 336,
+    "fields": {
+      "codigo_maquina": "9236",
+      "descripcion": "DOBLADORA GREENLEE MANUAL",
+      "sigla": "DOG2",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 337,
+    "fields": {
+      "codigo_maquina": "9237",
+      "descripcion": "CORTADORA DE LLANTAS",
+      "sigla": "CLL1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 338,
+    "fields": {
+      "codigo_maquina": "9238",
+      "descripcion": "RODONADORA TOLVA",
+      "sigla": "RTO1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 339,
+    "fields": {
+      "codigo_maquina": "9239",
+      "descripcion": "RODONADORA TOLVA",
+      "sigla": "RT02",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 340,
+    "fields": {
+      "codigo_maquina": "9240",
+      "descripcion": "MESA ARMADO ALMA TOLVA",
+      "sigla": "MAT1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 341,
+    "fields": {
+      "codigo_maquina": "9241",
+      "descripcion": "MESON TRAZADO",
+      "sigla": "MET1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 342,
+    "fields": {
+      "codigo_maquina": "9242",
+      "descripcion": "MESON PLEGADO",
+      "sigla": "MEP1",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 343,
+    "fields": {
+      "codigo_maquina": "9243",
+      "descripcion": "MESA ARMADO",
+      "sigla": "MEA",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 344,
+    "fields": {
+      "codigo_maquina": "9244",
+      "descripcion": "ARREGLO MAQUINA",
+      "sigla": "ARREG",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 345,
+    "fields": {
+      "codigo_maquina": "9245",
+      "descripcion": "PRENSA HIDRAULICA",
+      "sigla": "PREHI",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 346,
+    "fields": {
+      "codigo_maquina": "9246",
+      "descripcion": "MESA RECUPERACION",
+      "sigla": "MEREC",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 347,
+    "fields": {
+      "codigo_maquina": "9247",
+      "descripcion": "INVENTARIO",
+      "sigla": "INVENT",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": 2
+    }
+  },
+  {
+    "model": "JobManagement.maquina",
+    "pk": 348,
+    "fields": {
+      "codigo_maquina": "",
+      "descripcion": "",
+      "sigla": "",
+      "carga": "0.00",
+      "golpes": 0,
+      "empresa": null
+    }
+  }
+]

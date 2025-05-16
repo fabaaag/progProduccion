@@ -1,0 +1,858 @@
+[
+  {
+    "model": "Product.familiaproducto",
+    "pk": 1,
+    "fields": {
+      "codigo_familia": "10",
+      "descripcion": "PERNOS CAB HEXAGONAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 2,
+    "fields": {
+      "codigo_familia": "11",
+      "descripcion": "PERNOS CAB CUADRADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 3,
+    "fields": {
+      "codigo_familia": "12",
+      "descripcion": "PERNOS COCHE"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 4,
+    "fields": {
+      "codigo_familia": "13",
+      "descripcion": "PERNO CENTRO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 5,
+    "fields": {
+      "codigo_familia": "14",
+      "descripcion": "PERNO ARADO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 6,
+    "fields": {
+      "codigo_familia": "15",
+      "descripcion": "PERNO MAQUINA CAB PLANA AVE"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 7,
+    "fields": {
+      "codigo_familia": "16",
+      "descripcion": "PERNO MAQUINA CAB RED"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 8,
+    "fields": {
+      "codigo_familia": "17",
+      "descripcion": "PERNO MARQUEZA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 9,
+    "fields": {
+      "codigo_familia": "18",
+      "descripcion": "TIRAFONDOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 10,
+    "fields": {
+      "codigo_familia": "19",
+      "descripcion": "ESPARRAGO HILO TOTAL (1 MT)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 11,
+    "fields": {
+      "codigo_familia": "1A",
+      "descripcion": "ESPARRAGO HILO TOTAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 12,
+    "fields": {
+      "codigo_familia": "1B",
+      "descripcion": "ESPARRAGO HILO AMBOS EXTREMOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 13,
+    "fields": {
+      "codigo_familia": "1C",
+      "descripcion": "ESPARRAGO HILO UN EXTREMO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 14,
+    "fields": {
+      "codigo_familia": "20",
+      "descripcion": "GANCHO P/TECHO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 15,
+    "fields": {
+      "codigo_familia": "21",
+      "descripcion": "PERNO PARKER CAB. CILINDRICA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 16,
+    "fields": {
+      "codigo_familia": "22",
+      "descripcion": "PER CORAZA MOLINO CAB OVALADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 17,
+    "fields": {
+      "codigo_familia": "23",
+      "descripcion": "PER CORAZA MOLINO CAB CUADRADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 18,
+    "fields": {
+      "codigo_familia": "24",
+      "descripcion": "PERNO DE ANCLAJE"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 19,
+    "fields": {
+      "codigo_familia": "25",
+      "descripcion": "PERNO CAB HEXAGONAL REFORZADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 20,
+    "fields": {
+      "codigo_familia": "26",
+      "descripcion": "PERNO CAB CUADRADA REFORZADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 21,
+    "fields": {
+      "codigo_familia": "27",
+      "descripcion": "PERNO RIELERO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 22,
+    "fields": {
+      "codigo_familia": "28",
+      "descripcion": "PERNO RIELERO FFCC"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 23,
+    "fields": {
+      "codigo_familia": "29",
+      "descripcion": "PERNO ESPECIAL (SEGUN PLANO)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 24,
+    "fields": {
+      "codigo_familia": "2A",
+      "descripcion": "PERNO CAB CUADRADA ESPECIAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 25,
+    "fields": {
+      "codigo_familia": "2E",
+      "descripcion": "PERNO MAQ CAB PLA ESP (VARIOS)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 26,
+    "fields": {
+      "codigo_familia": "2F",
+      "descripcion": "PERNO MAQ CAB RED ESP (VARIOS)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 27,
+    "fields": {
+      "codigo_familia": "2H",
+      "descripcion": "PERNO MAQ CAB CIL ESP (VARIOS)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 28,
+    "fields": {
+      "codigo_familia": "2K",
+      "descripcion": "PERNO RIELERO ESPECIAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 29,
+    "fields": {
+      "codigo_familia": "30",
+      "descripcion": "TUERCA HEXAGONAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 30,
+    "fields": {
+      "codigo_familia": "31",
+      "descripcion": "TUERCA HEXAGONAL REFORZADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 31,
+    "fields": {
+      "codigo_familia": "32",
+      "descripcion": "TUERCA CUADRADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 32,
+    "fields": {
+      "codigo_familia": "33",
+      "descripcion": "TUERCA CUADRADA REFORZADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 33,
+    "fields": {
+      "codigo_familia": "34",
+      "descripcion": "TUERCA HEXAGONAL ESPECIAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 34,
+    "fields": {
+      "codigo_familia": "35",
+      "descripcion": "GOLILLA PLANA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 35,
+    "fields": {
+      "codigo_familia": "36",
+      "descripcion": "GOLILLA PRESION"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 36,
+    "fields": {
+      "codigo_familia": "37",
+      "descripcion": "GOLILLAS ESPECIALES/VARIAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 37,
+    "fields": {
+      "codigo_familia": "38",
+      "descripcion": "TIRAFONDO RIELERO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 38,
+    "fields": {
+      "codigo_familia": "39",
+      "descripcion": "TORNILLO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 39,
+    "fields": {
+      "codigo_familia": "40",
+      "descripcion": "CADENA ESLABON CORTO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 40,
+    "fields": {
+      "codigo_familia": "41",
+      "descripcion": "CADENA ESLABON LARGO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 41,
+    "fields": {
+      "codigo_familia": "42",
+      "descripcion": "CADENA ESPECIAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 42,
+    "fields": {
+      "codigo_familia": "43",
+      "descripcion": "TIRO ARADO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 43,
+    "fields": {
+      "codigo_familia": "44",
+      "descripcion": "PERNOS ALLEN"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 44,
+    "fields": {
+      "codigo_familia": "45",
+      "descripcion": "PERNO MAQUINA CAB CIL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 45,
+    "fields": {
+      "codigo_familia": "46",
+      "descripcion": "PERNO ROSCALATA CAB HEXAGONAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 46,
+    "fields": {
+      "codigo_familia": "47",
+      "descripcion": "REMACHE CAB PLANA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 47,
+    "fields": {
+      "codigo_familia": "48",
+      "descripcion": "REMACHE CAB PLANA AVELLANADA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 48,
+    "fields": {
+      "codigo_familia": "49",
+      "descripcion": "REMACHE CAB CONICA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 49,
+    "fields": {
+      "codigo_familia": "50",
+      "descripcion": "REMACHE CAB RED (BOTON)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 50,
+    "fields": {
+      "codigo_familia": "51",
+      "descripcion": "REMACHE CAB PLANA (TONELERO)"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 51,
+    "fields": {
+      "codigo_familia": "52",
+      "descripcion": "REMACHES VARIOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 52,
+    "fields": {
+      "codigo_familia": "53",
+      "descripcion": "CLAVO GEMAL"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 53,
+    "fields": {
+      "codigo_familia": "54",
+      "descripcion": "CLAVO RIELERO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 54,
+    "fields": {
+      "codigo_familia": "55",
+      "descripcion": "TACHUELA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 55,
+    "fields": {
+      "codigo_familia": "56",
+      "descripcion": "CHAVETA PARTIDA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 56,
+    "fields": {
+      "codigo_familia": "57",
+      "descripcion": "ABRAZADERA PARA CARROCERIA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 57,
+    "fields": {
+      "codigo_familia": "58",
+      "descripcion": "CLAVOS Y CLAVICOTES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 58,
+    "fields": {
+      "codigo_familia": "59",
+      "descripcion": "PASADORES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 59,
+    "fields": {
+      "codigo_familia": "60",
+      "descripcion": "PRODUCTOS ESPECIALES Y VARIOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 60,
+    "fields": {
+      "codigo_familia": "61",
+      "descripcion": "PERNO PARKER CAB.PLANA REC HEX"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 61,
+    "fields": {
+      "codigo_familia": "62",
+      "descripcion": "PERNO DEFENSA CAMINERA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 62,
+    "fields": {
+      "codigo_familia": "63",
+      "descripcion": "TUERCA ESPECIAL VARIAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 63,
+    "fields": {
+      "codigo_familia": "64",
+      "descripcion": "PERNO P/PRENSA ESTOPA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 64,
+    "fields": {
+      "codigo_familia": "65",
+      "descripcion": "NIPLES PARA CANERIA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 65,
+    "fields": {
+      "codigo_familia": "66",
+      "descripcion": "PRODUCTOS LINEAS ESPECIALES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 66,
+    "fields": {
+      "codigo_familia": "67",
+      "descripcion": "HTAS. ELECTRICAS Y MAQUINARIAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 67,
+    "fields": {
+      "codigo_familia": "68",
+      "descripcion": "PERNO U P/CANERIA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 68,
+    "fields": {
+      "codigo_familia": "69",
+      "descripcion": "ABRAZADERA U PAQUETE RESORTE"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 69,
+    "fields": {
+      "codigo_familia": "70",
+      "descripcion": "ABRAZADERAS GALVANIZADAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 70,
+    "fields": {
+      "codigo_familia": "71",
+      "descripcion": "ABRAZADERAS TIPO \"C\""
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 71,
+    "fields": {
+      "codigo_familia": "73",
+      "descripcion": "ARANDELAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 72,
+    "fields": {
+      "codigo_familia": "74",
+      "descripcion": "BARRAS CON OJO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 73,
+    "fields": {
+      "codigo_familia": "75",
+      "descripcion": "BRIDAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 74,
+    "fields": {
+      "codigo_familia": "76",
+      "descripcion": "CANCAMO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 75,
+    "fields": {
+      "codigo_familia": "78",
+      "descripcion": "CONDULET"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 76,
+    "fields": {
+      "codigo_familia": "79",
+      "descripcion": "CONSOLA"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 77,
+    "fields": {
+      "codigo_familia": "80",
+      "descripcion": "CRUCETAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 78,
+    "fields": {
+      "codigo_familia": "83",
+      "descripcion": "TIRANTES GV"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 79,
+    "fields": {
+      "codigo_familia": "86",
+      "descripcion": "ESPACIADORES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 80,
+    "fields": {
+      "codigo_familia": "87",
+      "descripcion": "ESPIGAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 81,
+    "fields": {
+      "codigo_familia": "88",
+      "descripcion": "ELEMENTOS DE ANCLAJE"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 82,
+    "fields": {
+      "codigo_familia": "90",
+      "descripcion": "TUERCA VARIAS GALVANIZADAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 83,
+    "fields": {
+      "codigo_familia": "91",
+      "descripcion": "GANCHO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 84,
+    "fields": {
+      "codigo_familia": "92",
+      "descripcion": "GANCHO P/LUMINARIA DE A.P."
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 85,
+    "fields": {
+      "codigo_familia": "93",
+      "descripcion": "PERNO HEXAGONAL GALVANIZADO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 86,
+    "fields": {
+      "codigo_familia": "94",
+      "descripcion": "PERNO CAB CUADRADA GALVANIZADO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 87,
+    "fields": {
+      "codigo_familia": "95",
+      "descripcion": "GRILLETES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 88,
+    "fields": {
+      "codigo_familia": "96",
+      "descripcion": "PERNO OJO GALVANIZADO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 89,
+    "fields": {
+      "codigo_familia": "97",
+      "descripcion": "PASADORES CAB RED"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 90,
+    "fields": {
+      "codigo_familia": "98",
+      "descripcion": "PRODUCTOS VARIOS GV"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 91,
+    "fields": {
+      "codigo_familia": "99",
+      "descripcion": "PERNOS VARIOS GALVANIZADOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 92,
+    "fields": {
+      "codigo_familia": "A1",
+      "descripcion": "PRODUCTOS COMPUESTOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 93,
+    "fields": {
+      "codigo_familia": "A3",
+      "descripcion": "VIGAS/VIGUETAS Y PORTAVIGAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 94,
+    "fields": {
+      "codigo_familia": "A4",
+      "descripcion": "PRENSAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 95,
+    "fields": {
+      "codigo_familia": "A8",
+      "descripcion": "SOPORTES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 96,
+    "fields": {
+      "codigo_familia": "C6",
+      "descripcion": "FIJACIONES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 97,
+    "fields": {
+      "codigo_familia": "D1",
+      "descripcion": "CARRETILLAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 98,
+    "fields": {
+      "codigo_familia": "D2",
+      "descripcion": "PALAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 99,
+    "fields": {
+      "codigo_familia": "D3",
+      "descripcion": "CHUZOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 100,
+    "fields": {
+      "codigo_familia": "D4",
+      "descripcion": "BARRETILLAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 101,
+    "fields": {
+      "codigo_familia": "D5",
+      "descripcion": "CINCELES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 102,
+    "fields": {
+      "codigo_familia": "D6",
+      "descripcion": "PUNTOS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 103,
+    "fields": {
+      "codigo_familia": "G0",
+      "descripcion": "PRODUCTOS PLANTA GALVANIZADO"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 104,
+    "fields": {
+      "codigo_familia": "H1",
+      "descripcion": "BROCAS"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 105,
+    "fields": {
+      "codigo_familia": "X1",
+      "descripcion": "CONCEPTOS ESPECIALES"
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 106,
+    "fields": {
+      "codigo_familia": "EG",
+      "descripcion": ""
+    }
+  },
+  {
+    "model": "Product.familiaproducto",
+    "pk": 107,
+    "fields": {
+      "codigo_familia": "MT",
+      "descripcion": ""
+    }
+  }
+]

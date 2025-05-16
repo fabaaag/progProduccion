@@ -1,0 +1,50 @@
+[
+  {
+    "model": "JobManagement.situacionot",
+    "pk": 1,
+    "fields": {
+      "codigo_situacion_ot": "T",
+      "descripcion": "Terminada"
+    }
+  },
+  {
+    "model": "JobManagement.situacionot",
+    "pk": 2,
+    "fields": {
+      "codigo_situacion_ot": "C",
+      "descripcion": "Cancelada"
+    }
+  },
+  {
+    "model": "JobManagement.situacionot",
+    "pk": 3,
+    "fields": {
+      "codigo_situacion_ot": "A",
+      "descripcion": "Anulada"
+    }
+  },
+  {
+    "model": "JobManagement.situacionot",
+    "pk": 4,
+    "fields": {
+      "codigo_situacion_ot": "S",
+      "descripcion": "Sin Imprimir"
+    }
+  },
+  {
+    "model": "JobManagement.situacionot",
+    "pk": 5,
+    "fields": {
+      "codigo_situacion_ot": "P",
+      "descripcion": "Pendiente"
+    }
+  },
+  {
+    "model": "JobManagement.situacionot",
+    "pk": 6,
+    "fields": {
+      "codigo_situacion_ot": "N",
+      "descripcion": null
+    }
+  }
+]

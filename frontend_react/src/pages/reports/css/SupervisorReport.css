@@ -1,0 +1,18 @@
+/* css/SupervisorReport.css */
+.timeline-button {
+    min-width: 120px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.timeline-modal .modal-dialog {
+    max-width: 95vw;
+    margin: 20px auto;
+}
+
+.timeline-container {
+    height: 70vh;
+    width: 100%;
+    overflow: hidden;
+}

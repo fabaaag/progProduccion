@@ -1,0 +1,10 @@
+[
+  {
+    "model": "Machine.estadooperatividad",
+    "pk": 1,
+    "fields": {
+      "estado": "OP",
+      "descripcion": "Operativa"
+    }
+  }
+]

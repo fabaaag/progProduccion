@@ -1,0 +1,6812 @@
+[
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 1,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "696.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 1
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 2,
+    "fields": {
+      "item": 2,
+      "maquina": 189,
+      "proceso": 156,
+      "estandar": 833,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 1
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 3,
+    "fields": {
+      "item": 3,
+      "maquina": 198,
+      "proceso": 196,
+      "estandar": 200,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 1
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 4,
+    "fields": {
+      "item": 4,
+      "maquina": 184,
+      "proceso": 148,
+      "estandar": 400,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 1
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 5,
+    "fields": {
+      "item": 5,
+      "maquina": 201,
+      "proceso": 172,
+      "estandar": 250,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 1
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 6,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 60,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 2
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 7,
+    "fields": {
+      "item": 2,
+      "maquina": 189,
+      "proceso": 156,
+      "estandar": 600,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 2
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 8,
+    "fields": {
+      "item": 3,
+      "maquina": 198,
+      "proceso": 196,
+      "estandar": 200,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 2
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 9,
+    "fields": {
+      "item": 4,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 250,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 2
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 10,
+    "fields": {
+      "item": 1,
+      "maquina": 250,
+      "proceso": 135,
+      "estandar": 480,
+      "cantidad_pedido": "480.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 3
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 11,
+    "fields": {
+      "item": 2,
+      "maquina": 247,
+      "proceso": 212,
+      "estandar": 200,
+      "cantidad_pedido": "480.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 3
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 12,
+    "fields": {
+      "item": 3,
+      "maquina": 237,
+      "proceso": 199,
+      "estandar": 200,
+      "cantidad_pedido": "480.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 3
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 13,
+    "fields": {
+      "item": 4,
+      "maquina": 232,
+      "proceso": 216,
+      "estandar": 200,
+      "cantidad_pedido": "480.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 3
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 14,
+    "fields": {
+      "item": 1,
+      "maquina": 271,
+      "proceso": 193,
+      "estandar": 0,
+      "cantidad_pedido": "1500.00",
+      "cantidad_terminado_proceso": "1411.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 4
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 15,
+    "fields": {
+      "item": 1,
+      "maquina": 196,
+      "proceso": 137,
+      "estandar": 483,
+      "cantidad_pedido": "10000.00",
+      "cantidad_terminado_proceso": "9945.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 5
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 16,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "607.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 6
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 17,
+    "fields": {
+      "item": 2,
+      "maquina": 183,
+      "proceso": 157,
+      "estandar": 300,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "610.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 6
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 18,
+    "fields": {
+      "item": 3,
+      "maquina": 183,
+      "proceso": 158,
+      "estandar": 275,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "605.00",
+      "cantidad_perdida_proceso": "10.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 6
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 19,
+    "fields": {
+      "item": 4,
+      "maquina": 208,
+      "proceso": 196,
+      "estandar": 150,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "605.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 6
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 20,
+    "fields": {
+      "item": 5,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 133,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 6
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 21,
+    "fields": {
+      "item": 6,
+      "maquina": 190,
+      "proceso": 163,
+      "estandar": 361,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 6
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 22,
+    "fields": {
+      "item": 1,
+      "maquina": 297,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "1.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 7
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 23,
+    "fields": {
+      "item": 2,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "1.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 7
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 24,
+    "fields": {
+      "item": 1,
+      "maquina": 177,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "1304.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 8
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 25,
+    "fields": {
+      "item": 2,
+      "maquina": 180,
+      "proceso": 156,
+      "estandar": 698,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "1343.00",
+      "cantidad_perdida_proceso": "10.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 8
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 26,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 196,
+      "estandar": 214,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "1167.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 8
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 27,
+    "fields": {
+      "item": 4,
+      "maquina": 200,
+      "proceso": 197,
+      "estandar": 214,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "1320.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 8
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 28,
+    "fields": {
+      "item": 5,
+      "maquina": 264,
+      "proceso": 168,
+      "estandar": 789,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "280.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 8
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 29,
+    "fields": {
+      "item": 7,
+      "maquina": 232,
+      "proceso": 216,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "280.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 8
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 30,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "15757.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 9
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 31,
+    "fields": {
+      "item": 2,
+      "maquina": 191,
+      "proceso": 156,
+      "estandar": 2128,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "15580.00",
+      "cantidad_perdida_proceso": "56.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 9
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 32,
+    "fields": {
+      "item": 3,
+      "maquina": 208,
+      "proceso": 200,
+      "estandar": 1800,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "13532.00",
+      "cantidad_perdida_proceso": "1.00",
+      "terminado_sin_actualizar": "227.00",
+      "ruta": 9
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 33,
+    "fields": {
+      "item": 4,
+      "maquina": 218,
+      "proceso": 192,
+      "estandar": 4500,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "14691.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "1420.00",
+      "ruta": 9
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 34,
+    "fields": {
+      "item": 5,
+      "maquina": 220,
+      "proceso": 214,
+      "estandar": 2350,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "15393.00",
+      "cantidad_perdida_proceso": "19.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 9
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 35,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 50,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "290.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 36,
+    "fields": {
+      "item": 2,
+      "maquina": 185,
+      "proceso": 156,
+      "estandar": 38,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 37,
+    "fields": {
+      "item": 3,
+      "maquina": 208,
+      "proceso": 200,
+      "estandar": 14,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 38,
+    "fields": {
+      "item": 4,
+      "maquina": 214,
+      "proceso": 195,
+      "estandar": 24,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 39,
+    "fields": {
+      "item": 5,
+      "maquina": 184,
+      "proceso": 161,
+      "estandar": 16,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 40,
+    "fields": {
+      "item": 6,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 24,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 41,
+    "fields": {
+      "item": 7,
+      "maquina": 226,
+      "proceso": 217,
+      "estandar": 33,
+      "cantidad_pedido": "60.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 10
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 42,
+    "fields": {
+      "item": 1,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 12,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 11
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 43,
+    "fields": {
+      "item": 2,
+      "maquina": 199,
+      "proceso": 196,
+      "estandar": 62,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 11
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 44,
+    "fields": {
+      "item": 3,
+      "maquina": 236,
+      "proceso": 218,
+      "estandar": 80,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 11
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 45,
+    "fields": {
+      "item": 4,
+      "maquina": 276,
+      "proceso": 219,
+      "estandar": 60,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 11
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 46,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 2500,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "9611.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 12
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 47,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 4072,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "7739.00",
+      "cantidad_perdida_proceso": "289.00",
+      "terminado_sin_actualizar": "135.00",
+      "ruta": 12
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 48,
+    "fields": {
+      "item": 3,
+      "maquina": 208,
+      "proceso": 200,
+      "estandar": 3180,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "3357.00",
+      "cantidad_perdida_proceso": "18.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 12
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 49,
+    "fields": {
+      "item": 4,
+      "maquina": 218,
+      "proceso": 192,
+      "estandar": 4500,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "5112.00",
+      "cantidad_perdida_proceso": "12.00",
+      "terminado_sin_actualizar": "597.00",
+      "ruta": 12
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 50,
+    "fields": {
+      "item": 5,
+      "maquina": 220,
+      "proceso": 214,
+      "estandar": 4072,
+      "cantidad_pedido": "15000.00",
+      "cantidad_terminado_proceso": "5249.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 12
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 51,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "101.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 13
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 52,
+    "fields": {
+      "item": 2,
+      "maquina": 196,
+      "proceso": 166,
+      "estandar": 0,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "123.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 13
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 53,
+    "fields": {
+      "item": 3,
+      "maquina": 196,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "123.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 13
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 54,
+    "fields": {
+      "item": 4,
+      "maquina": 190,
+      "proceso": 149,
+      "estandar": 150,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "303.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 13
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 55,
+    "fields": {
+      "item": 1,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "865.00",
+      "cantidad_terminado_proceso": "320.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 14
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 56,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 15
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 57,
+    "fields": {
+      "item": 2,
+      "maquina": 186,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "166.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 15
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 58,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 15
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 59,
+    "fields": {
+      "item": 4,
+      "maquina": 240,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "167.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 15
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 60,
+    "fields": {
+      "item": 5,
+      "maquina": 286,
+      "proceso": 228,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 15
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 61,
+    "fields": {
+      "item": 1,
+      "maquina": 177,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "657.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 16
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 62,
+    "fields": {
+      "item": 2,
+      "maquina": 180,
+      "proceso": 156,
+      "estandar": 1364,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "655.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 16
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 63,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 196,
+      "estandar": 480,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "795.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 16
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 64,
+    "fields": {
+      "item": 4,
+      "maquina": 200,
+      "proceso": 197,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "184.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 16
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 65,
+    "fields": {
+      "item": 5,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "757.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 16
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 66,
+    "fields": {
+      "item": 6,
+      "maquina": 229,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "342.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 16
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 67,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "110.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 17
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 68,
+    "fields": {
+      "item": 2,
+      "maquina": 198,
+      "proceso": 173,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 17
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 69,
+    "fields": {
+      "item": 3,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 17
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 70,
+    "fields": {
+      "item": 4,
+      "maquina": 190,
+      "proceso": 148,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 17
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 71,
+    "fields": {
+      "item": 5,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 17
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 72,
+    "fields": {
+      "item": 6,
+      "maquina": 286,
+      "proceso": 228,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 17
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 73,
+    "fields": {
+      "item": 1,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 600,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 74,
+    "fields": {
+      "item": 2,
+      "maquina": 190,
+      "proceso": 141,
+      "estandar": 400,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 75,
+    "fields": {
+      "item": 3,
+      "maquina": 201,
+      "proceso": 174,
+      "estandar": 400,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 76,
+    "fields": {
+      "item": 4,
+      "maquina": 201,
+      "proceso": 182,
+      "estandar": 550,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 77,
+    "fields": {
+      "item": 5,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 659,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "1500.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 78,
+    "fields": {
+      "item": 6,
+      "maquina": 184,
+      "proceso": 148,
+      "estandar": 300,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "1000.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 79,
+    "fields": {
+      "item": 7,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 1000,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "1500.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 80,
+    "fields": {
+      "item": 8,
+      "maquina": 190,
+      "proceso": 149,
+      "estandar": 1800,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "1435.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 81,
+    "fields": {
+      "item": 9,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 600,
+      "cantidad_pedido": "1200.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 18
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 82,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 500,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "1207.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 19
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 83,
+    "fields": {
+      "item": 2,
+      "maquina": 186,
+      "proceso": 156,
+      "estandar": 424,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "1235.00",
+      "cantidad_perdida_proceso": "30.00",
+      "terminado_sin_actualizar": "1421.00",
+      "ruta": 19
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 84,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 550,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "1192.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 19
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 85,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 800,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "1197.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 19
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 86,
+    "fields": {
+      "item": 5,
+      "maquina": 229,
+      "proceso": 217,
+      "estandar": 1200,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "575.00",
+      "cantidad_perdida_proceso": "6.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 19
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 87,
+    "fields": {
+      "item": 1,
+      "maquina": 199,
+      "proceso": 136,
+      "estandar": 1000,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "2552.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 20
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 88,
+    "fields": {
+      "item": 2,
+      "maquina": 189,
+      "proceso": 156,
+      "estandar": 1000,
+      "cantidad_pedido": "4000.00",
+      "cantidad_terminado_proceso": "242.00",
+      "cantidad_perdida_proceso": "8.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 20
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 89,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 220,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "420.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 90,
+    "fields": {
+      "item": 2,
+      "maquina": 185,
+      "proceso": 156,
+      "estandar": 353,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 91,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 180,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 92,
+    "fields": {
+      "item": 4,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 250,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 93,
+    "fields": {
+      "item": 5,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 190,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 94,
+    "fields": {
+      "item": 6,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 170,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 95,
+    "fields": {
+      "item": 7,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 220,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "490.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 96,
+    "fields": {
+      "item": 8,
+      "maquina": 226,
+      "proceso": 217,
+      "estandar": 90,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 21
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 97,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 140,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "500.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 22
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 98,
+    "fields": {
+      "item": 2,
+      "maquina": 183,
+      "proceso": 157,
+      "estandar": 203,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 22
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 99,
+    "fields": {
+      "item": 3,
+      "maquina": 183,
+      "proceso": 158,
+      "estandar": 185,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 22
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 100,
+    "fields": {
+      "item": 4,
+      "maquina": 207,
+      "proceso": 196,
+      "estandar": 167,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 22
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 101,
+    "fields": {
+      "item": 5,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 133,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 22
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 102,
+    "fields": {
+      "item": 6,
+      "maquina": 190,
+      "proceso": 163,
+      "estandar": 349,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 22
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 103,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 100,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "300.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 104,
+    "fields": {
+      "item": 2,
+      "maquina": 185,
+      "proceso": 156,
+      "estandar": 156,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "142.00",
+      "cantidad_perdida_proceso": "8.00",
+      "terminado_sin_actualizar": "150.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 105,
+    "fields": {
+      "item": 3,
+      "maquina": 208,
+      "proceso": 200,
+      "estandar": 60,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 106,
+    "fields": {
+      "item": 4,
+      "maquina": 214,
+      "proceso": 194,
+      "estandar": 100,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "366.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 107,
+    "fields": {
+      "item": 5,
+      "maquina": 184,
+      "proceso": 161,
+      "estandar": 65,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 108,
+    "fields": {
+      "item": 6,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 116,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 109,
+    "fields": {
+      "item": 7,
+      "maquina": 228,
+      "proceso": 217,
+      "estandar": 136,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 110,
+    "fields": {
+      "item": 8,
+      "maquina": 300,
+      "proceso": 257,
+      "estandar": 140,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 23
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 111,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "900.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 112,
+    "fields": {
+      "item": 2,
+      "maquina": 185,
+      "proceso": 156,
+      "estandar": 563,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "835.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 113,
+    "fields": {
+      "item": 3,
+      "maquina": 208,
+      "proceso": 198,
+      "estandar": 216,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "900.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 114,
+    "fields": {
+      "item": 4,
+      "maquina": 184,
+      "proceso": 161,
+      "estandar": 235,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "900.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 115,
+    "fields": {
+      "item": 5,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 150,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "746.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 116,
+    "fields": {
+      "item": 6,
+      "maquina": 228,
+      "proceso": 217,
+      "estandar": 242,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "726.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 117,
+    "fields": {
+      "item": 8,
+      "maquina": 300,
+      "proceso": 257,
+      "estandar": 0,
+      "cantidad_pedido": "900.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 24
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 118,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 88,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 25
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 119,
+    "fields": {
+      "item": 2,
+      "maquina": 189,
+      "proceso": 156,
+      "estandar": 474,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 25
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 120,
+    "fields": {
+      "item": 3,
+      "maquina": 198,
+      "proceso": 196,
+      "estandar": 106,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 25
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 121,
+    "fields": {
+      "item": 4,
+      "maquina": 198,
+      "proceso": 173,
+      "estandar": 113,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 25
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 122,
+    "fields": {
+      "item": 5,
+      "maquina": 198,
+      "proceso": 171,
+      "estandar": 113,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 25
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 123,
+    "fields": {
+      "item": 6,
+      "maquina": 183,
+      "proceso": 149,
+      "estandar": 47,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 25
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 124,
+    "fields": {
+      "item": 1,
+      "maquina": 177,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "124.00",
+      "cantidad_terminado_proceso": "124.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 26
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 125,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 148,
+      "estandar": 0,
+      "cantidad_pedido": "124.00",
+      "cantidad_terminado_proceso": "121.00",
+      "cantidad_perdida_proceso": "8.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 26
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 126,
+    "fields": {
+      "item": 3,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "124.00",
+      "cantidad_terminado_proceso": "79.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 26
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 127,
+    "fields": {
+      "item": 4,
+      "maquina": 219,
+      "proceso": 187,
+      "estandar": 0,
+      "cantidad_pedido": "124.00",
+      "cantidad_terminado_proceso": "114.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 26
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 128,
+    "fields": {
+      "item": 5,
+      "maquina": 230,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "124.00",
+      "cantidad_terminado_proceso": "114.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 26
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 129,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 27
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 130,
+    "fields": {
+      "item": 2,
+      "maquina": 190,
+      "proceso": 148,
+      "estandar": 86,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 27
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 131,
+    "fields": {
+      "item": 3,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 27
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 132,
+    "fields": {
+      "item": 4,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "100.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 27
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 133,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "151.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 134,
+    "fields": {
+      "item": 2,
+      "maquina": 180,
+      "proceso": 156,
+      "estandar": 167,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "144.00",
+      "cantidad_perdida_proceso": "7.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 135,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 197,
+      "estandar": 36,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "144.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 136,
+    "fields": {
+      "item": 4,
+      "maquina": 200,
+      "proceso": 196,
+      "estandar": 36,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "144.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 137,
+    "fields": {
+      "item": 5,
+      "maquina": 200,
+      "proceso": 154,
+      "estandar": 0,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "139.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 138,
+    "fields": {
+      "item": 6,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 96,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "172.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 139,
+    "fields": {
+      "item": 7,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 120,
+      "cantidad_pedido": "120.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 28
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 140,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "1500.00",
+      "cantidad_terminado_proceso": "1560.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 29
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 141,
+    "fields": {
+      "item": 2,
+      "maquina": 186,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "1500.00",
+      "cantidad_terminado_proceso": "1577.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 29
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 142,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "1500.00",
+      "cantidad_terminado_proceso": "1548.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "100.00",
+      "ruta": 29
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 143,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "1500.00",
+      "cantidad_terminado_proceso": "1577.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 29
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 144,
+    "fields": {
+      "item": 5,
+      "maquina": 229,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "1500.00",
+      "cantidad_terminado_proceso": "1137.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "294.00",
+      "ruta": 29
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 145,
+    "fields": {
+      "item": 1,
+      "maquina": 184,
+      "proceso": 163,
+      "estandar": 0,
+      "cantidad_pedido": "600.00",
+      "cantidad_terminado_proceso": "330.00",
+      "cantidad_perdida_proceso": "15.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 30
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 146,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "754.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 31
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 147,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 31
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 148,
+    "fields": {
+      "item": 3,
+      "maquina": 201,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 31
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 149,
+    "fields": {
+      "item": 4,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 31
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 150,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 293,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 32
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 151,
+    "fields": {
+      "item": 2,
+      "maquina": 180,
+      "proceso": 156,
+      "estandar": 1579,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 32
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 152,
+    "fields": {
+      "item": 3,
+      "maquina": 199,
+      "proceso": 196,
+      "estandar": 353,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 32
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 153,
+    "fields": {
+      "item": 4,
+      "maquina": 202,
+      "proceso": 173,
+      "estandar": 375,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 32
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 154,
+    "fields": {
+      "item": 5,
+      "maquina": 202,
+      "proceso": 171,
+      "estandar": 375,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 32
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 155,
+    "fields": {
+      "item": 6,
+      "maquina": 183,
+      "proceso": 149,
+      "estandar": 157,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 32
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 156,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "10.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "1421.00",
+      "ruta": 33
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 157,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 33
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 158,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 33
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 159,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 33
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 160,
+    "fields": {
+      "item": 5,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 33
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 161,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "10.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 34
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 162,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 34
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 163,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 34
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 164,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 34
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 165,
+    "fields": {
+      "item": 5,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 34
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 166,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "10.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "1421.00",
+      "ruta": 35
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 167,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 35
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 168,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 35
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 169,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 35
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 170,
+    "fields": {
+      "item": 5,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "10.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 35
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 171,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 36
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 172,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 36
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 173,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 36
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 174,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 36
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 175,
+    "fields": {
+      "item": 5,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "150.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 36
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 176,
+    "fields": {
+      "item": 1,
+      "maquina": 177,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 37
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 177,
+    "fields": {
+      "item": 2,
+      "maquina": 180,
+      "proceso": 156,
+      "estandar": 1364,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 37
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 178,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 196,
+      "estandar": 480,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 37
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 179,
+    "fields": {
+      "item": 4,
+      "maquina": 200,
+      "proceso": 197,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 37
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 180,
+    "fields": {
+      "item": 5,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 37
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 181,
+    "fields": {
+      "item": 6,
+      "maquina": 229,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 37
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 182,
+    "fields": {
+      "item": 1,
+      "maquina": 177,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "355.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "145.00",
+      "ruta": 38
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 183,
+    "fields": {
+      "item": 2,
+      "maquina": 180,
+      "proceso": 156,
+      "estandar": 682,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "370.00",
+      "cantidad_perdida_proceso": "2.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 38
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 184,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 196,
+      "estandar": 240,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "228.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 38
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 185,
+    "fields": {
+      "item": 4,
+      "maquina": 200,
+      "proceso": 197,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "228.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 38
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 186,
+    "fields": {
+      "item": 5,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "500.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "140.00",
+      "ruta": 38
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 187,
+    "fields": {
+      "item": 6,
+      "maquina": 229,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "60.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 38
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 188,
+    "fields": {
+      "item": 1,
+      "maquina": 193,
+      "proceso": 136,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "72.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "153.00",
+      "ruta": 39
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 189,
+    "fields": {
+      "item": 2,
+      "maquina": 297,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "48.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "136.00",
+      "ruta": 39
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 190,
+    "fields": {
+      "item": 3,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 39
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 191,
+    "fields": {
+      "item": 4,
+      "maquina": 198,
+      "proceso": 173,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 39
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 192,
+    "fields": {
+      "item": 5,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "25.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "35.00",
+      "ruta": 39
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 193,
+    "fields": {
+      "item": 1,
+      "maquina": 193,
+      "proceso": 136,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 40
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 194,
+    "fields": {
+      "item": 2,
+      "maquina": 297,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 40
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 195,
+    "fields": {
+      "item": 3,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 40
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 196,
+    "fields": {
+      "item": 4,
+      "maquina": 198,
+      "proceso": 173,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 40
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 197,
+    "fields": {
+      "item": 5,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "350.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 40
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 198,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 41
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 199,
+    "fields": {
+      "item": 2,
+      "maquina": 196,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 41
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 200,
+    "fields": {
+      "item": 3,
+      "maquina": 209,
+      "proceso": 165,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 41
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 201,
+    "fields": {
+      "item": 4,
+      "maquina": 190,
+      "proceso": 148,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 41
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 202,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "52.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 42
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 203,
+    "fields": {
+      "item": 2,
+      "maquina": 196,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "25.00",
+      "ruta": 42
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 204,
+    "fields": {
+      "item": 3,
+      "maquina": 209,
+      "proceso": 165,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 42
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 205,
+    "fields": {
+      "item": 4,
+      "maquina": 190,
+      "proceso": 148,
+      "estandar": 0,
+      "cantidad_pedido": "50.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 42
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 206,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 43
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 207,
+    "fields": {
+      "item": 2,
+      "maquina": 196,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 43
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 208,
+    "fields": {
+      "item": 3,
+      "maquina": 202,
+      "proceso": 171,
+      "estandar": 0,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 43
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 209,
+    "fields": {
+      "item": 4,
+      "maquina": 198,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "250.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 43
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 210,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 44
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 211,
+    "fields": {
+      "item": 2,
+      "maquina": 186,
+      "proceso": 156,
+      "estandar": 102,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 44
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 212,
+    "fields": {
+      "item": 3,
+      "maquina": 211,
+      "proceso": 196,
+      "estandar": 0,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 44
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 213,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 113,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 44
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 214,
+    "fields": {
+      "item": 5,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 225,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 44
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 215,
+    "fields": {
+      "item": 1,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 216,
+    "fields": {
+      "item": 2,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 217,
+    "fields": {
+      "item": 3,
+      "maquina": 202,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 218,
+    "fields": {
+      "item": 4,
+      "maquina": 202,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 219,
+    "fields": {
+      "item": 5,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 220,
+    "fields": {
+      "item": 6,
+      "maquina": 268,
+      "proceso": 155,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 221,
+    "fields": {
+      "item": 7,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 222,
+    "fields": {
+      "item": 8,
+      "maquina": 268,
+      "proceso": 155,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 223,
+    "fields": {
+      "item": 9,
+      "maquina": 184,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 224,
+    "fields": {
+      "item": 10,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "867.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 45
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 225,
+    "fields": {
+      "item": 1,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 226,
+    "fields": {
+      "item": 2,
+      "maquina": 178,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 227,
+    "fields": {
+      "item": 3,
+      "maquina": 202,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 228,
+    "fields": {
+      "item": 4,
+      "maquina": 202,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 229,
+    "fields": {
+      "item": 5,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 230,
+    "fields": {
+      "item": 6,
+      "maquina": 268,
+      "proceso": 155,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 231,
+    "fields": {
+      "item": 7,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 232,
+    "fields": {
+      "item": 8,
+      "maquina": 268,
+      "proceso": 155,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 233,
+    "fields": {
+      "item": 9,
+      "maquina": 184,
+      "proceso": 149,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 234,
+    "fields": {
+      "item": 10,
+      "maquina": 260,
+      "proceso": 204,
+      "estandar": 0,
+      "cantidad_pedido": "727.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 46
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 235,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 279,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "580.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 47
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 236,
+    "fields": {
+      "item": 2,
+      "maquina": 183,
+      "proceso": 157,
+      "estandar": 405,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 47
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 237,
+    "fields": {
+      "item": 3,
+      "maquina": 183,
+      "proceso": 158,
+      "estandar": 370,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 47
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 238,
+    "fields": {
+      "item": 4,
+      "maquina": 207,
+      "proceso": 196,
+      "estandar": 333,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 47
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 239,
+    "fields": {
+      "item": 5,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 267,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 47
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 240,
+    "fields": {
+      "item": 6,
+      "maquina": 190,
+      "proceso": 163,
+      "estandar": 698,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 47
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 241,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 84,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "300.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 48
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 242,
+    "fields": {
+      "item": 2,
+      "maquina": 183,
+      "proceso": 157,
+      "estandar": 122,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 48
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 243,
+    "fields": {
+      "item": 3,
+      "maquina": 183,
+      "proceso": 158,
+      "estandar": 111,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 48
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 244,
+    "fields": {
+      "item": 4,
+      "maquina": 207,
+      "proceso": 196,
+      "estandar": 100,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 48
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 245,
+    "fields": {
+      "item": 5,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 80,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 48
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 246,
+    "fields": {
+      "item": 6,
+      "maquina": 190,
+      "proceso": 163,
+      "estandar": 209,
+      "cantidad_pedido": "300.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 48
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 247,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "5000.00",
+      "cantidad_terminado_proceso": "1275.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "1997.00",
+      "ruta": 49
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 248,
+    "fields": {
+      "item": 2,
+      "maquina": 186,
+      "proceso": 156,
+      "estandar": 2000,
+      "cantidad_pedido": "5000.00",
+      "cantidad_terminado_proceso": "924.00",
+      "cantidad_perdida_proceso": "26.00",
+      "terminado_sin_actualizar": "772.00",
+      "ruta": 49
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 249,
+    "fields": {
+      "item": 3,
+      "maquina": 212,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "5000.00",
+      "cantidad_terminado_proceso": "900.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "651.00",
+      "ruta": 49
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 250,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 831,
+      "cantidad_pedido": "5000.00",
+      "cantidad_terminado_proceso": "1231.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "1472.00",
+      "ruta": 49
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 251,
+    "fields": {
+      "item": 5,
+      "maquina": 226,
+      "proceso": 217,
+      "estandar": 2400,
+      "cantidad_pedido": "5000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "600.00",
+      "ruta": 49
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 252,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 253,
+    "fields": {
+      "item": 2,
+      "maquina": 185,
+      "proceso": 156,
+      "estandar": 588,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 254,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 255,
+    "fields": {
+      "item": 4,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 256,
+    "fields": {
+      "item": 5,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 257,
+    "fields": {
+      "item": 6,
+      "maquina": 239,
+      "proceso": 168,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 258,
+    "fields": {
+      "item": 7,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 259,
+    "fields": {
+      "item": 8,
+      "maquina": 226,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "500.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 50
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 260,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "2000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 51
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 261,
+    "fields": {
+      "item": 2,
+      "maquina": 186,
+      "proceso": 156,
+      "estandar": 212,
+      "cantidad_pedido": "2000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 51
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 262,
+    "fields": {
+      "item": 3,
+      "maquina": 211,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "2000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 51
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 263,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 230,
+      "cantidad_pedido": "2000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 51
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 264,
+    "fields": {
+      "item": 5,
+      "maquina": 228,
+      "proceso": 217,
+      "estandar": 449,
+      "cantidad_pedido": "2000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 51
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 265,
+    "fields": {
+      "item": 1,
+      "maquina": 175,
+      "proceso": 135,
+      "estandar": 279,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "275.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 52
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 266,
+    "fields": {
+      "item": 2,
+      "maquina": 183,
+      "proceso": 157,
+      "estandar": 405,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 52
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 267,
+    "fields": {
+      "item": 3,
+      "maquina": 183,
+      "proceso": 158,
+      "estandar": 370,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 52
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 268,
+    "fields": {
+      "item": 4,
+      "maquina": 207,
+      "proceso": 196,
+      "estandar": 333,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 52
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 269,
+    "fields": {
+      "item": 5,
+      "maquina": 198,
+      "proceso": 168,
+      "estandar": 267,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 52
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 270,
+    "fields": {
+      "item": 6,
+      "maquina": 190,
+      "proceso": 163,
+      "estandar": 698,
+      "cantidad_pedido": "1000.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 52
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 271,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "700.00",
+      "cantidad_terminado_proceso": "700.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 53
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 272,
+    "fields": {
+      "item": 2,
+      "maquina": 182,
+      "proceso": 156,
+      "estandar": 93,
+      "cantidad_pedido": "700.00",
+      "cantidad_terminado_proceso": "60.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 53
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 273,
+    "fields": {
+      "item": 3,
+      "maquina": 201,
+      "proceso": 200,
+      "estandar": 0,
+      "cantidad_pedido": "700.00",
+      "cantidad_terminado_proceso": "25.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 53
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 274,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 140,
+      "cantidad_pedido": "700.00",
+      "cantidad_terminado_proceso": "20.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 53
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 275,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 372,
+      "cantidad_pedido": "700.00",
+      "cantidad_terminado_proceso": "54.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 53
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 276,
+    "fields": {
+      "item": 1,
+      "maquina": 271,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "540.00",
+      "cantidad_terminado_proceso": "60.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 54
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 277,
+    "fields": {
+      "item": 2,
+      "maquina": 219,
+      "proceso": 187,
+      "estandar": 0,
+      "cantidad_pedido": "540.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "59.00",
+      "ruta": 54
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 278,
+    "fields": {
+      "item": 3,
+      "maquina": 225,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "540.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "57.00",
+      "ruta": 54
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 279,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 55
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 280,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 55
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 281,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 55
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 282,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 56
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 283,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 56
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 284,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 56
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 285,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 57
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 286,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 57
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 287,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 57
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 288,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 58
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 289,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 58
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 290,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 58
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 291,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 59
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 292,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 59
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 293,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 59
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 294,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 60
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 295,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 60
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 296,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 60
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 297,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 61
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 298,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 61
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 299,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 61
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 300,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 62
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 301,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 62
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 302,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 62
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 303,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 63
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 304,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 63
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 305,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 63
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 306,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 64
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 307,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 64
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 308,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 64
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 309,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 65
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 310,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 65
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 311,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 65
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 312,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 66
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 313,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 66
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 314,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 66
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 315,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 67
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 316,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 67
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 317,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 67
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 318,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 68
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 319,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 68
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 320,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 68
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 321,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 69
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 322,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 69
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 323,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 69
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 324,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 70
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 325,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 70
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 326,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 70
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 327,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 71
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 328,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 71
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 329,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 71
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 330,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 72
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 331,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 72
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 332,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 72
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 333,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 73
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 334,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 73
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 335,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 73
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 336,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 74
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 337,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 74
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 338,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 74
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 339,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 75
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 340,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 74,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 75
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 341,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 105,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 75
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 342,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 75
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 343,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 75
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 344,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 76
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 345,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 74,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 76
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 346,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 105,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 76
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 347,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 76
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 348,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 76
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 349,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 77
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 350,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 77
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 351,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 77
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 352,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 77
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 353,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 77
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 354,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 78
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 355,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 78
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 356,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 78
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 357,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 78
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 358,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 78
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 359,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 79
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 360,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 79
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 361,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 79
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 362,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 79
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 363,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 79
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 364,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 80
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 365,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 80
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 366,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 80
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 367,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 80
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 368,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 80
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 369,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 81
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 370,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 81
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 371,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 81
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 372,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 81
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 373,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 81
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 374,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 82
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 375,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 82
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 376,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 82
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 377,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 82
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 378,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 82
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 379,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 83
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 380,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 83
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 381,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 83
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 382,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 83
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 383,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 83
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 384,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 84
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 385,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 84
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 386,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 84
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 387,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 84
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 388,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 84
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 389,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 85
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 390,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 85
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 391,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 85
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 392,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 250,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 86
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 393,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 140,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 86
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 394,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 160,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 86
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 395,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 87
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 396,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 87
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 397,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 87
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 398,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 88
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 399,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 88
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 400,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 88
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 401,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 89
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 402,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 89
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 403,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 89
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 404,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 90
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 405,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 90
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 406,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 90
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 407,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 91
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 408,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 91
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 409,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 91
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 410,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 250,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 92
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 411,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 160,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 92
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 412,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 200,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 92
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 413,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 93
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 414,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 93
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 415,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 93
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 416,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 94
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 417,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 94
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 418,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 94
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 419,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 95
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 420,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 95
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 421,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 95
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 422,
+    "fields": {
+      "item": 1,
+      "maquina": 197,
+      "proceso": 135,
+      "estandar": 250,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 96
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 423,
+    "fields": {
+      "item": 2,
+      "maquina": 184,
+      "proceso": 156,
+      "estandar": 160,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 96
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 424,
+    "fields": {
+      "item": 3,
+      "maquina": 200,
+      "proceso": 172,
+      "estandar": 180,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 96
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 425,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 100,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 97
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 426,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 74,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 97
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 427,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 105,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 97
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 428,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 200,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 97
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 429,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 250,
+      "cantidad_pedido": "800.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 97
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 430,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 90,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 98
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 431,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 98
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 432,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 98
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 433,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 120,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 98
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 434,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 100,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 98
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 435,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 99
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 436,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 99
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 437,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 99
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 438,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 99
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 439,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 99
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 440,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 100
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 441,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 100
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 442,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 100
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 443,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 100
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 444,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 100
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 445,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 101
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 446,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 101
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 447,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 101
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 448,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 101
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 449,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 101
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 450,
+    "fields": {
+      "item": 1,
+      "maquina": 176,
+      "proceso": 135,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 102
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 451,
+    "fields": {
+      "item": 2,
+      "maquina": 181,
+      "proceso": 156,
+      "estandar": 37,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 102
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 452,
+    "fields": {
+      "item": 3,
+      "maquina": 207,
+      "proceso": 200,
+      "estandar": 52,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 102
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 453,
+    "fields": {
+      "item": 4,
+      "maquina": 215,
+      "proceso": 191,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 102
+    }
+  },
+  {
+    "model": "JobManagement.itemruta",
+    "pk": 454,
+    "fields": {
+      "item": 5,
+      "maquina": 227,
+      "proceso": 217,
+      "estandar": 0,
+      "cantidad_pedido": "400.00",
+      "cantidad_terminado_proceso": "0.00",
+      "cantidad_perdida_proceso": "0.00",
+      "terminado_sin_actualizar": "0.00",
+      "ruta": 102
+    }
+  }
+]

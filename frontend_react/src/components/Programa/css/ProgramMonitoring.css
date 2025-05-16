@@ -1,0 +1,35 @@
+.program-monitoring {
+    margin-bottom: 2rem;
+  }
+  
+  .program-monitoring .card {
+    transition: transform 0.2s;
+  }
+  
+  .program-monitoring .card:hover {
+    transform: translateY(-2px);
+  }
+  
+  .program-monitoring .alert {
+    animation: slideIn 0.3s ease-out;
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+    to {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  .cursor-pointer {
+    transition: transform 0.2s ease-in-out;
+  }
+  
+  .cursor-pointer:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }

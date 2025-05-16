@@ -1,0 +1,138 @@
+[
+  {
+    "model": "Utils.measurementunit",
+    "pk": 1,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "UND"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 2,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "MTS"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 3,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "KGS"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 4,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "JGO"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 5,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "PAR"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 6,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "CAJ"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 7,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "RLL"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 8,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "GAL"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 9,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "LTS"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 10,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "TRA"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 11,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "TUB"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 12,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "MT3"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 13,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "SAC"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 14,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "PGO"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 15,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "MT2"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 16,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": "TLN"
+    }
+  },
+  {
+    "model": "Utils.measurementunit",
+    "pk": 17,
+    "fields": {
+      "nombre": "",
+      "codigo_und_medida": ""
+    }
+  }
+]

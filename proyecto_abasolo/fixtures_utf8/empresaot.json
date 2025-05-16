@@ -1,0 +1,29 @@
+[
+  {
+    "model": "JobManagement.empresaot",
+    "pk": 2,
+    "fields": {
+      "nombre": "Indaval SPA",
+      "apodo": "Indaval",
+      "codigo_empresa": "0"
+    }
+  },
+  {
+    "model": "JobManagement.empresaot",
+    "pk": 3,
+    "fields": {
+      "nombre": "Abasolo S.A",
+      "apodo": "AVSA",
+      "codigo_empresa": "1"
+    }
+  },
+  {
+    "model": "JobManagement.empresaot",
+    "pk": 4,
+    "fields": {
+      "nombre": "Articulos Comerciales Chile SPA",
+      "apodo": "Arco Chile",
+      "codigo_empresa": "2"
+    }
+  }
+]

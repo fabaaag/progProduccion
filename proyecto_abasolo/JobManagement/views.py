@@ -2,9 +2,8 @@ from django.core.exceptions import MultipleObjectsReturned, ObjectDoesNotExist, 
 from django.db import IntegrityError, transaction
 from django.db.models import Q
 from django.http import JsonResponse, HttpResponse
-from django.utils.dateparse import parse_date
 from django.utils.dateparse import parse_date, parse_datetime
-from django.utils.timezone import localtime, now
+from django.utils.timezone import localtime, now, timezone
 from django.shortcuts import get_object_or_404
 
 
@@ -2338,354 +2337,6 @@ class ProcesoListView(APIView):
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-class SupervisorReportView(APIView):
-    permission_classes = [IsAuthenticated]
-    
-    def get(self, request, pk):
-        try:
-            programa = get_object_or_404(ProgramaProduccion, id=pk)
-            
-            programa_info = {
-                'id': programa.id,
-                'nombre': programa.nombre,
-                'fecha_inicio': programa.fecha_inicio.strftime('%Y-%m-%d'),
-                'fecha_fin': programa.fecha_fin.strftime('%Y-%m-%d') if programa.fecha_fin else None
-            }
-
-            # Obtener datos del timeline para agrupar tareas por día
-            program_detail_view = ProgramDetailView()
-            timeline_data = program_detail_view.generate_timeline_data(
-                programa,
-                program_detail_view.get_ordenes_trabajo(programa)
-            )
-
-            tareas_agrupadas = {}
-            total_kilos_programados = 0
-
-            # Obtener todos los reportes diarios para este programa
-            reportes_diarios = ReporteDiario.objects.filter(
-                programa=programa
-            ).select_related(
-                'item_ruta'
-            ).order_by('fecha', 'created_at')
-
-            # Crear un diccionario para acceder fácilmente a los reportes por proceso_id y fecha
-            reportes_por_proceso = defaultdict(list)
-            for reporte in reportes_diarios:
-                clave = f"{reporte.item_ruta.id}_{reporte.fecha.strftime('%Y-%m-%d')}"
-                reportes_por_proceso[clave].append(ReporteDiarioSerializer(reporte).data)
-
-            # Procesar los items del timeline y agruparlos por día
-            for item in timeline_data.get('items', []):
-                try:
-                    fecha_inicio = datetime.strptime(item['start_time'], '%Y-%m-%d %H:%M:%S')
-                    
-                    if programa.fecha_inicio <= fecha_inicio.date() <= programa.fecha_fin:
-                        proceso_id = item['proceso_id'].replace('proc_', '')
-                        clave = f"{item['ot_id']}_{proceso_id}"
-                        
-                        if clave not in tareas_agrupadas:
-                            try:
-                                item_ruta = ItemRuta.objects.select_related(
-                                    'proceso',
-                                    'maquina',
-                                    'ruta__orden_trabajo'
-                                ).get(id=proceso_id)
-
-                                # Calcular kilos programados
-                                peso_unitario = float(item_ruta.ruta.orden_trabajo.peso_unitario or 0)
-                                kilos_programados = peso_unitario * float(item['cantidad_total'])
-                                total_kilos_programados += kilos_programados
-
-                                # Obtener el último reporte para esta fecha y proceso
-                                clave_reporte = f"{proceso_id}_{fecha_inicio.strftime('%Y-%m-%d')}"
-                                reportes = reportes_por_proceso.get(clave_reporte, [])
-                                ultimo_reporte = reportes[-1] if reportes else None
-
-                                # Crear la tarea con la fecha del programa
-                                tarea = {
-                                    'id': item['id'],
-                                    'ot_codigo': item_ruta.ruta.orden_trabajo.codigo_ot,
-                                    'proceso': item_ruta.proceso.descripcion,
-                                    'maquina': {
-                                        'id': item_ruta.maquina.id if item_ruta.maquina else None,
-                                        'descripcion': item_ruta.maquina.descripcion if item_ruta.maquina else 'Sin máquina'
-                                    },
-                                    'operador': item.get('operador_nombre', 'Sin asignar'),
-                                    'cantidad_programada': item['cantidad_total'],
-                                    'kilos_programados': kilos_programados,
-                                    'hora_inicio': fecha_inicio.strftime('%H:%M'),
-                                    'hora_fin': datetime.strptime(item['end_time'], '%Y-%m-%d %H:%M:%S').strftime('%H:%M'),
-                                    'estado': ultimo_reporte['estado'] if ultimo_reporte else 'Pendiente',
-                                    'observaciones': ultimo_reporte['observaciones'] if ultimo_reporte else '',
-                                    'proceso_id': proceso_id,
-                                    'fecha': fecha_inicio.strftime('%Y-%m-%d'),
-                                    'kilos_fabricados': ultimo_reporte['kilos_fabricados'] if ultimo_reporte else 0,
-                                    'porcentaje_cumplimiento': (float(ultimo_reporte['kilos_fabricados']) / kilos_programados * 100) if ultimo_reporte and kilos_programados > 0 else 0,
-                                    'historial': reportes,
-                                }
-                                
-                                #Info sobre quién realizó la asignación
-                                from Operator.models import AsignacionOperador
-                                asignacion = AsignacionOperador.objects.filter(
-                                    item_ruta_id=proceso_id,
-                                    programa_id=programa.id
-                                ).first()
-
-                                if asignacion and asignacion.asignado_por:
-                                    tarea['asignado_por_nombre'] = f"{asignacion.asignado_por.first_name} {asignacion.asignado_por.last_name}".strip() or asignacion.asignado_por.username
-                                    tarea['fecha_asignacion'] = asignacion.fecha_asignacion
-                                else:
-                                    tarea['asignado_por_nombre'] = None
-                                    tarea['fecha_asignacion'] = None
-
-
-                                # Verificar si esta tarea es una continuación
-                                from JobManagement.models import TareaFragmentada
-
-                                # Buscar fragmento para este proceso en esta fecha
-                                fragmento = TareaFragmentada.objects.filter(
-                                    tarea_original_id=proceso_id,
-                                    fecha=fecha_inicio.date()
-                                ).select_related('tarea_padre').first()
-
-                                if fragmento:
-                                    # Si existe un fragmento y es continuación, marcar como tal
-                                    if fragmento.es_continuacion:
-                                        tarea['es_continuacion'] = True
-                                        tarea['nivel_fragmentacion'] = fragmento.nivel_fragmentacion
-                                        
-                                        # Si tiene tarea padre, obtener su información
-                                        if fragmento.tarea_padre:
-                                            tarea['tarea_padre_fecha'] = fragmento.tarea_padre.fecha.strftime('%Y-%m-%d')
-                                            tarea['tarea_padre_porcentaje'] = float(fragmento.tarea_padre.porcentaje_completado)
-                                            tarea['tarea_padre_kilos'] = float(fragmento.tarea_padre.cantidad_completada)
-                                        else:
-                                            tarea['tarea_padre_fecha'] = None
-                                            tarea['tarea_padre_porcentaje'] = 0
-                                            tarea['tarea_padre_kilos'] = 0
-                                    else:
-                                        tarea['es_continuacion'] = False
-                                else:
-                                    tarea['es_continuacion'] = False
-
-                                # Verificar si tiene fragmentos (continuaciones)
-                                tiene_fragmentos = TareaFragmentada.objects.filter(
-                                    tarea_padre__tarea_original_id=proceso_id,
-                                    tarea_padre__fecha=fecha_inicio.date()
-                                ).exists()
-
-                                tarea['tiene_fragmentos'] = tiene_fragmentos
-
-                                tareas_agrupadas[clave] = tarea
-
-                            except ItemRuta.DoesNotExist:
-                                print(f"No se encontró ItemRuta para proceso_id: {proceso_id}")
-                except Exception as e:
-                    print(f"Error procesando item del timeline: {str(e)}")
-
-            return Response({
-                'programa': programa_info,
-                'total_kilos_programados': total_kilos_programados,
-                'tareas': list(tareas_agrupadas.values())
-            })
-        except Exception as e:
-            print(f"Error general en SupervisorReportView: {str(e)}")
-            return Response(
-                {'error': str(e)},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
-
-    def put(self, request, pk):
-        """Actualiza los kilos fabricados sin duplicar registros"""
-        try:
-            programa = get_object_or_404(ProgramaProduccion, id=pk)
-            data = request.data
-            tarea_id = data.get('tarea_id')
-            proceso_id = data.get('proceso_id')
-            kilos_fabricados = float(data.get('kilos_fabricados', 0))
-            estado = data.get('estado', 'Pendiente')
-            fecha_actual = datetime.strptime(data.get('fecha'), '%Y-%m-%d')
-            observaciones = data.get('observaciones', '')
-            
-            # Obtener el item_ruta
-            item_ruta = ItemRuta.objects.select_related(
-                'proceso', 'maquina', 'ruta__orden_trabajo'
-            ).get(id=proceso_id)
-            
-            # Calcular unidades fabricadas
-            peso_unitario = float(item_ruta.ruta.orden_trabajo.peso_unitario or 0)
-            unidades_programadas = float(data.get('cantidad_programada', 0))
-            unidades_fabricadas = kilos_fabricados / peso_unitario if peso_unitario > 0 else 0
-            
-            # Buscar si ya existe un reporte para este día y actualizar
-            reporte_diario, created = ReporteDiario.objects.update_or_create(
-                programa=programa,
-                item_ruta=item_ruta,
-                fecha=fecha_actual,
-                defaults={
-                    'estado': estado,
-                    'kilos_fabricados': kilos_fabricados,
-                    'unidades_fabricadas': unidades_fabricadas,
-                    'observaciones': observaciones
-                }
-            )
-            
-            # Calcular unidades pendientes para eventos adicionales
-            unidades_pendientes = unidades_programadas - unidades_fabricadas
-            
-            # Lógica adicional similar al método post actual...
-            
-            return Response({
-                'message': 'Actualización exitosa',
-                'kilos_fabricados': kilos_fabricados,
-                'porcentaje_cumplimiento': (kilos_fabricados / (peso_unitario * unidades_programadas)) * 100 if peso_unitario > 0 else 0,
-                'unidades_pendientes': unidades_pendientes,
-                'siguiente_fecha': get_next_working_day(fecha_actual).strftime('%Y-%m-%d') if unidades_pendientes > 0 else None
-            })
-
-        except Exception as e:
-            return Response(
-                {'error': str(e)},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
-
-
-    @transaction.atomic
-    def post(self, request, pk):
-        """Actualiza los kilos fabricados y recalcula el programa si es necesario"""
-        try:
-            programa = get_object_or_404(ProgramaProduccion, id=pk)
-            data = request.data
-            tarea_id = data.get('tarea_id')
-            proceso_id = data.get('proceso_id')
-            kilos_fabricados = float(data.get('kilos_fabricados', 0))
-            estado = data.get('estado', 'Pendiente')
-            fecha_actual = datetime.strptime(data.get('fecha'), '%Y-%m-%d')
-            observaciones = data.get('observaciones', '')
-            
-            # Obtener el item_ruta y sus datos relacionados
-            item_ruta = ItemRuta.objects.select_related(
-                'proceso', 'maquina', 'ruta__orden_trabajo'
-            ).get(id=proceso_id)
-            
-            peso_unitario = float(item_ruta.ruta.orden_trabajo.peso_unitario or 0)
-            unidades_programadas = float(data.get('cantidad_programada', 0))
-            unidades_fabricadas = kilos_fabricados / peso_unitario if peso_unitario > 0 else 0
-            
-            # Calcular unidades pendientes
-            unidades_pendientes = unidades_programadas - unidades_fabricadas
-            
-            # Manejar diferentes estados
-            if estado == 'Terminado':
-                # No necesitamos recalcular nada si está terminado
-                return Response({
-                    'message': 'Tarea completada',
-                    'kilos_fabricados': kilos_fabricados,
-                    'porcentaje_cumplimiento': 100
-                })
-            
-            elif estado in ['Pendiente', 'En Proceso', 'Detenido'] and unidades_pendientes > 0:
-                # Obtener la siguiente fecha hábil
-                siguiente_dia = get_next_working_day(fecha_actual)
-                
-                # Recalcular fechas para las unidades pendientes
-                program_detail_view = ProgramDetailView()
-                dates_data = program_detail_view.calculate_working_days(
-                    datetime.combine(siguiente_dia, time(7, 45)),
-                    unidades_pendientes,
-                    item_ruta.estandar
-                )
-                
-                # Actualizar el timeline con los nuevos intervalos
-                if dates_data['intervals']:
-                    # Aquí actualizamos las fechas en el programa
-                    # Esto afectará a todas las tareas subsiguientes
-                    self.recalcular_fechas_programa(
-                        programa, 
-                        item_ruta, 
-                        dates_data['intervals'][0]['fecha_inicio'],
-                        unidades_pendientes
-                    )
-            
-            # Guardar el estado y las observaciones
-            reporte_diario = ReporteDiario.objects.create(
-                programa=programa,
-                item_ruta=item_ruta,
-                fecha=fecha_actual,
-                estado=estado,
-                kilos_fabricados=kilos_fabricados,
-                unidades_fabricadas=unidades_fabricadas,
-                observaciones=observaciones
-            )
-            
-            return Response({
-                'message': 'Actualización exitosa',
-                'kilos_fabricados': kilos_fabricados,
-                'porcentaje_cumplimiento': (kilos_fabricados / (peso_unitario * unidades_programadas)) * 100 if peso_unitario > 0 else 0,
-                'unidades_pendientes': unidades_pendientes,
-                'siguiente_fecha': siguiente_dia.strftime('%Y-%m-%d') if unidades_pendientes > 0 else None
-            })
-
-        except Exception as e:
-            return Response(
-                {'error': str(e)},
-                status=status.HTTP_500_INTERNAL_SERVER_ERROR
-            )
-
-    def recalcular_fechas_programa(self, programa, item_ruta_actual, nueva_fecha_inicio, unidades_pendientes):
-        """Recalcula las fechas de todas las tareas posteriores"""
-        try:
-            # Obtener todas las tareas del programa ordenadas por prioridad
-            program_ots = ProgramaOrdenTrabajo.objects.filter(
-                programa=programa
-            ).select_related(
-                'orden_trabajo',
-                'orden_trabajo__ruta_ot'
-            ).prefetch_related(
-                'orden_trabajo__ruta_ot__items'
-            ).order_by('prioridad')
-
-            fecha_actual = nueva_fecha_inicio
-            tarea_encontrada = False
-
-            for prog_ot in program_ots:
-                ruta = prog_ot.orden_trabajo.ruta_ot
-                if not ruta:
-                    continue
-
-                for item in ruta.items.all().order_by('item'):
-                    # Una vez que encontramos la tarea actual, comenzamos a recalcular
-                    if item.id == item_ruta_actual.id:
-                        tarea_encontrada = True
-                        # Actualizar la tarea actual con las unidades pendientes
-                        dates_data = self.calculate_working_days(
-                            fecha_actual,
-                            unidades_pendientes,
-                            item.estandar
-                        )
-                        if dates_data['intervals']:
-                            fecha_actual = dates_data['next_available_time']
-                    
-                    elif tarea_encontrada:
-                        # Recalcular todas las tareas posteriores
-                        dates_data = self.calculate_working_days(
-                            fecha_actual,
-                            item.cantidad_pedido,
-                            item.estandar
-                        )
-                        if dates_data['intervals']:
-                            fecha_actual = dates_data['next_available_time']
-
-            # Actualizar la fecha de fin del programa si es necesario
-            if fecha_actual.date() > programa.fecha_fin:
-                programa.fecha_fin = fecha_actual.date()
-                programa.save()
-
-        except Exception as e:
-            print(f"Error al recalcular fechas: {str(e)}")
-            raise
-        
 @api_view(['GET'])
 def search_orders(request):
     search_term = request.GET.get('search', '')
@@ -2718,219 +2369,736 @@ def search_orders(request):
     
     serializer = OrdenTrabajoSerializer(queryset, many=True)
     return Response(serializer.data)
-        
-class FinalizarDiaReporteView(APIView):
-    permission_classes = [IsAuthenticated]
 
-    def obtener_siguiente_dia_laboral(self, fecha):
-        """Obtiene el siguiente dia laboral (excluyendo sabados y domingos)"""
-        siguiente_dia = fecha + timedelta(days=1)
-        #Si es sabado (5) o domingo (6), avanzar al lunes
-        if siguiente_dia.weekday() >= 5:
-            siguiente_dia = siguiente_dia + timedelta(days=(7 - siguiente_dia.weekday()))
-        return siguiente_dia
-    
-    def identificar_tareas_incompletas(self, programa_id, fecha):
-        """Identifica tareas que no se han completado para el dia especificado"""
+
+#DEJAMOS AQUI EL GET DE MOMENTO PARA EL CAMBIO TEMPORAL
+"""
+def get(self, request, pk):
         try:
-            #Obtener el programa
-            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            programa = get_object_or_404(ProgramaProduccion, id=pk)
+            fecha_solicitada = request.GET.get('fecha', timezone.now().date().strftime('%Y-%m-%d'))
+            fecha = datetime.strptime(fecha_solicitada, '%Y-%m-%d').date()
 
-            #Obtener tareas del día
-            from .serializers import SupervisorReporteSerializer
-            supervisor_view = SupervisorReportView()
-            reporte_data = supervisor_view.get(None, programa_id).data
+            # Estructura base de la respuesta
+            response_data = {
+                'programa': {
+                    'id': programa.id,
+                    'nombre': programa.nombre,
+                    'fecha_inicio': programa.fecha_inicio,
+                    'fecha_fin': programa.fecha_fin,
+                    'fecha_actual': fecha_solicitada
+                },
+                'tareas': []
+            }
 
-            tareas = reporte_data.get('tareas', [])
-            tareas_del_dia = [tarea for tarea in tareas if tarea.get('fecha') == fecha]
+            # 1. Obtener tareas fragmentadas para esta fecha
+            tareas_del_dia = TareaFragmentada.objects.filter(
+                programa=programa,
+                fecha=fecha
+            ).select_related(
+                'tarea_original__proceso',
+                'tarea_original__maquina',
+                'tarea_original__ruta__orden_trabajo',
+                'operador'
+            )
 
-            #Identificar tareas incompletas (menos del 100% de cumplimiento)
-            tareas_incompletas = []
             for tarea in tareas_del_dia:
-                kilos_prog = float(tarea.get('kilos_programados', 0))
-                kilos_fab = float(tarea.get('kilos_fabricados', 0))
+                item_ruta = tarea.tarea_original
+                orden_trabajo = item_ruta.ruta.orden_trabajo
 
-                # Normalizar el ID si tiene formato ReactSortable
-                tarea_id = tarea.get('id')
-                if isinstance(tarea_id, str) and tarea_id.startswith('item_'):
-                    try:
-                        tarea_id = int(tarea_id.split('_')[1])
-                    except (IndexError, ValueError):
-                        # Si hay error al convertir, usar el ID original
-                        pass
-                
-                if kilos_prog > 0 and kilos_fab < kilos_prog:
-                    porcentaje = (kilos_fab / kilos_prog) * 100
-                    kilos_restantes = kilos_prog - kilos_fab
+                tarea_data = {
+                    'id': tarea.id,
+                    'es_continuacion': tarea.es_continuacion,
+                    'orden_trabajo': {
+                        'id': orden_trabajo.id,
+                        'codigo': orden_trabajo.codigo_ot,
+                        'descripcion': orden_trabajo.descripcion_producto_ot
+                    },
+                    'proceso': {
+                        'id': item_ruta.proceso.id,
+                        'codigo': item_ruta.proceso.codigo_proceso,
+                        'descripcion': item_ruta.proceso.descripcion
+                    },
+                    'maquina': {
+                        'id': item_ruta.maquina.id,
+                        'codigo': item_ruta.maquina.codigo_maquina,
+                        'descripcion': item_ruta.maquina.descripcion
+                    },
+                    'operador': {
+                        'id': tarea.operador.id,
+                        'nombre': tarea.operador.nombre
+                    } if tarea.operador else None,
+                    'cantidades': {
+                        'programada': float(tarea.cantidad_asignada),
+                        'pendiente_anterior': float(tarea.cantidad_pendiente_anterior),
+                        'total_dia': float(tarea.cantidad_total_dia),
+                        'completada': float(tarea.cantidad_completada),
+                        'pendiente': float(tarea.cantidad_pendiente)
+                    },
+                    'kilos': {
+                        'fabricados': float(tarea.kilos_fabricados),
+                        'programados': float(tarea.cantidad_total_dia * orden_trabajo.peso_unitario)
+                    },
+                    'estado': tarea.estado,
+                    'porcentaje_cumplimiento': float(tarea.porcentaje_cumplimiento),
+                    'observaciones': tarea.observaciones
+                }
 
-                    tareas_incompletas.append({
-                        'id': tarea_id,  # Usar el ID normalizado
-                        'ot_codigo': tarea.get('ot_codigo'),
-                        'proceso': tarea.get('proceso'),
-                        'maquina': tarea.get('maquina'),
-                        'kilos_programados': kilos_prog,
-                        'kilos_fabricados': kilos_fab,
-                        'kilos_restantes': kilos_restantes,
-                        'porcentaje_completado': round(porcentaje, 2),
-                        'porcentaje_restante': round(100 - porcentaje, 2)
-                    })
-            return tareas_incompletas
+                # Si es continuación, agregar datos del padre
+                if tarea.es_continuacion and tarea.tarea_padre:
+                    tarea_data['tarea_padre'] = {
+                        'fecha': tarea.tarea_padre.fecha,
+                        'cantidad_completada': float(tarea.tarea_padre.cantidad_completada),
+                        'porcentaje_cumplimiento': float(tarea.tarea_padre.porcentaje_cumplimiento)
+                    }
+
+                response_data['tareas'].append(tarea_data)
+
+            return Response(response_data)
+
         except Exception as e:
-            print(f'Error identificando tareas incompletas: {str(e)}')
-            raise e
+            return Response(
+                {'error': str(e)}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+"""
+
+
+class SupervisorReportView(APIView):
+    permission_classes = [IsAuthenticated] 
+    def agrupar_intervalos_por_dia(self, timeline_items, ordenes_trabajo):
+        """Agrupa los intervalos por día y por tarea"""
+        tareas_por_dia = {}
+        print("Iniciando agrupación de intervalos...")
+        
+        for item in timeline_items:
+            try:
+                fecha_inicio = datetime.strptime(item['start_time'], '%Y-%m-%d %H:%M:%S').date()
+                fecha_key = fecha_inicio.strftime('%Y-%m-%d')
+                print(f"Procesando item para fecha: {fecha_key}")
+                
+                # Crear clave única para la tarea
+                ot_id = item['ot_id'].replace('ot_', '') if isinstance(item['ot_id'], str) else str(item['ot_id'])
+                proceso_id = item['proceso_id'].replace('proc_', '') if isinstance(item['proceso_id'], str) else str(item['proceso_id'])
+                tarea_key = f"{ot_id}_{proceso_id}"
+
+                # Buscar la OT correspondiente
+                ot_data = next(
+                    (ot for ot in ordenes_trabajo if str(ot['orden_trabajo']) == ot_id),
+                    None
+                )
+                if not ot_data:
+                    print(f"No se encontró OT para id: {ot_id}")
+                    continue
+
+                # Buscar el proceso correspondiente
+                proceso_data = next(
+                    (proc for proc in ot_data['procesos'] if str(proc['id']) == proceso_id),
+                    None
+                )
+                if not proceso_data:
+                    print(f"No se encontró proceso para id: {proceso_id}")
+                    continue
+
+                if fecha_key not in tareas_por_dia:
+                    tareas_por_dia[fecha_key] = {}
+
+                if tarea_key not in tareas_por_dia[fecha_key]:
+                    print(f"Nueva tarea para {fecha_key}: OT {ot_id}, Proceso {proceso_id}")
+                    tareas_por_dia[fecha_key][tarea_key] = {
+                        'ot_data': ot_data,
+                        'proceso_data': proceso_data,
+                        'cantidad_total': float(item['cantidad_intervalo']),
+                        'es_continuacion': item.get('es_continuacion', False)
+                    }
+                else:
+                    print(f"Sumando cantidad para tarea existente: {tarea_key}")
+                    tareas_por_dia[fecha_key][tarea_key]['cantidad_total'] += float(item['cantidad_intervalo'])
+
+            except Exception as e:
+                print(f"Error agrupando intervalo: {str(e)}")
+                print(f"Item data: {item}")
+                continue
+
+        print(f"Agrupación completada. Días encontrados: {list(tareas_por_dia.keys())}")
+        return tareas_por_dia
+    
+    def is_working_day(date):
+        """Verifica si una fecha es día laborable (no domingo)"""
+        return date.weekday() != 6  # 6 es domingo en Python
+
+    def get_next_working_day(date):
+        """Obtiene el siguiente día laborable"""
+        next_date = date + timedelta(days=1)
+        while not is_working_day(next_date):
+            next_date += timedelta(days=1)
+        return next_date
+
+    
+    def get(self, request, pk):
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=pk)
+            fecha_solicitada = request.GET.get('fecha')
+            
+            if fecha_solicitada:
+                fecha_solicitada_obj = datetime.strptime(fecha_solicitada, '%Y-%m-%d').date()
+                # Si es domingo, mover al siguiente día laborable
+                if not is_working_day(fecha_solicitada_obj):
+                    fecha_solicitada_obj = get_next_working_day(fecha_solicitada_obj)
+                    fecha_solicitada = fecha_solicitada_obj.strftime('%Y-%m-%d')
+            else:
+                fecha_solicitada_obj = programa.fecha_inicio
+                # Si la fecha de inicio es domingo, mover al siguiente día
+                if not is_working_day(fecha_solicitada_obj):
+                    fecha_solicitada_obj = get_next_working_day(fecha_solicitada_obj)
+                fecha_solicitada = fecha_solicitada_obj.strftime('%Y-%m-%d')
+
+            # Obtener datos del timeline
+            program_detail = ProgramDetailView()
+            ordenes_trabajo = program_detail.get_ordenes_trabajo(programa)
+            timeline_data = program_detail.generate_timeline_data(programa, ordenes_trabajo)
+
+            response_data = {
+                'programa': {
+                    'id': programa.id,
+                    'nombre': programa.nombre,
+                    'fecha_inicio': programa.fecha_inicio.strftime('%Y-%m-%d'),
+                    'fecha_fin': programa.fecha_fin.strftime('%Y-%m-%d'),
+                    'fecha_actual': fecha_solicitada
+                },
+                'tareas': []
+            }
+
+            if timeline_data and 'items' in timeline_data:
+                tareas_agrupadas = self.agrupar_intervalos_por_dia(timeline_data['items'], ordenes_trabajo)
+                
+                if fecha_solicitada in tareas_agrupadas:
+                    for tarea_key, tarea in tareas_agrupadas[fecha_solicitada].items():
+                        try:
+                            orden_trabajo = OrdenTrabajo.objects.get(id=tarea['ot_data']['orden_trabajo'])
+                            peso_unitario = float(orden_trabajo.peso_unitario)
+                            kilos_totales = tarea['cantidad_total'] * peso_unitario
+
+                            tarea_data = {
+                                'id': f"{programa.id}_{tarea_key}_{fecha_solicitada}",
+                                'codigo': orden_trabajo.codigo_ot,  # Cambiado de ot_codigo a codigo
+                                'proceso': {
+                                    'id': tarea['proceso_data']['id'],
+                                    'descripcion': tarea['proceso_data']['descripcion']
+                                },
+                                'maquina': {
+                                    'id': tarea['proceso_data'].get('maquina_id'),
+                                    'descripcion': tarea['proceso_data'].get('maquina_descripcion', 'Sin máquina')
+                                },
+                                'operador': {
+                                    'id': None,
+                                    'nombre': None
+                                },
+                                'cantidad_programada': tarea['cantidad_total'],
+                                'kilos_programados': round(kilos_totales, 2),
+                                'estado': 'PENDIENTE',
+                                'kilos_fabricados': 0,
+                                'porcentaje_cumplimiento': 0,
+                                'observaciones': '',
+                                'es_continuacion': tarea['es_continuacion']
+                            }
+                            
+                            response_data['tareas'].append(tarea_data)
+
+                        except Exception as e:
+                            print(f"Error procesando tarea {tarea_key}: {str(e)}")
+                            continue
+
+            return Response(response_data)
+
+        except Exception as e:
+            import traceback
+            print(f"Error en SupervisorReportView.get: {str(e)}")
+            print(traceback.format_exc())
+            return Response(
+                {'error': str(e)}, 
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
         
     @transaction.atomic
-    def post(self, request, programa_id, fecha_str):
-        """
-        Finaliza el dia, identificando tareas incompletas y creando continuaciones.
-        Admite modo de previsualizacion que no realiza cambios en la base de datos.
-        """
+    def put(self, request, pk):
+        """Actualiza el progreso de una tarea"""
         try:
-            try:
-                fecha = datetime.strptime(fecha_str, "%Y-%m-%d").date()
-            except ValueError:
-                return Response(
-                    {"error": "Formato de fecha inválido. Use el formato YYYY-MM-DD"},
-                    status=status.HTTP_400_BAD_REQUEST
-                )
+            tarea = get_object_or_404(TareaFragmentada, id=request.data.get('tarea_id'))
             
-            #Determinar si estamos en modo previsualización
-            preview_only = request.data.get('preview_only', True)
+            # Actualizar producción
+            kilos_fabricados = float(request.data.get('kilos_fabricados', 0))
+            estado = request.data.get('estado', tarea.estado)
+            observaciones = request.data.get('observaciones', '')
 
-            #Calcular siguiente dia laboral
-            siguiente_dia = self.obtener_siguiente_dia_laboral(fecha)
+            # Registrar ejecución
+            EjecucionTarea.objects.create(
+                tarea=tarea,
+                fecha_hora_inicio=timezone.now(),
+                fecha_hora_fin=timezone.now(),
+                cantidad_producida=kilos_fabricados,
+                operador=request.user,
+                estado=estado,
+                observaciones=observaciones
+            )
 
-            #Identificar tareas incompletas
-            tareas_incompletas = self.identificar_tareas_incompletas(programa_id, fecha_str)
-
-            #Si estamos en modo previsualización, solo devolver datos sin hacer cambios
-            if preview_only:
-                return Response({
-                    'mensaje': f'Previsualización de finalización del día {fecha_str}',
-                    'tareas_incompletas': tareas_incompletas,
-                    'siguiente_dia': siguiente_dia.strftime('%Y-%m-%d'),
-                    'total_tareas': len(tareas_incompletas)
-                })
-            #Si no estamos en previsualización, rear fragmentos y continuaciones
-            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
-            tareas_procesadas = []
-
-            for tarea in tareas_incompletas:
-                # Normalizar el ID si todavía tiene formato ReactSortable
-                tarea_id = tarea['id']
-                if isinstance(tarea_id, str) and tarea_id.startswith('item_'):
-                    try:
-                        tarea_id = int(tarea_id.split('_')[1])
-                        tarea['id'] = tarea_id  # Actualizar el ID en el diccionario
-                    except (IndexError, ValueError):
-                        # Si hay error al convertir, dejar el error ocurrir para generar un log claro
-                        pass
-                    
-                item_ruta = get_object_or_404(ItemRuta, id=tarea['id'])
-
-                #Buscar si ya existe un fragmento para esta tarea en esta fecha
-                fragmento_existente = TareaFragmentada.objects.filter(
-                    tarea_original=item_ruta,
-                    fecha=fecha
-                ).first()
-
-                #Si no existe, crear el fragmento para el día actual
-                if not fragmento_existente:
-                    fragmento = TareaFragmentada.objects.create(
-                        tarea_original=item_ruta,
-                        fecha=fecha,
-                        porcentaje_completado=tarea['porcentaje_completado'],
-                        cantidad_asignada=tarea['kilos_programados'],
-                        cantidad_completada=tarea['kilos_fabricados'],
-                        es_continuacion=False,
-                        nivel_fragmentacion=0
-                    )
-                else:
-                    #Actualizar el fragmento existente
-                    fragmento = fragmento_existente
-                    fragmento.porcentaje_completado = tarea['porcentaje_completado']
-                    fragmento.cantidad_completada = tarea['kilos_fabricados']
-                    fragmento.save()
-
-                #Crear la continuación para el siguiente día
-                continuacion = TareaFragmentada.objects.create(
-                    tarea_original=item_ruta,
-                    tarea_padre=fragmento,
-                    fecha=siguiente_dia,
-                    porcentaje_completado=0,
-                    cantidad_asignada=tarea['kilos_restantes'],
-                    cantidad_completada=0,
-                    es_continuacion=True,
-                    nivel_fragmentacion=fragmento.nivel_fragmentacion + 1
-                )
-
-                #Actualizar registro de tareas procesadas 
-                tareas_procesadas.append({
-                    'id': tarea['id'],
-                    'proceso': tarea['proceso'],
-                    'ot_codigo': tarea['ot_codigo'],
-                    'porcentaje_completado': tarea['porcentaje_completado'],
-                    'kilos_restantes': tarea['kilos_restantes'],
-                    'continuacion_id': continuacion.id,
-                    'fecha_continuacion': siguiente_dia.strftime('%Y-%m-%d')
-                })
+            # Actualizar tarea
+            tarea.kilos_fabricados = kilos_fabricados
+            tarea.estado = estado
+            tarea.observaciones = observaciones
+            tarea.save()
 
             return Response({
-                'mensaje': f'Día {fecha_str} finalizado con éxito',
-                'tareas_procesadas': tareas_procesadas,
-                'siguiente_dia': siguiente_dia.strftime('%Y-%m-%d'),
-                'total_tareas': len(tareas_procesadas)
+                'message': 'Tarea actualizada correctamente',
+                'tarea_id': tarea.id,
+                'kilos_fabricados': kilos_fabricados,
+                'porcentaje_cumplimiento': tarea.porcentaje_cumplimiento
             })
+
         except Exception as e:
-            print(f'Error finalizando día: {str(e)}')
             return Response(
-                {'error': f'Error al finalizar el día: {str(e)}'},
+                {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
 
-class TareaGenealogiaView(APIView):
+#Guardar respaldo para el cambio temporal
+
+"""
+def get(self, request, programa_id, fecha):
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_obj = datetime.strptime(fecha, '%Y-%m-%d').date()
+
+            tareas = TareaFragmentada.objects.filter(
+                programa=programa,
+                fecha=fecha_obj
+            )
+
+            return Response({
+                'total_tareas': tareas.count(),
+                'completadas': tareas.filter(estado='COMPLETADO').count(),
+                'en_proceso': tareas.filter(estado='EN_PROCESO').count(),
+                'pendientes': tareas.filter(estado='PENDIENTE').count(),
+                'porcentaje_completado': self.calcular_porcentaje_completado(tareas)
+            })
+        
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+"""
+
+
+class ResumenDiarioView(APIView):
     permission_classes = [IsAuthenticated]
 
-    def get(self, request, tarea_id):
-        """Obtiene la genealogía completa de una tarea fragmentada"""
+    def get(self, request, programa_id, fecha):
         try:
-            #Obtener el item ruta
-            item_ruta = get_object_or_404(ItemRuta, id=tarea_id)
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_obj = datetime.strptime(fecha, '%Y-%m-%d').date()
 
-            #Buscar el fragmento raíz (nivel 0, no es continuacion)
-            fragmento_raiz = TareaFragmentada.objects.filter(
-                tarea_original=item_ruta,
-                nivel_fragmentacion=0
-            ).first()
+            # Obtener las tareas del supervisor report
+            supervisor_report = SupervisorReportView()
+            response = supervisor_report.get(request, programa_id)
+            tareas = response.data['tareas']
 
-            if not fragmento_raiz:
-                #Si no hay fragmento raíz pero hay fragmentos, buscar el de menor nivel
-                fragmento_raiz = TareaFragmentada.objects.filter(
-                    tarea_original=item_ruta
-                ).order_by('nivel_fragmentacion').first()
-
-                if not fragmento_raiz:
-                    return Response(
-                        {'mensaje': 'Esta tarea no tiene fragmentos asociados'},
-                        status=status.HTTP_404_NOT_FOUND
-                    )
-                
-            #Serializer con anidación recursiva
-            serializer = TareaFragmentadaSerializer(fragmento_raiz)
+            total_tareas = len(tareas)
+            completadas = sum(1 for t in tareas if t['estado'] == 'COMPLETADO')
+            en_proceso = sum(1 for t in tareas if t['estado'] == 'EN_PROCESO')
+            pendientes = sum(1 for t in tareas if t['estado'] == 'PENDIENTE')
 
             return Response({
-                'tarea_original': {
-                    'id': item_ruta.id,
-                    'proceso': item_ruta.proceso.descripcion,
-                    'maquina': item_ruta.maquina.descripcion if item_ruta.maquina else 'Sin maquina',
-                    'cantidad_total': float(item_ruta.cantidad_pedido)
-                },
-                'genealogia': serializer.data,
-                'progreso_global': serializer.data.get('progreso_acumulado', 0)
+                'total_tareas': total_tareas,
+                'completadas': completadas,
+                'en_proceso': en_proceso,
+                'pendientes': pendientes,
+                'porcentaje_completado': (completadas / total_tareas * 100) if total_tareas > 0 else 0
             })
+        
         except Exception as e:
-            print(f'Error obteniendo genealogía: {str(e)}')
+            print(f"Error en ResumenDiarioView.get: {str(e)}")  # Para debugging
             return Response(
-                {'error': f'Error al obtener genealogía: {str(e)}'},
+                {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
             )
+        
+    def calcular_porcentaje_completado(self, tareas):
+        if not tareas:
+            return 0
+        return sum(tarea.porcentaje_cumplimiento for tarea in tareas) / tareas.count()
+
+
+class FinalizarDiaView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, programa_id, fecha):
+        """Previsualiza el cierre del día"""
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_obj = datetime.strptime(fecha, '%Y-%m-%d').date()
+
+            # Verificar si el día ya está cerrado
+            if ReporteDiarioPrograma.objects.filter(
+                programa=programa,
+                fecha=fecha_obj,
+                estado='CERRADO'
+            ).exists():
+                return Response({
+                    'error': 'Este día ya está cerrado'
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+            # Obtener tareas incompletas
+            tareas_incompletas = TareaFragmentada.objects.filter(
+                programa=programa,
+                fecha=fecha_obj,
+                estado__in=['PENDIENTE', 'EN_PROCESO']
+            ).select_related(
+                'tarea_original__proceso',
+                'tarea_original__maquina',
+                'tarea_original__ruta__orden_trabajo'
+            )
+
+            preview_data = {
+                'fecha': fecha,
+                'siguiente_dia': self.obtener_siguiente_dia_laboral(fecha_obj).strftime('%Y-%m-%d'),
+                'tareas_pendientes': []
+            }
+
+            for tarea in tareas_incompletas:
+                if tarea.cantidad_pendiente > 0:
+                    preview_data['tareas_pendientes'].append({
+                        'id': tarea.id,
+                        'orden_trabajo': tarea.tarea_original.ruta.orden_trabajo.codigo_ot,
+                        'proceso': tarea.tarea_original.proceso.descripcion,
+                        'cantidad_pendiente': float(tarea.cantidad_pendiente),
+                        'porcentaje_completado': float(tarea.porcentaje_cumplimiento)
+                    })
+
+            return Response(preview_data)
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    @transaction.atomic
+    def post(self, request, programa_id, fecha):
+        """Finaliza el día y crea las continuaciones necesarias"""
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_obj = datetime.strptime(fecha, '%Y-%m-%d').date()
+            siguiente_dia = self.obtener_siguiente_dia_laboral(fecha_obj)
+
+            # Verificar si el día ya está cerrado
+            if ReporteDiarioPrograma.objects.filter(
+                programa=programa,
+                fecha=fecha_obj,
+                estado='CERRADO'
+            ).exists():
+                return Response({
+                    'error': 'Este día ya está cerrado'
+                }, status=status.HTTP_400_BAD_REQUEST)
+
+            # Procesar tareas incompletas
+            tareas_procesadas = []
+            for tarea in TareaFragmentada.objects.filter(
+                programa=programa,
+                fecha=fecha_obj,
+                estado__in=['PENDIENTE', 'EN_PROCESO']
+            ):
+                if tarea.cantidad_pendiente > 0:
+                    # Crear continuación
+                    continuacion = tarea.crear_continuacion(
+                        tarea.cantidad_pendiente,
+                        siguiente_dia
+                    )
+                    
+                    # Actualizar estado de la tarea actual
+                    tarea.estado = 'CONTINUADO'
+                    tarea.save()
+
+                    tareas_procesadas.append({
+                        'tarea_original_id': tarea.id,
+                        'continuacion_id': continuacion.id,
+                        'cantidad_pendiente': float(tarea.cantidad_pendiente)
+                    })
+
+            # Crear reporte diario
+            ReporteDiarioPrograma.objects.create(
+                programa=programa,
+                fecha=fecha_obj,
+                estado='CERRADO',
+                cerrado_por=request.user,
+                fecha_cierre=timezone.now()
+            )
+
+            return Response({
+                'mensaje': 'Día finalizado correctamente',
+                'fecha': fecha,
+                'siguiente_dia': siguiente_dia.strftime('%Y-%m-%d'),
+                'tareas_procesadas': tareas_procesadas
+            })
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    def obtener_siguiente_dia_laboral(self, fecha):
+        """Obtiene el siguiente día laboral (excluye fines de semana)"""
+        siguiente_dia = fecha + timedelta(days=1)
+        while siguiente_dia.weekday() >= 5:  # 5 = Sábado, 6 = Domingo
+            siguiente_dia += timedelta(days=1)
+        return siguiente_dia
+
+class TimelineEjecucionView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request, pk):
+        """Obtiene el timeline de ejecución real de un programa"""
+        try:
+            programa = get_object_or_404(ProgramaProduccion, id=pk)
+            
+            # Obtener todas las tareas del supervisor report
+            tareas_supervisor = TareaFragmentada.objects.filter(
+                programa=programa,
+            ).select_related(
+                'tarea_original__proceso',
+                'tarea_original__maquina',
+                'tarea_original__ruta__orden_trabajo',
+                'operador'
+            ).order_by('fecha', 'tarea_original__ruta__orden_trabajo__codigo_ot')
+
+            # Diccionario para grupos (OTs)
+            ots = {}
+            items = []
+            item_id = 1
+
+            for tarea in tareas_supervisor:
+                orden_trabajo = tarea.tarea_original.ruta.orden_trabajo
+                codigo_ot = orden_trabajo.codigo_ot
+
+                # Agregar OT al diccionario si no existe
+                if codigo_ot not in ots:
+                    ots[codigo_ot] = {
+                        'id': str(codigo_ot),
+                        'title': f'OT {codigo_ot} - {orden_trabajo.descripcion}'
+                    }
+
+                # Calcular inicio y fin de la tarea
+                hora_inicio = datetime.combine(tarea.fecha, time(8, 0))  # 8:00 AM
+                hora_fin = datetime.combine(tarea.fecha, time(18, 0))    # 6:00 PM
+
+                # Crear item
+                items.append({
+                    'id': str(item_id),
+                    'group': str(codigo_ot),
+                    'title': f'{tarea.tarea_original.proceso.descripcion}',
+                    'start_time': hora_inicio.isoformat(),
+                    'end_time': hora_fin.isoformat(),
+                    'estado': tarea.estado.lower(),
+                    'itemProps': {
+                        'data-tooltip': (
+                            f'Proceso: {tarea.tarea_original.proceso.descripcion}\n'
+                            f'Estado: {tarea.estado}\n'
+                            f'Cantidad: {tarea.kilos_fabricados} de {tarea.kilos_programados}\n'
+                            f'Operador: {tarea.operador.nombre if tarea.operador else "Sin operador"}\n'
+                            f'Estándar: {tarea.tarea_original.estandar_produccion} u/hr\n'
+                            f'Inicio: {hora_inicio.strftime("%d/%m/%Y, %H:%M:%S")}\n'
+                            f'Fin: {hora_fin.strftime("%d/%m/%Y, %H:%M:%S")}'
+                        )
+                    }
+                })
+                item_id += 1
+
+            timeline_data = {
+                'groups': list(ots.values()),
+                'items': items
+            }
+            print("grupos:", timeline_data['groups'])
+            print("items:", timeline_data['items'])
+
+            return Response(timeline_data)
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    def post(self, request, pk):
+        """Registra una nueva ejecución en el timeline"""
+        try:
+            tarea = get_object_or_404(TareaFragmentada, id=request.data.get('tarea_id'))
+            
+            ejecucion = EjecucionTarea.objects.create(
+                tarea=tarea,
+                fecha_hora_inicio=request.data.get('fecha_hora_inicio'),
+                fecha_hora_fin=request.data.get('fecha_hora_fin'),
+                cantidad_producida=request.data.get('cantidad_producida'),
+                operador_id=request.data.get('operador_id'),
+                estado=request.data.get('estado', 'EN_PROCESO'),
+                observaciones=request.data.get('observaciones', '')
+            )
+
+            return Response({
+                'mensaje': 'Ejecución registrada correctamente',
+                'ejecucion_id': ejecucion.id
+            })
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+        
+class ReporteSupervisorListView(APIView):
+    permission_classes = [IsAuthenticated]
+
+    def get(self, request):
+        """Obtiene la lista de programas con sus tareas fragmentadas"""
+        try:
+            # Obtener todos los programas activos
+            programas = ProgramaProduccion.objects.all().order_by('-fecha_inicio')
+            
+            response_data = []
+            for programa in programas:
+                # Obtener las tareas fragmentadas agrupadas por fecha
+                tareas_por_fecha = TareaFragmentada.objects.filter(
+                    programa=programa
+                ).values('fecha').distinct()
+                
+                # Obtener cantidad de tareas para el día actual
+                fecha_actual = timezone.now().date()
+                tareas_hoy = TareaFragmentada.objects.filter(
+                    programa=programa,
+                    fecha=fecha_actual
+                ).count()
+
+                # Obtener la última fecha con tareas
+                ultima_tarea = TareaFragmentada.objects.filter(
+                    programa=programa
+                ).order_by('-fecha').first()
+
+                programa_data = {
+                    'id': programa.id,
+                    'nombre': programa.nombre,
+                    'fecha_inicio': programa.fecha_inicio,
+                    'fecha_fin': programa.fecha_fin,
+                    'ultima_actividad': {
+                        'fecha': ultima_tarea.fecha if ultima_tarea else None,
+                        'total_tareas': tareas_por_fecha.count(),
+                        'dias_con_tareas': [fecha['fecha'] for fecha in tareas_por_fecha]
+                    },
+                    'tareas_hoy': tareas_hoy,
+                    'estado': self.determinar_estado_programa(programa)
+                }
+                response_data.append(programa_data)
+
+            return Response(response_data)
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    def determinar_estado_programa(self, programa):
+        """Determina el estado general del programa basado en sus tareas"""
+        try:
+            tareas = TareaFragmentada.objects.filter(programa=programa)
+            if not tareas.exists():
+                return "SIN_INICIAR"
+            
+            total_tareas = tareas.count()
+            tareas_completadas = tareas.filter(estado='COMPLETADO').count()
+            tareas_en_proceso = tareas.filter(estado='EN_PROCESO').count()
+            
+            if tareas_completadas == total_tareas:
+                return "COMPLETADO"
+            elif tareas_en_proceso > 0:
+                return "EN_PROCESO"
+            else:
+                return "PENDIENTE"
+                
+        except Exception:
+            return "ERROR"
+
+    def post(self, request):
+        """Crea nuevas tareas fragmentadas para un programa en una fecha específica"""
+        try:
+            programa_id = request.data.get('programa_id')
+            fecha = request.data.get('fecha')
+
+            if not programa_id or not fecha:
+                return Response(
+                    {'error': 'Se requiere programa_id y fecha'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            programa = get_object_or_404(ProgramaProduccion, id=programa_id)
+            fecha_obj = datetime.strptime(fecha, '%Y-%m-%d').date()
+
+            # Verificar si ya existen tareas para esta fecha
+            tareas_existentes = TareaFragmentada.objects.filter(
+                programa=programa,
+                fecha=fecha_obj
+            ).exists()
+
+            if tareas_existentes:
+                return Response(
+                    {'error': 'Ya existen tareas registradas para esta fecha'},
+                    status=status.HTTP_400_BAD_REQUEST
+                )
+
+            # Crear las tareas fragmentadas para este día
+            tareas_creadas = self.crear_tareas_del_dia(programa, fecha_obj)
+
+            return Response({
+                'mensaje': 'Tareas creadas correctamente',
+                'tareas_creadas': tareas_creadas
+            })
+
+        except Exception as e:
+            return Response(
+                {'error': str(e)},
+                status=status.HTTP_500_INTERNAL_SERVER_ERROR
+            )
+
+    def crear_tareas_del_dia(self, programa, fecha):
+        """Crea las tareas fragmentadas para un día específico"""
+        tareas_creadas = []
+        
+        # Obtener todas las órdenes de trabajo del programa
+        program_ots = ProgramaOrdenTrabajo.objects.filter(
+            programa=programa
+        ).select_related(
+            'orden_trabajo__ruta_ot'
+        ).prefetch_related(
+            'orden_trabajo__ruta_ot__items'
+        )
+
+        for prog_ot in program_ots:
+            ruta = prog_ot.orden_trabajo.ruta_ot
+            if ruta:
+                for item in ruta.items.all():
+                    # Aquí puedes implementar la lógica para determinar
+                    # qué cantidad debe ser asignada para este día
+                    tarea = TareaFragmentada.objects.create(
+                        programa=programa,
+                        fecha=fecha,
+                        tarea_original=item,
+                        cantidad_asignada=item.cantidad_pedido,  # Esto debería ser calculado
+                        estado='PENDIENTE'
+                    )
+                    tareas_creadas.append({
+                        'id': tarea.id,
+                        'proceso': item.proceso.descripcion,
+                        'cantidad': float(tarea.cantidad_asignada)
+                    })
+
+        return tareas_creadas

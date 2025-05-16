@@ -1,0 +1,95 @@
+/* DateNavigation.css */
+.date-navigation {
+    padding: 1.5rem 0;
+    border-bottom: 1px solid #dee2e6;
+    margin-bottom: 1.5rem;
+}
+
+.navigation-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.page-title {
+    margin: 0;
+    color: #2c3e50;
+    font-size: 1.75rem;
+    font-weight: 600;
+}
+
+.date-controls {
+    display: flex;
+    align-items: center;
+}
+
+.nav-button {
+    padding: 0.5rem 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.date-button {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1.25rem;
+    background: white;
+    border: 1px solid #dee2e6;
+    min-width: 280px;
+    justify-content: center;
+}
+
+.date-button:hover {
+    background-color: #f8f9fa;
+}
+
+.calendar-icon {
+    color: #007bff;
+}
+
+.date-text {
+    color: #495057;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Estilos para el DatePicker */
+.react-datepicker-wrapper {
+    width: auto;
+}
+
+.react-datepicker__input-container {
+    width: auto;
+}
+
+.date-picker-input {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    text-align: center;
+    width: 100%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .navigation-container {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .page-title {
+        text-align: center;
+    }
+
+    .date-controls {
+        justify-content: center;
+    }
+
+    .date-button {
+        min-width: 220px;
+    }
+}

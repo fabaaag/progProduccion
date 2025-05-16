@@ -1,0 +1,4000 @@
+
+=== Diagnóstico de Máquinas (2025-04-30 18:46:21) ===
+
+Total máquinas: 174
+Máquinas con estado asignado: 174
+Máquinas sin estado: 0
+
+
+==================================================
+Máquina:  - 
+Sigla: 
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1001 - TIJERA #1
+Sigla: TIJE1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1002 - TIJERA #2
+Sigla: TIJE2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 6
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 6
+    • CORTADO
+      - Estándar: 120
+      - Cantidad pedido: 1000.00
+      - Completado: 754.00
+    • CORTADO
+      - Estándar: 293
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+    • CORTADO
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 10.00
+    • CORTADO
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 10.00
+    • CORTADO
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 10.00
+    • CORTADO
+      - Estándar: 50
+      - Cantidad pedido: 150.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1003 - TIJERA UNIVERSAL
+Sigla: TIJEU1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • CORTADO
+      - Estándar: 500
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1004 - GUILLOTINA
+Sigla: GUILLO
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1112 - PRENSA CHUN-ZU-12
+Sigla: CH-12
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ESTAMF - Máquinas para ESTAMPAR EN FRIO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1201 - PRENSA FRICCION #1
+Sigla: PF-01
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 2
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 2
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 1579
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 1364
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1202 - PRENSA FRICCION #2
+Sigla: PF-02
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ENDERZ - Máquinas para ENDEREZAR
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTAC1 - Máquinas para ESTAMPAR EN CALIENTE PRIMER GO 1202 PF- 02
+  • ESTAC2 - Máquinas para ESTAMPAR EN CALIENTE SEGUNDO G 1202 PF- 02
+  • ESTRIA - Máquinas para ESTRIAR
+  • PLANCH - Máquinas para PLANCHADO
+  • PUESPI - Máquinas para PUNTEADO DE ESPIGA
+  • PUPER - Máquinas para PUNTEADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1203 - PRENSA FRICCION #3
+Sigla: PF-03
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTAC1 - Máquinas para ESTAMPAR EN CALIENTE PRIMER GO 1202 PF- 02
+  • ESTAC2 - Máquinas para ESTAMPAR EN CALIENTE SEGUNDO G 1202 PF- 02
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 5
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 5
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 121
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • ESTAMPAR EN CALIENTE
+      - Estándar: 50
+      - Cantidad pedido: 150.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1204 - PRENSA FRICCION #4
+Sigla: PF-04
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTAC1 - Máquinas para ESTAMPAR EN CALIENTE PRIMER GO 1202 PF- 02
+  • ESTAC2 - Máquinas para ESTAMPAR EN CALIENTE SEGUNDO G 1202 PF- 02
+  • PLANCH - Máquinas para PLANCHADO
+  • PLANCL - Máquinas para PLANCHADO Y LOGO
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • DOBLAR EN FRIO
+      - Estándar: 157
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1205 - PRENSA FRICCION #5
+Sigla: PF-05
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CALI - Máquinas para CALIBRADO
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTRIA - Máquinas para ESTRIAR
+  • FORJAR - Máquinas para FORJAR
+  • PLANCH - Máquinas para PLANCHADO
+  • RANURA - Máquinas para RANURADO
+  • PARTPA - Máquinas para PARTIR PATAS
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • FORJAR
+      - Estándar: 120
+      - Cantidad pedido: 600.00
+      - Completado: 330.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1206 - PRENSA FRICCION #6
+Sigla: PF-06
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1207 - PRENSA FRICCION #7
+Sigla: PF-07
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTAC1 - Máquinas para ESTAMPAR EN CALIENTE PRIMER GO 1202 PF- 02
+  • ESTAC2 - Máquinas para ESTAMPAR EN CALIENTE SEGUNDO G 1202 PF- 02
+  • PLANCU - Máquinas para PLANCHADO CURVO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1208 - PRENSA FRICCION #8
+Sigla: PF-08
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ENDERZ - Máquinas para ENDEREZAR
+  • ESTRIA - Máquinas para ESTRIAR
+  • PLANCH - Máquinas para PLANCHADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1209 - PRENSA FRICCION #9
+Sigla: PF-09
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ENDERZ - Máquinas para ENDEREZAR
+  • ESTAMF - Máquinas para ESTAMPAR EN FRIO
+  • ESTRIA - Máquinas para ESTRIAR
+  • PLANCH - Máquinas para PLANCHADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1210 - PRENSA FRICCION #10
+Sigla: PF-10
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTAC1 - Máquinas para ESTAMPAR EN CALIENTE PRIMER GO 1202 PF- 02
+  • ESTAC2 - Máquinas para ESTAMPAR EN CALIENTE SEGUNDO G 1202 PF- 02
+  • ESTAMF - Máquinas para ESTAMPAR EN FRIO
+  • PLANCH - Máquinas para PLANCHADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1211 - PRENSA FRICCION #11
+Sigla: PF-11
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTAMF - Máquinas para ESTAMPAR EN FRIO
+  • ESTRIA - Máquinas para ESTRIAR
+  • FORJAR - Máquinas para FORJAR
+  • PLANCH - Máquinas para PLANCHADO
+  • PUESPI - Máquinas para PUNTEADO DE ESPIGA
+  • PARTPA - Máquinas para PARTIR PATAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1212 - PRENSA FRICCION #12
+Sigla: PF-12
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • DESTAJ - Máquinas para DESTAJE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+  • ESTRIA - Máquinas para ESTRIAR
+  • PERFOR - Máquinas para PERFORADO
+  • PLANCH - Máquinas para PLANCHADO
+  • PUESPI - Máquinas para PUNTEADO DE ESPIGA
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1213 - PRENSA FRICCION #13 ITALIANA
+Sigla: PF13
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1220 - CORTADORA LASER
+Sigla: LASER
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • PERFOR - Máquinas para PERFORADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1303 - PRENSA EXCENTRICA #3
+Sigla: PR-3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ESTAMF - Máquinas para ESTAMPAR EN FRIO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1304 - PRENSA EXCENTRICA #4
+Sigla: PR-4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ESTAMF - Máquinas para ESTAMPAR EN FRIO
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1305 - PRENSA EXCENTRICA #5
+Sigla: PR-5
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPL - Máquinas para CORTE, PERFORADO Y LOGO
+  • DESTAJ - Máquinas para DESTAJE
+  • PERFCE - Máquinas para PERFORACION CENTRO 10MM
+  • PERFEX - Máquinas para PERFORACION EXTREMO 10MM
+  • PERFOR - Máquinas para PERFORADO
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1306 - PRENSA EXCENTRICA #6
+Sigla: PR-6
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORPUN - Máquinas para CORTADO DE PUNTAS
+  • DESTAJ - Máquinas para DESTAJE
+  • PERFOR - Máquinas para PERFORADO
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1311 - PRENSA EXCENTRICA #11
+Sigla: PE-11
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • DESTAJ - Máquinas para DESTAJE
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • PERFOR - Máquinas para PERFORADO
+  • PERFTR - Máquinas para PERFORACION TREBOL
+  • PERFSE - Máquinas para PERFORACION SEIS
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERFO2 - Máquinas para PERFORACION OVALADA 2
+  • PERFO8 - Máquinas para PERFORACION OCHO - SEIS
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARI - Máquinas para REBARBADO INTERIOR
+  • PREPAR - Máquinas para PREPARTIR PATAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1312 - PRENSA EXCENTRICA #12
+Sigla: PE-12
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • CORTPL - Máquinas para CORTE, PERFORADO Y LOGO
+  • DESTAJ - Máquinas para DESTAJE
+  • PERFOR - Máquinas para PERFORADO
+  • PERFTR - Máquinas para PERFORACION TREBOL
+  • PERFSE - Máquinas para PERFORACION SEIS
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARI - Máquinas para REBARBADO INTERIOR
+  • REBART - Máquinas para REBARBADO DE TUERCAS
+  • DEPUN - Máquinas para DESPUNTE
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • REBARBADO EXTERIOR
+      - Estándar: 353
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1313 - PRENSA EXCENTRICA #13
+Sigla: PE-13
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • DESTAJ - Máquinas para DESTAJE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ENDERZ - Máquinas para ENDEREZAR
+  • PERFOR - Máquinas para PERFORADO
+  • PERFSE - Máquinas para PERFORACION SEIS
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERFO2 - Máquinas para PERFORACION OVALADA 2
+  • PERFO8 - Máquinas para PERFORACION OCHO - SEIS
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARI - Máquinas para REBARBADO INTERIOR
+  • REBART - Máquinas para REBARBADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 2
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 2
+    • REBARBADO EXTERIOR
+      - Estándar: 480
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+    • REBARBADO INTERIOR
+      - Estándar: 500
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1314 - PRENSA EXCENTRICA #14
+Sigla: PE-14
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • ACANAL - Máquinas para ACANALADO
+  • DESTAJ - Máquinas para DESTAJE
+  • DOBLAC - Máquinas para DOBLAR EN CALIENTE
+  • PERFOR - Máquinas para PERFORADO
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • PERFT - Máquinas para PERFORACION TRASLAPADA
+  • PERF11 - Máquinas para PERFORACION REDONDA 11mm
+  • PERF16 - Máquinas para PERFORACION REDONDA 16mm
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARI - Máquinas para REBARBADO INTERIOR
+  • REBAES - Máquinas para REBARBADO DE ESPIGAS
+  • REBARP - Máquinas para REBARBADO DE PERNOS
+  • PERF09 - Máquinas para PERFORACION REDONDA 9mm
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • REBARBADO DE PERNOS
+      - Estándar: 120
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1315 - PRENSA EXCENTRICA #15
+Sigla: PE-15
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • DESTAJ - Máquinas para DESTAJE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • ENDERZ - Máquinas para ENDEREZAR
+  • PERFOR - Máquinas para PERFORADO
+  • PERFTR - Máquinas para PERFORACION TREBOL
+  • PERFSE - Máquinas para PERFORACION SEIS
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERFO2 - Máquinas para PERFORACION OVALADA 2
+  • PERFO8 - Máquinas para PERFORACION OCHO - SEIS
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • PERFT - Máquinas para PERFORACION TRASLAPADA
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARI - Máquinas para REBARBADO INTERIOR
+  • DOBLA1 - Máquinas para DOBLADO 1
+  • DOBLA2 - Máquinas para DOBLADO 2
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 2
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 2
+    • PERFORACION REDONDA 18mm
+      - Estándar: 375
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+    • PERFORACION OVALADA
+      - Estándar: 375
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1316 - PRENSA EXCENTRICA #16
+Sigla: P.EX16
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • CORTPL - Máquinas para CORTE, PERFORADO Y LOGO
+  • ACANAL - Máquinas para ACANALADO
+  • DESTAJ - Máquinas para DESTAJE
+  • DOBLAF - Máquinas para DOBLAR EN FRIO
+  • PERFCE - Máquinas para PERFORACION CENTRO 10MM
+  • PERFEX - Máquinas para PERFORACION EXTREMO 10MM
+  • PERFOR - Máquinas para PERFORADO
+  • PERFTR - Máquinas para PERFORACION TREBOL
+  • PERFSE - Máquinas para PERFORACION SEIS
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • PERFT - Máquinas para PERFORACION TRASLAPADA
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1317 - PRENSA EXCENTRICA #17
+Sigla: P.EX17
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • CORTPL - Máquinas para CORTE, PERFORADO Y LOGO
+  • DESTAJ - Máquinas para DESTAJE
+  • PERFCE - Máquinas para PERFORACION CENTRO 10MM
+  • PERFEX - Máquinas para PERFORACION EXTREMO 10MM
+  • PERFOR - Máquinas para PERFORADO
+  • PERFTR - Máquinas para PERFORACION TREBOL
+  • PERFSE - Máquinas para PERFORACION SEIS
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • PERFT - Máquinas para PERFORACION TRASLAPADA
+  • PERF11 - Máquinas para PERFORACION REDONDA 11mm
+  • PLANCU - Máquinas para PLANCHADO CURVO
+  • PERF09 - Máquinas para PERFORACION REDONDA 9mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1318 - PRENSA EXCENTRICA #18
+Sigla: P.EX18
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERFOR - Máquinas para PERFORADO
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • PERF11 - Máquinas para PERFORACION REDONDA 11mm
+  • LOGO - Máquinas para LOGOTIPO
+  • PERF09 - Máquinas para PERFORACION REDONDA 9mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1401 - REBARBADORA FAMAE #1
+Sigla: REFA01
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DESTAJ - Máquinas para DESTAJE
+  • PERFOR - Máquinas para PERFORADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1402 - REBARBADORA FAMAE #2
+Sigla: REFA02
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DESTAJ - Máquinas para DESTAJE
+  • LOGOTI - Máquinas para LOGOTIPO
+  • PERFOR - Máquinas para PERFORADO
+  • PERFCU - Máquinas para PERFORACION CUADRADA
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARP - Máquinas para REBARBADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1403 - REBARBADORA FAMAE #3
+Sigla: REFA03
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DESTAJ - Máquinas para DESTAJE
+  • LOGOTI - Máquinas para LOGOTIPO
+  • PERFOR - Máquinas para PERFORADO
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBAES - Máquinas para REBARBADO DE ESPIGAS
+  • REBARP - Máquinas para REBARBADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1411 - REBARBADORA NIETO #1
+Sigla: RENI01
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LOGOTI - Máquinas para LOGOTIPO
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1412 - REBARBADORA NIETO #2
+Sigla: RENI02
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LOGOTI - Máquinas para LOGOTIPO
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1421 - REBARBADORA DE 2 CABEZAS
+Sigla: RE2CA
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARP - Máquinas para REBARBADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1431 - REBARBADORA TORTUGA #1
+Sigla: RETOR
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARP - Máquinas para REBARBADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 4
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 4
+    • REBARBADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • REBARBADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • REBARBADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • REBARBADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 150.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1440 - REBARBADORA CHUN-ZU-12
+Sigla: CT-12
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • REBARP - Máquinas para REBARBADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1600 - PUNTEADORA 2 CABEZAS
+Sigla: PU2CA
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUPER - Máquinas para PUNTEADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1601 - PUNTEADORA DE PERNOS #1
+Sigla: PUPE1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUPER - Máquinas para PUNTEADO DE PERNOS
+  • PUTIR - Máquinas para PUNTEAR TIRAFONDOS
+  • REBAJA - Máquinas para REBAJADO
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 5
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 5
+    • PUNTEADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • PUNTEADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • PUNTEADO DE PERNOS
+      - Estándar: 51
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • PUNTEADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 150.00
+      - Completado: 0.00
+    • PUNTEADO DE PERNOS
+      - Estándar: 490
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1611 - PUNTEADORA DE CLAVOS #1
+Sigla: PUCLA1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUCLA - Máquinas para PUNTEADO DE CLAVOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1612 - PUNTEADORA DE CLAVOS #2
+Sigla: PUCLA2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUCLA - Máquinas para PUNTEADO DE CLAVOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1621 - PUNTEADORA DE TIRAFONDOS #1
+Sigla: PUTIR1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUTIR - Máquinas para PUNTEAR TIRAFONDOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1631 - PUNTEADORA DE BARRAS
+Sigla: PUBAR1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUTIR - Máquinas para PUNTEAR TIRAFONDOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1811 - LAMINADORA TIRAFONDOS #1
+Sigla: LATIR1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LATIR - Máquinas para LAMINAR TIRAFONDOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1812 - LAMINADORA TIRAFONDOS #2
+Sigla: LATIR2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LATIR - Máquinas para LAMINAR TIRAFONDOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1835 - LAMINADORA ZURZOLO (LDR)
+Sigla: LDR-15
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LAMIN - Máquinas para LAMINAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 1840 - LAMINADORA CHUN-ZU-12
+Sigla: DPR-12
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LAMIN - Máquinas para LAMINAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2001 - TERRAJADORA PERNOS #1
+Sigla: T.PER1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • HILOS - Máquinas para CONFECCION DE HILOS
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2002 - TERRAJADORA DE PERNOS #2
+Sigla: TEPE2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • HILOS - Máquinas para CONFECCION DE HILOS
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 4
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 4
+    • TERRAJADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • TERRAJADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • TERRAJADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 10.00
+      - Completado: 0.00
+    • TERRAJADO DE PERNOS
+      - Estándar: 50
+      - Cantidad pedido: 150.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2003 - TERRAJADORA DE PERNOS #3
+Sigla: TEPE3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • HILOS - Máquinas para CONFECCION DE HILOS
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2004 - TERRAJADORA DE PERNOS #4
+Sigla: TEPE4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • HILOS - Máquinas para CONFECCION DE HILOS
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2005 - TERRAJADORA DE PERNOS #5
+Sigla: TEPE5
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2006 - TERRAJADORA DE PERNOS #6
+Sigla: TEPE6
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • TERRAJADO DE PERNOS
+      - Estándar: 600
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2007 - TERRAJADORA DE PERNOS #7
+Sigla: TEPE7
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2008 - TERRAJADORA DE PERNOS #8
+Sigla: TEPE8
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REPER - Máquinas para REPASADO DE PERNOS
+  • TEPER - Máquinas para TERRAJADO DE PERNOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2303 - TERRAJADORA DE TUERCAS #3
+Sigla: TETU3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • RETUE - Máquinas para REPASADO DE TUERCAS
+  • TETUE - Máquinas para TERRAJADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2304 - TERRAJADORA DE TUERCAS #4
+Sigla: TETU4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • RETUE - Máquinas para REPASADO DE TUERCAS
+  • TETUE - Máquinas para TERRAJADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2305 - TERRAJADORA DE TUERCAS #5
+Sigla: TETU5
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PUESPI - Máquinas para PUNTEADO DE ESPIGA
+  • RETUE - Máquinas para REPASADO DE TUERCAS
+  • TETUE - Máquinas para TERRAJADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2306 - TERRAJADORA DE TUERCAS #6
+Sigla: TETU6
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • RETUE - Máquinas para REPASADO DE TUERCAS
+  • TETUE - Máquinas para TERRAJADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2307 - TERRAJADORA DE TUERCAS DE 2 BRAZOS
+Sigla: TETU7
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • RETUE - Máquinas para REPASADO DE TUERCAS
+  • TETUE - Máquinas para TERRAJADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2401 - REBARBADORA DE TUERCAS #1
+Sigla: RETU1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBART - Máquinas para REBARBADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2402 - REBARBADORA DE TUERCAS #2
+Sigla: RETU2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBART - Máquinas para REBARBADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2501 - TALADRO #1
+Sigla: TAL01
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERFOR - Máquinas para PERFORADO
+  • PARTPA - Máquinas para PARTIR PATAS
+
+Asignaciones actuales:
+  • Programas activos: 1
+  • Procesos asignados: 1
+
+Detalle por programa:
+
+  Programa: Programa mayo
+  Fecha: 2025-05-02 - 2025-05-07
+  Procesos: 1
+    • PERFORADO
+      - Estándar: 120
+      - Cantidad pedido: 1000.00
+      - Completado: 0.00
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2502 - TALADRO #2
+Sigla: TAL02
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERFOR - Máquinas para PERFORADO
+  • PREPAR - Máquinas para PREPARTIR PATAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2503 - TALADRO #3
+Sigla: TAL03
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERFOR - Máquinas para PERFORADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2504 - TALADRO #4
+Sigla: TAL04
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2505 - TALADRO #5
+Sigla: TAL05
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • BISEL - Máquinas para BISELADO
+  • PERFOR - Máquinas para PERFORADO
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2506 - TALADRO #6
+Sigla: TAL06
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • BISEL - Máquinas para BISELADO
+  • PERFOR - Máquinas para PERFORADO
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2507 - TALADRO #7
+Sigla: TAL07
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • BISEL - Máquinas para BISELADO
+  • PERFOR - Máquinas para PERFORADO
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2508 - TALADRO #8
+Sigla: TAL08
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERFOR - Máquinas para PERFORADO
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2601 - AVELLANADORA #1
+Sigla: AVETU1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2602 - AVELLANADORA #2
+Sigla: AVETU2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2603 - AVELLANADORA #3
+Sigla: AVETU3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REBARE - Máquinas para REBARBADO EXTERIOR
+  • AVELLA - Máquinas para AVELLANAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2701 - PELTZER #1
+Sigla: PELT-1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2702 - PELTZER #2
+Sigla: PELT-2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • ESTATU - Máquinas para ESTAMPAR TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2801 - TEJEDORA CADENA #1
+Sigla: TEJCA1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLDAR - Máquinas para SOLDADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 2802 - TEJEDORA CADENA #2
+Sigla: TEJCA2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLDAR - Máquinas para SOLDADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3001 - SOLDADORA CADENAS #1
+Sigla: SOLCA1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLCA - Máquinas para SOLDADO DE CADENAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3002 - SOLDADORA CADENAS #2
+Sigla: SOLCA2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLCA - Máquinas para SOLDADO DE CADENAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3004 - SOLDADORA CADENAS #4
+Sigla: SOLCA4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLCA - Máquinas para SOLDADO DE CADENAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3200 - CHAVETERA
+Sigla: CHAV01
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • FABCHA - Máquinas para FABRICAR CHAVETAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3401 - SOLDADORA AL ARCO #1
+Sigla: SOL401
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • SOLDAR - Máquinas para SOLDADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3402 - SOLDADORA AL ARCO #2
+Sigla: SOL402
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • SOLDAR - Máquinas para SOLDADO
+  • SOLDOJ - Máquinas para SOLDAR OJO
+  • SOLDCU - Máquinas para SOLDAR CUELLO
+  • SOLGOL - Máquinas para SOLDAR GOLILLA
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3421 - SOLDADORA MIG #1
+Sigla: SOLMI1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLDAR - Máquinas para SOLDADO
+  • SOLDOJ - Máquinas para SOLDAR OJO
+  • SOLDCU - Máquinas para SOLDAR CUELLO
+  • SOLGOL - Máquinas para SOLDAR GOLILLA
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3422 - SOLDADORA MIG #2
+Sigla: SOLMI2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PINCHA - Máquinas para PINCHADO
+  • SOLDAR - Máquinas para SOLDADO
+  • SOLDOJ - Máquinas para SOLDAR OJO
+  • SOLDCU - Máquinas para SOLDAR CUELLO
+  • SOLGOL - Máquinas para SOLDAR GOLILLA
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3501 - PRENSA EXCENTRICA PELS
+Sigla: P.PELS
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3601 - CORTADORA DE PUNTAS
+Sigla: CORPU1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORPUN - Máquinas para CORTADO DE PUNTAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3801 - TORNO DE PRODUCCION #1
+Sigla: TORNO1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • BISEL - Máquinas para BISELADO
+  • PERFOR - Máquinas para PERFORADO
+  • REBAJA - Máquinas para REBAJADO
+  • TETUE - Máquinas para TERRAJADO DE TUERCAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3802 - TORNO DE PRODUCCION #2
+Sigla: TORNO2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • BISEL - Máquinas para BISELADO
+  • DESBAS - Máquinas para DESBASTADO
+  • PERFOR - Máquinas para PERFORADO
+  • REBAJA - Máquinas para REBAJADO
+  • REFREN - Máquinas para REFRENTADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 3810 - TORNO GILDEMEISTER
+Sigla: TORNOG
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERFOR - Máquinas para PERFORADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4001 - ESMERIL #1
+Sigla: ESME1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • BISEL - Máquinas para BISELADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4002 - ESMERIL #2
+Sigla: ESME2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CHASCO - Máquinas para CHASCONEADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4003 - ESMERIL #3
+Sigla: ESME3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CHASCO - Máquinas para CHASCONEADO
+  • ESMERI - Máquinas para ESMERILAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4004 - ESMERIL #4
+Sigla: ESME4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CHASCO - Máquinas para CHASCONEADO
+  • ESMERI - Máquinas para ESMERILAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4201 - SIERRA CIRCULAR #1
+Sigla: SIECI1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • RANURA - Máquinas para RANURADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4202 - SIERRA CIRCULAR CAROLINA #2
+Sigla: SIECI2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • RANURA - Máquinas para RANURADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4221 - SIERRA DE VAIVEN #1
+Sigla: SIEVA1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • RANURA - Máquinas para RANURADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4222 - SIERRA DE VAIVEN #2
+Sigla: SIEVA2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • RANURA - Máquinas para RANURADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4223 - SIERRA SHARK 331 NC 5.0
+Sigla: SHARK
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4401 - HORNO #1
+Sigla: HORNO1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • TRATER - Máquinas para TRATAMIENTO TERMICO
+  • REVE - Máquinas para REVENIDO
+  • NORMAL - Máquinas para NORMALIZADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4402 - HORNO #2
+Sigla: HORNO2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • TRATER - Máquinas para TRATAMIENTO TERMICO
+  • REVE - Máquinas para REVENIDO
+  • NORMAL - Máquinas para NORMALIZADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4403 - HORNO #3
+Sigla: HORNO3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • TRATER - Máquinas para TRATAMIENTO TERMICO
+  • REVE - Máquinas para REVENIDO
+  • NORMAL - Máquinas para NORMALIZADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4600 - BANCO TREFILADOR
+Sigla: BCOTRE
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • TREBA - Máquinas para TREFILADO DE BARRAS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4610 - TREFILADORA ROLLOS
+Sigla: TRERO1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • TRERO - Máquinas para TREFILADO DE ROLLOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 4801 - ARENADORA #1
+Sigla: ARE1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ARENAR - Máquinas para ARENADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 5001 - TAMBOR PULIDOR #1
+Sigla: TAMPU1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PULIR - Máquinas para PULIDO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6002 - ACEITADO
+Sigla: ACEITA
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACEITA - Máquinas para ACEITAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6004 - DECAPADO
+Sigla: DECA
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DECA - Máquinas para DECAPAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6006 - DICROMATADO
+Sigla: DICRO
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DICRO - Máquinas para DICROMATAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6008 - GALVANIZADO
+Sigla: GALVAN
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • GALVAN - Máquinas para GALVANIZAR
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6010 - PAVONADO
+Sigla: PAVON
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PAVON - Máquinas para PAVONADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6012 - PINTADO
+Sigla: PINTAR
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PINTAR - Máquinas para PINTADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6018 - ZINCADO
+Sigla: ZINCAR
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REZINC - Máquinas para REZINCADO
+  • ZINCAR - Máquinas para ZINCADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6020 - CALIBRADO
+Sigla: CALI
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CALI - Máquinas para CALIBRADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6022 - EMPLOMADO
+Sigla: EMPLO
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • EMPLO - Máquinas para EMPLOMADO
+  • DEMPL - Máquinas para DESEMPLOMADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6023 - ENCAMIZADO
+Sigla: ENCAM
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ENCAM - Máquinas para ENCAMIZADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6024 - LIMADO
+Sigla: LIMAR
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LIMAR - Máquinas para LIMADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6026 - REPICADO
+Sigla: REPI
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • REPI - Máquinas para REPICADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 6027 - WEINGARTEN
+Sigla: WEING
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ACANAL - Máquinas para ACANALADO
+  • PERFOR - Máquinas para PERFORADO
+  • PERFO8 - Máquinas para PERFORACION OCHO - SEIS
+  • DOBLA1 - Máquinas para DOBLADO 1
+  • DOBLA2 - Máquinas para DOBLADO 2
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 7000 - PLEGADORA NARGESA
+Sigla: PLEGA
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DINDAV - Máquinas para DESPACHO INDAVAL
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 8000 - SIN MAQUINA
+Sigla: S/M
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DINDAV - Máquinas para DESPACHO INDAVAL
+  • RECEPC - Máquinas para RECEPCION DE PRODUCTOS
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9000 - ORDENES INTERNAS
+Sigla: O/I
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9100 - CARRETERA
+Sigla: CARRET
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTAR - Máquinas para CORTADO
+  • CORTPE - Máquinas para CORTE Y PERFORADO
+  • DESTAJ - Máquinas para DESTAJE
+  • PERFOR - Máquinas para PERFORADO
+  • PERFOV - Máquinas para PERFORACION OVALADA
+  • PERFRE - Máquinas para PERFORACION REDONDA
+  • REBAJA - Máquinas para REBAJADO
+  • DINDAV - Máquinas para DESPACHO INDAVAL
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9110 - INYECTORA DE PLASTICO
+Sigla: INYEC1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • INYECT - Máquinas para INYECION DE POLIAMIDA
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9201 - PRENSA BLISS  150 TONELADAS
+Sigla: PRB1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERF20 - Máquinas para PERFORACION REDONDA 20mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9202 - PRENSA BLISS 50 TONELADAS
+Sigla: PRB2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9203 - PRENSA BLISS 150 TONELADAS
+Sigla: PRB3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERF20 - Máquinas para PERFORACION REDONDA 20mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9204 - PRENSA BLISS 300 TONELADAS
+Sigla: PRB4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9205 - PRENSA BLISS 150 TONELADAS
+Sigla: PRB5
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9206 - PRENSA BLISS 150 TONELADAS
+Sigla: PRB6
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9207 - PRENSA BLISS 120 TONELADAS
+Sigla: PRB7
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9208 - PRENSA BLISS 30
+Sigla: PRB8
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • LOGO - Máquinas para LOGOTIPO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9209 - PRENSA BLISS 30 TONELADAS
+Sigla: PRB9
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9210 - PRENSA BLISS 20 TONELADAS
+Sigla: PRB10
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9211 - PRENSA BLISS 20 TONELADAS
+Sigla: PRB11
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9212 - PRENSA BLISS 30 TONELADAS
+Sigla: PRB12
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9213 - PRENSA CHINA
+Sigla: PCH1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERF20 - Máquinas para PERFORACION REDONDA 20mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9214 - PRENSA CHINA
+Sigla: PCH2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • PERF18 - Máquinas para PERFORACION REDONDA 18mm
+  • PERF14 - Máquinas para PERFORACION REDONDA 14mm
+  • PERF21 - Máquinas para PERFORACION REDONDA 21mm
+  • PERF20 - Máquinas para PERFORACION REDONDA 20mm
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9215 - PRENSA NATIONAL
+Sigla: PRN1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • ESTAMC - Máquinas para ESTAMPAR EN CALIENTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9216 - PRENSA MANUAL PEDDINGHOUS
+Sigla: PRP1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9217 - PRENSA ENMANGADORA
+Sigla: PEP1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9218 - MARTINETE BECHE
+Sigla: MAB1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9219 - CIZALLA AJIAL 8 X 2
+Sigla: CZA1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9220 - CIZALLA SACMA
+Sigla: CZS1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9221 - TALADRO TRADE MARK 16mm
+Sigla: TAT1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9222 - TALADRO BENCH 13mm
+Sigla: TAB1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9223 - TORNO SOUTE BEND
+Sigla: TOS1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9224 - TORNO TABELLI ZUM
+Sigla: TOS1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9225 - SOLDADORA PUNTO
+Sigla: SPT1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9226 - SOLDADORA PUNTO SIEMENS
+Sigla: SPT2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9227 - SOLDADORA PUNTO PANTERA
+Sigla: SPT3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9228 - SIERRA VAIVEN MARVEL
+Sigla: SVM1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9229 - CIZALLA PORTATIL BOSCH
+Sigla: CZP1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9230 - CIZALLA ARCO CHILE
+Sigla: CZA3
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9231 - CIZALLA AB SVETSMEKANO
+Sigla: CZA4
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9232 - TALADRO K&K
+Sigla: TAK1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9233 - SOLDADORA MIG HOBART
+Sigla: SMH1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • SOLDAD - Máquinas para SOLDADO
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9234 - DOBLADORA Y CORTADORA SCHNELL
+Sigla: DCS1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+  • DOBLA1 - Máquinas para DOBLADO 1
+  • DOBLA2 - Máquinas para DOBLADO 2
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9235 - DOBLADORA GREENLEE ELECTRICA
+Sigla: DOG1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9236 - DOBLADORA GREENLEE MANUAL
+Sigla: DOG2
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • DOBLA1 - Máquinas para DOBLADO 1
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9237 - CORTADORA DE LLANTAS
+Sigla: CLL1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+Tipos de máquina:
+  • CORTE - Máquinas para CORTE
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9238 - RODONADORA TOLVA
+Sigla: RTO1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9239 - RODONADORA TOLVA
+Sigla: RT02
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9240 - MESA ARMADO ALMA TOLVA
+Sigla: MAT1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9241 - MESON TRAZADO
+Sigla: MET1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9242 - MESON PLEGADO
+Sigla: MEP1
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9243 - MESA ARMADO
+Sigla: MEA
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9244 - ARREGLO MAQUINA
+Sigla: ARREG
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9245 - PRENSA HIDRAULICA
+Sigla: PREHI
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9246 - MESA RECUPERACION
+Sigla: MEREC
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy
+
+==================================================
+Máquina: 9247 - INVENTARIO
+Sigla: INVENT
+
+Estado:
+  • Operatividad: Operativa
+  • Capacidad/hora: No definida
+  • Factor eficiencia: 1.00
+  • Horario: 07:45:00 - 17:45:00
+
+⚠️ Sin tipos de máquina asignados
+
+Asignaciones actuales:
+  • Programas activos: 0
+  • Procesos asignados: 0
+
+Disponibilidad:
+  • Sin información de disponibilidad para hoy

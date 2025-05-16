@@ -1,4 +1,6 @@
 from django.db import models
+from django.db.models.signals import post_save
+from django.dispatch import receiver
 from django.utils import timezone
 from django.core.exceptions import ValidationError
 from Client.models import Cliente
@@ -6,6 +8,7 @@ from Product.models import Producto, Pieza, MateriaPrima, MeasurementUnit
 from datetime import datetime, time, timedelta
 import uuid
 from django.conf import settings
+from django.contrib.auth import get_user_model
 
 # Create your models here.
 
@@ -24,6 +27,85 @@ class Maquina(models.Model):
     def __str__(self):
         return f'{self.codigo_maquina} - {self.descripcion}'
     
+    def get_disponibilidad_fecha(self, fecha):
+        """Obtiene la disponibilidad para una fecha específica"""
+        from Machine.models import DisponibilidadMaquina
+        return DisponibilidadMaquina.objects.get_or_create(
+            maquina=self,
+            fecha=fecha
+        )[0]
+    
+    def validar_disponibilidad(self, fecha, cantidad, estandar):
+        """Valida si la máquina puede aceptar más carga en una fecha"""
+        disponibilidad = self.get_disponibilidad_fecha(fecha)
+        estado = self.estado
+        
+        if not disponibilidad.disponible:
+            return False, "Máquina no disponible en esta fecha"
+        
+        horas_efectivas = disponibilidad.get_horas_efectivas()
+        capacidad_dia = estado.get_capacidad_real() * horas_efectivas
+        carga_actual = self.calcular_carga_fecha(fecha)
+        horas_requeridas = cantidad / estandar
+        
+        if (carga_actual + horas_requeridas) > capacidad_dia:
+            return False, f"Capacidad insuficiente. Disponible: {capacidad_dia - carga_actual} hrs, Requerido: {horas_requeridas} hrs"
+            
+        return True, "Máquina disponible"
+    
+    def calcular_carga_fecha(self, fecha):
+        """Calcula la carga total para una fecha específica basada en ItemRuta"""
+        from datetime import datetime, time
+        inicio_dia = datetime.combine(fecha, time.min)
+        fin_dia = datetime.combine(fecha, time.max)
+        
+        # Obtener todos los ItemRuta que usan esta máquina en la fecha
+        items_ruta = ItemRuta.objects.filter(
+            maquina=self,
+            ruta_ot__programa__fecha_inicio__lte=fecha,
+            ruta_ot__programa__fecha_fin__gte=fecha
+        ).select_related(
+            'ruta_ot__programa',
+            'ruta_ot__orden_trabajo'
+        )
+
+        carga_total = 0
+        for item in items_ruta:
+            # Validar si el proceso está programado para esta fecha
+            if self.proceso_programado_para_fecha(item, fecha):
+                # Calcular carga basada en cantidad y estándar
+                carga_total += item.cantidad / item.estandar if item.estandar else 0
+                
+        return carga_total
+
+    def proceso_programado_para_fecha(self, item_ruta, fecha):
+        """Determina si un proceso está programado para una fecha específica"""
+        programa = item_ruta.ruta_ot.programa
+        
+        # Si tenemos fechas específicas en el timeline
+        timeline = programa.timeline_set.filter(
+            item_ruta=item_ruta,
+            fecha=fecha
+        ).exists()
+        
+        if timeline:
+            return True
+            
+        # Si no hay timeline específico, usar lógica de programación general
+        orden_trabajo = item_ruta.ruta_ot.orden_trabajo
+        prioridad = orden_trabajo.programaordentrabajo_set.filter(
+            programa=programa
+        ).first()
+        
+        if not prioridad:
+            return False
+            
+        # Aquí podrías implementar la lógica para determinar si,
+        # basado en la prioridad y la secuencia de procesos,
+        # este proceso debería estar activo en esta fecha
+        
+        return False  # Por defecto, ser conservador
+
 class Proceso(models.Model):
     codigo_proceso = models.CharField(max_length=10, null=False, blank=False, unique=False)
     sigla = models.CharField(max_length=10, null=True, blank=True)
@@ -42,9 +124,10 @@ class Proceso(models.Model):
     def get_maquinas_compatibles(self):
         """Obtiene todas las máquinas compatibles con este proceso"""
         from Machine.models import EstadoMaquina
+        
         return Maquina.objects.filter(
-            estado__tipos_maquina__in=self.tipos_maquina_compatibles.all(),
-            estado__disponible=True
+            estadomaquina__tipos_maquina__in=self.tipos_maquina_compatibles.all(),
+            estadomaquina__estado_operatividad__estado='OP'  # Solo máquinas operativas
         ).distinct()
     
 class Ruta(models.Model):
@@ -187,6 +270,18 @@ class ProgramaProduccion(models.Model):
     fecha_fin = models.DateField()
     created_at = models.DateTimeField(auto_now_add=True, null=True)
     updated_at = models.DateTimeField(auto_now=True, null=True)
+    creado_por = models.ForeignKey(
+        settings.AUTH_USER_MODEL, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        related_name='programas_creados'
+    )
+    modificado_por = models.ForeignKey(
+        settings.AUTH_USER_MODEL, 
+        on_delete=models.SET_NULL, 
+        null=True, 
+        related_name='programas_modificados'
+    )
 
     class Meta:
         verbose_name = "Programa Producción"
@@ -283,6 +378,39 @@ class IntervaloMaquina(IntervaloDisponibilidad):
     maquina = models.ForeignKey('Maquina', on_delete=models.CASCADE)
     motivo = models.CharField(max_length=255, blank=True)
 
+    def save(self, *args, **kwargs):
+        super().save(*args, **kwargs)
+        # Actualizar DisponibilidadMaquina cuando se crea un intervalo
+        from Machine.models import DisponibilidadMaquina, BloqueoMaquina
+        
+        # Crear o actualizar DisponibilidadMaquina para cada día del intervalo
+        fecha_actual = self.fecha_inicio.date()
+        while fecha_actual <= self.fecha_fin.date():
+            disponibilidad, _ = DisponibilidadMaquina.objects.get_or_create(
+                maquina=self.maquina,
+                fecha=fecha_actual
+            )
+            
+            # Crear BloqueoMaquina correspondiente
+            if fecha_actual == self.fecha_inicio.date():
+                hora_inicio = self.fecha_inicio.time()
+            else:
+                hora_inicio = time(7, 45)  # Hora inicio normal
+                
+            if fecha_actual == self.fecha_fin.date():
+                hora_fin = self.fecha_fin.time()
+            else:
+                hora_fin = time(17, 45)  # Hora fin normal
+                
+            BloqueoMaquina.objects.create(
+                disponibilidad=disponibilidad,
+                hora_inicio=hora_inicio,
+                hora_fin=hora_fin,
+                motivo=f"Intervalo: {self.motivo}"
+            )
+            
+            fecha_actual += timedelta(days=1)
+
     def __str__(self):
         return f"Intervalo {self.maquina.codigo_maquina} - {self.fecha_inicio.strftime('%Y-%m-%d %H:%M')} a {self.fecha_fin.strftime('%Y-%m-%d %H:%M')}"
 
@@ -374,45 +502,161 @@ class IntervaloOperador(IntervaloDisponibilidad):
         #Si no encontramos conflictos o no hay más intervalos, usar la última fecha propuesta
         return fecha_propuesta
 
-class ReporteDiario(models.Model):
-    programa = models.ForeignKey(ProgramaProduccion, on_delete=models.CASCADE)
-    item_ruta = models.ForeignKey(ItemRuta, on_delete=models.CASCADE)
-    fecha = models.DateField()
-    estado = models.CharField(max_length=20, choices=[
-        ('Pendiente', 'Pendiente'),
-        ('En Proceso', 'En Proceso'),
-        ('Terminado', 'Terminado'),
-        ('Detenido', 'Detenido')
-    ])
-    kilos_fabricados = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    unidades_fabricadas = models.DecimalField(max_digits=10, decimal_places=2, default=0)
-    observaciones = models.TextField(blank=True)
-    created_at = models.DateTimeField(auto_now_add=True)
-    updated_at = models.DateTimeField(auto_now=True)
-    fragmento_tarea = models.ForeignKey('TareaFragmentada', on_delete=models.SET_NULL, null=True, blank=True, related_name='reportes')
-
-    class Meta:
-        unique_together = ['programa', 'item_ruta', 'fecha']
-
 class TareaFragmentada(models.Model):
+    # Relaciones principales (mantenemos y añadimos)
     tarea_original = models.ForeignKey('ItemRuta', on_delete=models.CASCADE, related_name='fragmentos')
     tarea_padre = models.ForeignKey('self', on_delete=models.CASCADE, null=True, blank=True, related_name='continuaciones')
+    programa = models.ForeignKey('ProgramaProduccion', on_delete=models.CASCADE)
+    operador = models.ForeignKey('Operator.Operador', on_delete=models.SET_NULL, null=True, blank=True)
+
+    # Campos temporales (mantenemos y mejoramos)
     fecha = models.DateField()
-    porcentaje_completado= models.DecimalField(max_digits=5, decimal_places=2, default=0)
+    fecha_planificada_inicio = models.DateTimeField(null=True, blank=True)
+    fecha_planificada_fin = models.DateTimeField(null=True, blank=True)
+    fecha_real_inicio = models.DateTimeField(null=True, blank=True)
+    fecha_real_fin = models.DateTimeField(null=True, blank=True)
+
+    # Campos de cantidades (unificamos conceptos)
     cantidad_asignada = models.DecimalField(max_digits=10, decimal_places=2)
+    cantidad_pendiente_anterior = models.DecimalField(max_digits=10, decimal_places=2, default=0)
     cantidad_completada = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    kilos_fabricados = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+    unidades_fabricadas = models.DecimalField(max_digits=10, decimal_places=2, default=0)
+
+    # Control de estado y fragmentación (mantenemos)
+    estado = models.CharField(
+        max_length=20,
+        choices=[
+            ('PENDIENTE', 'Pendiente'),
+            ('EN_PROCESO', 'En Proceso'),
+            ('COMPLETADO', 'Completado'),
+            ('CONTINUADO', 'Continuado al siguiente día'),
+            ('DETENIDO', 'Detenido')
+        ],
+        default='PENDIENTE'
+    )
     es_continuacion = models.BooleanField(default=False)
-    nivel_fragmentacion = models.IntegerField(default=0)  #0 para tarea original, 1 para continuaciones
+    nivel_fragmentacion = models.IntegerField(default=0)
+
+    # Campos adicionales
+    observaciones = models.TextField(blank=True)
+    motivo_detencion = models.TextField(blank=True)
     created_at = models.DateTimeField(auto_now_add=True)
     updated_at = models.DateTimeField(auto_now=True)
 
     class Meta:
         ordering = ['fecha', 'nivel_fragmentacion']
+        unique_together = ['tarea_original', 'fecha']
 
-    def __str__(self):
-        return f"Fragmento {self.nivel_fragmentacion} de {self.tarea_original} - {self.fecha}"
+    # Mantenemos los métodos existentes
+    @property
+    def cantidad_total_dia(self):
+        return self.cantidad_asignada + self.cantidad_pendiente_anterior
+
+    @property
+    def cantidad_pendiente(self):
+        return self.cantidad_total_dia - self.cantidad_completada
+
+    @property
+    def porcentaje_cumplimiento(self):
+        if self.cantidad_total_dia > 0:
+            return (self.cantidad_completada / self.cantidad_total_dia) * 100
+        return 0
+
+    def acumular_pendiente(self, cantidad):
+        # Mantenemos el método existente
+        siguiente_fragmento = TareaFragmentada.objects.filter(
+            tarea_original=self.tarea_original,
+            fecha__gt=self.fecha
+        ).order_by('fecha').first()
+
+        if siguiente_fragmento:
+            siguiente_fragmento.cantidad_pendiente_anterior += cantidad
+            siguiente_fragmento.save()
+            return True
+        return False
+
+    def crear_continuacion(self, cantidad_pendiente, nueva_fecha):
+        # Mantenemos el método existente pero añadimos campos nuevos
+        return TareaFragmentada.objects.create(
+            tarea_original=self.tarea_original,
+            tarea_padre=self,
+            programa=self.programa,
+            fecha=nueva_fecha,
+            cantidad_asignada=cantidad_pendiente,
+            es_continuacion=True,
+            nivel_fragmentacion=self.nivel_fragmentacion + 1
+        )
+
+    def registrar_produccion(self, kilos, unidades):
+        """Nuevo método para registrar la producción del día"""
+        self.kilos_fabricados = kilos
+        self.unidades_fabricadas = unidades
+        self.cantidad_completada = unidades
+        if self.cantidad_completada >= self.cantidad_total_dia:
+            self.estado = 'COMPLETADO'
+        self.save()
+
+class EjecucionTarea(models.Model):
+    """
+    Modelo para registrar la ejecución real de las tareas.
+    Permite mantener un historial detallado de la producción.
+    """
+    tarea = models.ForeignKey(
+        TareaFragmentada, 
+        on_delete=models.CASCADE,
+        related_name='ejecuciones'
+    )
+    fecha_hora_inicio = models.DateTimeField()
+    fecha_hora_fin = models.DateTimeField()
+    cantidad_producida = models.DecimalField(max_digits=10, decimal_places=2)
+    operador = models.ForeignKey(
+        'Operator.Operador', 
+        on_delete=models.SET_NULL, 
+        null=True
+    )
+    estado = models.CharField(
+        max_length=20,
+        choices=[
+            ('EN_PROCESO', 'En Proceso'),
+            ('PAUSADO', 'Pausado'),
+            ('COMPLETADO', 'Completado')
+        ]
+    )
+    motivo_pausa = models.CharField(max_length=255, blank=True)
+    observaciones = models.TextField(blank=True)
+    created_at = models.DateTimeField(auto_now_add=True)
+
+    class Meta:
+        ordering = ['fecha_hora_inicio']
+
+class ReporteDiarioPrograma(models.Model):
+    """
+    Modelo para manejar el estado general del programa por día.
+    Permite controlar el cierre de día y mantener estadísticas.
+    """
+    programa = models.ForeignKey('ProgramaProduccion', on_delete=models.CASCADE)
+    fecha = models.DateField()
+    estado = models.CharField(
+        max_length=20,
+        choices=[
+            ('ABIERTO', 'Abierto'),
+            ('CERRADO', 'Cerrado'),
+            ('EN_REVISION', 'En Revisión')
+        ],
+        default='ABIERTO'
+    )
+    cerrado_por = models.ForeignKey(
+        settings.AUTH_USER_MODEL,
+        on_delete=models.SET_NULL,
+        null=True,
+        related_name='reportes_cerrados'
+    )
+    fecha_cierre = models.DateTimeField(null=True, blank=True)
+    observaciones_cierre = models.TextField(blank=True)
     
-
+    class Meta:
+        unique_together = ['programa', 'fecha']
 
 class ReporteSupervisor(models.Model):
     """Modelo para gestionar el reporte global de un supervisor para un programa"""
@@ -457,13 +701,13 @@ class ReporteSupervisor(models.Model):
         return f'Reporte Supervisor: {self.programa.nombre}'
     
     def calcular_porcentaje_completado(self):
-        """Calcular porcentaje de tareas completadas"""
-        reportes = ReporteDiario.objects.filter(programa=self.programa)
-        if not reportes.exists():
+        """Calcular porcentaje de tareas completadas del programa"""
+        tareas = TareaFragmentada.objects.filter(programa=self.programa)
+        if not tareas.exists():
             return 0
         
-        total_tareas = reportes.count()
-        tareas_completadas = reportes.filter(estado='Terminado').count()
+        total_tareas = tareas.count()
+        tareas_completadas = tareas.filter(estado='COMPLETADO').count()
 
         porcentaje = (tareas_completadas / total_tareas) * 100 if total_tareas > 0 else 0
         self.porcentaje_completado = round(porcentaje, 2)
@@ -497,3 +741,26 @@ class ReporteSupervisor(models.Model):
             self.save(update_fields=['editor_actual', 'bloqueo_hasta'])
             return True
         return False
+    
+    @receiver(post_save, sender=ProgramaProduccion)
+    def crear_reporte_supervisor(sender, instance, created, **kwargs):
+        """Crea automáticamente un ReporteSupervisor cuando se crea un ProgramaProduccion"""
+        if created:
+            # Buscar un supervisor adecuado
+            User = get_user_model()
+            default_user = User.objects.filter(is_superuser=True).first() or User.objects.first()
+            
+            supervisor = None
+            if hasattr(instance, 'creado_por') and instance.creado_por:
+                supervisor = instance.creado_por
+            elif hasattr(instance, 'modificado_por') and instance.modificado_por:
+                supervisor = instance.modificado_por
+            else:
+                supervisor = default_user
+                
+            if supervisor:
+                ReporteSupervisor.objects.create(
+                    programa=instance,
+                    supervisor=supervisor,
+                    estado='ACTIVO'
+                )

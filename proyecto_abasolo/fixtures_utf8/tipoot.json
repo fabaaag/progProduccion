@@ -1,0 +1,34 @@
+[
+  {
+    "model": "JobManagement.tipoot",
+    "pk": 1,
+    "fields": {
+      "codigo_tipo_ot": "P",
+      "descripcion": "Pedido"
+    }
+  },
+  {
+    "model": "JobManagement.tipoot",
+    "pk": 2,
+    "fields": {
+      "codigo_tipo_ot": "R",
+      "descripcion": "Stock"
+    }
+  },
+  {
+    "model": "JobManagement.tipoot",
+    "pk": 3,
+    "fields": {
+      "codigo_tipo_ot": "C",
+      "descripcion": "Contrato"
+    }
+  },
+  {
+    "model": "JobManagement.tipoot",
+    "pk": 4,
+    "fields": {
+      "codigo_tipo_ot": "I",
+      "descripcion": "Interna"
+    }
+  }
+]

@@ -68,6 +68,8 @@ const CompNavbar = () => {
                             <NavDropdown.Item href="/programs">Programas de Producción</NavDropdown.Item>
                             <NavDropdown.Divider />
                             <NavDropdown.Item href="/operators">Gestión de Operarios</NavDropdown.Item>
+                            <NavDropdown.Divider />
+                            <NavDropdown.Item href="/supervisor-reports">Reportes</NavDropdown.Item>
                         </NavDropdown>
 
                         <NavDropdown

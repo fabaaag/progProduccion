@@ -216,61 +216,47 @@ class ProgramaProduccionSerializer(serializers.ModelSerializer):
         return ProgramaOrdenTrabajoSerializer(ordenes_trabajo, many=True).data
     
 
-class ReporteDiarioSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = ReporteDiario
-        fields = [
-            'id',
-            'fecha',
-            'estado',
-            'kilos_fabricados',
-            'unidades_fabricadas',
-            'observaciones',
-            'created_at',
-            'updated_at'
-        ]
-
-class SupervisorReporteSerializer(serializers.Serializer):
-    id = serializers.CharField()
-    ot_codigo = serializers.CharField()
-    proceso = serializers.CharField()
-    maquina = serializers.DictField()
-    operador = serializers.CharField()
-    cantidad_programada = serializers.FloatField()
-    kilos_programados = serializers.FloatField()
-    hora_inicio = serializers.CharField()
-    hora_fin = serializers.CharField()
-    estado = serializers.CharField()
-    observaciones = serializers.CharField(allow_blank=True)
-    proceso_id = serializers.CharField()
-    fecha = serializers.DateField()
-    kilos_fabricados = serializers.FloatField(default=0)
-    porcentaje_cumplimiento = serializers.FloatField(default=0)
-    historial = ReporteDiarioSerializer(many=True, read_only=True)
-
-    asignado_por_nombre = serializers.CharField(allow_null=True, required=False)
-    fecha_asignacion = serializers.DateTimeField(allow_null=True, required=False)
+# Agregar después de ProgramaProduccionSerializer
 
 class TareaFragmentadaSerializer(serializers.ModelSerializer):
-    tarea_original_detalles = ItemRutaSerializer(source='tarea_original', read_only=True)
+    tarea_original = ItemRutaSerializer(read_only=True)
+    operador_id = serializers.IntegerField(source='operador.id', read_only=True)
+    orden_trabajo = serializers.SerializerMethodField()
 
     class Meta:
         model = TareaFragmentada
-        fields = '__all__'
+        fields = [
+            'id', 'programa', 'fecha', 'tarea_original', 'operador_id',
+            'cantidad_asignada', 'cantidad_pendiente_anterior',
+            'cantidad_total_dia', 'cantidad_completada', 'cantidad_pendiente',
+            'kilos_fabricados', 'estado', 'porcentaje_cumplimiento',
+            'es_continuacion', 'tarea_padre', 'observaciones',
+            'created_at', 'updated_at', 'orden_trabajo',
+            'fecha_planificada_inicio', 'fecha_planificada_fin'
+        ]
 
-class TareaGenealogiaSerializer(serializers.ModelSerializer):
-    continuaciones = serializers.SerializerMethodField()
-    progreso_acumulado = serializers.SerializerMethodField()
+    def get_orden_trabajo(self, obj):
+        """Obtiene la información de la orden de trabajo asociada a esta tarea"""
+        try:
+            if obj.tarea_original and obj.tarea_original.ruta and obj.tarea_original.ruta.orden_trabajo:
+                ot = obj.tarea_original.ruta.orden_trabajo
+                return {
+                    'id': ot.id,
+                    'codigo': ot.codigo_ot,
+                    'descripcion': ot.descripcion_producto_ot
+                }
+        except AttributeError:
+            #Maneja las excepciones si algún objeto en la cadena es None
+            pass
+        return None
 
+class EjecucionTareaSerializer(serializers.ModelSerializer):
+    operador_id = serializers.IntegerField(source='operador.id', read_only=True)
+    
     class Meta:
-        model = TareaFragmentada
-        fields = '__all__'
-
-    def get_continuaciones(self, obj):
-        return TareaGenealogiaSerializer(obj.continuaciones.all(), many=True).data
-    
-    def get_progreso_acumulado(self, obj):
-        #Logica para calcular el progreso acumulado
-        return calcular_progreso_acumulado(obj)
-    
-#class ReporteSupervisorListSerializer(serializers.ModelSerializer):
+        model = EjecucionTarea
+        fields = [
+            'id', 'tarea', 'fecha_hora_inicio', 'fecha_hora_fin',
+            'cantidad_producida', 'operador_id', 'estado', 'observaciones',
+            'created_at', 'updated_at'
+        ]

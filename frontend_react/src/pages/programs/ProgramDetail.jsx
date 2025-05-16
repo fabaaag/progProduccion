@@ -1,17 +1,19 @@
 import React, { useEffect, useState } from "react";
 import { useParams, Link, redirect, useNavigate } from "react-router-dom";
-import { Button, Dropdown, Form, Badge, Card, Collapse, Table } from "react-bootstrap";
+import { Button, Dropdown, Form, Badge, Card, Collapse, Table, Modal, Alert } from "react-bootstrap";
 import { ReactSortable } from "react-sortablejs";
 import CompNavbar from "../../components/Navbar/CompNavbar";
 import { Footer } from "../../components/Footer/Footer";
-import { getProgram, updatePriorities, deleteOrder, getMaquinas, generateProgramPDF, getProcesoTimeline } from "../../api/programs.api";
+import { getProgram, updatePriorities, deleteOrder, getMaquinas, generateProgramPDF, getProcesoTimeline, verificarReajustesPrograma, aplicarReajustesPrograma } from "../../api/programs.api";
 import Timeline from "react-calendar-timeline";
 import "react-calendar-timeline/dist/Timeline.scss";
 import { toast } from "react-hot-toast";
 import moment from "moment";
 import { LoadingSpinner } from "../../components/UI/LoadingSpinner/LoadingSpinner";
 import "./ProgramDetail.css";
-import { FaArrowLeft, FaCalendarAlt, FaFlag, FaFilePdf, FaClipboardList, FaExclamationTriangle, FaSave, FaChevronDown } from "react-icons/fa";
+import { FaArrowLeft, FaCalendarAlt, FaFlag, FaFilePdf, FaClipboardList, FaExclamationTriangle, FaSave, FaChevronDown, FaPlus } from "react-icons/fa";
+import { ProgramMonitoring } from "../../components/Programa/ProgramMonitoring";
+import { AgregarOrdenModal } from '../../components/Programa/AgregarOrdenModal';
 
 const AlertMessage = ({ type, icon, message }) => (
     <div className={`alert alert-${type} d-flex align-items-center`} role="alert">
@@ -45,7 +47,11 @@ export function ProgramDetail() {
     // Para controlar la visibiidad de la alerta de cambios pendientes
     const [showPendingChangesAlert, setShowPendingChangesAlert] = useState(false);
 
-   
+    const [showAgregarOrden, setShowAgregarOrden] = useState(false);
+
+    const [showReajustesModal, setShowReajustesModal] = useState(false);
+    const [ajustes, setAjustes] = useState(null);
+
     //Agregar función para cargar máquinas por proceso
     const cargarMaquinasPorProceso = async (itemRuta) => {
         try{
@@ -650,9 +656,83 @@ export function ProgramDetail() {
     if (loading) return <LoadingSpinner message="Cargando detalles del programa..."/>;
     if (!programData) return <p>No se encontró el programa.</p>;
 
+    const handleOrdenesAgregadas = (data) => {
+        // Recargar los datos del programa
+        fetchProgramData();
+    };
+
+    const verificarReajustes = async () => {
+        try {
+            console.log('Verificando reajustes para programa:', programId);
+            const response = await verificarReajustesPrograma(programId);
+            console.log('Respuesta completa:', JSON.stringify(response, null, 2));
+            
+            if (response.requiere_ajustes) {
+                // Veamos la estructura de cada ajuste
+                response.ajustes_sugeridos.forEach((ajuste, index) => {
+                    console.log(`Ajuste ${index}:`, {
+                        key: `${ajuste.orden_trabajo}-${ajuste.proceso.id}`,
+                        orden_trabajo: ajuste.orden_trabajo,
+                        proceso_id: ajuste.proceso.id,
+                        fecha_propuesta: ajuste.fecha_propuesta
+                    });
+                });
+
+                // Intentemos el agrupamiento de otra manera
+                const ajustesUnicos = Array.from(new Set(
+                    response.ajustes_sugeridos.map(ajuste => 
+                        `${ajuste.orden_trabajo}-${ajuste.proceso.id}`
+                    )
+                )).map(key => {
+                    const [ot, procesoId] = key.split('-');
+                    const ajustesDeEstePar = response.ajustes_sugeridos.filter(
+                        ajuste => ajuste.orden_trabajo === ot && ajuste.proceso.id === parseInt(procesoId)
+                    );
+                    // Tomar el último ajuste (más reciente)
+                    return ajustesDeEstePar[ajustesDeEstePar.length - 1];
+                });
+
+                console.log('Ajustes únicos:', ajustesUnicos);
+
+                setAjustes({
+                    ...response,
+                    ajustes_sugeridos: ajustesUnicos
+                });
+                setShowReajustesModal(true);
+            } else {
+                toast.success(response.mensaje);
+            }
+        } catch (error) {
+            console.error('Error completo:', error);
+            toast.error("Error al verificar reajustes");
+        }
+    };
+
+    const aplicarReajustes = async () => {
+        try {
+            if (!ajustes || !ajustes.ajustes_sugeridos) {
+                console.log('Estado de ajustes:', ajustes); // Agregar este log
+                toast.error("No hay ajustes para aplicar");
+                return;
+            }
+            
+            console.log('Enviando ajustes:', ajustes.ajustes_sugeridos); // Agregar este log
+            await aplicarReajustesPrograma(programId, ajustes.ajustes_sugeridos);
+            setShowReajustesModal(false);
+            toast.success("Ajustes aplicados correctamente");
+            // Recargar datos del programa
+            fetchProgramData();
+        } catch (error) {
+            console.log('Error completo:', error.response?.data); // Agregar este log
+            toast.error("Error al aplicar reajustes");
+            console.error(error);
+        }
+    };
+
     return (
         <div className="page-container">
             <CompNavbar />
+            
             <div className="content-wrapper">
                 <div className="container">
                     <div className="program-header">
@@ -678,6 +758,14 @@ export function ProgramDetail() {
                             </div>
                             <div className="action-buttons">
                                 <Button 
+                                    variant="outline-primary" 
+                                    className="me-2"
+                                    onClick={() => setShowAgregarOrden(true)}
+                                >
+                                    <FaPlus className="me-2" />
+                                    Agregar Órdenes
+                                </Button>
+                                <Button 
                                     variant="outline-success" 
                                     className="me-2"
                                     onClick={() => generateProgramPDF(programId)}
@@ -692,9 +780,17 @@ export function ProgramDetail() {
                                     <FaClipboardList className="me-2" />
                                     Reporte
                                 </Button>
+                                {/*<Button 
+                                    variant="warning" 
+                                    onClick={verificarReajustes}
+                                    className="ms-2"
+                                >
+                                    Verificar Disponibilidad
+                                </Button>*/}
                             </div>
                         </div>
                     </div>
+                    <ProgramMonitoring programId={programId}/>
 
                     <section
                         className="container-section container-fluid border py-2 mb-2"
@@ -781,12 +877,14 @@ export function ProgramDetail() {
                                     return (
                                         <div
                                             {...getItemProps({
+                                                className: 'timeline-custom-item',
                                                 style: {
-                                                    ...item.itemProps.style,
                                                     left: leftResizer,
                                                     width: rightResizer - leftResizer,
                                                     position: 'absolute',
-                                                    height: '100%'
+                                                    height: '100%',
+                                                    backgroundColor: item.itemProps.style?.backgroundColor || '#fff',
+                                                    border: item.itemProps.style?.border || 'none',
                                                 }
                                             })}
                                             title={item.itemProps['data-tooltip']}
@@ -807,6 +905,74 @@ export function ProgramDetail() {
                 </div>
             </div>
             <Footer />
+            <AgregarOrdenModal 
+                show={showAgregarOrden}
+                onHide={() => setShowAgregarOrden(false)}
+                programId={programId}
+                onOrdenesAgregadas={handleOrdenesAgregadas}
+            />
+            <Modal show={showReajustesModal} onHide={() => setShowReajustesModal(false)} size="lg">
+                <Modal.Header closeButton>
+                    <Modal.Title>Ajustes Necesarios</Modal.Title>
+                </Modal.Header>
+                <Modal.Body>
+                    {ajustes && (
+                        <>
+                            <Alert variant="info">
+                                <strong>Fecha actual de fin:</strong> {ajustes.fecha_actual}<br/>
+                                <strong>Nueva fecha de fin propuesta:</strong> {ajustes.nueva_fecha_fin}
+                            </Alert>
+                            
+                            <div className="mb-3">
+                                <strong>Total de ajustes necesarios: </strong> 
+                                {ajustes.ajustes_sugeridos.length}
+                            </div>
+                            
+                            {ajustes.ajustes_sugeridos.map((ajuste, index) => (
+                                <Card key={`${ajuste.orden_trabajo}-${ajuste.proceso.id}`} className="mb-3">
+                                    <Card.Header className="d-flex justify-content-between align-items-center">
+                                        <span className="fw-bold">OT: {ajuste.orden_trabajo}</span>
+                                        <Badge bg={index === 0 ? "warning" : "info"}>
+                                            {index === 0 ? "Primer ajuste necesario" : `Ajuste #${index + 1}`}
+                                        </Badge>
+                                    </Card.Header>
+                                    <Card.Body>
+                                        <div className="row">
+                                            <div className="col-md-6">
+                                                <h6>Proceso</h6>
+                                                <p>{ajuste.proceso.descripcion}</p>
+                                                <h6>Máquina</h6>
+                                                <p>{ajuste.maquina.codigo} - {ajuste.maquina.descripcion}</p>
+                                            </div>
+                                            <div className="col-md-6">
+                                                <h6>Fechas</h6>
+                                                <div className="text-danger">
+                                                    <small>Original: {new Date(ajuste.fecha_original).toLocaleString()}</small>
+                                                </div>
+                                                <div className="text-success">
+                                                    <small>Propuesta: {new Date(ajuste.fecha_propuesta).toLocaleString()}</small>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </Card.Body>
+                                </Card>
+                            ))}
+                        </>
+                    )}
+                </Modal.Body>
+                <Modal.Footer>
+                    <Button variant="secondary" onClick={() => setShowReajustesModal(false)}>
+                        Cancelar
+                    </Button>
+                    <Button 
+                        variant="primary" 
+                        onClick={aplicarReajustes}
+                        disabled={!ajustes || ajustes.ajustes_sugeridos.length === 0}
+                    >
+                        Aplicar Ajustes
+                    </Button>
+                </Modal.Footer>
+            </Modal>
         </div>
     );
 }

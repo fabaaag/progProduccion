@@ -1,0 +1,412 @@
+[
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 1,
+    "fields": {
+      "operador": 1,
+      "maquina": 180,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 2,
+    "fields": {
+      "operador": 1,
+      "maquina": 181,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 3,
+    "fields": {
+      "operador": 1,
+      "maquina": 182,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 4,
+    "fields": {
+      "operador": 1,
+      "maquina": 183,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 5,
+    "fields": {
+      "operador": 1,
+      "maquina": 184,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 6,
+    "fields": {
+      "operador": 1,
+      "maquina": 185,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 7,
+    "fields": {
+      "operador": 1,
+      "maquina": 186,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 8,
+    "fields": {
+      "operador": 1,
+      "maquina": 187,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 9,
+    "fields": {
+      "operador": 1,
+      "maquina": 188,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 10,
+    "fields": {
+      "operador": 1,
+      "maquina": 189,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 11,
+    "fields": {
+      "operador": 1,
+      "maquina": 190,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 12,
+    "fields": {
+      "operador": 1,
+      "maquina": 191,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 13,
+    "fields": {
+      "operador": 1,
+      "maquina": 192,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 14,
+    "fields": {
+      "operador": 2,
+      "maquina": 175,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 15,
+    "fields": {
+      "operador": 2,
+      "maquina": 176,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 16,
+    "fields": {
+      "operador": 2,
+      "maquina": 177,
+      "fecha_habilitacion": "2025-02-28",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 17,
+    "fields": {
+      "operador": 3,
+      "maquina": 206,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 18,
+    "fields": {
+      "operador": 3,
+      "maquina": 207,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 19,
+    "fields": {
+      "operador": 3,
+      "maquina": 208,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 20,
+    "fields": {
+      "operador": 3,
+      "maquina": 209,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 21,
+    "fields": {
+      "operador": 3,
+      "maquina": 210,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 22,
+    "fields": {
+      "operador": 3,
+      "maquina": 211,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 23,
+    "fields": {
+      "operador": 3,
+      "maquina": 212,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 24,
+    "fields": {
+      "operador": 3,
+      "maquina": 213,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 33,
+    "fields": {
+      "operador": 5,
+      "maquina": 175,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 34,
+    "fields": {
+      "operador": 5,
+      "maquina": 176,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 35,
+    "fields": {
+      "operador": 5,
+      "maquina": 177,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 36,
+    "fields": {
+      "operador": 5,
+      "maquina": 178,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 37,
+    "fields": {
+      "operador": 5,
+      "maquina": 179,
+      "fecha_habilitacion": "2025-03-11",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 38,
+    "fields": {
+      "operador": 6,
+      "maquina": 194,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 39,
+    "fields": {
+      "operador": 6,
+      "maquina": 195,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 40,
+    "fields": {
+      "operador": 6,
+      "maquina": 196,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 41,
+    "fields": {
+      "operador": 6,
+      "maquina": 197,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 42,
+    "fields": {
+      "operador": 6,
+      "maquina": 198,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 43,
+    "fields": {
+      "operador": 6,
+      "maquina": 199,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 44,
+    "fields": {
+      "operador": 6,
+      "maquina": 200,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 45,
+    "fields": {
+      "operador": 6,
+      "maquina": 201,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 46,
+    "fields": {
+      "operador": 6,
+      "maquina": 202,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 47,
+    "fields": {
+      "operador": 6,
+      "maquina": 203,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 48,
+    "fields": {
+      "operador": 6,
+      "maquina": 204,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  },
+  {
+    "model": "Operator.operadormaquina",
+    "pk": 49,
+    "fields": {
+      "operador": 6,
+      "maquina": 205,
+      "fecha_habilitacion": "2025-03-13",
+      "activo": true
+    }
+  }
+]

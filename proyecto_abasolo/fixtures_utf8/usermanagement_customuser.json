@@ -1,0 +1,110 @@
+[
+  {
+    "model": "UserManagement.customuser",
+    "pk": 1,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$IfEeArRSXfA2KNz2HDEA0x$r1AEUfADpE6RTo+PLVPmqv1nFAF9pFoqA1dqgMtOhb0=",
+      "last_login": "2025-04-24T20:17:19.927Z",
+      "is_superuser": true,
+      "username": "admin",
+      "first_name": "Fabián",
+      "last_name": "González",
+      "email": "faba@mail.cl",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-02-24T18:25:36.056Z",
+      "rut": "",
+      "rol": "ADMIN",
+      "telefono": "",
+      "cargo": "Analista Programador",
+      "activo": true,
+      "ultima_conexion": null,
+      "created_by": null,
+      "groups": [
+        4
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "UserManagement.customuser",
+    "pk": 2,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$JkARGAiNZ3spNURWg5dSP7$Kt44h9Vtyaryz1UX+BUTMvq2wJ0LBi/YM6Yi9XgYqZE=",
+      "last_login": null,
+      "is_superuser": true,
+      "username": "adminFaba",
+      "first_name": "Fabian",
+      "last_name": "Gonzalez",
+      "email": "fabiangonzalez@abasolovallejo.cl",
+      "is_staff": true,
+      "is_active": true,
+      "date_joined": "2025-02-26T12:30:04.601Z",
+      "rut": "20.078.101-5",
+      "rol": "ADMIN",
+      "telefono": null,
+      "cargo": null,
+      "activo": true,
+      "ultima_conexion": null,
+      "created_by": null,
+      "groups": [
+        5
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "UserManagement.customuser",
+    "pk": 3,
+    "fields": {
+      "password": "pbkdf2_sha256$390000$IqeNfcgldMOcLAqy3aCa5Y$WdDsaPytzQTjFbJoNiQEICmz6+TwMJfJblpImXRfyZk=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "PatricioLara",
+      "first_name": "Patricio",
+      "last_name": "Lara",
+      "email": "informatica@abasolovallejo.cl",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-02-28T19:39:31.126Z",
+      "rut": "10.485.918-6",
+      "rol": "ADMIN",
+      "telefono": "+56999998888",
+      "cargo": "",
+      "activo": true,
+      "ultima_conexion": null,
+      "created_by": null,
+      "groups": [
+        5
+      ],
+      "user_permissions": []
+    }
+  },
+  {
+    "model": "UserManagement.customuser",
+    "pk": 4,
+    "fields": {
+      "password": "pbkdf2_sha256$1000000$kgkUs25pCWIsR4oGRvpwgj$y0xCW3YmxsZMMANDZ9PgCUVEUPsTtNdDKdIKKHky/t0=",
+      "last_login": null,
+      "is_superuser": false,
+      "username": "testsupervisor",
+      "first_name": "Supervisor",
+      "last_name": "Test",
+      "email": "faba@mail.cl",
+      "is_staff": false,
+      "is_active": true,
+      "date_joined": "2025-04-23T15:50:16.642Z",
+      "rut": "11.111.111-2",
+      "rol": "SUPERVISOR",
+      "telefono": "945894544",
+      "cargo": "",
+      "activo": true,
+      "ultima_conexion": null,
+      "created_by": null,
+      "groups": [
+        6
+      ],
+      "user_permissions": []
+    }
+  }
+]

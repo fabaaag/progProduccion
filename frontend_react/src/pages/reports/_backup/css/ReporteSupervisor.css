@@ -1,0 +1,285 @@
+.supervisor-report {
+    background-color: #f8f9fa;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.report-header {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 1.5rem;
+}
+
+.report-title {
+    color: #004b93;
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-bottom: 0;
+}
+
+.date-navigation {
+    background: white;
+    padding: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    margin-bottom: 1.5rem;
+}
+
+.date-navigation .btn-outline-primary {
+    border-color: #004b93;
+    color: #004b93;
+}
+
+.date-navigation .btn-outline-primary:hover {
+    background-color: #004b93;
+    color: white;
+}
+
+.date-display {
+    background: #f8f9fa;
+    padding: 0.5rem 1.5rem;
+    font-weight: 500;
+    color: #495057;
+    min-width: 150px;
+    text-align: center;
+}
+
+.total-kilos-alert {
+    background-color: #e8f4ff;
+    border: 1px solid #b8daff;
+    color: #004b93;
+    padding: 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+}
+
+.report-table {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.04);
+    overflow-x: auto;
+    margin-bottom: 2rem;
+}
+
+.report-table table {
+    min-width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+}
+
+.report-table th,
+.report-table td {
+    padding: 12px 8px;
+    vertical-align: middle;
+    min-width: 100px;
+}
+
+.report-table .col-drag { width: 50px; min-width: 50px; }
+.report-table .col-priority { width: 80px; min-width: 80px; }
+.report-table .col-ot { width: 100px; min-width: 100px; }
+.report-table .col-process { width: 150px; min-width: 150px; }
+.report-table .col-machine { width: 150px; min-width: 150px; }
+.report-table .col-operator { width: 150px; min-width: 150px; }
+.report-table .col-quantity { width: 100px; min-width: 100px; }
+.report-table .col-kilos { width: 100px; min-width: 100px; }
+.report-table .col-schedule { width: 120px; min-width: 120px; }
+.report-table .col-status { width: 120px; min-width: 120px; }
+.report-table .col-produced { width: 100px; min-width: 100px; }
+.report-table .col-compliance { width: 100px; min-width: 100px; }
+.report-table .col-observations { width: 200px; min-width: 200px; }
+
+.report-table thead th {
+    background-color: #004b93;
+    color: white;
+    border-bottom: none;
+    padding: 1rem;
+}
+
+.report-table tbody td {
+    vertical-align: middle;
+    padding: 0.75rem;
+}
+
+.form-select, .form-control {
+    border-radius: 6px;
+    border: 1px solid #ced4da;
+}
+
+.form-select:focus, .form-control:focus {
+    border-color: #004b93;
+    box-shadow: 0 0 0 0.2rem rgba(0, 75, 147, 0.25);
+}
+
+.save-button {
+    background-color: #004b93;
+    border-color: #004b93;
+    padding: 0.5rem 2rem;
+    border-radius: 6px;
+    transition: all 0.3s ease;
+}
+
+.save-button:hover {
+    background-color: #003b75;
+    border-color: #003b75;
+    transform: translateY(-1px);
+}
+
+.no-tasks-message {
+    background-color: #e8f4ff;
+    border: 1px solid #b8daff;
+    color: #004b93;
+    padding: 2rem;
+    border-radius: 8px;
+    text-align: center;
+    font-weight: 500;
+}
+
+/* Estilos para el manejo de arrastre */
+.drag-handle {
+    cursor: grab;
+    color: #999;
+    font-size: 1.2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 20px;
+    margin: 0 auto;
+}
+
+.drag-handle:hover {
+    color: #004b93;
+}
+
+.drag-handle:active {
+    cursor: grabbing;
+}
+
+.sortable-ghost {
+    background-color: #f8f9fa !important;
+    opacity: 0.8;
+}
+
+.sortable-drag {
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0,0,0,0.15);
+    opacity: 1;
+}
+
+/* Asegurar que las filas mantengan su estructura durante el arrastre */
+.report-table tbody tr {
+    background-color: #ffffff;
+    height: 50px;
+}
+
+.report-table tbody tr td {
+    background-color: inherit;
+    vertical-align: middle;
+}
+
+.date-navigation .react-datepicker-wrapper {
+    width: auto !important;
+}
+
+.react-datepicker {
+    font-family: inherit;
+    border-radius: 4px;
+    border: 1px solid #ced4da;
+}
+
+.react-datepicker__day--selected {
+    background-color: #0d6efd !important;
+    color: white !important;
+}
+
+.react-datepicker__day--disabled {
+    color: #ccc !important;
+    cursor: not-allowed;
+}
+
+.react-datepicker__day--outside-month {
+    color: #ccc !important;
+}
+
+.react-datepicker__day:hover {
+    background-color: #e9ecef !important;
+}
+
+.react-datepicker__day--keyboard-selected {
+    background-color: #004b93 !important;
+}
+
+.react-datepicker__day--in-range {
+    background-color: rgba(0, 75, 147, 0.1) !important;
+}
+
+.react-datepicker__day--in-selecting-range {
+    background-color: rgba(0, 75, 147, 0.2) !important;
+}
+
+/* Asegurar que las celdas mantengan su ancho durante el arrastre */
+.report-table th,
+.report-table td {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Estilos para los inputs y selects dentro de la tabla */
+.report-table .form-control,
+.report-table .form-select {
+    padding: 4px 8px;
+    height: auto;
+    font-size: 14px;
+}
+
+.tarea-continuacion {
+    background-color: rgba(255, 119, 0, 0.05);
+}
+
+.continuacion-badge {
+    display: inline-flex;
+    align-items: center;
+    font-size: 0.8em;
+    color: #ff7700;
+    background-color: rgba(255, 119, 0, 0.1);
+    padding: 2px 6px;
+    border-radius: 4px;
+    margin-left: 8px;
+}
+
+.continuacion-badge:hover {
+    background-color: rgba(255, 119, 0, 0.2);
+}
+
+/* En ReporteSupervisor.css */
+.timeline-container {
+    height: 70vh;
+    background-color: #f8f9fa;
+    padding: 16px;
+    border-radius: 8px;
+    margin-bottom: 24px;
+    overflow: scroll;
+  }
+  
+  .react-calendar-timeline .rct-header-root {
+    background-color: #f0f0f0;
+  }
+  
+  .react-calendar-timeline .rct-dateHeader {
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .react-calendar-timeline .rct-item {
+    font-size: 12px;
+    font-weight: 500;
+    box-shadow: 0 1px 5px rgba(0,0,0,0.15);
+  }
+  
+  .react-calendar-timeline .rct-sidebar {
+    border-right: 1px solid #ddd;
+  }

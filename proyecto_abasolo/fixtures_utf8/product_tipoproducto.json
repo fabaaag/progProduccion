@@ -1,0 +1,26 @@
+[
+  {
+    "model": "Product.tipoproducto",
+    "pk": 1,
+    "fields": {
+      "codigo": "PR",
+      "nombre": null
+    }
+  },
+  {
+    "model": "Product.tipoproducto",
+    "pk": 2,
+    "fields": {
+      "codigo": "CP",
+      "nombre": null
+    }
+  },
+  {
+    "model": "Product.tipoproducto",
+    "pk": 3,
+    "fields": {
+      "codigo": "PZ",
+      "nombre": null
+    }
+  }
+]

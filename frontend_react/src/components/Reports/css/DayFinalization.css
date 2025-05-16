@@ -1,0 +1,103 @@
+/* DayFinalization.css */
+.day-finalization-modal .modal-title {
+    display: flex;
+    align-items: center;
+    color: #2c3e50;
+}
+
+.date-summary {
+    background-color: #f8f9fa;
+    padding: 1rem;
+    border-radius: 6px;
+    border: 1px solid #dee2e6;
+}
+
+.date-summary h6 {
+    color: #495057;
+    margin-bottom: 0;
+    text-transform: capitalize;
+}
+
+.pending-tasks {
+    background-color: #fff;
+    border: 1px solid #dee2e6;
+    border-radius: 6px;
+    padding: 1rem;
+}
+
+.pending-tasks h6 {
+    color: #495057;
+    margin-bottom: 1rem;
+}
+
+.task-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-height: 200px;
+    overflow-y: auto;
+}
+
+.task-item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0.5rem;
+    border-bottom: 1px solid #dee2e6;
+}
+
+.task-item:last-child {
+    border-bottom: none;
+}
+
+.ot-code {
+    font-weight: 600;
+    color: #2c3e50;
+    min-width: 100px;
+}
+
+.process {
+    flex: 1;
+    margin: 0 1rem;
+    color: #6c757d;
+}
+
+.status {
+    padding: 0.25rem 0.5rem;
+    border-radius: 12px;
+    font-size: 0.8rem;
+    font-weight: 500;
+}
+
+.status.en-proceso {
+    background-color: #cce5ff;
+    color: #004085;
+}
+
+.status.detenido {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.status.pendiente {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+/* Scrollbar personalizado */
+.task-list::-webkit-scrollbar {
+    width: 6px;
+}
+
+.task-list::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+.task-list::-webkit-scrollbar-thumb {
+    background: #888;
+    border-radius: 3px;
+}
+
+.task-list::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}

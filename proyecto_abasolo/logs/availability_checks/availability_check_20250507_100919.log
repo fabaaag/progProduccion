@@ -1,0 +1,382 @@
+2025-05-07 10:09:19,806 - INFO - No se detectaron conflictos
+2025-05-07 10:09:19,829 - INFO - 
+Verificando conflictos para máquina 1313
+2025-05-07 10:09:19,833 - INFO - Intervalo a verificar: 2025-05-02 15:00:00 - 2025-05-02 23:00:00
+2025-05-07 10:09:19,838 - INFO - Prioridad actual: 0
+2025-05-07 10:09:19,846 - INFO - 
+Obteniendo intervalos para máquina 1313
+2025-05-07 10:09:19,871 - INFO - Rango: 2025-05-02 15:00:00 - 2025-05-02 23:00:00
+2025-05-07 10:09:19,971 - INFO - No se detectaron conflictos
+2025-05-07 10:09:19,975 - INFO - 
+Verificando conflictos para máquina 1313
+2025-05-07 10:09:19,976 - INFO - Intervalo a verificar: 2025-05-05 09:00:00 - 2025-05-05 17:00:00
+2025-05-07 10:09:19,978 - INFO - Prioridad actual: 0
+2025-05-07 10:09:19,980 - INFO - 
+Obteniendo intervalos para máquina 1313
+2025-05-07 10:09:19,983 - INFO - Rango: 2025-05-05 09:00:00 - 2025-05-05 17:00:00
+2025-05-07 10:09:20,065 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,070 - INFO - 
+Verificando conflictos para máquina 1601
+2025-05-07 10:09:20,073 - INFO - Intervalo a verificar: 2025-05-05 11:00:00 - 2025-05-05 19:00:00
+2025-05-07 10:09:20,075 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,078 - INFO - 
+Obteniendo intervalos para máquina 1601
+2025-05-07 10:09:20,081 - INFO - Rango: 2025-05-05 11:00:00 - 2025-05-05 19:00:00
+2025-05-07 10:09:20,201 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,212 - INFO - 
+Verificando conflictos para máquina 2006
+2025-05-07 10:09:20,212 - INFO - Intervalo a verificar: 2025-05-05 15:00:00 - 2025-05-05 23:00:00
+2025-05-07 10:09:20,213 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,213 - INFO - 
+Obteniendo intervalos para máquina 2006
+2025-05-07 10:09:20,213 - INFO - Rango: 2025-05-05 15:00:00 - 2025-05-05 23:00:00
+2025-05-07 10:09:20,223 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,224 - INFO - 
+Verificando conflictos para máquina 1205
+2025-05-07 10:09:20,224 - INFO - Intervalo a verificar: 2025-05-02 07:45:00 - 2025-05-02 15:45:00
+2025-05-07 10:09:20,224 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,225 - INFO - 
+Obteniendo intervalos para máquina 1205
+2025-05-07 10:09:20,225 - INFO - Rango: 2025-05-02 07:45:00 - 2025-05-02 15:45:00
+2025-05-07 10:09:20,249 - WARNING - Conflicto detectado con OT 43949
+2025-05-07 10:09:20,249 - WARNING - Prioridad del conflicto: 4
+2025-05-07 10:09:20,250 - INFO - 
+Verificando conflictos para máquina 1002
+2025-05-07 10:09:20,251 - INFO - Intervalo a verificar: 2025-05-05 15:30:00 - 2025-05-05 23:30:00
+2025-05-07 10:09:20,251 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,251 - INFO - 
+Obteniendo intervalos para máquina 1002
+2025-05-07 10:09:20,251 - INFO - Rango: 2025-05-05 15:30:00 - 2025-05-05 23:30:00
+2025-05-07 10:09:20,290 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,291 - INFO - 
+Verificando conflictos para máquina 1203
+2025-05-07 10:09:20,291 - INFO - Intervalo a verificar: 2025-05-06 15:30:00 - 2025-05-06 23:30:00
+2025-05-07 10:09:20,292 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,292 - INFO - 
+Obteniendo intervalos para máquina 1203
+2025-05-07 10:09:20,292 - INFO - Rango: 2025-05-06 15:30:00 - 2025-05-06 23:30:00
+2025-05-07 10:09:20,305 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,306 - INFO - 
+Verificando conflictos para máquina 1431
+2025-05-07 10:09:20,306 - INFO - Intervalo a verificar: 2025-05-06 16:00:00 - 2025-05-07 00:00:00
+2025-05-07 10:09:20,307 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,307 - INFO - 
+Obteniendo intervalos para máquina 1431
+2025-05-07 10:09:20,307 - INFO - Rango: 2025-05-06 16:00:00 - 2025-05-07 00:00:00
+2025-05-07 10:09:20,318 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,319 - INFO - 
+Verificando conflictos para máquina 1601
+2025-05-07 10:09:20,320 - INFO - Intervalo a verificar: 2025-05-06 17:00:00 - 2025-05-07 01:00:00
+2025-05-07 10:09:20,320 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,320 - INFO - 
+Obteniendo intervalos para máquina 1601
+2025-05-07 10:09:20,321 - INFO - Rango: 2025-05-06 17:00:00 - 2025-05-07 01:00:00
+2025-05-07 10:09:20,350 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,351 - INFO - 
+Verificando conflictos para máquina 2002
+2025-05-07 10:09:20,351 - INFO - Intervalo a verificar: 2025-05-06 17:45:00 - 2025-05-07 01:45:00
+2025-05-07 10:09:20,352 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,352 - INFO - 
+Obteniendo intervalos para máquina 2002
+2025-05-07 10:09:20,353 - INFO - Rango: 2025-05-06 17:45:00 - 2025-05-07 01:45:00
+2025-05-07 10:09:20,364 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,365 - INFO - 
+Verificando conflictos para máquina 1002
+2025-05-07 10:09:20,365 - INFO - Intervalo a verificar: 2025-05-05 16:30:00 - 2025-05-06 00:30:00
+2025-05-07 10:09:20,365 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,365 - INFO - 
+Obteniendo intervalos para máquina 1002
+2025-05-07 10:09:20,366 - INFO - Rango: 2025-05-05 16:30:00 - 2025-05-06 00:30:00
+2025-05-07 10:09:20,404 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,404 - INFO - 
+Verificando conflictos para máquina 1203
+2025-05-07 10:09:20,405 - INFO - Intervalo a verificar: 2025-05-06 16:30:00 - 2025-05-07 00:30:00
+2025-05-07 10:09:20,405 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,405 - INFO - 
+Obteniendo intervalos para máquina 1203
+2025-05-07 10:09:20,405 - INFO - Rango: 2025-05-06 16:30:00 - 2025-05-07 00:30:00
+2025-05-07 10:09:20,418 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,420 - INFO - 
+Verificando conflictos para máquina 1431
+2025-05-07 10:09:20,420 - INFO - Intervalo a verificar: 2025-05-06 17:00:00 - 2025-05-07 01:00:00
+2025-05-07 10:09:20,420 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,421 - INFO - 
+Obteniendo intervalos para máquina 1431
+2025-05-07 10:09:20,421 - INFO - Rango: 2025-05-06 17:00:00 - 2025-05-07 01:00:00
+2025-05-07 10:09:20,431 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,432 - INFO - 
+Verificando conflictos para máquina 1601
+2025-05-07 10:09:20,433 - INFO - Intervalo a verificar: 2025-05-06 17:45:00 - 2025-05-07 01:45:00
+2025-05-07 10:09:20,433 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,433 - INFO - 
+Obteniendo intervalos para máquina 1601
+2025-05-07 10:09:20,434 - INFO - Rango: 2025-05-06 17:45:00 - 2025-05-07 01:45:00
+2025-05-07 10:09:20,465 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,466 - INFO - 
+Verificando conflictos para máquina 2002
+2025-05-07 10:09:20,467 - INFO - Intervalo a verificar: 2025-05-07 08:00:00 - 2025-05-07 16:00:00
+2025-05-07 10:09:20,467 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,467 - INFO - 
+Obteniendo intervalos para máquina 2002
+2025-05-07 10:09:20,468 - INFO - Rango: 2025-05-07 08:00:00 - 2025-05-07 16:00:00
+2025-05-07 10:09:20,476 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,477 - INFO - 
+Verificando conflictos para máquina 1002
+2025-05-07 10:09:20,478 - INFO - Intervalo a verificar: 2025-05-05 17:30:00 - 2025-05-06 01:30:00
+2025-05-07 10:09:20,478 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,478 - INFO - 
+Obteniendo intervalos para máquina 1002
+2025-05-07 10:09:20,479 - INFO - Rango: 2025-05-05 17:30:00 - 2025-05-06 01:30:00
+2025-05-07 10:09:20,517 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,517 - INFO - 
+Verificando conflictos para máquina 1203
+2025-05-07 10:09:20,518 - INFO - Intervalo a verificar: 2025-05-06 17:30:00 - 2025-05-07 01:30:00
+2025-05-07 10:09:20,518 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,518 - INFO - 
+Obteniendo intervalos para máquina 1203
+2025-05-07 10:09:20,518 - INFO - Rango: 2025-05-06 17:30:00 - 2025-05-07 01:30:00
+2025-05-07 10:09:20,530 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,531 - INFO - 
+Verificando conflictos para máquina 1431
+2025-05-07 10:09:20,532 - INFO - Intervalo a verificar: 2025-05-06 17:45:00 - 2025-05-07 01:45:00
+2025-05-07 10:09:20,532 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,532 - INFO - 
+Obteniendo intervalos para máquina 1431
+2025-05-07 10:09:20,532 - INFO - Rango: 2025-05-06 17:45:00 - 2025-05-07 01:45:00
+2025-05-07 10:09:20,542 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,543 - INFO - 
+Verificando conflictos para máquina 1601
+2025-05-07 10:09:20,543 - INFO - Intervalo a verificar: 2025-05-07 08:00:00 - 2025-05-07 16:00:00
+2025-05-07 10:09:20,544 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,544 - INFO - 
+Obteniendo intervalos para máquina 1601
+2025-05-07 10:09:20,544 - INFO - Rango: 2025-05-07 08:00:00 - 2025-05-07 16:00:00
+2025-05-07 10:09:20,574 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,575 - INFO - 
+Verificando conflictos para máquina 2002
+2025-05-07 10:09:20,575 - INFO - Intervalo a verificar: 2025-05-07 09:00:00 - 2025-05-07 17:00:00
+2025-05-07 10:09:20,576 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,576 - INFO - 
+Obteniendo intervalos para máquina 2002
+2025-05-07 10:09:20,576 - INFO - Rango: 2025-05-07 09:00:00 - 2025-05-07 17:00:00
+2025-05-07 10:09:20,585 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,586 - INFO - 
+Verificando conflictos para máquina 1002
+2025-05-07 10:09:20,587 - INFO - Intervalo a verificar: 2025-05-05 18:15:00 - 2025-05-06 02:15:00
+2025-05-07 10:09:20,587 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,587 - INFO - 
+Obteniendo intervalos para máquina 1002
+2025-05-07 10:09:20,588 - INFO - Rango: 2025-05-05 18:15:00 - 2025-05-06 02:15:00
+2025-05-07 10:09:20,627 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,629 - INFO - 
+Verificando conflictos para máquina 1203
+2025-05-07 10:09:20,629 - INFO - Intervalo a verificar: 2025-05-07 11:00:00 - 2025-05-07 19:00:00
+2025-05-07 10:09:20,630 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,630 - INFO - 
+Obteniendo intervalos para máquina 1203
+2025-05-07 10:09:20,630 - INFO - Rango: 2025-05-07 11:00:00 - 2025-05-07 19:00:00
+2025-05-07 10:09:20,642 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,643 - INFO - 
+Verificando conflictos para máquina 1431
+2025-05-07 10:09:20,643 - INFO - Intervalo a verificar: 2025-05-07 15:00:00 - 2025-05-07 23:00:00
+2025-05-07 10:09:20,644 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,644 - INFO - 
+Obteniendo intervalos para máquina 1431
+2025-05-07 10:09:20,644 - INFO - Rango: 2025-05-07 15:00:00 - 2025-05-07 23:00:00
+2025-05-07 10:09:20,655 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,656 - INFO - 
+Verificando conflictos para máquina 1601
+2025-05-07 10:09:20,656 - INFO - Intervalo a verificar: 2025-05-08 08:00:00 - 2025-05-08 16:00:00
+2025-05-07 10:09:20,656 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,657 - INFO - 
+Obteniendo intervalos para máquina 1601
+2025-05-07 10:09:20,657 - INFO - Rango: 2025-05-08 08:00:00 - 2025-05-08 16:00:00
+2025-05-07 10:09:20,686 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,687 - INFO - 
+Verificando conflictos para máquina 2002
+2025-05-07 10:09:20,687 - INFO - Intervalo a verificar: 2025-05-08 11:00:00 - 2025-05-08 19:00:00
+2025-05-07 10:09:20,687 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,687 - INFO - 
+Obteniendo intervalos para máquina 2002
+2025-05-07 10:09:20,688 - INFO - Rango: 2025-05-08 11:00:00 - 2025-05-08 19:00:00
+2025-05-07 10:09:20,698 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,700 - INFO - 
+Verificando conflictos para máquina 1004
+2025-05-07 10:09:20,700 - INFO - Intervalo a verificar: 2025-05-02 07:45:00 - 2025-05-02 15:45:00
+2025-05-07 10:09:20,700 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,701 - INFO - 
+Obteniendo intervalos para máquina 1004
+2025-05-07 10:09:20,701 - INFO - Rango: 2025-05-02 07:45:00 - 2025-05-02 15:45:00
+2025-05-07 10:09:20,708 - WARNING - Conflicto detectado con OT 43970
+2025-05-07 10:09:20,708 - WARNING - Prioridad del conflicto: 9
+2025-05-07 10:09:20,709 - INFO - 
+Verificando conflictos para máquina 1004
+2025-05-07 10:09:20,710 - INFO - Intervalo a verificar: 2025-05-02 13:00:00 - 2025-05-02 21:00:00
+2025-05-07 10:09:20,710 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,710 - INFO - 
+Obteniendo intervalos para máquina 1004
+2025-05-07 10:09:20,710 - INFO - Rango: 2025-05-02 13:00:00 - 2025-05-02 21:00:00
+2025-05-07 10:09:20,720 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,721 - INFO - 
+Verificando conflictos para máquina 1315
+2025-05-07 10:09:20,721 - INFO - Intervalo a verificar: 2025-05-05 15:30:00 - 2025-05-05 23:30:00
+2025-05-07 10:09:20,721 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,721 - INFO - 
+Obteniendo intervalos para máquina 1315
+2025-05-07 10:09:20,722 - INFO - Rango: 2025-05-05 15:30:00 - 2025-05-05 23:30:00
+2025-05-07 10:09:20,732 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,732 - INFO - 
+Verificando conflictos para máquina 1315
+2025-05-07 10:09:20,733 - INFO - Intervalo a verificar: 2025-05-06 10:00:00 - 2025-05-06 18:00:00
+2025-05-07 10:09:20,733 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,733 - INFO - 
+Obteniendo intervalos para máquina 1315
+2025-05-07 10:09:20,733 - INFO - Rango: 2025-05-06 10:00:00 - 2025-05-06 18:00:00
+2025-05-07 10:09:20,741 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,742 - INFO - 
+Verificando conflictos para máquina 1001
+2025-05-07 10:09:20,742 - INFO - Intervalo a verificar: 2025-05-06 15:00:00 - 2025-05-06 23:00:00
+2025-05-07 10:09:20,743 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,743 - INFO - 
+Obteniendo intervalos para máquina 1001
+2025-05-07 10:09:20,743 - INFO - Rango: 2025-05-06 15:00:00 - 2025-05-06 23:00:00
+2025-05-07 10:09:20,753 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,753 - INFO - 
+Verificando conflictos para máquina 4002
+2025-05-07 10:09:20,754 - INFO - Intervalo a verificar: 2025-05-07 09:00:00 - 2025-05-07 17:00:00
+2025-05-07 10:09:20,754 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,754 - INFO - 
+Obteniendo intervalos para máquina 4002
+2025-05-07 10:09:20,754 - INFO - Rango: 2025-05-07 09:00:00 - 2025-05-07 17:00:00
+2025-05-07 10:09:20,761 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,762 - INFO - 
+Verificando conflictos para máquina 1001
+2025-05-07 10:09:20,762 - INFO - Intervalo a verificar: 2025-05-07 13:00:00 - 2025-05-07 21:00:00
+2025-05-07 10:09:20,762 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,763 - INFO - 
+Obteniendo intervalos para máquina 1001
+2025-05-07 10:09:20,763 - INFO - Rango: 2025-05-07 13:00:00 - 2025-05-07 21:00:00
+2025-05-07 10:09:20,771 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,772 - INFO - 
+Verificando conflictos para máquina 4002
+2025-05-07 10:09:20,773 - INFO - Intervalo a verificar: 2025-05-07 17:45:00 - 2025-05-08 01:45:00
+2025-05-07 10:09:20,773 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,773 - INFO - 
+Obteniendo intervalos para máquina 4002
+2025-05-07 10:09:20,774 - INFO - Rango: 2025-05-07 17:45:00 - 2025-05-08 01:45:00
+2025-05-07 10:09:20,780 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,781 - INFO - 
+Verificando conflictos para máquina 1205
+2025-05-07 10:09:20,781 - INFO - Intervalo a verificar: 2025-05-08 12:00:00 - 2025-05-08 20:00:00
+2025-05-07 10:09:20,782 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,782 - INFO - 
+Obteniendo intervalos para máquina 1205
+2025-05-07 10:09:20,782 - INFO - Rango: 2025-05-08 12:00:00 - 2025-05-08 20:00:00
+2025-05-07 10:09:20,802 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,804 - INFO - 
+Verificando conflictos para máquina 3421
+2025-05-07 10:09:20,804 - INFO - Intervalo a verificar: 2025-05-08 17:00:00 - 2025-05-09 01:00:00
+2025-05-07 10:09:20,805 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,805 - INFO - 
+Obteniendo intervalos para máquina 3421
+2025-05-07 10:09:20,805 - INFO - Rango: 2025-05-08 17:00:00 - 2025-05-09 01:00:00
+2025-05-07 10:09:20,821 - INFO - No se detectaron conflictos
+025-05-07 23:00:00
+2025-05-07 10:09:20,655 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,656 - INFO - 
+Verificando conflictos para máquina 1601
+2025-05-07 10:09:20,656 - INFO - Intervalo a verificar: 2025-05-08 08:00:00 - 2025-05-08 16:00:00
+2025-05-07 10:09:20,656 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,657 - INFO - 
+Obteniendo intervalos para máquina 1601
+2025-05-07 10:09:20,657 - INFO - Rango: 2025-05-08 08:00:00 - 2025-05-08 16:00:00
+2025-05-07 10:09:20,686 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,687 - INFO - 
+Verificando conflictos para máquina 2002
+2025-05-07 10:09:20,687 - INFO - Intervalo a verificar: 2025-05-08 11:00:00 - 2025-05-08 19:00:00
+2025-05-07 10:09:20,687 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,687 - INFO - 
+Obteniendo intervalos para máquina 2002
+2025-05-07 10:09:20,688 - INFO - Rango: 2025-05-08 11:00:00 - 2025-05-08 19:00:00
+2025-05-07 10:09:20,698 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,700 - INFO - 
+Verificando conflictos para máquina 1004
+2025-05-07 10:09:20,700 - INFO - Intervalo a verificar: 2025-05-02 07:45:00 - 2025-05-02 15:45:00
+2025-05-07 10:09:20,700 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,701 - INFO - 
+Obteniendo intervalos para máquina 1004
+2025-05-07 10:09:20,701 - INFO - Rango: 2025-05-02 07:45:00 - 2025-05-02 15:45:00
+2025-05-07 10:09:20,708 - WARNING - Conflicto detectado con OT 43970
+2025-05-07 10:09:20,708 - WARNING - Prioridad del conflicto: 9
+2025-05-07 10:09:20,709 - INFO - 
+Verificando conflictos para máquina 1004
+2025-05-07 10:09:20,710 - INFO - Intervalo a verificar: 2025-05-02 13:00:00 - 2025-05-02 21:00:00
+2025-05-07 10:09:20,710 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,710 - INFO - 
+Obteniendo intervalos para máquina 1004
+2025-05-07 10:09:20,710 - INFO - Rango: 2025-05-02 13:00:00 - 2025-05-02 21:00:00
+2025-05-07 10:09:20,720 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,721 - INFO - 
+Verificando conflictos para máquina 1315
+2025-05-07 10:09:20,721 - INFO - Intervalo a verificar: 2025-05-05 15:30:00 - 2025-05-05 23:30:00
+2025-05-07 10:09:20,721 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,721 - INFO - 
+Obteniendo intervalos para máquina 1315
+2025-05-07 10:09:20,722 - INFO - Rango: 2025-05-05 15:30:00 - 2025-05-05 23:30:00
+2025-05-07 10:09:20,732 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,732 - INFO - 
+Verificando conflictos para máquina 1315
+2025-05-07 10:09:20,733 - INFO - Intervalo a verificar: 2025-05-06 10:00:00 - 2025-05-06 18:00:00
+2025-05-07 10:09:20,733 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,733 - INFO - 
+Obteniendo intervalos para máquina 1315
+2025-05-07 10:09:20,733 - INFO - Rango: 2025-05-06 10:00:00 - 2025-05-06 18:00:00
+2025-05-07 10:09:20,741 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,742 - INFO - 
+Verificando conflictos para máquina 1001
+2025-05-07 10:09:20,742 - INFO - Intervalo a verificar: 2025-05-06 15:00:00 - 2025-05-06 23:00:00
+2025-05-07 10:09:20,743 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,743 - INFO - 
+Obteniendo intervalos para máquina 1001
+2025-05-07 10:09:20,743 - INFO - Rango: 2025-05-06 15:00:00 - 2025-05-06 23:00:00
+2025-05-07 10:09:20,753 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,753 - INFO - 
+Verificando conflictos para máquina 4002
+2025-05-07 10:09:20,754 - INFO - Intervalo a verificar: 2025-05-07 09:00:00 - 2025-05-07 17:00:00
+2025-05-07 10:09:20,754 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,754 - INFO - 
+Obteniendo intervalos para máquina 4002
+2025-05-07 10:09:20,754 - INFO - Rango: 2025-05-07 09:00:00 - 2025-05-07 17:00:00
+2025-05-07 10:09:20,761 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,762 - INFO - 
+Verificando conflictos para máquina 1001
+2025-05-07 10:09:20,762 - INFO - Intervalo a verificar: 2025-05-07 13:00:00 - 2025-05-07 21:00:00
+2025-05-07 10:09:20,762 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,763 - INFO - 
+Obteniendo intervalos para máquina 1001
+2025-05-07 10:09:20,763 - INFO - Rango: 2025-05-07 13:00:00 - 2025-05-07 21:00:00
+2025-05-07 10:09:20,771 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,772 - INFO - 
+Verificando conflictos para máquina 4002
+2025-05-07 10:09:20,773 - INFO - Intervalo a verificar: 2025-05-07 17:45:00 - 2025-05-08 01:45:00
+2025-05-07 10:09:20,773 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,773 - INFO - 
+Obteniendo intervalos para máquina 4002
+2025-05-07 10:09:20,774 - INFO - Rango: 2025-05-07 17:45:00 - 2025-05-08 01:45:00
+2025-05-07 10:09:20,780 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,781 - INFO - 
+Verificando conflictos para máquina 1205
+2025-05-07 10:09:20,781 - INFO - Intervalo a verificar: 2025-05-08 12:00:00 - 2025-05-08 20:00:00
+2025-05-07 10:09:20,782 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,782 - INFO - 
+Obteniendo intervalos para máquina 1205
+2025-05-07 10:09:20,782 - INFO - Rango: 2025-05-08 12:00:00 - 2025-05-08 20:00:00
+2025-05-07 10:09:20,802 - INFO - No se detectaron conflictos
+2025-05-07 10:09:20,804 - INFO - 
+Verificando conflictos para máquina 3421
+2025-05-07 10:09:20,804 - INFO - Intervalo a verificar: 2025-05-08 17:00:00 - 2025-05-09 01:00:00
+2025-05-07 10:09:20,805 - INFO - Prioridad actual: 0
+2025-05-07 10:09:20,805 - INFO - 
+Obteniendo intervalos para máquina 3421
+2025-05-07 10:09:20,805 - INFO - Rango: 2025-05-08 17:00:00 - 2025-05-09 01:00:00
+2025-05-07 10:09:20,821 - INFO - No se detectaron conflictos

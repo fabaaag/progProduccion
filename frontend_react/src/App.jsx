@@ -17,10 +17,10 @@ import { OperatorManagementPage } from './components/Operator/OperatorManagement
 import { ProgramaOperadores } from './components/Operator/ProgramaOperadores';
 import { MachineList } from './components/Machine/MachineList';
 import { DiagnosticoMaquinas } from './components/Machine/DiagnosticoMaquinas';
-import { ReporteSupervisor } from './pages/programs/ReporteSupervisor';
+import { SupervisorReportDetail } from './pages/reports/SupervisorReportDetail';
 import { ProductosList } from './components/Productos/Productos/ProductosList';
 import { PiezasList } from './components/Productos/Piezas/PiezasList';
-
+import { SupervisorReportList } from './pages/reports/SupervisorReportList';
 function App() {
   return (
     <BrowserRouter>
@@ -126,7 +126,7 @@ function App() {
         }/>
         <Route path="/programs/:programId/supervisor-report" element={
           <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
-            <ReporteSupervisor/>
+            <SupervisorReportDetail/>
           </ProtectedRoute>
         }/>
         <Route path="/productos" element={
@@ -139,6 +139,17 @@ function App() {
             <PiezasList/>
           </ProtectedRoute>
         }/>
+        <Route path="/supervisor-reports" element={
+          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+            <SupervisorReportList />
+          </ProtectedRoute>
+        } />
+        <Route path="/supervisor-reports/:reportId" element={
+          <ProtectedRoute allowedRoles={['ADMIN', 'SUPERVISOR']}>
+            <SupervisorReportDetail />
+          </ProtectedRoute>
+        } />
+  
       </Routes>
       <Toaster/>
     </BrowserRouter>

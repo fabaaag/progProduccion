@@ -1,0 +1,76 @@
+{
+  "evento": "INICIO_GENERACION_TIMELINE",
+  "programa_id": 10,
+  "fecha_inicio": "2025-05-02",
+  "num_ordenes": 9
+}
+
+=== INICIANDO GENERACIÓN DE TIMELINE ===
+Programa ID: 10
+Fecha inicio programa: 2025-05-02
+Número de órdenes: 9
+
+--- OT: 43957 ---
+{
+  "evento": "ERROR",
+  "tipo": "AttributeError",
+  "mensaje": "'dict' object has no attribute 'isoformat'",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 69, in generate_timeline_data\n    timeline_data = self._generate_base_timeline(programa, ordenes_trabajo)\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 151, in _generate_base_timeline\n    self.log_process_info(proceso, tiempo_cascada, fecha_inicio_real, calculo_tiempo)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 50, in log_process_info\n    \"fecha_inicio_cascada\": tiempo_cascada.isoformat() if tiempo_cascada else None,\n                            ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'isoformat'\n"
+}
+{
+  "evento": "INICIO_GENERACION_TIMELINE",
+  "programa_id": 10,
+  "fecha_inicio": "2025-05-02",
+  "num_ordenes": 9
+}
+{
+  "evento": "INICIO_GENERACION_TIMELINE",
+  "programa_id": 10,
+  "fecha_inicio": "2025-05-02",
+  "num_ordenes": 9
+}
+{
+  "evento": "INICIO_GENERACION_TIMELINE",
+  "programa_id": 10,
+  "fecha_inicio": "2025-05-02",
+  "num_ordenes": 9
+}
+
+=== INICIANDO GENERACIÓN DE TIMELINE ===
+
+=== INICIANDO GENERACIÓN DE TIMELINE ===
+
+=== INICIANDO GENERACIÓN DE TIMELINE ===
+Programa ID: 10
+Programa ID: 10
+Programa ID: 10
+Fecha inicio programa: 2025-05-02
+Fecha inicio programa: 2025-05-02
+Fecha inicio programa: 2025-05-02
+Número de órdenes: 9
+Número de órdenes: 9
+Número de órdenes: 9
+
+--- OT: 43957 ---
+
+--- OT: 43957 ---
+
+--- OT: 43957 ---
+{
+  "evento": "ERROR",
+  "tipo": "AttributeError",
+  "mensaje": "'dict' object has no attribute 'isoformat'",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 69, in generate_timeline_data\n    timeline_data = self._generate_base_timeline(programa, ordenes_trabajo)\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 151, in _generate_base_timeline\n    self.log_process_info(proceso, tiempo_cascada, fecha_inicio_real, calculo_tiempo)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 50, in log_process_info\n    \"fecha_inicio_cascada\": tiempo_cascada.isoformat() if tiempo_cascada else None,\n                            ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'isoformat'\n"
+}
+{
+  "evento": "ERROR",
+  "tipo": "AttributeError",
+  "mensaje": "'dict' object has no attribute 'isoformat'",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 69, in generate_timeline_data\n    timeline_data = self._generate_base_timeline(programa, ordenes_trabajo)\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 151, in _generate_base_timeline\n    self.log_process_info(proceso, tiempo_cascada, fecha_inicio_real, calculo_tiempo)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 50, in log_process_info\n    \"fecha_inicio_cascada\": tiempo_cascada.isoformat() if tiempo_cascada else None,\n                            ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'isoformat'\n"
+}
+{
+  "evento": "ERROR",
+  "tipo": "AttributeError",
+  "mensaje": "'dict' object has no attribute 'isoformat'",
+  "traceback": "Traceback (most recent call last):\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 69, in generate_timeline_data\n    timeline_data = self._generate_base_timeline(programa, ordenes_trabajo)\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 151, in _generate_base_timeline\n    self.log_process_info(proceso, tiempo_cascada, fecha_inicio_real, calculo_tiempo)\n    ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"C:\\Users\\desar\\Downloads\\Nueva carpeta\\copia_proyecto (para git)\\proyecto_abasolo\\JobManagement\\services\\production_scheduler.py\", line 50, in log_process_info\n    \"fecha_inicio_cascada\": tiempo_cascada.isoformat() if tiempo_cascada else None,\n                            ^^^^^^^^^^^^^^^^^^^^^^^^\nAttributeError: 'dict' object has no attribute 'isoformat'\n"
+}

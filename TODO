@@ -1,0 +1,47 @@
+1. Reporte de Supervisor
+[ x ] Frontend - Formulario Base
+[ x ] Crear componente principal SupervisorReportForm
+[ ] Sección de información general (OT, producto, proceso, etc.)
+[ x ] Tabla de intervalos de producción (7:45-17:45)
+[ ] Sección de registro de interrupciones/mudas
+[ ] Sección de pérdidas y control de calidad
+[ ] Validaciones de formulario
+[ x ] Backend - Endpoints y Lógica
+[ ] Endpoint para crear/actualizar reporte
+[ ] Endpoint para obtener datos iniciales (OT, estándares, etc.)
+[ ] Lógica de cálculos (totales, diferencias, tiempos)
+[ ] Validaciones de datos
+2. Estados y Seguimiento
+[ ] Sistema de Estados
+[ ] Implementar lógica de cambios de estado (Pendiente → En Proceso → Terminado/Detenido)
+[ ] Registro de observaciones por cambio de estado
+[ ] Validaciones de transiciones de estado
+[ ] Cálculos y Actualizaciones
+[ ] Cálculo de porcentaje de avance
+[ ] Actualización de cantidades pendientes
+[ ] Registro de tiempos muertos
+[ ] Cálculo de eficiencia (real vs estándar)
+3. Timeline Actualizada
+[ ] Visualización
+[ ] Modificar timeline para mostrar estados
+[ ] Agregar indicadores de avance
+[ ] Mostrar interrupciones/mudas
+[ ] Diferenciación visual entre planificado y real
+[ ] Lógica de Actualización
+[ ] Sistema de reagendamiento de tareas incompletas
+[ ] Propagación de cambios a tareas dependientes
+[ ] Histórico de cambios básico
+4. Integración y Pruebas
+[ ] Integración
+[ ] Conectar formulario con timeline
+[ ] Sincronización de estados y avances
+[ ] Sistema de alertas/notificaciones básico
+[ ] Pruebas Básicas
+[ ] Pruebas de flujo completo
+[ ] Validación de cálculos
+[ ] Verificación de integridad de datos
+5. Documentación Mínima
+[ ] Guías de Usuario
+[ ] Manual básico de uso del reporte
+[ ] Explicación de estados y transiciones
+[ ] Guía de interpretación de timeline

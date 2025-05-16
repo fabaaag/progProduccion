@@ -1,0 +1,106 @@
+[
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 1,
+    "fields": {
+      "nombre": "Programa febrero-marzo",
+      "fecha_inicio": "2025-02-24",
+      "fecha_fin": "2025-02-24",
+      "created_at": "2025-02-26T14:15:48.259Z",
+      "updated_at": "2025-02-26T14:15:48.259Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 3,
+    "fields": {
+      "nombre": "Programa marzo",
+      "fecha_inicio": "2025-03-03",
+      "fecha_fin": "2025-03-07",
+      "created_at": "2025-03-11T08:59:42.744Z",
+      "updated_at": "2025-03-11T08:59:42.744Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 4,
+    "fields": {
+      "nombre": "dfmdfg",
+      "fecha_inicio": "2025-03-02",
+      "fecha_fin": "2025-03-05",
+      "created_at": "2025-03-11T12:06:00.858Z",
+      "updated_at": "2025-03-11T12:06:00.858Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 5,
+    "fields": {
+      "nombre": "programa de prueba",
+      "fecha_inicio": "2025-03-17",
+      "fecha_fin": "2025-03-19",
+      "created_at": "2025-03-12T18:42:41.274Z",
+      "updated_at": "2025-03-12T18:42:41.275Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 6,
+    "fields": {
+      "nombre": "kjhkjjhk",
+      "fecha_inicio": "2025-03-24",
+      "fecha_fin": "2025-03-24",
+      "created_at": "2025-03-24T20:13:53.305Z",
+      "updated_at": "2025-03-24T20:13:53.306Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 7,
+    "fields": {
+      "nombre": "semana 1 abril",
+      "fecha_inicio": "2025-04-01",
+      "fecha_fin": "2025-04-01",
+      "created_at": "2025-03-27T20:53:20.054Z",
+      "updated_at": "2025-03-27T20:53:20.054Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 8,
+    "fields": {
+      "nombre": "Programa Abril",
+      "fecha_inicio": "2025-04-01",
+      "fecha_fin": "2025-04-04",
+      "created_at": "2025-03-31T20:27:35.105Z",
+      "updated_at": "2025-03-31T20:27:35.105Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  },
+  {
+    "model": "JobManagement.programaproduccion",
+    "pk": 9,
+    "fields": {
+      "nombre": "Programa abril ",
+      "fecha_inicio": "2025-04-01",
+      "fecha_fin": "2025-04-01",
+      "created_at": "2025-04-01T13:40:46.814Z",
+      "updated_at": "2025-04-01T13:40:46.814Z",
+      "creado_por": null,
+      "modificado_por": null
+    }
+  }
+]

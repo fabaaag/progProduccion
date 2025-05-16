@@ -13,10 +13,10 @@ class MachineListView(APIView):
         """Obtener lista de máquinas con su estado y tipos"""
         try:
             maquinas = Maquina.objects.select_related(
-                'estado',
-                'estado__estado_operatividad'
+                'estadomaquina',
+                'estadomaquina__estado_operatividad'
             ).prefetch_related(
-                'estado__tipos_maquina'
+                'estadomaquina__tipos_maquina'
             ).all()
 
             data = []
@@ -31,14 +31,14 @@ class MachineListView(APIView):
                             'codigo': tipo.codigo,
                             'descripcion': tipo.descripcion
                         }
-                        for tipo in maquina.estado.tipos_maquina.all()
-                    ] if hasattr(maquina, 'estado') else [],
+                        for tipo in maquina.estadomaquina.tipos_maquina.all()
+                    ] if hasattr(maquina, 'estadomaquina') else [],
                     'estado_operatividad': {
-                        'estado': maquina.estado.estado_operatividad.estado,
-                        'descripcion': maquina.estado.estado_operatividad.get_estado_display()
-                    } if hasattr(maquina, 'estado') and maquina.estado.estado_operatividad else None,
-                    'capacidad_maxima': maquina.estado.capacidad_maxima if hasattr(maquina, 'estado') else 0,
-                    'disponible': maquina.estado.disponible if hasattr(maquina, 'estado') else False
+                        'estado': maquina.estadomaquina.estado_operatividad.estado,
+                        'descripcion': maquina.estadomaquina.estado_operatividad.get_estado_display()
+                    } if hasattr(maquina, 'estadomaquina') and maquina.estadomaquina.estado_operatividad else None,
+                    'capacidad_hora': float(maquina.estadomaquina.capacidad_hora) if hasattr(maquina, 'estadomaquina') and maquina.estadomaquina.capacidad_hora else 0,
+                    'factor_eficiencia': float(maquina.estadomaquina.factor_eficiencia) if hasattr(maquina, 'estadomaquina') else 1.00
                 }
                 data.append(maquina_data)
             
@@ -55,20 +55,20 @@ class MachineDetailView(APIView):
     def get(self, request, pk):
         try:
             maquina = Maquina.objects.select_related(
-                'estado',
-                'estado__estado_operatividad',
+                'estadomaquina',
+                'estadomaquina__estado_operatividad',
                 'empresa'
             ).prefetch_related(
-                'estado__tipos_maquina'
+                'estadomaquina__tipos_maquina'
             ).get(pk=pk)
 
             # Obtener procesos asociados a los tipos de máquina
-            tipos_maquina_ids = maquina.estado.tipos_maquina.values_list('id', flat=True)
+            tipos_maquina_ids = maquina.estadomaquina.tipos_maquina.values_list('id', flat=True)
             procesos_asociados = Proceso.objects.filter(
                 tipos_maquina_compatibles__in=tipos_maquina_ids
             ).distinct().values('id', 'codigo_proceso', 'descripcion')
 
-            # Obtener órdenes de trabajo asociadas a través de ItemRuta
+            # Obtener órdenes de trabajo asociadas
             ordenes_trabajo = OrdenTrabajo.objects.filter(
                 ruta_ot__items__maquina=maquina
             ).distinct().select_related('situacion_ot').values(
@@ -94,15 +94,18 @@ class MachineDetailView(APIView):
                         'id': tipo.id,
                         'codigo': tipo.codigo,
                         'descripcion': tipo.descripcion,
-                    } for tipo in maquina.estado.tipos_maquina.all()],
+                    } for tipo in maquina.estadomaquina.tipos_maquina.all()],
                     'estado_operatividad': {
-                        'id': maquina.estado.estado_operatividad.id,
-                        'estado': maquina.estado.estado_operatividad.estado,
-                        'descripcion': maquina.estado.estado_operatividad.get_estado_display()
-                    } if maquina.estado.estado_operatividad else None,
-                    'disponible': maquina.estado.disponible,
-                    'capacidad_maxima': maquina.estado.capacidad_maxima,
-                    'observaciones': maquina.estado.observaciones
+                        'id': maquina.estadomaquina.estado_operatividad.id,
+                        'estado': maquina.estadomaquina.estado_operatividad.estado,
+                        'descripcion': maquina.estadomaquina.estado_operatividad.get_estado_display()
+                    } if maquina.estadomaquina.estado_operatividad else None,
+                    'capacidad_hora': float(maquina.estadomaquina.capacidad_hora) if maquina.estadomaquina.capacidad_hora else 0,
+                    'factor_eficiencia': float(maquina.estadomaquina.factor_eficiencia),
+                    'horario': {
+                        'hora_inicio': maquina.estadomaquina.hora_inicio_normal.strftime('%H:%M'),
+                        'hora_fin': maquina.estadomaquina.hora_fin_normal.strftime('%H:%M')
+                    }
                 },
                 'procesos_asociados': list(procesos_asociados),
                 'ordenes_trabajo': [{
@@ -119,7 +122,7 @@ class MachineDetailView(APIView):
                 status=status.HTTP_404_NOT_FOUND
             )
         except Exception as e:
-            print(f"Error en MachineDetailView: {str(e)}")  # Para debugging
+            print(f"Error en MachineDetailView: {str(e)}")
             return Response(
                 {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
@@ -155,10 +158,10 @@ class DiagnosticoMaquinasView(APIView):
 
             # Obtener todas las máquinas con sus relaciones
             maquinas = Maquina.objects.select_related(
-                'estado',
+                'estadomaquina',
                 'empresa'
             ).prefetch_related(
-                'estado__tipos_maquina'
+                'estadomaquina__tipos_maquina'
             ).all()
 
             for maquina in maquinas:
@@ -173,8 +176,8 @@ class DiagnosticoMaquinasView(APIView):
                 }
 
                 # Verificar tipos de máquina
-                if hasattr(maquina, 'estado'):
-                    tipos = maquina.estado.tipos_maquina.all()
+                if hasattr(maquina, 'estadomaquina'):
+                    tipos = maquina.estadomaquina.tipos_maquina.all()
                     maquina_info['tipos'] = [{
                         'id': tipo.id,
                         'codigo': tipo.codigo,
@@ -268,10 +271,10 @@ class OperatorMachinesView(APIView):
             maquinas = Maquina.objects.filter(
                 operadores_habilitados__id=operator_id
             ).select_related(
-                'estado',
-                'estado__estado_operatividad'
+                'estadomaquina',
+                'estadomaquina__estado_operatividad'
             ).prefetch_related(
-                'estado__tipos_maquina'
+                'estadomaquina__tipos_maquina'
             )
 
             data = []
@@ -285,11 +288,11 @@ class OperatorMachinesView(APIView):
                             'codigo': tipo.codigo,
                             'descripcion': tipo.descripcion
                         }
-                        for tipo in maquina.estado.tipos_maquina.all()
-                    ] if hasattr(maquina, 'estado') else [],
+                        for tipo in maquina.estadomaquina.tipos_maquina.all()
+                    ] if hasattr(maquina, 'estadomaquina') else [],
                     'estado_operatividad': (
-                        maquina.estado.estado_operatividad.get_estado_display()
-                        if hasattr(maquina, 'estado') and maquina.estado.estado_operatividad
+                        maquina.estadomaquina.estado_operatividad.get_estado_display()
+                        if hasattr(maquina, 'estadomaquina') and maquina.estadomaquina.estado_operatividad
                         else 'No especificado'
                     )
                 }
@@ -310,10 +313,10 @@ class OperatorFormMachinesView(APIView):
         try:
             # Obtener todas las máquinas con sus relaciones
             maquinas = Maquina.objects.select_related(
-                'estado',
-                'estado__estado_operatividad'
+                'estadomaquina',
+                'estadomaquina__estado_operatividad'
             ).prefetch_related(
-                'estado__tipos_maquina'
+                'estadomaquina__tipos_maquina'
             ).all()
 
             data = []
@@ -328,12 +331,12 @@ class OperatorFormMachinesView(APIView):
                             'codigo': tipo.codigo,
                             'descripcion': tipo.descripcion
                         }
-                        for tipo in maquina.estado.tipos_maquina.all()
-                    ] if hasattr(maquina, 'estado') else [],
+                        for tipo in maquina.estadomaquina.tipos_maquina.all()
+                    ] if hasattr(maquina, 'estadomaquina') else [],
                     'estado_operatividad': {
-                        'estado': maquina.estado.estado_operatividad.estado,
-                        'descripcion': maquina.estado.estado_operatividad.get_estado_display()
-                    } if hasattr(maquina, 'estado') and maquina.estado.estado_operatividad else None
+                        'estado': maquina.estadomaquina.estado_operatividad.estado,
+                        'descripcion': maquina.estadomaquina.estado_operatividad.get_estado_display()
+                    } if hasattr(maquina, 'estadomaquina') and maquina.estadomaquina.estado_operatividad else None
                 }
                 data.append(maquina_data)
             

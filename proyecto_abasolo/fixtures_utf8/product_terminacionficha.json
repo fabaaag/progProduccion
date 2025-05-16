@@ -1,0 +1,146 @@
+[
+  {
+    "model": "Product.terminacionficha",
+    "pk": 1,
+    "fields": {
+      "codigo": "CP",
+      "nombre": "CP"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 2,
+    "fields": {
+      "codigo": "CZ",
+      "nombre": "CZ"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 3,
+    "fields": {
+      "codigo": "PV",
+      "nombre": "PV"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 4,
+    "fields": {
+      "codigo": "CN",
+      "nombre": "CN"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 5,
+    "fields": {
+      "codigo": "NG",
+      "nombre": "NG"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 6,
+    "fields": {
+      "codigo": "CG",
+      "nombre": "CG"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 7,
+    "fields": {
+      "codigo": "P ",
+      "nombre": "P "
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 8,
+    "fields": {
+      "codigo": "CD",
+      "nombre": "CD"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 9,
+    "fields": {
+      "codigo": "CI",
+      "nombre": "CI"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 10,
+    "fields": {
+      "codigo": "CA",
+      "nombre": "CA"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 11,
+    "fields": {
+      "codigo": "C ",
+      "nombre": "C "
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 12,
+    "fields": {
+      "codigo": "Z ",
+      "nombre": "Z "
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 13,
+    "fields": {
+      "codigo": "N ",
+      "nombre": "N "
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 14,
+    "fields": {
+      "codigo": "GV",
+      "nombre": "GV"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 15,
+    "fields": {
+      "codigo": "G ",
+      "nombre": "G "
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 16,
+    "fields": {
+      "codigo": "GC",
+      "nombre": "GC"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 17,
+    "fields": {
+      "codigo": "CE",
+      "nombre": "CE"
+    }
+  },
+  {
+    "model": "Product.terminacionficha",
+    "pk": 18,
+    "fields": {
+      "codigo": "PR",
+      "nombre": "PR"
+    }
+  }
+]

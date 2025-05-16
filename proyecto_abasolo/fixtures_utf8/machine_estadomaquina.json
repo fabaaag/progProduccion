@@ -1,0 +1,3027 @@
+[
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 252,
+    "fields": {
+      "maquina": 176,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:21.823Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 253,
+    "fields": {
+      "maquina": 177,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:21.916Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 254,
+    "fields": {
+      "maquina": 178,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:22.468Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 255,
+    "fields": {
+      "maquina": 193,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:22.827Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        195,
+        225
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 256,
+    "fields": {
+      "maquina": 250,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:22.959Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 257,
+    "fields": {
+      "maquina": 251,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.029Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        217
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 258,
+    "fields": {
+      "maquina": 258,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.125Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        260
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 259,
+    "fields": {
+      "maquina": 259,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.162Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        260,
+        261,
+        262,
+        263
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 260,
+    "fields": {
+      "maquina": 271,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.207Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        249
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 261,
+    "fields": {
+      "maquina": 272,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.292Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        249
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 262,
+    "fields": {
+      "maquina": 273,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.342Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        249
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 263,
+    "fields": {
+      "maquina": 274,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.441Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        249
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 264,
+    "fields": {
+      "maquina": 275,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.550Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 265,
+    "fields": {
+      "maquina": 299,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:23.920Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        195,
+        205,
+        225,
+        228,
+        229,
+        250,
+        287
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 266,
+    "fields": {
+      "maquina": 295,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.494Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        225,
+        234,
+        293,
+        294
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 267,
+    "fields": {
+      "maquina": 264,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.560Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        200,
+        225,
+        250,
+        273
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 268,
+    "fields": {
+      "maquina": 265,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.613Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        200,
+        204,
+        225,
+        250,
+        257
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 269,
+    "fields": {
+      "maquina": 267,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.653Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        200
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 270,
+    "fields": {
+      "maquina": 290,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.740Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        201
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 271,
+    "fields": {
+      "maquina": 268,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.831Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        202
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 272,
+    "fields": {
+      "maquina": 269,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.896Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        202,
+        212
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 273,
+    "fields": {
+      "maquina": 270,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:24.949Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        202,
+        212
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 274,
+    "fields": {
+      "maquina": 263,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:25.035Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        203
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 275,
+    "fields": {
+      "maquina": 206,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:25.108Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        205,
+        225
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 276,
+    "fields": {
+      "maquina": 207,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:25.162Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        205,
+        222,
+        225,
+        232,
+        252,
+        256
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 277,
+    "fields": {
+      "maquina": 208,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:25.220Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        205,
+        222,
+        225,
+        252,
+        254,
+        256
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 278,
+    "fields": {
+      "maquina": 315,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:25.798Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        213
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 279,
+    "fields": {
+      "maquina": 209,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:26.332Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        222,
+        252
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 280,
+    "fields": {
+      "maquina": 210,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:26.411Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        222,
+        252
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 281,
+    "fields": {
+      "maquina": 239,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:26.910Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        225,
+        264
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 282,
+    "fields": {
+      "maquina": 240,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:26.962Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        225,
+        265
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 283,
+    "fields": {
+      "maquina": 241,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:26.986Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        225
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 284,
+    "fields": {
+      "maquina": 246,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.012Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        225,
+        252,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 285,
+    "fields": {
+      "maquina": 266,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.037Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        225
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 286,
+    "fields": {
+      "maquina": 261,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.091Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        235,
+        260,
+        261,
+        262,
+        263
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 287,
+    "fields": {
+      "maquina": 313,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.311Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        231,
+        237
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 288,
+    "fields": {
+      "maquina": 217,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.589Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        244
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 289,
+    "fields": {
+      "maquina": 234,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.632Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        245,
+        271,
+        273
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 290,
+    "fields": {
+      "maquina": 214,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:27.995Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        247
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 291,
+    "fields": {
+      "maquina": 215,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.141Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        247,
+        248,
+        250
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 292,
+    "fields": {
+      "maquina": 218,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.178Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        248
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 293,
+    "fields": {
+      "maquina": 219,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.216Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        248
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 294,
+    "fields": {
+      "maquina": 211,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.595Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        252,
+        256
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 295,
+    "fields": {
+      "maquina": 212,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.642Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        252,
+        256
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 296,
+    "fields": {
+      "maquina": 247,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.719Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        252,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 297,
+    "fields": {
+      "maquina": 248,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:28.747Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        252,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 298,
+    "fields": {
+      "maquina": 249,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.013Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        252,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 299,
+    "fields": {
+      "maquina": 237,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.163Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        255
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 300,
+    "fields": {
+      "maquina": 238,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.208Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        255
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 301,
+    "fields": {
+      "maquina": 255,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.428Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        259
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 302,
+    "fields": {
+      "maquina": 256,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.487Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        259
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 303,
+    "fields": {
+      "maquina": 253,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.564Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        260
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 304,
+    "fields": {
+      "maquina": 260,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.624Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        260,
+        261,
+        262,
+        263
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 305,
+    "fields": {
+      "maquina": 226,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.749Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        266,
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 306,
+    "fields": {
+      "maquina": 227,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.796Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        266,
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 307,
+    "fields": {
+      "maquina": 242,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.845Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 308,
+    "fields": {
+      "maquina": 223,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.896Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        268
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 309,
+    "fields": {
+      "maquina": 221,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:29.974Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        269
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 310,
+    "fields": {
+      "maquina": 228,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.144Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 311,
+    "fields": {
+      "maquina": 229,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.215Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 312,
+    "fields": {
+      "maquina": 230,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.290Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 313,
+    "fields": {
+      "maquina": 231,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.337Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 314,
+    "fields": {
+      "maquina": 233,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.422Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        271,
+        273
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 315,
+    "fields": {
+      "maquina": 235,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.459Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        271,
+        273
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 316,
+    "fields": {
+      "maquina": 236,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.553Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        271,
+        273
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 317,
+    "fields": {
+      "maquina": 277,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:30.610Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        274,
+        275,
+        276
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 318,
+    "fields": {
+      "maquina": 296,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.011Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        287
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 319,
+    "fields": {
+      "maquina": 319,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.164Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 320,
+    "fields": {
+      "maquina": 320,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.203Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 321,
+    "fields": {
+      "maquina": 328,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.480Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 322,
+    "fields": {
+      "maquina": 329,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.529Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 323,
+    "fields": {
+      "maquina": 330,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.670Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 324,
+    "fields": {
+      "maquina": 331,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.696Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 325,
+    "fields": {
+      "maquina": 334,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.760Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288,
+        293,
+        294
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 326,
+    "fields": {
+      "maquina": 337,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.797Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 327,
+    "fields": {
+      "maquina": 308,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:31.831Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        289
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 328,
+    "fields": {
+      "maquina": 336,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-20T20:33:32.592Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        293
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 329,
+    "fields": {
+      "maquina": 175,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T14:59:40.607Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 330,
+    "fields": {
+      "maquina": 179,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.389Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        216
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 331,
+    "fields": {
+      "maquina": 180,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.409Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        213
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 332,
+    "fields": {
+      "maquina": 181,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.426Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        206,
+        207,
+        211,
+        213,
+        214,
+        215,
+        218,
+        241,
+        245,
+        247
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 333,
+    "fields": {
+      "maquina": 182,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.442Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        206,
+        213,
+        214,
+        215
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 334,
+    "fields": {
+      "maquina": 183,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.470Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        207,
+        213,
+        214,
+        215,
+        241,
+        242
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 335,
+    "fields": {
+      "maquina": 184,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.538Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        201,
+        206,
+        207,
+        213,
+        218,
+        220,
+        241,
+        249,
+        264
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 336,
+    "fields": {
+      "maquina": 185,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.555Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        206,
+        207,
+        213
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 337,
+    "fields": {
+      "maquina": 186,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.572Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        206,
+        207,
+        213,
+        214,
+        215,
+        277
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 338,
+    "fields": {
+      "maquina": 187,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.591Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        207,
+        211,
+        218,
+        241
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 339,
+    "fields": {
+      "maquina": 188,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.643Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        207,
+        211,
+        216,
+        218,
+        241
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 340,
+    "fields": {
+      "maquina": 189,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.684Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        206,
+        207,
+        213,
+        214,
+        215,
+        216,
+        241
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 341,
+    "fields": {
+      "maquina": 190,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.732Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        206,
+        207,
+        213,
+        216,
+        218,
+        220,
+        241,
+        245,
+        264
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 342,
+    "fields": {
+      "maquina": 191,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.744Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        205,
+        207,
+        213,
+        218,
+        225,
+        241,
+        245
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 343,
+    "fields": {
+      "maquina": 192,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.756Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 344,
+    "fields": {
+      "maquina": 194,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.769Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        216
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 345,
+    "fields": {
+      "maquina": 195,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.783Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        216,
+        230
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 346,
+    "fields": {
+      "maquina": 196,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.794Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        196,
+        205,
+        223,
+        224,
+        225,
+        228,
+        229,
+        230,
+        231,
+        232,
+        236
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 347,
+    "fields": {
+      "maquina": 197,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.831Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        203,
+        205,
+        225,
+        236
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 348,
+    "fields": {
+      "maquina": 198,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.844Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        195,
+        205,
+        206,
+        207,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        236,
+        252,
+        253,
+        265
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 349,
+    "fields": {
+      "maquina": 199,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.858Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        195,
+        196,
+        205,
+        225,
+        226,
+        227,
+        228,
+        229,
+        236,
+        252,
+        253,
+        255,
+        295
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 350,
+    "fields": {
+      "maquina": 200,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.869Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        205,
+        207,
+        211,
+        225,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        236,
+        252,
+        253,
+        255
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 351,
+    "fields": {
+      "maquina": 201,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.887Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        195,
+        199,
+        205,
+        206,
+        225,
+        228,
+        229,
+        230,
+        231,
+        232,
+        236,
+        238,
+        239,
+        240,
+        252,
+        253,
+        254,
+        256,
+        290
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 352,
+    "fields": {
+      "maquina": 202,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.899Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        199,
+        205,
+        207,
+        211,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        233,
+        234,
+        236,
+        238,
+        252,
+        253,
+        293,
+        294
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 353,
+    "fields": {
+      "maquina": 203,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.909Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        195,
+        196,
+        199,
+        205,
+        207,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        236,
+        238
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 354,
+    "fields": {
+      "maquina": 204,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.923Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        194,
+        195,
+        196,
+        205,
+        223,
+        224,
+        225,
+        226,
+        227,
+        228,
+        229,
+        230,
+        231,
+        232,
+        236,
+        238,
+        239,
+        277,
+        290
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 355,
+    "fields": {
+      "maquina": 205,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.935Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        225,
+        229,
+        232,
+        239,
+        289,
+        290
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 356,
+    "fields": {
+      "maquina": 213,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.958Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        252,
+        256
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 357,
+    "fields": {
+      "maquina": 216,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:56.973Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        244
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 358,
+    "fields": {
+      "maquina": 220,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.002Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        269
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 359,
+    "fields": {
+      "maquina": 222,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.017Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        268
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 360,
+    "fields": {
+      "maquina": 224,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.033Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        266,
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 361,
+    "fields": {
+      "maquina": 225,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.043Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        266,
+        270,
+        272
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 362,
+    "fields": {
+      "maquina": 232,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.071Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        271,
+        273
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 363,
+    "fields": {
+      "maquina": 243,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.103Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        200,
+        225,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 364,
+    "fields": {
+      "maquina": 244,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.117Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        200,
+        225,
+        252,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 365,
+    "fields": {
+      "maquina": 245,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.148Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        200,
+        225,
+        252,
+        267
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 366,
+    "fields": {
+      "maquina": 252,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.177Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        260
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 367,
+    "fields": {
+      "maquina": 254,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.193Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        259
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 368,
+    "fields": {
+      "maquina": 257,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.210Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        219
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 369,
+    "fields": {
+      "maquina": 262,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.233Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 370,
+    "fields": {
+      "maquina": 276,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.273Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        274,
+        275,
+        276
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 371,
+    "fields": {
+      "maquina": 278,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.307Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        274,
+        275,
+        276
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 372,
+    "fields": {
+      "maquina": 279,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.326Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        197
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 373,
+    "fields": {
+      "maquina": 280,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.365Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        198
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 374,
+    "fields": {
+      "maquina": 281,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.378Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        193
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 375,
+    "fields": {
+      "maquina": 282,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.393Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        246
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 376,
+    "fields": {
+      "maquina": 283,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.408Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        278
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 377,
+    "fields": {
+      "maquina": 284,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.422Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        279
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 378,
+    "fields": {
+      "maquina": 285,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.432Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        280
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 379,
+    "fields": {
+      "maquina": 286,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.443Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        281
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 380,
+    "fields": {
+      "maquina": 287,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.455Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        282
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 381,
+    "fields": {
+      "maquina": 288,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.467Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        283
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 382,
+    "fields": {
+      "maquina": 289,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.515Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        285,
+        286
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 383,
+    "fields": {
+      "maquina": 291,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.553Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        208,
+        209
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 384,
+    "fields": {
+      "maquina": 292,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.577Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        210
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 385,
+    "fields": {
+      "maquina": 293,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.621Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        221
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 386,
+    "fields": {
+      "maquina": 294,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.682Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        258
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 387,
+    "fields": {
+      "maquina": 297,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.707Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        287,
+        297
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 388,
+    "fields": {
+      "maquina": 298,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.724Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 389,
+    "fields": {
+      "maquina": 300,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.743Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        296
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 390,
+    "fields": {
+      "maquina": 301,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.760Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        237
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 391,
+    "fields": {
+      "maquina": 302,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.787Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 392,
+    "fields": {
+      "maquina": 303,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.802Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        237
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 393,
+    "fields": {
+      "maquina": 304,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.813Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 394,
+    "fields": {
+      "maquina": 305,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.833Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 395,
+    "fields": {
+      "maquina": 306,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.842Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 396,
+    "fields": {
+      "maquina": 307,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.851Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        288
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 397,
+    "fields": {
+      "maquina": 309,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.862Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 398,
+    "fields": {
+      "maquina": 310,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.872Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 399,
+    "fields": {
+      "maquina": 311,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.884Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 400,
+    "fields": {
+      "maquina": 312,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.905Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 401,
+    "fields": {
+      "maquina": 314,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.919Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        230,
+        231,
+        236,
+        237
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 402,
+    "fields": {
+      "maquina": 316,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.948Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 403,
+    "fields": {
+      "maquina": 317,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.958Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 404,
+    "fields": {
+      "maquina": 318,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.968Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 405,
+    "fields": {
+      "maquina": 321,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.981Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 406,
+    "fields": {
+      "maquina": 322,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:57.991Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 407,
+    "fields": {
+      "maquina": 323,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.001Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 408,
+    "fields": {
+      "maquina": 324,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.013Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 409,
+    "fields": {
+      "maquina": 325,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.043Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 410,
+    "fields": {
+      "maquina": 326,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.055Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 411,
+    "fields": {
+      "maquina": 327,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.066Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 412,
+    "fields": {
+      "maquina": 332,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.082Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 413,
+    "fields": {
+      "maquina": 333,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.094Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": [
+        291
+      ]
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 414,
+    "fields": {
+      "maquina": 335,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.106Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 415,
+    "fields": {
+      "maquina": 338,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.119Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 416,
+    "fields": {
+      "maquina": 339,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.129Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 417,
+    "fields": {
+      "maquina": 340,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.141Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 418,
+    "fields": {
+      "maquina": 341,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.167Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 419,
+    "fields": {
+      "maquina": 342,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.205Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 420,
+    "fields": {
+      "maquina": 343,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.259Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 421,
+    "fields": {
+      "maquina": 344,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.291Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 422,
+    "fields": {
+      "maquina": 345,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.300Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 423,
+    "fields": {
+      "maquina": 346,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.309Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 424,
+    "fields": {
+      "maquina": 347,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.323Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  },
+  {
+    "model": "Machine.estadomaquina",
+    "pk": 425,
+    "fields": {
+      "maquina": 348,
+      "estado_operatividad": 1,
+      "motivo_estado": null,
+      "fecha_ultimo_cambio": "2025-03-21T15:00:58.336Z",
+      "disponible": true,
+      "capacidad_maxima": 0,
+      "observaciones": null,
+      "tipos_maquina": []
+    }
+  }
+]
