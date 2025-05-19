@@ -80,9 +80,11 @@ export const supervisorReportAPI = {
     },
 
     // Timeline de ejecución
-    getExecutionTimeline: async (programId) => {
+    getExecutionTimeline: async (programId, params = {}) => {
         try {
-            const response = await axiosInstance.get(`/gestion/api/v1/programas/${programId}/timeline-ejecucion/`);
+            const queryParams = new URLSearchParams(params).toString();
+            const url = `/gestion/api/v1/programas/${programId}/timeline-ejecucion/${queryParams ? `?${queryParams}` : ''}`;
+            const response = await axiosInstance.get(url);
             return response.data;
         } catch (error) {
             throw error;

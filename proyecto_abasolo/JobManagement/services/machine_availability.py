@@ -14,28 +14,32 @@ class MachineAvailabilityService:
 
     def setup_logger(self):
         """Configura el logger para el servicio"""
-        # Crear directorio para logs si no existe
-        log_dir = Path('logs/availability_checks')
-        log_dir.mkdir(parents=True, exist_ok=True)
-
-        # Crear un logger específico para este servicio
+        # Deshabilitado temporalmente para ahorrar espacio
         self.logger = logging.getLogger('machine_availability')
-        self.logger.setLevel(logging.DEBUG)
+        self.logger.addHandler(logging.NullHandler())
+        
+        # # Crear directorio para logs si no existe
+        # log_dir = Path('logs/availability_checks')
+        # log_dir.mkdir(parents=True, exist_ok=True)
 
-        # Crear un nuevo archivo de log con timestamp
-        timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
-        log_file = log_dir / f'availability_check_{timestamp}.log'
+        # # Crear un logger específico para este servicio
+        # self.logger = logging.getLogger('machine_availability')
+        # self.logger.setLevel(logging.DEBUG)
+
+        # # Crear un nuevo archivo de log con timestamp
+        # timestamp = datetime.now().strftime('%Y%m%d_%H%M%S')
+        # log_file = log_dir / f'availability_check_{timestamp}.log'
         
-        # Configurar el handler para archivo
-        file_handler = logging.FileHandler(log_file, mode='w')
-        file_handler.setLevel(logging.DEBUG)
+        # # Configurar el handler para archivo
+        # file_handler = logging.FileHandler(log_file, mode='w')
+        # file_handler.setLevel(logging.DEBUG)
         
-        # Definir el formato del log
-        formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
-        file_handler.setFormatter(formatter)
+        # # Definir el formato del log
+        # formatter = logging.Formatter('%(asctime)s - %(levelname)s - %(message)s')
+        # file_handler.setFormatter(formatter)
         
-        # Agregar el handler al logger
-        self.logger.addHandler(file_handler)
+        # # Agregar el handler al logger
+        # self.logger.addHandler(file_handler)
 
     def obtener_intervalos_maquina(self, maquina, fecha_inicio, fecha_fin):
         """Obtiene los intervalos de uso existentes para una máquina"""

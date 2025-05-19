@@ -153,3 +153,37 @@
 .rct-item-overflow {
     display: none !important;
 }
+
+/* Estilos específicos para items de ejecución */
+.execution-timeline-item {
+    height: 40px !important;
+    border-radius: 6px !important;
+    padding: 0.5px !important;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1) !important;
+    display: flex !important;
+    align-items: center !important;
+}
+
+.execution-timeline-item .timeline-item-content {
+    font-size: 13px !important;
+    padding: 6px 8px !important;
+    display: flex !important;
+    flex-direction: column !important;
+    justify-content: space-between !important;
+    width: 100% !important;
+    height: 90% !important;
+}
+
+.execution-timeline-item .progress {
+    width: 100% !important;
+    height: 6px !important;
+    background-color: rgba(255, 255, 255, 0.3) !important;
+    margin-top: 4px !important;
+    border-radius: 3px !important;
+}
+
+.execution-timeline-item .progress-bar {
+    background-color: rgba(68, 67, 67, 0.8) !important;
+    border-radius: 3px !important;
+    transition: width 0.3s ease !important;
+}

@@ -633,6 +633,12 @@ class EmpresaListView(APIView):
     
 logger = logging.getLogger(__name__)
 class GenerateProgramPDF(APIView):
+    def __init__(self):
+        super().__init__()
+        # Inicializar el time calculator y el scheduler
+        self.time_calculator = TimeCalculator()
+        self.production_scheduler = ProductionScheduler(self.time_calculator)
+
     def get_ordenes_trabajo(self, programa):
         """Obtiene las órdenes de trabajo del programa dado."""
         try:
@@ -704,49 +710,78 @@ class GenerateProgramPDF(APIView):
                     'fecha_fin': asignacion.fecha_fin
                 }
 
-            # Si no hay asignación, usar la lógica del timeline
-            program_detail_view = ProgramDetailView()
-            
-            # Obtener las órdenes de trabajo ordenadas por prioridad
+            # Si no hay asignación, obtener todas las OTs del programa
             program_ots = ProgramaOrdenTrabajo.objects.filter(
                 programa=programa
             ).select_related(
-                'orden_trabajo'
+                'orden_trabajo',
+                'orden_trabajo__ruta_ot'
+            ).prefetch_related(
+                'orden_trabajo__ruta_ot__items'
             ).order_by('prioridad')
 
-            # Encontrar la OT que contiene este item_ruta
+            # Preparar datos para el scheduler
+            ordenes_trabajo = []
             for prog_ot in program_ots:
                 ot = prog_ot.orden_trabajo
-                ruta = getattr(ot, 'ruta_ot', None)
-                if not ruta:
-                    continue
+                ot_data = {
+                    'orden_trabajo': ot.id,
+                    'orden_trabajo_codigo_ot': ot.codigo_ot,
+                    'orden_trabajo_descripcion_producto_ot': ot.descripcion_producto_ot,
+                    'procesos': []
+                }
 
-                # Si encontramos el item_ruta en esta OT
-                if item_ruta.ruta_id == ruta.id:
-                    # Formatear la OT para el timeline
-                    ot_data = program_detail_view.format_orden_trabajo(ot, programa.id)
+                if ot.ruta_ot:
+                    for item in ot.ruta_ot.items.all().order_by('item'):
+                        proceso_data = {
+                            'id': item.id,
+                            'item': item.item,
+                            'descripcion': item.proceso.descripcion if item.proceso else None,
+                            'maquina_id': item.maquina.id if item.maquina else None,
+                            'maquina_descripcion': item.maquina.descripcion if item.maquina else None,
+                            'cantidad': item.cantidad_pedido,
+                            'estandar': item.estandar,
+                            'prioridad': prog_ot.prioridad
+                        }
+                        ot_data['procesos'].append(proceso_data)
+            
+                ordenes_trabajo.append(ot_data)
+
+            # Generar timeline data para todas las OTs
+            timeline_data = self.production_scheduler.generate_timeline_data(programa, ordenes_trabajo)
+
+            # Buscar el proceso específico en el timeline completo
+            if timeline_data.get('items'):
+                proceso_items = [
+                    item for item in timeline_data['items'] 
+                    if item['proceso_id'] == f"proc_{item_ruta.id}"
+                ]
+
+                if proceso_items:
+                    # Ordenar items por fecha
+                    proceso_items.sort(key=lambda x: datetime.strptime(x['start_time'], '%Y-%m-%d %H:%M:%S'))
                     
-                    # Generar datos del timeline para esta OT
-                    timeline_data = program_detail_view.generate_timeline_data(programa, [ot_data])
+                    fecha_inicio = datetime.strptime(proceso_items[0]['start_time'], '%Y-%m-%d %H:%M:%S')
                     
-                    # Buscar los intervalos correspondientes a este proceso
-                    if timeline_data.get('items'):
-                        proceso_items = [
-                            item for item in timeline_data['items'] 
-                            if item['proceso_id'] == f"proc_{item_ruta.id}"
-                        ]
+                    # Calcular la fecha fin real basada en la cantidad total y los intervalos
+                    cantidad_total = float(item_ruta.cantidad_pedido)
+                    cantidad_acumulada = 0
+                    fecha_fin = None
+                    
+                    for item in proceso_items:
+                        cantidad_acumulada += float(item['cantidad_intervalo'])
+                        fecha_fin = datetime.strptime(item['end_time'], '%Y-%m-%d %H:%M:%S')
                         
-                        if proceso_items:
-                            # Tomar la fecha de inicio del primer intervalo y la fecha fin del último
-                            fecha_inicio = datetime.strptime(proceso_items[0]['start_time'], '%Y-%m-%d %H:%M:%S')
-                            fecha_fin = datetime.strptime(proceso_items[-1]['end_time'], '%Y-%m-%d %H:%M:%S')
-                            
-                            return {
-                                'fecha_inicio': fecha_inicio,
-                                'fecha_fin': fecha_fin
-                            }
+                        # Si ya procesamos toda la cantidad, esta es la fecha fin real
+                        if cantidad_acumulada >= cantidad_total:
+                            break
 
-            # Si no se encontraron fechas válidas
+                    if fecha_fin:
+                        return {
+                            'fecha_inicio': fecha_inicio,
+                            'fecha_fin': fecha_fin
+                        }
+
             return {
                 'fecha_inicio': None,
                 'fecha_fin': None,
@@ -884,8 +919,8 @@ class GenerateProgramPDF(APIView):
                     # Agregar procesos
                     for proceso in ot.get('procesos', []):
                         # Formatear fechas
-                        fecha_inicio_str = proceso.get('fecha_inicio').strftime('%d/%m/%Y') if proceso.get('fecha_inicio') else 'No definida'
-                        fecha_fin_str = proceso.get('fecha_fin').strftime('%d/%m/%Y') if proceso.get('fecha_fin') else 'No definida'
+                        fecha_inicio_str = proceso.get('fecha_inicio').strftime('%d/%m/%Y %H:%M') if proceso.get('fecha_inicio') else 'No definida'
+                        fecha_fin_str = proceso.get('fecha_fin').strftime('%d/%m/%Y %H:%M') if proceso.get('fecha_fin') else 'No definida'
                         
                         # Crear fila con Paragraphs para permitir ajuste de texto
                         proceso_row = [

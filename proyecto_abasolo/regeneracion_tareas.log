@@ -1,0 +1,141 @@
+2025-05-19 16:58:09,702 - INFO - Procesando 12 programas
+2025-05-19 16:58:09,704 - INFO - Procesando programa 1 - Programa febrero-marzo
+2025-05-19 16:58:09,718 - INFO - Eliminados 62 tareas y 10 reportes existentes
+2025-05-19 16:58:09,719 - INFO - Procesando 9 órdenes de trabajo
+2025-05-19 16:58:09,720 - INFO - Procesando OT: 43999
+2025-05-19 16:58:09,725 - INFO - Procesando OT: 44000
+2025-05-19 16:58:09,730 - INFO - Procesando OT: 44001
+2025-05-19 16:58:09,734 - INFO - Procesando OT: 44004
+2025-05-19 16:58:09,739 - INFO - Procesando OT: 44005
+2025-05-19 16:58:09,745 - INFO - Procesando OT: 44006
+2025-05-19 16:58:09,753 - INFO - Procesando OT: 44009
+2025-05-19 16:58:09,758 - INFO - Procesando OT: 44010
+2025-05-19 16:58:09,766 - INFO - Procesando OT: 44012
+2025-05-19 16:58:10,098 - INFO - Programa 1 procesado exitosamente: 62 tareas, 10 reportes
+2025-05-19 16:58:10,104 - INFO - Procesando programa 3 - Programa marzo
+2025-05-19 16:58:10,112 - INFO - Eliminados 28 tareas y 5 reportes existentes
+2025-05-19 16:58:10,113 - INFO - Procesando 5 órdenes de trabajo
+2025-05-19 16:58:10,114 - INFO - Procesando OT: 44013
+2025-05-19 16:58:10,119 - INFO - Procesando OT: 44019
+2025-05-19 16:58:10,123 - INFO - Procesando OT: 44023
+2025-05-19 16:58:10,127 - INFO - Procesando OT: 44024
+2025-05-19 16:58:10,133 - INFO - Procesando OT: 44025
+2025-05-19 16:58:10,275 - INFO - Programa 3 procesado exitosamente: 28 tareas, 5 reportes
+2025-05-19 16:58:10,295 - INFO - Procesando programa 4 - dfmdfg
+2025-05-19 16:58:10,307 - INFO - Eliminados 11 tareas y 0 reportes existentes
+2025-05-19 16:58:10,308 - INFO - Procesando 3 órdenes de trabajo
+2025-05-19 16:58:10,309 - INFO - Procesando OT: 43036
+2025-05-19 16:58:10,315 - WARNING - OT 43036 tiene 1 procesos inválidos: [{'id': 1, 'estandar': 0, 'cantidad': Decimal('500.00')}]
+2025-05-19 16:58:10,316 - INFO - Procesando OT: 43515
+2025-05-19 16:58:10,320 - INFO - Procesando OT: 43777
+2025-05-19 16:58:10,331 - WARNING - OT 43777 tiene 2 procesos inválidos: [{'id': 24, 'estandar': 0, 'cantidad': Decimal('500.00')}, {'id': 29, 'estandar': 0, 'cantidad': Decimal('500.00')}]
+2025-05-19 16:58:10,372 - INFO - Programa 4 procesado exitosamente: 11 tareas, 0 reportes
+2025-05-19 16:58:10,378 - INFO - Procesando programa 5 - programa de prueba
+2025-05-19 16:58:10,380 - INFO - Procesando 4 órdenes de trabajo
+2025-05-19 16:58:10,381 - INFO - Procesando OT: 43467
+2025-05-19 16:58:10,383 - WARNING - OT 43467 tiene 1 procesos inválidos: [{'id': 14, 'estandar': 0, 'cantidad': Decimal('1500.00')}]
+2025-05-19 16:58:10,383 - INFO - Procesando OT: 43568
+2025-05-19 16:58:10,389 - WARNING - OT 43568 tiene 1 procesos inválidos: [{'id': 16, 'estandar': 0, 'cantidad': Decimal('500.00')}]
+2025-05-19 16:58:10,389 - INFO - Procesando OT: 43668
+2025-05-19 16:58:10,390 - WARNING - OT 43668 tiene 2 procesos inválidos: [{'id': 22, 'estandar': 0, 'cantidad': Decimal('1.00')}, {'id': 23, 'estandar': 0, 'cantidad': Decimal('1.00')}]
+2025-05-19 16:58:10,391 - INFO - Procesando OT: 43811
+2025-05-19 16:58:10,395 - WARNING - OT 43811 tiene 1 procesos inválidos: [{'id': 30, 'estandar': 0, 'cantidad': Decimal('15000.00')}]
+2025-05-19 16:58:10,458 - INFO - Programa 5 procesado exitosamente: 11 tareas, 1 reportes
+2025-05-19 16:58:10,462 - INFO - Procesando programa 6 - kjhkjjhk
+2025-05-19 16:58:10,472 - INFO - Eliminados 34 tareas y 7 reportes existentes
+2025-05-19 16:58:10,473 - INFO - Procesando 5 órdenes de trabajo
+2025-05-19 16:58:10,474 - INFO - Procesando OT: 43037
+2025-05-19 16:58:10,480 - INFO - Procesando OT: 43280
+2025-05-19 16:58:10,487 - INFO - Procesando OT: 43864
+2025-05-19 16:58:10,494 - INFO - Procesando OT: 43890
+2025-05-19 16:58:10,501 - INFO - Procesando OT: 43900
+2025-05-19 16:58:10,658 - INFO - Programa 6 procesado exitosamente: 34 tareas, 7 reportes
+2025-05-19 16:58:10,664 - INFO - Procesando programa 7 - semana 1 abril
+2025-05-19 16:58:10,667 - INFO - Procesando 5 órdenes de trabajo
+2025-05-19 16:58:10,668 - INFO - Procesando OT: 43904
+2025-05-19 16:58:10,670 - WARNING - OT 43904 tiene 3 procesos inválidos: [{'id': 51, 'estandar': 0, 'cantidad': Decimal('300.00')}, {'id': 52, 'estandar': 0, 'cantidad': Decimal('300.00')}, {'id': 53, 'estandar': 0, 'cantidad': Decimal('300.00')}]
+2025-05-19 16:58:10,671 - INFO - Procesando OT: 43906
+2025-05-19 16:58:10,672 - WARNING - OT 43906 tiene 1 procesos inválidos: [{'id': 55, 'estandar': 0, 'cantidad': Decimal('865.00')}]
+2025-05-19 16:58:10,673 - INFO - Procesando OT: 43916
+2025-05-19 16:58:10,674 - WARNING - OT 43916 tiene 5 procesos inválidos: [{'id': 56, 'estandar': 0, 'cantidad': Decimal('150.00')}, {'id': 57, 'estandar': 0, 'cantidad': Decimal('150.00')}, {'id': 58, 'estandar': 0, 'cantidad': Decimal('150.00')}, {'id': 59, 'estandar': 0, 'cantidad': Decimal('150.00')}, {'id': 60, 'estandar': 0, 'cantidad': Decimal('150.00')}]
+2025-05-19 16:58:10,675 - INFO - Procesando OT: 43920
+2025-05-19 16:58:10,677 - WARNING - OT 43920 tiene 4 procesos inválidos: [{'id': 61, 'estandar': 0, 'cantidad': Decimal('1000.00')}, {'id': 64, 'estandar': 0, 'cantidad': Decimal('1000.00')}, {'id': 65, 'estandar': 0, 'cantidad': Decimal('1000.00')}, {'id': 66, 'estandar': 0, 'cantidad': Decimal('1000.00')}]
+2025-05-19 16:58:10,678 - INFO - Procesando OT: 43925
+2025-05-19 16:58:10,679 - WARNING - OT 43925 tiene 6 procesos inválidos: [{'id': 67, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 68, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 69, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 70, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 71, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 72, 'estandar': 0, 'cantidad': Decimal('100.00')}]
+2025-05-19 16:58:10,696 - INFO - Programa 7 procesado exitosamente: 3 tareas, 1 reportes
+2025-05-19 16:58:10,701 - INFO - Procesando programa 8 - Programa Abril
+2025-05-19 16:58:10,710 - INFO - Eliminados 51 tareas y 7 reportes existentes
+2025-05-19 16:58:10,711 - INFO - Procesando 6 órdenes de trabajo
+2025-05-19 16:58:10,712 - INFO - Procesando OT: 43929
+2025-05-19 16:58:10,721 - INFO - Procesando OT: 43933
+2025-05-19 16:58:10,726 - INFO - Procesando OT: 43934
+2025-05-19 16:58:10,732 - INFO - Procesando OT: 43935
+2025-05-19 16:58:10,740 - INFO - Procesando OT: 43936
+2025-05-19 16:58:10,745 - INFO - Procesando OT: 43940
+2025-05-19 16:58:10,962 - INFO - Programa 8 procesado exitosamente: 51 tareas, 7 reportes
+2025-05-19 16:58:10,969 - INFO - Procesando programa 9 - Programa abril 
+2025-05-19 16:58:10,971 - INFO - Procesando 6 órdenes de trabajo
+2025-05-19 16:58:10,972 - INFO - Procesando OT: 43942
+2025-05-19 16:58:10,977 - WARNING - OT 43942 tiene 2 procesos inválidos: [{'id': 111, 'estandar': 0, 'cantidad': Decimal('900.00')}, {'id': 117, 'estandar': 0, 'cantidad': Decimal('900.00')}]
+2025-05-19 16:58:10,978 - INFO - Procesando OT: 43944
+2025-05-19 16:58:10,986 - INFO - Procesando OT: 43945
+2025-05-19 16:58:10,987 - WARNING - OT 43945 tiene 5 procesos inválidos: [{'id': 124, 'estandar': 0, 'cantidad': Decimal('124.00')}, {'id': 125, 'estandar': 0, 'cantidad': Decimal('124.00')}, {'id': 126, 'estandar': 0, 'cantidad': Decimal('124.00')}, {'id': 127, 'estandar': 0, 'cantidad': Decimal('124.00')}, {'id': 128, 'estandar': 0, 'cantidad': Decimal('124.00')}]
+2025-05-19 16:58:10,988 - INFO - Procesando OT: 43946
+2025-05-19 16:58:10,990 - WARNING - OT 43946 tiene 3 procesos inválidos: [{'id': 129, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 131, 'estandar': 0, 'cantidad': Decimal('100.00')}, {'id': 132, 'estandar': 0, 'cantidad': Decimal('100.00')}]
+2025-05-19 16:58:10,990 - INFO - Procesando OT: 43947
+2025-05-19 16:58:10,995 - WARNING - OT 43947 tiene 2 procesos inválidos: [{'id': 133, 'estandar': 0, 'cantidad': Decimal('120.00')}, {'id': 137, 'estandar': 0, 'cantidad': Decimal('120.00')}]
+2025-05-19 16:58:10,998 - INFO - Procesando OT: 43948
+2025-05-19 16:58:11,001 - WARNING - OT 43948 tiene 5 procesos inválidos: [{'id': 140, 'estandar': 0, 'cantidad': Decimal('1500.00')}, {'id': 141, 'estandar': 0, 'cantidad': Decimal('1500.00')}, {'id': 142, 'estandar': 0, 'cantidad': Decimal('1500.00')}, {'id': 143, 'estandar': 0, 'cantidad': Decimal('1500.00')}, {'id': 144, 'estandar': 0, 'cantidad': Decimal('1500.00')}]
+2025-05-19 16:58:11,083 - INFO - Programa 9 procesado exitosamente: 22 tareas, 1 reportes
+2025-05-19 16:58:11,094 - INFO - Procesando programa 10 - Programa mayo
+2025-05-19 16:58:11,105 - INFO - Eliminados 59 tareas y 6 reportes existentes
+2025-05-19 16:58:11,106 - INFO - Procesando 9 órdenes de trabajo
+2025-05-19 16:58:11,107 - INFO - Procesando OT: 43949
+2025-05-19 16:58:11,110 - INFO - Procesando OT: 43951
+2025-05-19 16:58:11,117 - INFO - Procesando OT: 43952
+2025-05-19 16:58:11,123 - INFO - Procesando OT: 43953
+2025-05-19 16:58:11,128 - INFO - Procesando OT: 43954
+2025-05-19 16:58:11,137 - INFO - Procesando OT: 43955
+2025-05-19 16:58:11,142 - INFO - Procesando OT: 43956
+2025-05-19 16:58:11,148 - INFO - Procesando OT: 43957
+2025-05-19 16:58:11,156 - INFO - Procesando OT: 43970
+2025-05-19 16:58:11,388 - INFO - Programa 10 procesado exitosamente: 59 tareas, 6 reportes
+2025-05-19 16:58:11,393 - INFO - Procesando programa 11 - programa 45
+2025-05-19 16:58:11,395 - INFO - Procesando 5 órdenes de trabajo
+2025-05-19 16:58:11,396 - INFO - Procesando OT: 43959
+2025-05-19 16:58:11,402 - WARNING - OT 43959 tiene 3 procesos inválidos: [{'id': 185, 'estandar': 0, 'cantidad': Decimal('500.00')}, {'id': 186, 'estandar': 0, 'cantidad': Decimal('500.00')}, {'id': 187, 'estandar': 0, 'cantidad': Decimal('500.00')}]
+2025-05-19 16:58:11,403 - INFO - Procesando OT: 43960
+2025-05-19 16:58:11,404 - WARNING - OT 43960 tiene 5 procesos inválidos: [{'id': 188, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 189, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 190, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 191, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 192, 'estandar': 0, 'cantidad': Decimal('350.00')}]
+2025-05-19 16:58:11,405 - INFO - Procesando OT: 43961
+2025-05-19 16:58:11,406 - WARNING - OT 43961 tiene 5 procesos inválidos: [{'id': 193, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 194, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 195, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 196, 'estandar': 0, 'cantidad': Decimal('350.00')}, {'id': 197, 'estandar': 0, 'cantidad': Decimal('350.00')}]
+2025-05-19 16:58:11,406 - INFO - Procesando OT: 43963
+2025-05-19 16:58:11,407 - WARNING - OT 43963 tiene 4 procesos inválidos: [{'id': 198, 'estandar': 0, 'cantidad': Decimal('50.00')}, {'id': 199, 'estandar': 0, 'cantidad': Decimal('50.00')}, {'id': 200, 'estandar': 0, 'cantidad': Decimal('50.00')}, {'id': 201, 'estandar': 0, 'cantidad': Decimal('50.00')}]
+2025-05-19 16:58:11,408 - INFO - Procesando OT: 43965
+2025-05-19 16:58:11,409 - WARNING - OT 43965 tiene 4 procesos inválidos: [{'id': 206, 'estandar': 0, 'cantidad': Decimal('250.00')}, {'id': 207, 'estandar': 0, 'cantidad': Decimal('250.00')}, {'id': 208, 'estandar': 0, 'cantidad': Decimal('250.00')}, {'id': 209, 'estandar': 0, 'cantidad': Decimal('250.00')}]
+2025-05-19 16:58:11,427 - INFO - Programa 11 procesado exitosamente: 3 tareas, 1 reportes
+2025-05-19 16:58:11,431 - INFO - Procesando programa 12 - Test4
+2025-05-19 16:58:11,444 - INFO - Eliminados 69 tareas y 11 reportes existentes
+2025-05-19 16:58:11,445 - INFO - Procesando 8 órdenes de trabajo
+2025-05-19 16:58:11,446 - INFO - Procesando OT: 43964
+2025-05-19 16:58:11,452 - INFO - Procesando OT: 43966
+2025-05-19 16:58:11,457 - INFO - Procesando OT: 43969
+2025-05-19 16:58:11,470 - INFO - Procesando OT: 43971
+2025-05-19 16:58:11,475 - INFO - Procesando OT: 43973
+2025-05-19 16:58:11,481 - INFO - Procesando OT: 43974
+2025-05-19 16:58:11,488 - INFO - Procesando OT: 43975
+2025-05-19 16:58:11,495 - INFO - Procesando OT: 43976
+2025-05-19 16:58:11,807 - INFO - Programa 12 procesado exitosamente: 69 tareas, 11 reportes
+2025-05-19 16:58:11,812 - INFO - Procesando programa 13 - 1Test2
+2025-05-19 16:58:11,821 - INFO - Eliminados 22 tareas y 4 reportes existentes
+2025-05-19 16:58:11,821 - INFO - Procesando 4 órdenes de trabajo
+2025-05-19 16:58:11,822 - INFO - Procesando OT: 43977
+2025-05-19 16:58:11,828 - INFO - Procesando OT: 43978
+2025-05-19 16:58:11,834 - INFO - Procesando OT: 43981
+2025-05-19 16:58:11,838 - INFO - Procesando OT: 43982
+2025-05-19 16:58:11,934 - INFO - Programa 13 procesado exitosamente: 22 tareas, 4 reportes
+2025-05-19 16:58:11,943 - INFO - 
+Resumen de la operación:
+2025-05-19 16:58:11,943 - INFO - Programas procesados: 12
+2025-05-19 16:58:11,943 - INFO - Tareas fragmentadas creadas: 375
+2025-05-19 16:58:11,943 - INFO - Reportes diarios creados: 54
+2025-05-19 16:58:11,943 - INFO - Errores encontrados: 0

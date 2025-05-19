@@ -45,31 +45,36 @@ class ProcessNode:
             self.intervals = calculo_tiempo['intervals']
         
     def propagar_ajuste(self, tiempo_setup=timedelta(minutes=30), procesos_por_maquina=None):
-        """Propaga el ajuste a los procesos siguientes en la cadena y verifica conflictos de máquina"""
+        """Propaga el ajuste a los procesos siguientes considerando tanto máquinas como dependencias"""
+        # Primero, ajustar procesos de la misma máquina
         if procesos_por_maquina and self.maquina_id:
-            # Obtener todos los procesos que usan la misma máquina
             procesos_misma_maquina = procesos_por_maquina.get(self.maquina_id, [])
-            
-            # Ordenar por prioridad
             procesos_misma_maquina.sort(key=lambda x: x.prioridad)
             
-            # Encontrar el índice de este proceso
             mi_indice = procesos_misma_maquina.index(self)
-            
-            # Ajustar todos los procesos posteriores que usan la misma máquina
             fecha_maquina_disponible = self.fecha_fin + tiempo_setup
+            
+            # Ajustar procesos posteriores de la misma máquina
             for proceso in procesos_misma_maquina[mi_indice + 1:]:
                 if proceso.fecha_inicio < fecha_maquina_disponible:
                     proceso.actualizar_fechas(fecha_maquina_disponible)
-                    # Propagar el ajuste a los procesos siguientes de esa OT
                     proceso.propagar_ajuste(tiempo_setup, procesos_por_maquina)
                 fecha_maquina_disponible = proceso.fecha_fin + tiempo_setup
 
-        # Propagar normalmente al siguiente proceso de la misma OT
-        if self.siguiente_proceso:
-            nueva_fecha_inicio = self.fecha_fin + tiempo_setup
-            self.siguiente_proceso.actualizar_fechas(nueva_fecha_inicio)
-            self.siguiente_proceso.propagar_ajuste(tiempo_setup, procesos_por_maquina)
+        # Luego, propagar a los procesos siguientes de la misma OT
+        siguiente_proceso = self.siguiente_proceso
+        while siguiente_proceso:
+            nueva_fecha_inicio = max(
+                self.fecha_fin + tiempo_setup,
+                siguiente_proceso.fecha_inicio
+            )
+            
+            if nueva_fecha_inicio > siguiente_proceso.fecha_inicio:
+                siguiente_proceso.actualizar_fechas(nueva_fecha_inicio)
+                # Propagar también a los procesos que usan la misma máquina
+                siguiente_proceso.propagar_ajuste(tiempo_setup, procesos_por_maquina)
+            
+            siguiente_proceso = siguiente_proceso.siguiente_proceso
 
     def agregar_intervalo(self, interval_data):
         """Agrega un intervalo de tiempo al proceso"""
@@ -208,22 +213,33 @@ class ProductionScheduler:
 
         # Segunda pasada: resolver conflictos de máquina y propagar ajustes
         for maquina_id, procesos in procesos_por_maquina.items():
-            # Ordenar todos los procesos de esta máquina por prioridad de OT
             procesos.sort(key=lambda x: x.prioridad)
-            
-            # El primer proceso (más prioritario) mantiene su fecha
             fecha_maquina_disponible = procesos[0].fecha_fin + timedelta(minutes=30)
             
-            # Para los demás procesos, asignar fechas secuencialmente
             for proceso in procesos[1:]:
                 if proceso.fecha_inicio < fecha_maquina_disponible:
-                    # Necesitamos mover este proceso
                     proceso.actualizar_fechas(fecha_maquina_disponible)
-                    # Propagar el cambio a los procesos siguientes de la misma OT
                     proceso.propagar_ajuste(procesos_por_maquina=procesos_por_maquina)
-                
-                # Actualizar cuando estará disponible la máquina
                 fecha_maquina_disponible = proceso.fecha_fin + timedelta(minutes=30)
+
+        # Tercera pasada: verificar y corregir secuencia de procesos por OT
+        ot_procesos = {}
+        for nodo in nodos_procesos.values():
+            if nodo.ot_id not in ot_procesos:
+                ot_procesos[nodo.ot_id] = []
+            ot_procesos[nodo.ot_id].append(nodo)
+
+        for ot_id, procesos in ot_procesos.items():
+            procesos.sort(key=lambda x: x.proceso_data['item'])
+            for i in range(len(procesos) - 1):
+                proceso_actual = procesos[i]
+                proceso_siguiente = procesos[i + 1]
+                
+                if proceso_siguiente.fecha_inicio < proceso_actual.fecha_fin + timedelta(minutes=30):
+                    proceso_siguiente.actualizar_fechas(
+                        proceso_actual.fecha_fin + timedelta(minutes=30)
+                    )
+                    proceso_siguiente.propagar_ajuste(procesos_por_maquina=procesos_por_maquina)
 
         # Actualizar los items con las nuevas fechas
         all_items.clear()
@@ -751,73 +767,41 @@ class ProductionCascadeCalculator:
         self.time_calculator = time_calculator
 
     def calculate_cascade_times(self, procesos, fecha_inicio):
-        """
-        Calcula los tiempos en cascada para una serie de procesos
-        siguiendo la lógica del Excel
-        """
-        proceso_timeline = {}
-        produccion_acumulada = {}
-
-        for i, proceso in enumerate(procesos):
+        cascade_times = {}
+        
+        # Identificar el proceso más lento
+        proceso_mas_lento = min(procesos, key=lambda p: float(p.get('estandar', float('inf'))))
+        estandar_mas_lento = float(proceso_mas_lento.get('estandar', 0))
+        
+        fecha_actual = fecha_inicio
+        unidades_disponibles = 0
+        
+        for proceso in procesos:
             proceso_id = f"proc_{proceso['id']}"
-            estandar = float(proceso['estandar'])
-            cantidad_total = float(proceso['cantidad'])
+            estandar = float(proceso.get('estandar', 0))
+            cantidad_total = float(proceso.get('cantidad', 0))
             
-            # Para el primer proceso, usar fecha_inicio directamente
-            if i == 0:
-                fecha_inicio_proceso = fecha_inicio
-            else:
-                # Para procesos posteriores, calcular basado en el proceso anterior
-                proceso_anterior = procesos[i-1]
-                proc_ant_id = f"proc_{proceso_anterior['id']}"
-                estandar_anterior = float(proceso_anterior['estandar'])
-                
-                # Calcular cuántas unidades necesita este proceso para comenzar
-                unidades_necesarias = min(estandar, cantidad_total)
-                
-                # Calcular cuánto tiempo necesita el proceso anterior para producir estas unidades
-                horas_necesarias = unidades_necesarias / estandar_anterior
-                
-                # La fecha de inicio será cuando el proceso anterior haya producido suficiente
-                fecha_inicio_proceso = proceso_timeline[proc_ant_id]['inicio'] + timedelta(hours=horas_necesarias)
-                
-                # Añadir tiempo de setup entre procesos
-                fecha_inicio_proceso += timedelta(minutes=30)
-
-            # Calcular tiempo total de este proceso
-            tiempo_total = cantidad_total / estandar  # horas totales necesarias
+            # Calcular cantidad mínima para iniciar este proceso
+            cantidad_minima = estandar  # Una hora de producción
             
-            # Calcular fecha fin considerando horario laboral
-            calculo_tiempo = self.time_calculator.calculate_working_days(
-                fecha_inicio_proceso,
-                cantidad_total,
-                estandar
-            )
+            # Esperar hasta tener suficientes unidades del proceso anterior
+            if unidades_disponibles < cantidad_minima:
+                tiempo_espera = (cantidad_minima - unidades_disponibles) / estandar_mas_lento
+                fecha_actual += timedelta(hours=tiempo_espera)
             
-            if 'error' not in calculo_tiempo:
-                fecha_fin_proceso = calculo_tiempo['next_available_time']
-            else:
-                fecha_fin_proceso = fecha_inicio_proceso + timedelta(hours=tiempo_total)
-
-            proceso_timeline[proceso_id] = {
-                'inicio': fecha_inicio_proceso,
-                'fin': fecha_fin_proceso,
-                'unidades_por_hora': estandar,
-                'cantidad_total': cantidad_total,
-                'produccion_por_intervalo': []
+            # Calcular tiempo de proceso ajustado al cuello de botella
+            tiempo_proceso = cantidad_total / min(estandar, estandar_mas_lento)
+            
+            cascade_times[proceso_id] = {
+                'inicio': fecha_actual,
+                'fin': fecha_actual + timedelta(hours=tiempo_proceso),
+                'cantidad_por_hora': min(estandar, estandar_mas_lento)
             }
-
-            # Calcular la producción por intervalos
-            if 'error' not in calculo_tiempo:
-                for interval in calculo_tiempo['intervals']:
-                    proceso_timeline[proceso_id]['produccion_por_intervalo'].append({
-                        'fecha_inicio': interval['fecha_inicio'],
-                        'fecha_fin': interval['fecha_fin'],
-                        'unidades': interval['unidades'],
-                        'unidades_restantes': interval.get('unidades_restantes', 0)
-                    })
-
-        return proceso_timeline
+            
+            fecha_actual = cascade_times[proceso_id]['fin']
+            unidades_disponibles = cantidad_total
+            
+        return cascade_times
 
     def get_production_at_time(self, proceso_info, tiempo):
         """

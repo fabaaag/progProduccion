@@ -14,6 +14,8 @@ import "./ProgramDetail.css";
 import { FaArrowLeft, FaCalendarAlt, FaFlag, FaFilePdf, FaClipboardList, FaExclamationTriangle, FaSave, FaChevronDown, FaPlus } from "react-icons/fa";
 import { ProgramMonitoring } from "../../components/Programa/ProgramMonitoring";
 import { AgregarOrdenModal } from '../../components/Programa/AgregarOrdenModal';
+// En ProgramDetail.jsx, al inicio donde están los imports
+import { supervisorReportAPI } from "../../api/supervisorReport.api";
 
 const AlertMessage = ({ type, icon, message }) => (
     <div className={`alert alert-${type} d-flex align-items-center`} role="alert">
@@ -25,6 +27,10 @@ const AlertMessage = ({ type, icon, message }) => (
 );
 
 export function ProgramDetail() {
+
+    const HIDE_TEXT = true; // Cambiar f o t
+     
+
     const { programId } = useParams();
     const navigate = useNavigate();
     const [programData, setProgramData] = useState(null);
@@ -35,6 +41,7 @@ export function ProgramDetail() {
     const [showTimeline, setShowTimeline] = useState(false); // Control para mostrar el timeline
     const [timelineLoading, setTimelineLoading] = useState(false);
     const [timelineGroups, setTimelineGroups] = useState([]);
+    const [timelineMode, setTimelineMode] = useState('planning'); // 'planning' o 'execution'
 
     const [expandedOTs, setExpandedOTs] = useState({});
     const [maquinas, setMaquinas] = useState([]);
@@ -356,6 +363,193 @@ export function ProgramDetail() {
             toast.error("Error al cargar los datos");
         } finally {
             setLoading(false);
+        }
+    };
+
+    const loadTimelineData = async () => {
+        if (!showTimeline || !programId) return;
+        
+        try {
+            setTimelineLoading(true);
+            let timelineData;
+
+            if (timelineMode === 'execution') {
+                console.log("Cargando datos de ejecución...");
+                // Obtener la fecha actual del programa
+                const programResponse = await getProgram(programId);
+                const programDate = programResponse.program.fecha_inicio;
+                
+                const response = await supervisorReportAPI.getExecutionTimeline(
+                    programId, 
+                    { fecha: programDate }
+                );
+                console.log("Datos de ejecución recibidos:", response);
+                timelineData = response;
+            } else {
+                console.log("Cargando datos de planificación...");
+                const response = await getProgram(programId);
+                console.log("Datos de planificación recibidos:", response);
+                timelineData = response.routes_data || { groups: [], items: [] };
+            }
+
+            processTimelineData(timelineData);
+        } catch (error) {
+            console.error('Error cargando datos del timeline:', error);
+            toast.error('Error al cargar la proyección');
+        } finally {
+            setTimelineLoading(false);
+        }
+    };
+
+    useEffect(() => {
+        if (showTimeline) {
+            console.log("Modo timeline cambiado a:", timelineMode);
+            loadTimelineData();
+        }
+    }, [showTimeline, timelineMode, programId]);
+
+    const processTimelineData = (timelineData) => {
+        console.log("Datos recibidos en processTimelineData:", timelineData);
+
+        if (timelineMode === 'execution') {
+            // Verificar si hay datos de ejecución
+            if (HIDE_TEXT || !timelineData.timeline || timelineData.timeline.length === 0) {
+                setTimelineGroups([]);
+                setTimelineItems([]);
+                return;
+            }
+
+            // Procesar datos de ejecución
+            const groups = [];
+            const items = [];
+            
+            // Agrupar por OT
+            const otGroups = {};
+            timelineData.timeline.forEach(ejecucion => {
+                const otId = `ot_${ejecucion.orden_trabajo.codigo}`;
+                
+                // Crear grupo de OT si no existe
+                if (!otGroups[otId]) {
+                    otGroups[otId] = {
+                        id: otId,
+                        title: ejecucion.orden_trabajo.codigo,
+                        stackItems: true,
+                        height: 70
+                    };
+                    groups.push(otGroups[otId]);
+                }
+
+                // Crear subgrupo de proceso
+                const procesoGroupId = `proc_${ejecucion.tarea_id}`;
+                if (!groups.find(g => g.id === procesoGroupId)) {
+                    groups.push({
+                        id: procesoGroupId,
+                        title: ejecucion.proceso.descripcion,
+                        parent: otId,
+                        height: 50
+                    });
+                }
+
+                // Ajustar las horas de inicio y fin al horario laboral
+                const fecha = moment(ejecucion.tiempo.inicio).format('YYYY-MM-DD');
+                const start_time = moment(`${fecha} 08:00`).toDate();
+                const end_time = moment(`${fecha} 18:00`).toDate();
+
+                // Crear item de timeline
+                items.push({
+                    id: `item_${ejecucion.id}`,
+                    group: procesoGroupId,
+                    title: `${ejecucion.proceso.descripcion} - ${ejecucion.cantidad_producida} de ${ejecucion.cantidad_total} unidades`,
+                    start_time: start_time,
+                    end_time: end_time,
+                    className: 'execution-timeline-item',
+                    porcentaje_avance: (ejecucion.cantidad_producida / ejecucion.cantidad_total) * 100,
+                    itemProps: {
+                        style: {
+                            backgroundColor: getEstadoColor(ejecucion.estado),
+                            color: 'white',
+                            borderRadius: '4px',
+                            padding: '2px 6px',
+                            fontSize: '12px'
+                        },
+                        'data-tooltip': `
+                            ${ejecucion.proceso.descripcion}
+                            Cantidad: ${ejecucion.cantidad_producida} de ${ejecucion.cantidad_total} unidades
+                            Avance: ${((ejecucion.cantidad_producida / ejecucion.cantidad_total) * 100).toFixed(1)}%
+                            Pendiente: ${ejecucion.cantidad_pendiente} unidades
+                            Estado: ${ejecucion.estado}
+                            Operador: ${ejecucion.operador?.nombre || 'No asignado'}
+                            Inicio real: ${moment(ejecucion.tiempo.inicio).format('HH:mm')}
+                            Fin real: ${moment(ejecucion.tiempo.fin).format('HH:mm')}
+                        `
+                    }
+                });
+            });
+
+            setTimelineGroups(groups);
+            setTimelineItems(items);
+
+        } else {
+            // Modo planificación - Mantener el código existente para planificación
+            if (!timelineData.groups || !timelineData.items) {
+                console.error("Datos de timeline inválidos:", timelineData);
+                return;
+            }
+
+            // Procesar grupos y subgrupos
+            const groups = timelineData.groups.flatMap(ot => {
+                const mainGroup = {
+                    id: `ot_${ot.id}`,
+                    title: ot.orden_trabajo_codigo_ot,
+                    stackItems: true,
+                    height: 70
+                };
+
+                const processGroups = ot.procesos?.map(proceso => ({
+                    id: `proc_${proceso.id}`,
+                    title: proceso.descripcion,
+                    parent: `ot_${ot.id}`,
+                    height: 50
+                })) || [];
+
+                return [mainGroup, ...processGroups];
+            });
+
+            // Procesar items
+            const items = timelineData.items.map(item => ({
+                id: `item_${item.id}`,
+                group: `proc_${item.proceso_id}`,
+                title: item.name,
+                start_time: moment(item.start_time).toDate(),
+                end_time: moment(item.end_time).toDate(),
+                itemProps: {
+                    style: {
+                        backgroundColor: '#FFA726',
+                        color: 'white',
+                        borderRadius: '4px',
+                        padding: '2px 6px',
+                        fontSize: '12px'
+                    },
+                    'data-tooltip': `
+                        ${item.name}
+                        Inicio: ${moment(item.start_time).format('DD/MM/YYYY HH:mm')}
+                        Fin: ${moment(item.end_time).format('DD/MM/YYYY HH:mm')}
+                    `
+                }
+            }));
+
+            setTimelineGroups(groups);
+            setTimelineItems(items);
+        }
+    };
+
+    // Función auxiliar para determinar el color según el estado
+    const getEstadoColor = (estado) => {
+        switch (estado?.toUpperCase()) {
+            case 'COMPLETADO': return '#4CAF50';
+            case 'EN_PROCESO': return '#2196F3';
+            case 'DETENIDO': return '#f44336';
+            default: return '#FFA726';
         }
     };
 
@@ -830,24 +1024,37 @@ export function ProgramDetail() {
                                 <p>No hay OTs asignadas a este programa.</p>
                             )}
                         </div>
-                        <Button 
-                        variant="success" 
-                        onClick={toggleTimeline} 
-                        className="mt-3" 
-                        disabled={timelineLoading}
-                        title = {hayProcesosConEstandarCero() ? "No se puede proyectar: Hay procesos con estándar en 0": ""}
-                        >
-                            {timelineLoading
-                                ? 
+                        <div className="d-flex align-items-center">
+                            <Button 
+                                variant="success" 
+                                onClick={toggleTimeline} 
+                                className="mt-3 me-2" 
+                                disabled={timelineLoading || hayProcesosConEstandarCero()}
+                                title={hayProcesosConEstandarCero() ? "No se puede proyectar: Hay procesos con estándar en 0" : ""}
+                            >
+                                {timelineLoading ? (
                                     <span>
                                         <LoadingSpinner message="" size="small"/> Cargando Proyección
                                     </span>
-                                : showTimeline
-                                ? "Ocultar Proyección"
-                                : hayProcesosConEstandarCero()
-                                    ? "Proyectar (Corregir estándares en OTs)"
-                                    : "Proyectar"}
-                        </Button>
+                                ) : showTimeline ? "Ocultar Proyección" : "Mostrar Proyección"}
+                            </Button>
+                            {showTimeline && (
+                                <div className="btn-group mt-3">
+                                    <Button
+                                        variant={timelineMode === 'planning' ? 'primary' : 'outline-primary'}
+                                        onClick={() => setTimelineMode('planning')}
+                                    >
+                                        Planificación
+                                    </Button>
+                                    <Button
+                                        variant={timelineMode === 'execution' ? 'primary' : 'outline-primary'}
+                                        onClick={() => setTimelineMode('execution')}
+                                    >
+                                        Ejecución
+                                    </Button>
+                                </div>
+                            )}
+                        </div>
                     </section>
 
                     {showTimeline && (
@@ -861,6 +1068,7 @@ export function ProgramDetail() {
                                 sidebarWidth={200}
                                 canMove={false}
                                 canResize={false}
+                                stackItems
                                 timeSteps={{
                                     second: 1,
                                     minute: 30,
@@ -869,36 +1077,34 @@ export function ProgramDetail() {
                                     month: 1,
                                     year: 1
                                 }}
-                                traditionalZoom={true}
-                                timeFormat="%H:%M"
-                                showCursorLine
-                                itemRenderer={({ item, itemContext, getItemProps }) => {
-                                    const { left: leftResizer, right: rightResizer } = itemContext.dimensions;
-                                    return (
-                                        <div
-                                            {...getItemProps({
-                                                className: 'timeline-custom-item',
-                                                style: {
-                                                    left: leftResizer,
-                                                    width: rightResizer - leftResizer,
-                                                    position: 'absolute',
-                                                    height: '100%',
-                                                    backgroundColor: item.itemProps.style?.backgroundColor || '#fff',
-                                                    border: item.itemProps.style?.border || 'none',
-                                                }
-                                            })}
-                                            title={item.itemProps['data-tooltip']}
-                                        >
-                                            <div className="timeline-item-content">
-                                                {item.title}
-                                            </div>
+                                traditionalZoom
+                                itemRenderer={({ item, itemContext, getItemProps }) => (
+                                    <div
+                                        {...getItemProps({
+                                            className: `${timelineMode === 'execution' ? 'execution-timeline-item' : ''}`,
+                                            style: {
+                                                ...item.itemProps.style,
+                                                borderRadius: '4px',
+                                                padding: '2px 6px'
+                                            }
+                                        })}
+                                        title={item.itemProps['data-tooltip']}
+                                    >
+                                        <div className="timeline-item-content">
+                                            <div className="item-title">{item.title}</div>
+                                            {timelineMode === 'execution' && (
+                                                <div className="progress">
+                                                    <div 
+                                                        className="progress-bar" 
+                                                        style={{ 
+                                                            width: `${item.porcentaje_avance}%`
+                                                        }}
+                                                    />
+                                                </div>
+                                            )}
                                         </div>
-                                    );
-                                }}
-                                dayBackground={date => {
-                                    const hours = date.getHours();
-                                    return hours === 13 ? '#f8d7da' : null;
-                                }}
+                                    </div>
+                                )}
                             />
                         </div>
                     )}

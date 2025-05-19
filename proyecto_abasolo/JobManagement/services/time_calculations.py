@@ -30,7 +30,7 @@ class TimeCalculator:
         """Obtiene las horas laborables según el día de la semana"""
         return self.FRIDAY_HOURS if date.weekday() == 4 else self.WORK_HOURS
 
-    def calculate_working_days(self, start_date, cantidad, estandar):
+    def calculate_working_days(self, start_date, cantidad, estandar, cantidad_minima_siguiente=None):
         """
         Implementación del cálculo de días laborables considerando horario especial de viernes
         """
@@ -95,10 +95,14 @@ class TimeCalculator:
                 if hora_actual.time() < self.BREAK_START and next_hour.time() > self.BREAK_START:
                     next_hour = datetime.combine(current_date, self.BREAK_START)
 
-                # Calcular unidades para esta hora
+                # Calcular unidades para esta hora considerando el siguiente proceso
                 hours_in_interval = (next_hour - hora_actual).total_seconds() / 3600
                 units_this_interval = min(remaining_units, hours_in_interval * estandar_hora)
-
+                
+                # Si hay un proceso siguiente, asegurar que producimos al menos su cantidad mínima
+                if cantidad_minima_siguiente and units_this_interval < cantidad_minima_siguiente:
+                    units_this_interval = min(remaining_units, cantidad_minima_siguiente)
+                
                 if units_this_interval > 0:
                     interval = {
                         'fecha': current_date,

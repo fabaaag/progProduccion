@@ -165,64 +165,106 @@ class SupervisorReportView(APIView):
 
     def put(self, request, pk):
         try:
-            # Verificar si estamos recibiendo tarea_id (nuevo formato desde frontend)
             tarea_id = request.data.get('tarea_id')
-            if tarea_id:
-                # Nuevo formato: recibimos tarea_id en el cuerpo
-                tarea = get_object_or_404(TareaFragmentada, id=tarea_id)
-            else:
-                # Formato anterior: el ID viene en la URL
-                tarea = get_object_or_404(TareaFragmentada, id=pk)
+            print(f"[DEBUG] Datos recibidos: {request.data}")
             
-            # Si se reciben kilos fabricados, calcular unidades
-            if 'kilos_fabricados' in request.data:
-                kilos_fabricados = float(request.data.get('kilos_fabricados', 0))
-                tarea.kilos_fabricados = kilos_fabricados
+            with transaction.atomic():
+                if tarea_id:
+                    tarea = get_object_or_404(TareaFragmentada, id=tarea_id)
+                    print(f"[DEBUG] Tarea encontrada: {tarea.id} - Estado: {tarea.estado}")
+                else:
+                    tarea = get_object_or_404(TareaFragmentada, id=pk)
                 
-                # Obtener peso unitario
-                orden_trabajo = tarea.tarea_original.ruta.orden_trabajo
-                peso_unitario = float(orden_trabajo.peso_unitario) if orden_trabajo and orden_trabajo.peso_unitario else None
-                
-                # Si no tiene peso unitario en la orden, intentar obtenerlo del producto
-                if not peso_unitario or peso_unitario <= 0:
-                    try:
-                        from Product.models import Producto, Pieza
-                        codigo_producto = orden_trabajo.codigo_producto_salida
-                        if codigo_producto:
-                            try:
-                                producto = Producto.objects.get(codigo_producto=codigo_producto)
-                                peso_unitario = float(producto.peso_unitario)
-                            except Producto.DoesNotExist:
+                # Si se reciben kilos fabricados, calcular unidades
+                if 'kilos_fabricados' in request.data:
+                    kilos_fabricados = float(request.data.get('kilos_fabricados', 0))
+                    tarea.kilos_fabricados = kilos_fabricados
+                    
+                    # Obtener peso unitario
+                    orden_trabajo = tarea.tarea_original.ruta.orden_trabajo
+                    peso_unitario = float(orden_trabajo.peso_unitario) if orden_trabajo and orden_trabajo.peso_unitario else None
+                    
+                    # Si no tiene peso unitario en la orden, intentar obtenerlo del producto
+                    if not peso_unitario or peso_unitario <= 0:
+                        try:
+                            from Product.models import Producto, Pieza
+                            codigo_producto = orden_trabajo.codigo_producto_salida
+                            if codigo_producto:
                                 try:
-                                    pieza = Pieza.objects.get(codigo_pieza=codigo_producto)
-                                    peso_unitario = float(pieza.peso_unitario)
-                                except Pieza.DoesNotExist:
-                                    pass
-                    except Exception as e:
-                        print(f"Error al buscar peso unitario del producto: {str(e)}")
+                                    producto = Producto.objects.get(codigo_producto=codigo_producto)
+                                    peso_unitario = float(producto.peso_unitario)
+                                except Producto.DoesNotExist:
+                                    try:
+                                        pieza = Pieza.objects.get(codigo_pieza=codigo_producto)
+                                        peso_unitario = float(pieza.peso_unitario)
+                                    except Pieza.DoesNotExist:
+                                        pass
+                        except Exception as e:
+                            print(f"Error al buscar peso unitario del producto: {str(e)}")
+                    
+                    # Calcular unidades si tenemos peso unitario
+                    if peso_unitario and peso_unitario > 0:
+                        unidades_fabricadas = round(kilos_fabricados / peso_unitario)
+                        tarea.unidades_fabricadas = unidades_fabricadas
+                        tarea.cantidad_completada = unidades_fabricadas
+                        
+                # Actualizar otros campos
+                if 'observaciones' in request.data:
+                    tarea.observaciones = request.data.get('observaciones', '')
                 
-                # Calcular unidades si tenemos peso unitario
-                if peso_unitario and peso_unitario > 0:
-                    unidades_fabricadas = round(kilos_fabricados / peso_unitario)
-                    tarea.unidades_fabricadas = unidades_fabricadas
-                    tarea.cantidad_completada = unidades_fabricadas
-                    
-                    
-            # Actualizar otros campos
-            if 'observaciones' in request.data:
-                tarea.observaciones = request.data.get('observaciones', '')
-            
-            if 'estado' in request.data:
-                tarea.estado = request.data.get('estado')
-            
-            # Guardar los cambios
-            tarea.save()
-            
-            return Response({
-                'message': 'Tarea actualizada correctamente',
-                'tarea': TareaFragmentadaSerializer(tarea).data
-            })
-            
+                if 'estado' in request.data:
+                    tarea.estado = request.data.get('estado')
+                
+                # Antes de crear/actualizar EjecucionTarea
+                print(f"[DEBUG] Creando/actualizando ejecución para tarea {tarea.id}")
+                print(f"[DEBUG] Fecha de tarea: {tarea.fecha}")
+                print(f"[DEBUG] Estado: {tarea.estado}")
+                print(f"[DEBUG] Cantidad completada: {tarea.cantidad_completada}")
+
+                now = timezone.now()
+                fecha_hora = timezone.datetime.combine(
+                    tarea.fecha,
+                    now.time(),
+                    tzinfo=timezone.get_current_timezone()
+                )
+                print(f"[DEBUG] Fecha hora calculada: {fecha_hora}")
+
+                ejecucion, created = EjecucionTarea.objects.get_or_create(
+                    tarea=tarea,
+                    fecha_hora_inicio__date=tarea.fecha,
+                    defaults={
+                        'fecha_hora_inicio': fecha_hora,
+                        'fecha_hora_fin': fecha_hora,
+                        'cantidad_producida': tarea.cantidad_completada,
+                        'operador': tarea.operador,
+                        'estado': tarea.estado
+                    }
+                )
+                print(f"[DEBUG] Ejecución {'creada' if created else 'actualizada'}: {ejecucion.id}")
+
+                if not created:
+                    ejecucion.fecha_hora_fin = fecha_hora
+                    ejecucion.cantidad_producida = tarea.cantidad_completada
+                    ejecucion.estado = tarea.estado
+                    ejecucion.save()
+                    print(f"[DEBUG] Ejecución actualizada con nueva fecha fin: {ejecucion.fecha_hora_fin}")
+
+                tarea.save()
+                
+                # Verificar registros después de guardar
+                ejecuciones = EjecucionTarea.objects.filter(
+                    tarea__programa_id=tarea.programa_id,
+                    fecha_hora_inicio__date=tarea.fecha
+                )
+                print(f"[DEBUG] Total de ejecuciones para el día: {ejecuciones.count()}")
+                for e in ejecuciones:
+                    print(f"[DEBUG] - Ejecución {e.id}: Tarea {e.tarea_id}, Estado {e.estado}, Cantidad {e.cantidad_producida}")
+
+                return Response({
+                    'message': 'Tarea actualizada correctamente',
+                    'tarea': TareaFragmentadaSerializer(tarea).data
+                })
+                
         except Exception as e:
             import traceback
             traceback.print_exc()
@@ -234,13 +276,73 @@ class SupervisorReportView(APIView):
 class TimelineEjecucionView(APIView):
     permission_classes = [IsAuthenticated]
     
+    def crear_ejecuciones_por_avance(self, programa, fecha):
+        """
+        Crea registros de ejecución para todas las tareas que tienen avance pero no tienen registro
+        """
+        print(f"[DEBUG] Creando ejecuciones por avance para programa {programa.id} fecha {fecha}")
+        
+        # Buscar todas las tareas que tienen avance
+        tareas_con_avance = TareaFragmentada.objects.filter(
+            programa=programa,
+            fecha=fecha,
+            cantidad_completada__gt=0  # Tareas que tienen algún avance
+        ).select_related(
+            'tarea_original__proceso',
+            'tarea_original__maquina',
+            'tarea_original__ruta__orden_trabajo',
+            'operador'
+        ).order_by(
+            'tarea_original__ruta__orden_trabajo__codigo_ot',
+            'tarea_original__item'
+        )
+        
+        print(f"[DEBUG] Encontradas {tareas_con_avance.count()} tareas con avance")
+        ejecuciones_creadas = 0
+        
+        for tarea in tareas_con_avance:
+            # Verificar si ya existe una ejecución para esta tarea en esta fecha
+            ejecucion_existente = EjecucionTarea.objects.filter(
+                tarea=tarea,
+                fecha_hora_inicio__date=fecha
+            ).exists()
+            
+            if not ejecucion_existente:
+                # Crear nueva ejecución
+                fecha_hora = timezone.datetime.combine(
+                    fecha,
+                    timezone.now().time(),
+                    tzinfo=timezone.get_current_timezone()
+                )
+                
+                EjecucionTarea.objects.create(
+                    tarea=tarea,
+                    fecha_hora_inicio=fecha_hora,
+                    fecha_hora_fin=fecha_hora,
+                    cantidad_producida=tarea.cantidad_completada,
+                    operador=tarea.operador,
+                    estado=tarea.estado
+                )
+                ejecuciones_creadas += 1
+                print(f"[DEBUG] Creada ejecución para tarea {tarea.id} - OT: {tarea.tarea_original.ruta.orden_trabajo.codigo_ot} - Proceso: {tarea.tarea_original.proceso.descripcion}")
+        
+        print(f"[DEBUG] Total de ejecuciones creadas: {ejecuciones_creadas}")
+        return ejecuciones_creadas
+
     def get(self, request, pk):
         try:
             programa = get_object_or_404(ProgramaProduccion, id=pk)
             fecha_solicitada = request.GET.get('fecha', timezone.now().date().strftime('%Y-%m-%d'))
             fecha = datetime.strptime(fecha_solicitada, '%Y-%m-%d').date()
             
-            # Obtener todas las ejecuciones del día para el programa
+            print(f"[DEBUG] Buscando ejecuciones para programa {pk} en fecha {fecha}")
+            
+            # Crear ejecuciones para tareas con avance que no tengan registro
+            ejecuciones_creadas = self.crear_ejecuciones_por_avance(programa, fecha)
+            if ejecuciones_creadas > 0:
+                print(f"[DEBUG] Se crearon {ejecuciones_creadas} nuevas ejecuciones")
+            
+            # Obtener todas las ejecuciones ordenadas
             ejecuciones = EjecucionTarea.objects.filter(
                 tarea__programa=programa,
                 fecha_hora_inicio__date=fecha
@@ -249,7 +351,12 @@ class TimelineEjecucionView(APIView):
                 'tarea__tarea_original__maquina',
                 'tarea__tarea_original__ruta__orden_trabajo',
                 'operador'
+            ).order_by(
+                'tarea__tarea_original__ruta__orden_trabajo__codigo_ot',
+                'tarea__tarea_original__item'
             )
+            
+            print(f"[DEBUG] Total de ejecuciones encontradas: {ejecuciones.count()}")
             
             timeline_data = []
             for ejecucion in ejecuciones:
@@ -266,7 +373,8 @@ class TimelineEjecucionView(APIView):
                     },
                     'proceso': {
                         'codigo': item_ruta.proceso.codigo_proceso,
-                        'descripcion': item_ruta.proceso.descripcion
+                        'descripcion': item_ruta.proceso.descripcion,
+                        'item': item_ruta.item
                     },
                     'maquina': {
                         'codigo': item_ruta.maquina.codigo_maquina,
@@ -281,6 +389,9 @@ class TimelineEjecucionView(APIView):
                         'fin': ejecucion.fecha_hora_fin
                     },
                     'cantidad_producida': float(ejecucion.cantidad_producida),
+                    'cantidad_total': float(tarea.cantidad_asignada),
+                    'cantidad_pendiente': float(tarea.cantidad_pendiente),
+                    'porcentaje_avance': float(tarea.porcentaje_cumplimiento),
                     'estado': ejecucion.estado,
                     'observaciones': ejecucion.observaciones
                 })
@@ -295,6 +406,9 @@ class TimelineEjecucionView(APIView):
             })
             
         except Exception as e:
+            print(f"Error en TimelineEjecucionView: {str(e)}")
+            import traceback
+            traceback.print_exc()
             return Response(
                 {'error': str(e)},
                 status=status.HTTP_500_INTERNAL_SERVER_ERROR
